@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9200823f5507f5d4eb4d36b5de4d7542, type: 3}
+  m_Name: 016.SFX_CowFeed3
+  m_EditorClassIdentifier: 
+  soundName: 21
+  clip: {fileID: 8300000, guid: 80023e9e76cd5ca40b9247784644e8ca, type: 3}
+  group: {fileID: -1387078850697819475, guid: 9dae4ddf0d98e9b4985266e8a86adb07, type: 2}
+  volume: 1
+  pitch: 1
+  loop: 0

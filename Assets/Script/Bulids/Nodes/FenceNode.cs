@@ -1,0 +1,53 @@
+using UnityEngine;
+
+public class FenceNode : BasicNode, IConnectable
+{
+    [SerializeField] private GameObject spriteLU; // 좌상
+    [SerializeField] private GameObject spriteLD; // 좌하
+    [SerializeField] private GameObject spriteRU; // 우상
+    [SerializeField] private GameObject spriteRD; // 우하
+
+    [SerializeField] private int privateMinCount = 3;
+    public int MinConnectionCount => privateMinCount;
+
+    public override void Setup(Vector3Int pos)
+    {
+        privateCellPos = pos;
+        UpdateVisual();
+    }
+
+    // 주변 상태를 확인하고 내 그래픽을 갱신하는 핵심 함수
+    public override void UpdateVisual()
+    {
+        // FenceManager에게 주변에 울타리가 있는지 물어봅니다.
+        bool hasLeftUp = BuildManager.Instance.HasNodeAt<FenceNode>(privateCellPos + new Vector3Int(0, 1, 0));
+        bool hasRightUp = BuildManager.Instance.HasNodeAt<FenceNode>(privateCellPos + new Vector3Int(1, 0, 0));
+        bool hasLeftDown = BuildManager.Instance.HasNodeAt<FenceNode>(privateCellPos + new Vector3Int(-1, 0, 0));
+        bool hasRightDown = BuildManager.Instance.HasNodeAt<FenceNode>(privateCellPos + new Vector3Int(0, -1, 0));
+
+        // 예시 로직: 주변에 울타리가 없다면 해당 방향의 그래픽을 켭니다.
+        // (기획하신 울타리 연결 모양에 따라 조건을 수정하세요)
+        spriteLU.SetActive(!hasLeftUp);
+        spriteRU.SetActive(!hasRightUp);
+        spriteLD.SetActive(!hasLeftDown);
+        spriteRD.SetActive(!hasRightDown);
+    }
+
+    public void OnConnectionFailed()
+    {
+        // 연결 부족 시 스스로 파괴 (BuildManager에서 처리해도 됨)
+        Debug.Log("연결 부족으로 철거됩니다.");
+        Destroy(gameObject);
+    }
+
+    public void OnConnectionSuccess(int totalCount)
+    {
+        Debug.Log($"{totalCount}개의 울타리가 연결되었습니다!");
+        // 여기서 울타리 비주얼 연결 등의 추가 로직 수행
+    }
+
+    public override void DayAction()
+    {
+
+    }
+}

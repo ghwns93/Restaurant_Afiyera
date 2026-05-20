@@ -1,0 +1,621 @@
+fileFormatVersion: 2
+guid: e604ae6853f0f414f98de5dcd60a6944
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5670791773342275294
+    second: PopUPUI_0
+  - first:
+      213: 668441295900745976
+    second: PopUPUI_1
+  - first:
+      213: 1055673545672599233
+    second: PopUPUI_2
+  - first:
+      213: 65138731120976636
+    second: PopUPUI_3
+  - first:
+      213: 2323091393973461458
+    second: PopUPUI_4
+  - first:
+      213: -1791114827619736285
+    second: PopUPUI_5
+  - first:
+      213: -8579800782589048630
+    second: PopUPUI_6
+  - first:
+      213: 5401865659808399041
+    second: PopUPUI_7
+  - first:
+      213: 8283044760036891577
+    second: PopUPUI_8
+  - first:
+      213: -8289058553266291183
+    second: PopUPUI_9
+  - first:
+      213: 7991666058748347464
+    second: PopUPUI_10
+  - first:
+      213: -1527622425320321911
+    second: PopUPUI_11
+  - first:
+      213: -1890086963378758585
+    second: PopUPUI_12
+  - first:
+      213: -7804855271765748005
+    second: PopUPUI_13
+  - first:
+      213: 8955657743148259568
+    second: PopUPUI_14
+  - first:
+      213: 2511892760803296264
+    second: PopUPUI_15
+  - first:
+      213: -4911730207826028655
+    second: PopUPUI_16
+  - first:
+      213: 7405395366039646388
+    second: PopUPUI_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PopUPUI_0
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 2356
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 229e9b26dec4d41b0800000000000000
+      internalID: -5670791773342275294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2048
+        width: 910
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0ad5b21d7c64900800000000000000
+      internalID: 668441295900745976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_2
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 2216
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6a7902f7186ae00800000000000000
+      internalID: 1055673545672599233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_3
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2063
+        width: 515
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2e591b45b67e000800000000000000
+      internalID: 65138731120976636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_4
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 1935
+        width: 916
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d12e8680574d3020800000000000000
+      internalID: 2323091393973461458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_5
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 1858
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3256ac3dd8ea427e0800000000000000
+      internalID: -1791114827619736285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1116
+        width: 962
+        height: 711
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8492e55ac6ee880800000000000000
+      internalID: -8579800782589048630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_7
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1380
+        width: 775
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ceb241823847fa40800000000000000
+      internalID: 5401865659808399041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_8
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 1042
+        width: 571
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbd8a4e25943f270800000000000000
+      internalID: 8283044760036891577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_9
+      rect:
+        serializedVersion: 2
+        x: 3434
+        y: 259
+        width: 679
+        height: 1216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e3622c92957fc80800000000000000
+      internalID: -8289058553266291183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_10
+      rect:
+        serializedVersion: 2
+        x: 5316
+        y: 34
+        width: 3019
+        height: 1419
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844cd3350f918ee60800000000000000
+      internalID: 7991666058748347464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_11
+      rect:
+        serializedVersion: 2
+        x: 4383
+        y: 1061
+        width: 280
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c8cd37f7bcccae0800000000000000
+      internalID: -1527622425320321911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_12
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 669
+        width: 469
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c5631cbef05c5e0800000000000000
+      internalID: -1890086963378758585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_13
+      rect:
+        serializedVersion: 2
+        x: 4372
+        y: 644
+        width: 301
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd651137b759fa390800000000000000
+      internalID: -7804855271765748005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_14
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 371
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f8145ea443e84c70800000000000000
+      internalID: 8955657743148259568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_15
+      rect:
+        serializedVersion: 2
+        x: 4413
+        y: 282
+        width: 207
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8044e8948290cd220800000000000000
+      internalID: 2511892760803296264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_16
+      rect:
+        serializedVersion: 2
+        x: 3466
+        y: 15
+        width: 181
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19759f1466706dbb0800000000000000
+      internalID: -4911730207826028655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_17
+      rect:
+        serializedVersion: 2
+        x: 3727
+        y: 0
+        width: 181
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0fd1699df35c660800000000000000
+      internalID: 7405395366039646388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PopUPUI_18
+      rect:
+        serializedVersion: 2
+        x: 3458
+        y: 1341
+        width: 574
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e323d7ae66046847a34ab6e674d4687
+      internalID: 1310279885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e353026f1fcd1ed48a03e9b59fff8f6a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PopUPUI_0: -5670791773342275294
+      PopUPUI_1: 668441295900745976
+      PopUPUI_10: 7991666058748347464
+      PopUPUI_11: -1527622425320321911
+      PopUPUI_12: -1890086963378758585
+      PopUPUI_13: -7804855271765748005
+      PopUPUI_14: 8955657743148259568
+      PopUPUI_15: 2511892760803296264
+      PopUPUI_16: -4911730207826028655
+      PopUPUI_17: 7405395366039646388
+      PopUPUI_18: 1310279885
+      PopUPUI_2: 1055673545672599233
+      PopUPUI_3: 65138731120976636
+      PopUPUI_4: 2323091393973461458
+      PopUPUI_5: -1791114827619736285
+      PopUPUI_6: -8579800782589048630
+      PopUPUI_7: 5401865659808399041
+      PopUPUI_8: 8283044760036891577
+      PopUPUI_9: -8289058553266291183
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
