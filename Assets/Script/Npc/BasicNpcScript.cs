@@ -30,13 +30,11 @@ public class BasicNpcScript : MonoBehaviour
 
         if (npcInteractionBase is NpcInteractionTalk)
         {
-            SystemController.Instance.SetSystemPause(false);
-
             var unlockedTalk = npcInteractionList
                                .Where(interaction => NpcInteractionManager.Instance.IsQuestCompleted(interaction))
                                .ToList();
 
-            NpcTalkUIManager.Instance.ShowSelectionButtons(unlockedTalk);
+            NpcTalkUIManager.Instance.ShowSelectionButtons(unlockedTalk, gameObject);
         }
     }
 

@@ -46,7 +46,7 @@ public class BuildController : MonoBehaviour
         if (!privateIsBuildMode || privateSelectedPrefab == null) return;
 
         // 2. 마우스 입력 처리 (클릭 및 드래그 대응을 위해 GetMouseButton 사용)
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             HandleBuildInput();
         }
@@ -94,7 +94,7 @@ public class BuildController : MonoBehaviour
     {
         CameraController.Instance.SetFreeMode(false);
 
-        privateBuildManager.TryFinalizeAllNewConnections(privateCurrentSessionPositions);
+        //privateBuildManager.TryFinalizeAllNewConnections(privateCurrentSessionPositions);
 
         // 1. 겹침 확인 및 캐릭터 위치 조정 (가장 중요)
         SetCharactersActive(true);

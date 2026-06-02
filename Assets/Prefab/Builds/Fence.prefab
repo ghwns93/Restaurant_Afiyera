@@ -10,7 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6268459671768181698}
   - component: {fileID: 4130862912570961711}
-  m_Layer: 0
+  - component: {fileID: -3581352116678880493}
+  - component: {fileID: 2608213310552081056}
+  - component: {fileID: 6397234045570189907}
+  - component: {fileID: 2997803301048720332}
+  m_Layer: 6
   m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,10 +52,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd57d5802f149045ae5f4264e57c460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FenceNode
+  privateDayCount: 1
+  nodeSize: 2
   spriteLU: {fileID: 7002804869604546225}
   spriteLD: {fileID: 5535777581889751282}
   spriteRU: {fileID: 2753066472586545788}
   spriteRD: {fileID: 2649664802298097136}
+  privateMinCount: 3
+--- !u!114 &-3581352116678880493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812149568245938315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
+  npcName: "\uC6B8\uD0C0\uB9AC"
+  npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: a876ada6ecdbc4d4185dcb7273888831, type: 2}
+  - {fileID: 11400000, guid: d24c9b4857f954f409bfbd2542c548da, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+--- !u!61 &2608213310552081056
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812149568245938315}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!210 &6397234045570189907
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812149568245938315}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
+--- !u!114 &2997803301048720332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812149568245938315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4e3712f08695e48a97c774d7b14042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GroupSorting
 --- !u!1 &2649664802298097136
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +228,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 10009629598964769, guid: 58d546d88f2f62f4fa0f99cf89fc5371, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -143,7 +239,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!60 &1125179103989646999
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -346,7 +442,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3139843429129536200, guid: 67e2eeb188a75884689707a870e53fae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -357,7 +453,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!60 &6268209201025864401
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -568,7 +664,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!60 &6114240375959315514
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -768,7 +864,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6310074172161425775, guid: c7e8cc2b3b60c974eb62acb8f792c835, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -779,7 +875,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!60 &1527779728516552796
 PolygonCollider2D:
   m_ObjectHideFlags: 0

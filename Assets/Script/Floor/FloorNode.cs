@@ -8,8 +8,8 @@ public class FloorNode
 
     public FloorNode(Vector3Int pos)
     {
-        privateCellPos = pos;
-        PrivateIsAnimalArea = false;
+        this.privateCellPos = pos;
+        this.PrivateIsAnimalArea = false;
     }
 
     public bool PrivateIsAnimalArea { get => privateIsAnimalArea; set => privateIsAnimalArea = value; }

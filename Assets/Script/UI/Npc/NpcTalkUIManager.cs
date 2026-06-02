@@ -56,9 +56,11 @@ public class NpcTalkUIManager : MonoBehaviour
         }
     }
 
-    public void ShowSelectionButtons(List<NpcInteractionBase> dialogues)
+    public void ShowSelectionButtons(List<NpcInteractionBase> dialogues, GameObject actor)
     {
         if(gameObject.activeSelf == false) gameObject.SetActive(true);
+
+        SystemController.Instance.SetSystemPause(false);
 
         activeButtons.Clear();
 
@@ -69,7 +71,7 @@ public class NpcTalkUIManager : MonoBehaviour
         foreach (var data in dialogues)
         {
             var btn = Instantiate(buttonPrefab, buttonContainer).GetComponent<NpcTalkButton>();
-            btn.Setup(data);
+            btn.Setup(data, actor);
 
             activeButtons.Add(btn);
         }
@@ -80,5 +82,14 @@ public class NpcTalkUIManager : MonoBehaviour
         if (gameObject.activeSelf == false) gameObject.SetActive(true);
 
         npcTalkText.text = text;
+    }
+
+    public void EndTalk()
+    {
+        npcTalkText.text = "";
+
+        SystemController.Instance.SetSystemPause(true);
+
+        gameObject.SetActive(false);
     }
 }

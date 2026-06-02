@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,14 +7,18 @@ public class NpcTalkButton : MonoBehaviour
 {
     private NpcInteractionBase targetNib;
 
+    private GameObject actor;
+
     public Image highlightImage; // 선택되었을 때 보여줄 이미지
     public TextMeshProUGUI nameText;
 
     public Button button;
 
-    public void Setup(NpcInteractionBase nib)
+    public void Setup(NpcInteractionBase nib, GameObject actor)
     {
         targetNib = nib;
+
+        this.actor = actor;
 
         nameText.text = nib.dialogueKey;
 
@@ -24,7 +29,7 @@ public class NpcTalkButton : MonoBehaviour
 
     public void Onclick()
     {
-        targetNib.Execute(gameObject);
+        targetNib.Execute(actor);
     }
 
     public void SetHighlight(bool isSelected)

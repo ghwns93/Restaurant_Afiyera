@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -7,8 +8,7 @@ public class BuildManager : MonoBehaviour
     public static BuildManager Instance;
 
     [SerializeField] private Tilemap privateTargetTilemap;
-
-    [SerializeField] private Vector3 buildAnchor;
+    [SerializeField] private Vector3 baseAnchor;
 
     // [추가] 상하좌우 4방향을 체크하기 위한 방향 벡터 배열
     private readonly Vector3Int[] privateDirections = {
@@ -82,21 +82,37 @@ public class BuildManager : MonoBehaviour
 
     public bool PlaceNode(Vector3Int pos, GameObject prefab)
     {
-        // 1. 겹침 확인: 이미 해당 좌표에 키값이 있다면 설치 중단
-        if (FloorManager.Instance.GetFloorAt(pos) == null || HasNodeAt(pos))
-        {
-            return false;
-        }
-
-        Vector3 setPosition = PrivateTargetTilemap.GetCellCenterWorld(pos);
-
         // 2. 생성 및 데이터 등록
         GameObject obj = Instantiate(prefab, transform);
-        obj.transform.position = new Vector3(setPosition.x + buildAnchor.x, setPosition.y + buildAnchor.y, 0);
 
         BasicNode newNode = obj.GetComponent<BasicNode>();
+
+        var NodeOffset = GenerateBuildingOffsets(pos, newNode.NodeSize);
+
+        foreach(var offset in NodeOffset)
+        {
+            // 설치하려는 건물의 크기에 해당하는 모든 칸이 유효한지 확인
+            if (FloorManager.Instance.GetFloorAt(offset) == null || HasNodeAt(offset))
+            {
+                // 하나라도 겹치거나 바닥이 없으면 설치 실패 처리
+                Destroy(obj);
+                return false;
+            }
+        }
+
+        foreach (var offset in NodeOffset)
+        {
+            // 모든 칸이 유효하므로, 각 칸마다 노드 등록
+             if (!privateAllNodes.ContainsKey(offset))
+             {
+                 privateAllNodes.Add(offset, newNode);
+            }
+        }
+
         newNode.Setup(pos);
-        privateAllNodes.Add(pos, newNode);
+
+        obj.transform.position = GetCenterWorldPosition(NodeOffset);
+        obj.transform.position += (baseAnchor + new Vector3(0, (newNode.NodeSize * 2 + 1) * 0.25f, 0));
 
         // 3. 만약 설치한 것이 울타리라면, 해당 칸을 동물 구역으로 설정
         if (newNode is FenceNode)
@@ -104,8 +120,8 @@ public class BuildManager : MonoBehaviour
             FloorManager.Instance.UpdateAnimalArea(pos, true);
         }
 
-        // 4. 주변 노드들에게 변화를 알림 (UpdateVisual 호출)
-        NotifyNeighbors(pos);
+        // 고정 건물 크기로 변경으로 인해 안씀
+        //NotifyNeighbors(pos);
 
         privateIsDirty = true;
 
@@ -141,6 +157,7 @@ public class BuildManager : MonoBehaviour
 
     public void TryFinalizeAllNewConnections(List<Vector3Int> newPlacedPositions)
     {
+        #region [ 울타리 자유 설정일 경우 코드 ]
         // 이미 검사 완료된 좌표를 저장 (중복 방지용)
         HashSet<Vector3Int> processedPositions = new HashSet<Vector3Int>();
 
@@ -213,6 +230,7 @@ public class BuildManager : MonoBehaviour
                 }
             }
         }
+        #endregion
     }
 
     public Vector3Int FindNearestEmptyCell(Vector3Int startPos)
@@ -244,5 +262,78 @@ public class BuildManager : MonoBehaviour
 
         // 만약 maxRange 안에서도 못 찾았다면 (매우 드문 경우) 원래 위치 반환
         return startPos;
+    }
+
+    public List<Vector3Int> GenerateBuildingOffsets(Vector3Int centerPos, int range)
+    {
+        List<Vector3Int> occupiedList = new List<Vector3Int>();
+
+        // 예외 처리: 범위가 1 미만이면 기준점만 반환하거나 빈 리스트 반환
+        if (range < 1)
+        {
+            occupiedList.Add(centerPos);
+            return occupiedList;
+        }
+
+        // 규칙에 따른 X, Y의 최소/최대 오프셋 계산
+        int minOffset = 0;
+        int maxOffset = 0;
+
+        if (range % 2 != 0)
+        {
+            // 홀수 (1, 3, 5...) 일 때는 기준점 중심으로 양방향 균등 확장
+            minOffset = -(range / 2); // 1->0, 3->-1, 5->-2
+            maxOffset = range / 2;    // 1->0, 3->1, 5->2
+        }
+        else
+        {
+            // 짝수 (2, 4...) 일 때는 위쪽(양수) 영역으로 한 칸 더 치우치게 확장
+            minOffset = -(range / 2) + 1; // 2->0, 4->-1
+            maxOffset = range / 2;        // 2->1, 4->2
+        }
+
+        // 계산된 범위를 바탕으로 이중 루프를 돌며 좌표 추가
+        for (int x = minOffset; x <= maxOffset; x++)
+        {
+            for (int y = minOffset; y <= maxOffset; y++)
+            {
+                // 기준점에 상대 오프셋을 더해 최종 좌표 생성
+                Vector3Int targetTile = new Vector3Int(centerPos.x + x, centerPos.y + y, centerPos.z);
+                occupiedList.Add(targetTile);
+            }
+        }
+
+        return occupiedList;
+    }
+
+    public Vector3 GetCenterWorldPosition(List<Vector3Int> occupiedTiles)
+    {
+        // 예외 처리: 리스트가 비어있으면 원점 반환
+        if (occupiedTiles == null || occupiedTiles.Count == 0)
+            return Vector3.zero;
+
+        List<Vector3> worldPositions = new List<Vector3>();
+
+        foreach(var tile in occupiedTiles)
+        {
+            Vector3 worldPos = privateTargetTilemap.CellToWorld(tile);
+            worldPositions.Add(worldPos);
+        }
+
+        float averageX = 0f;
+        float averageY = 0f;
+
+        foreach(var pos in worldPositions)
+        {
+            averageX += pos.x;
+            averageY += pos.y;
+        }
+
+        averageX /= worldPositions.Count;
+        averageY /= worldPositions.Count;
+
+        Vector3 centerWorldPos = new Vector3(averageX, averageY, 0f);
+
+        return centerWorldPos;
     }
 }

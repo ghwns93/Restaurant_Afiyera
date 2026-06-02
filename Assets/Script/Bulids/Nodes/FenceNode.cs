@@ -12,11 +12,13 @@ public class FenceNode : BasicNode, IConnectable
 
     public override void Setup(Vector3Int pos)
     {
-        privateCellPos = pos;
-        UpdateVisual();
+        base.Setup(pos);
+        //UpdateVisual(); // 설치 시 초기 그래픽 업데이트
     }
 
+    #region [ 가변 울타리 코드 ]
     // 주변 상태를 확인하고 내 그래픽을 갱신하는 핵심 함수
+    // 26.05.28 고정크기로 변경
     public override void UpdateVisual()
     {
         // FenceManager에게 주변에 울타리가 있는지 물어봅니다.
@@ -36,14 +38,25 @@ public class FenceNode : BasicNode, IConnectable
     public void OnConnectionFailed()
     {
         // 연결 부족 시 스스로 파괴 (BuildManager에서 처리해도 됨)
-        Debug.Log("연결 부족으로 철거됩니다.");
-        Destroy(gameObject);
+        //Debug.Log("연결 부족으로 철거됩니다.");
+        //Destroy(gameObject);
     }
 
     public void OnConnectionSuccess(int totalCount)
     {
-        Debug.Log($"{totalCount}개의 울타리가 연결되었습니다!");
+        //Debug.Log($"{totalCount}개의 울타리가 연결되었습니다!");
         // 여기서 울타리 비주얼 연결 등의 추가 로직 수행
+    }
+    #endregion
+
+    public override void ManagementAction()
+    {
+        Debug.Log("울타리 관리!");
+    }
+
+    public override void HarvestAction()
+    {
+        Debug.Log("울타리 수확!");
     }
 
     public override void DayAction()

@@ -43,6 +43,7 @@ public class FloorManager : MonoBehaviour
     public void UpdateAnimalArea(Vector3Int pos, bool isInside)
     {
         FloorNode floor = GetFloorAt(pos);
+
         if (floor != null)
         {
             floor.PrivateIsAnimalArea = isInside;
