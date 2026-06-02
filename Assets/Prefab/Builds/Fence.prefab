@@ -52,6 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd57d5802f149045ae5f4264e57c460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FenceNode
+  harvestItem: {fileID: 11400000, guid: d6e8ac2ff4921ac4c90ac5a8863ad698, type: 2}
+  harvestAmount: 1
   privateDayCount: 1
   nodeSize: 2
   spriteLU: {fileID: 7002804869604546225}

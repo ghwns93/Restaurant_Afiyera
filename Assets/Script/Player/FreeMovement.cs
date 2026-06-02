@@ -39,7 +39,6 @@ public class FreeMovement : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 
         moveInput = new Vector2(h, v * (h != 0 ? 0.5f : 1f));
-        //moveInput = new Vector2(h, v * 0.5f);
 
         // 대각선 이동 시 속도가 빨라지지 않도록 정규화 (Normalize)
         if (moveInput.sqrMagnitude > 1)

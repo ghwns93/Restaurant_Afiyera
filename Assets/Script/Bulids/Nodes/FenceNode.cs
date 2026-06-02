@@ -57,10 +57,16 @@ public class FenceNode : BasicNode, IConnectable
     public override void HarvestAction()
     {
         Debug.Log("울타리 수확!");
+
+        InventoryManager.Instance.AddItem(harvestItem, harvestAmount);
+        isHarvested = true;
+        currentDayCount = 0;
     }
 
     public override void DayAction()
     {
+        isHarvested = false; // 매일 수확 가능하도록 초기화
 
+        currentDayCount = Mathf.Max(currentDayCount + 1, harvestTime); // 일 수 카운트 증가 (harvestTime 이상으로는 증가하지 않음)
     }
 }

@@ -5,6 +5,13 @@ public abstract class BasicNode : MonoBehaviour
     // 자식 클래스에서도 접근 가능하도록 protected 사용
     protected Vector3Int privateCellPos;
 
+    [SerializeField] protected ItemData harvestItem; // 수확 시 얻는 아이템 정보
+    [SerializeField] protected int harvestAmount = 1; // 수확 시 얻는 아이템 수량
+    [SerializeField] protected int harvestTime = 3; // 수확까지 걸리는 시간 (일 단위)
+
+    protected int currentDayCount = 0; // 현재 일 수 카운트
+    protected bool isHarvested = false; // 수확 여부
+
     [SerializeField] protected int privateDayCount = 1; // 몇 일마다 실행할지 (주기)
     [SerializeField] private int nodeSize = 1; // 건물 사이즈
     public int DayCount => privateDayCount;
@@ -29,6 +36,8 @@ public abstract class BasicNode : MonoBehaviour
         {
             orderLayer.SetFenceOrder(privateCellPos);
         }
+
+        currentDayCount = harvestTime;
     }
 
     // 외부에서 좌표 정보를 확인할 때 사용
