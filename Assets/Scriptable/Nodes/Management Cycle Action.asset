@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a4e6acfbfb8784085ef2bff11f94b2, type: 3}
   m_Name: Management Cycle Action
   m_EditorClassIdentifier: Assembly-CSharp::NodeManagementCycleAction
-  dialogueKey: 
-  isUnRocked: 0
+  dialogueKey: "\uC0DD\uC0B0 \uC8FC\uAE30 \uAC10\uC18C"
+  isUnRocked: 1

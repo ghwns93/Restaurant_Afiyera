@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NodeManagementAction
   dialogueKey: "\uAD00\uB9AC"
   isUnRocked: 1
+  subNpcInteractionBase:
+  - {fileID: 11400000, guid: fb0f8cc8132eeb84d8455b443c30298b, type: 2}
+  - {fileID: 11400000, guid: d2fc803370bfa9f4cafc8bed521ca3c8, type: 2}
