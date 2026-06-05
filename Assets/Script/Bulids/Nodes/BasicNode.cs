@@ -14,6 +14,9 @@ public abstract class BasicNode : MonoBehaviour
 
     [SerializeField] protected int privateDayCount = 1; // 몇 일마다 실행할지 (주기)
     [SerializeField] private int nodeSize = 1; // 건물 사이즈
+
+    protected BasicNpcScript nodesBasicNpcScript;
+
     public int DayCount => privateDayCount;
     public int NodeSize { get => nodeSize; set => nodeSize = value; }
 
@@ -38,6 +41,8 @@ public abstract class BasicNode : MonoBehaviour
         }
 
         currentDayCount = harvestTime;
+
+        nodesBasicNpcScript = GetComponent<BasicNpcScript>();
     }
 
     // 외부에서 좌표 정보를 확인할 때 사용
@@ -53,8 +58,10 @@ public abstract class BasicNode : MonoBehaviour
 
     //수확 행동
     public abstract void HarvestAction();
-    //관리 행동
-    public abstract void ManagementAction();
+    //관리 수량증가 행동
+    public abstract void ManagementCountAction();
+    //관리 주기감소 행동
+    public abstract void ManagementCycleAction();
     //하루 종료 시 행동
     public abstract void DayAction();
 }

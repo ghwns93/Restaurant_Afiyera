@@ -6,11 +6,15 @@ public class MovedObjectSorting : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Tilemap targetTilemap;
 
+    private int originalSortingOrder;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         // 씬에 있는 타일맵을 찾아서 연결 (또는 매니저를 통해 참조)
         targetTilemap = BuildManager.Instance.PrivateTargetTilemap;
+
+        originalSortingOrder = spriteRenderer.sortingOrder;
     }
 
     private void LateUpdate()
@@ -27,6 +31,6 @@ public class MovedObjectSorting : MonoBehaviour
 
         // 3. 울타리 뒷벽(0)과 앞벽(2) 사이에 NPC가 위치하도록 고정값 1을 더해줍니다.
         // 타일 경계를 넘어가는 순간 유니티 타일맵 좌표가 알아서 변경되므로 툭툭 끊기지 않습니다.
-        spriteRenderer.sortingOrder = baseOrder + 1;
+        spriteRenderer.sortingOrder = baseOrder + originalSortingOrder;
     }
 }

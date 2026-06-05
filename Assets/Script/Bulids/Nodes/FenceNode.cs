@@ -49,13 +49,14 @@ public class FenceNode : BasicNode, IConnectable
     }
     #endregion
 
-    public override void ManagementAction()
-    {
-        Debug.Log("울타리 관리!");
-    }
-
     public override void HarvestAction()
     {
+        if(isHarvested == true)
+        {               
+            NpcTalkUIManager.Instance.SetTalkText("이미 수확된 울타리입니다.");
+            return;
+        }
+
         Debug.Log("울타리 수확!");
 
         InventoryManager.Instance.AddItem(harvestItem, harvestAmount);
@@ -65,8 +66,21 @@ public class FenceNode : BasicNode, IConnectable
 
     public override void DayAction()
     {
-        isHarvested = false; // 매일 수확 가능하도록 초기화
+        if (currentDayCount == harvestTime)
+        {
+            isHarvested = false;
+        }
 
         currentDayCount = Mathf.Max(currentDayCount + 1, harvestTime); // 일 수 카운트 증가 (harvestTime 이상으로는 증가하지 않음)
+    }
+
+    public override void ManagementCountAction()
+    {
+        Debug.Log("울타리 관리 수량 증가!");
+    }
+
+    public override void ManagementCycleAction()
+    {
+        Debug.Log("울타리 주기 감소 증가!");
     }
 }

@@ -30,6 +30,12 @@ public class NpcInteractionManager : MonoBehaviour
         else questDatabase[id] = true;
     }
 
+    public void LockQuest(NpcInteractionInterface id)
+    {
+        if (!questDatabase.ContainsKey(id)) questDatabase.Add(id, false);
+        else questDatabase[id] = false;
+    }
+
     // 조건 충족 여부 확인
     public bool IsQuestCompleted(NpcInteractionInterface id)
     {
