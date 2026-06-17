@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeb291f23fe5e3c44a39d762b1a7ac11, type: 3}
-  m_Name: Milk
+  m_Name: 105Embers
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  id: 102
-  itemName: "\uC6B0\uC720"
-  icon: {fileID: -5852625888509824730, guid: e63e946f14013044c961a87ec6120300, type: 3}
-  description: "\uC6B0\uC720\uB2E4"
+  id: 105
+  itemName: "\uBD88\uC528"
+  icon: {fileID: -2874742198191501360, guid: 20ecc1245e9bff34bbdd1ee8eee72cf9, type: 3}
+  description: "\uBD88\uC528\uB2E4"

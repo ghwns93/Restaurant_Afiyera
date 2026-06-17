@@ -18,7 +18,7 @@ public class AfieraNode : BasicNode
 
     public override void HarvestAction()
     {
-        SceneController.Instance.LoadSubScene(SceneType.Restaurant);
+        SceneController.Instance.LoadSubScene(SceneType.Home);
     }
 
     public override void ManagementCountAction()

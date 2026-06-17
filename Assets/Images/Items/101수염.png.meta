@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 609f041f6e4cd2847ac0468925dfdb71
+guid: 16b8d2694ebdf2642916de110f6adfdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3849830125932790540
-    second: Char2_Normal3_0
+      213: -2293904488236200279
+    second: "101\uC218\uC5FC_0"
+  - first:
+      213: 6780031845284946242
+    second: "101\uC218\uC5FC_1"
+  - first:
+      213: 8154212220834195076
+    second: "101\uC218\uC5FC_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -96,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Char2_Normal3_0
+      name: "101\uC218\uC5FC_0"
       rect:
         serializedVersion: 2
-        x: 193
-        y: 30
-        width: 1467
-        height: 3314
+        x: 120
+        y: 478
+        width: 484
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fcbd22d5e7a29ac0800000000000000
-      internalID: -3849830125932790540
+      spriteID: 9aec106850a6a20e0800000000000000
+      internalID: -2293904488236200279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "101\uC218\uC5FC_1"
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 366
+        width: 552
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241ab088a03871e50800000000000000
+      internalID: 6780031845284946242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "101\uC218\uC5FC_2"
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 118
+        width: 499
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486a8fddfc4992170800000000000000
+      internalID: 8154212220834195076
       vertices: []
       indices: 
       edges: []
@@ -148,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Char2_Normal3_0: -3849830125932790540
+      "101\uC218\uC5FC_0": -2293904488236200279
+      "101\uC218\uC5FC_1": 6780031845284946242
+      "101\uC218\uC5FC_2": 8154212220834195076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
