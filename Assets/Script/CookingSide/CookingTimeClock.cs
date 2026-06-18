@@ -1,0 +1,47 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System;
+
+public class CookingTimeClock : MonoBehaviour
+{
+    [SerializeField] private GameObject _timer;
+    [SerializeField] private Image _fill;
+    [SerializeField] private float _clockTime;
+
+    public event Action OnTimerEnd;
+
+    public void ActiveFillTimer()
+    {
+        _fill.fillAmount = 1;
+        _timer.SetActive(true);
+        StartCoroutine(FillTimer());
+    }
+
+    IEnumerator FillTimer()
+    {
+        float nt = _clockTime;
+
+        if (nt <= 0)
+        {
+            _fill.fillAmount = 0;
+            _timer.SetActive(false);
+            OnTimerEnd?.Invoke();
+            OnTimerEnd = null;
+            yield break;
+        }
+
+        while (nt > 0)
+        {
+            _fill.fillAmount = nt / _clockTime;
+            nt -= Time.deltaTime;
+
+            yield return null;
+        }
+
+        _fill.fillAmount = 0;
+        _timer.SetActive(false);
+        OnTimerEnd?.Invoke();
+        OnTimerEnd = null;
+    }
+}

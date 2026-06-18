@@ -178,7 +178,7 @@ TextureImporter:
         height: 233
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 100, y: 80, z: 100, w: 80}
       customData: 
       outline: []
       physicsShape: []
@@ -217,12 +217,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1162
-        y: 434
+        y: 556
         width: 1022
-        height: 540
+        height: 418
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 145, y: 130, z: 145, w: 130}
       customData: 
       outline: []
       physicsShape: []
@@ -230,6 +230,28 @@ TextureImporter:
       bones: []
       spriteID: 6b18cf8bab168faf0800000000000000
       internalID: -362432315407957578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CookingUI2_5
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 435
+        width: 105
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d48b082b7e2c449b557ea4cd73cc7b
+      internalID: 353788895
       vertices: []
       indices: 
       edges: []
@@ -253,6 +275,7 @@ TextureImporter:
       CookingUI2_2: -1250993435313767086
       CookingUI2_3: -49451342797460520
       CookingUI2_4: -362432315407957578
+      CookingUI2_5: 353788895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
