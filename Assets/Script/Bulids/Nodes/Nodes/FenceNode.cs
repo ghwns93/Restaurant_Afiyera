@@ -57,11 +57,11 @@ public class FenceNode : BasicNode, IConnectable
             return;
         }
 
-        Debug.Log("울타리 수확!");
-
         InventoryManager.Instance.AddItem(harvestItem, harvestAmount);
         isHarvested = true;
         currentDayCount = 0;
+
+        NpcTalkUIManager.Instance.EndTalk();
     }
 
     public override void DayAction()

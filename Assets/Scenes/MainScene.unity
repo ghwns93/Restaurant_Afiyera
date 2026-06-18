@@ -436,6 +436,8 @@ MonoBehaviour:
     sceneName: NpcSelectionUiScene
   - type: 8
     sceneName: NpcInterationUiScene
+  - type: 9
+    sceneName: HomeScene
   optionOpened: 0
 --- !u!1 &1356914880
 GameObject:

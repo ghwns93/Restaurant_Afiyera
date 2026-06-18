@@ -85,17 +85,30 @@ public class BuildManager : MonoBehaviour
         // 2. 생성 및 데이터 등록
         GameObject obj = Instantiate(prefab, transform);
 
+        bool result = InsertNode(pos, obj);
+
+        if(result == false)
+        {
+            // 설치 실패 시 생성된 오브젝트 제거
+            Destroy(obj);
+            return false;
+        }
+
+        return true;
+    }
+
+    public bool InsertNode(Vector3Int pos, GameObject obj)
+    {
         BasicNode newNode = obj.GetComponent<BasicNode>();
 
         var NodeOffset = GenerateBuildingOffsets(pos, newNode.NodeSize);
 
-        foreach(var offset in NodeOffset)
+        foreach (var offset in NodeOffset)
         {
             // 설치하려는 건물의 크기에 해당하는 모든 칸이 유효한지 확인
             if (FloorManager.Instance.GetFloorAt(offset) == null || HasNodeAt(offset))
             {
                 // 하나라도 겹치거나 바닥이 없으면 설치 실패 처리
-                Destroy(obj);
                 return false;
             }
         }
@@ -103,9 +116,9 @@ public class BuildManager : MonoBehaviour
         foreach (var offset in NodeOffset)
         {
             // 모든 칸이 유효하므로, 각 칸마다 노드 등록
-             if (!privateAllNodes.ContainsKey(offset))
-             {
-                 privateAllNodes.Add(offset, newNode);
+            if (!privateAllNodes.ContainsKey(offset))
+            {
+                privateAllNodes.Add(offset, newNode);
             }
         }
 
@@ -117,7 +130,10 @@ public class BuildManager : MonoBehaviour
         // 3. 만약 설치한 것이 울타리라면, 해당 칸을 동물 구역으로 설정
         if (newNode is FenceNode)
         {
-            FloorManager.Instance.UpdateAnimalArea(pos, true);
+            foreach (var offset in NodeOffset)
+            {
+                FloorManager.Instance.UpdateAnimalArea(offset, true);
+            }
         }
 
         // 고정 건물 크기로 변경으로 인해 안씀
