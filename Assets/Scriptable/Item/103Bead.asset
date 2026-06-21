@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: "\uAD6C\uC2AC"
   icon: {fileID: 418469737902591561, guid: f2adc6f5c9bc7b643860669d34a54aa2, type: 3}
   description: "\uAD6C\uC2AC\uC774\uB2E4"
+  buffEffect: {fileID: 11400000, guid: 580d5f3acbb5ca74e9accca2dfd5a12e, type: 2}

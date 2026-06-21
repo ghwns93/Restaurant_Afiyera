@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd57d5802f149045ae5f4264e57c460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FenceNode
-  harvestItem: {fileID: 11400000, guid: bef835555af95ac45a83663d35862cfc, type: 2}
+  harvestItem: {fileID: 11400000, guid: 812d8558b3e82ea4c8b00227ffad2493, type: 2}
   harvestAmount: 1
   harvestTime: 3
   privateDayCount: 1

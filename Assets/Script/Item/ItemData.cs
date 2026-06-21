@@ -7,4 +7,6 @@ public class ItemData : ScriptableObject
     public string itemName;       // 이름
     public Sprite icon;           // UI에 표시할 아이콘
     [TextArea] public string description; // 설명
+
+    public BuffEffect buffEffect; // 일꾼 버프
 }

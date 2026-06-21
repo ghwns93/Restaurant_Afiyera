@@ -7,11 +7,24 @@ public class MaterialInfoPanelScript : MonoBehaviour
     [SerializeField] private Image matImage;
     [SerializeField] private TextMeshProUGUI matNameText;
     [SerializeField] private TextMeshProUGUI matDescriptionText;
+    [SerializeField] private TextMeshProUGUI matSubDescriptionText;
 
     public void SetMaterialInfo(ItemData showItem)
     {
         if (matImage != null) matImage.sprite = showItem.icon;
         if (matNameText != null) matNameText.text = showItem.itemName;
         if (matDescriptionText != null) matDescriptionText.text = showItem.description;
+
+        if (matSubDescriptionText != null)
+        {
+            if (showItem.buffEffect != null)
+            {
+                matSubDescriptionText.text = $"버프 효과: {showItem.buffEffect.description}";
+            }
+            else
+            {
+                matSubDescriptionText.text = "";
+            }
+        }
     }
 }

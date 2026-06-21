@@ -12,6 +12,11 @@ public abstract class TimeBase : MonoBehaviour
         //Debug.Log($"새로운 날이 밝았습니다! 현재 날짜: {privateNowDay}일");
 
         ProcessDayActions();
+
+        if(BuffManager.Instance != null)
+        {
+            BuffManager.Instance.DayCheck(1); // 버프 지속 시간 감소
+        }
     }
 
     protected virtual void ProcessDayActions()
