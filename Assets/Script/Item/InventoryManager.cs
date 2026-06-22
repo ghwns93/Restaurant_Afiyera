@@ -34,19 +34,36 @@ public class InventoryManager : MonoBehaviour
         Debug.Log($"{item.itemName} x{count} 인벤토리 추가 완료.");
     }
 
+    public void ReduceItem(ItemData item, int count)
+    {
+        if (item == null || count <= 0) return;
+        ItemSlot existingSlot = slots.Find(s => s.itemData.id == item.id);
+
+        if (existingSlot != null && existingSlot.quantity > 0)
+        {
+            existingSlot.quantity -= count;
+        }
+        else
+        {
+            return;
+        }
+
+        Debug.Log($"{item.itemName} x {count} 인벤토리 감소 완료.");
+    }
+
     public int GetItem(ItemData item)
     {
         if (item == null) return 0;
 
         ItemSlot existingSlot = slots.Find(s => s.itemData.id == item.id);
 
-        if(existingSlot != null)
+        if (existingSlot != null)
         {
             return existingSlot.quantity;
         }
         else
         {
             return 0;
-        }    
+        }
     }
 }

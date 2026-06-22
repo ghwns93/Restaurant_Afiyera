@@ -2,19 +2,22 @@ using UnityEngine;
 
 public class CookingWorker : MonoBehaviour
 {
-    [SerializeField] private int _matID;
+    [SerializeField] private ItemData _data;
     [SerializeField] private CookingTimeClock _clock;
     [SerializeField] private GameObject _matSlot;
 
-    public void StartWorking(int matid)
+    public bool _isWorking = false;
+
+    public void StartWorking(ItemData data)
     {
-        this._matID = matid;
+        _isWorking = true;
+        this._data = data;
         _clock.OnTimerEnd += InstantiateMaterial;
         _clock.ActiveFillTimer();
     }
 
     public void InstantiateMaterial()
     {
-
+        Debug.Log("Instantiate Material");
     }
 }
