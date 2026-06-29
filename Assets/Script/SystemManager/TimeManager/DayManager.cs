@@ -1,7 +1,9 @@
-using UnityEngine;
-using System.Collections.Generic;
+using NUnit.Framework.Internal.Execution;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+// 시간이 흐르는 방식
 public class DayManager : TimeBase
 {
     public static DayManager Instance;
@@ -12,9 +14,6 @@ public class DayManager : TimeBase
     private float timePerOnce;
 
     private int nowTime = 0;
-
-    private const float realSecondsPerDay = 86400; // 실제 하루의 초 수 (24시간 * 60분 * 60초)
-    private const int secondsPerHour = 3600; // 한 시간의 초 수
 
     private Coroutine ClockCoroutine;
 
@@ -86,11 +85,13 @@ public class DayManager : TimeBase
             yield return new WaitForSecondsRealtime(1); // 1초마다 체크
             nowOneDayTime += timePerOnce; // 게임 내 시간 증가
 
-            if(realSecondsPerDay <= nowOneDayTime)
+            if(nowOneDayTime >= (workTime * secondsPerHour) && isWorking == false)
             {
-                nowOneDayTime = 0; // 하루가 끝나면 시간 초기화
-                nowTime = 0;
-                NextDay(); // 다음 날로 넘어감
+                GoToWork();
+            }
+            else if(nowOneDayTime >= (sleepTime * secondsPerHour))
+            {
+                GoToSleep();
             }
 
             int currentHour = (int)(nowOneDayTime / secondsPerHour); // 현재 시간 계산
@@ -101,5 +102,23 @@ public class DayManager : TimeBase
                 //Debug.Log($"현재 시간: {nowTime}시");
             }
         }
+    }
+
+    protected override void GoToWork()
+    {
+        Debug.Log("일하러 갈 시간");
+        isWorking = true;
+    }
+
+    protected override void GoToSleep()
+    {
+        Debug.Log("자러 갈 시간");
+
+        nowOneDayTime = 0; // 하루가 끝나면 시간 초기화
+        nowTime = 0;
+
+        isWorking = false;
+
+        NextDay(); // 다음 날로 넘어감
     }
 }
