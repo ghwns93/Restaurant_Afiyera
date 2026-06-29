@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 일정시간이 + 되는 방식
 public class TimeManager : TimeBase
 {
     [SerializeField]
@@ -33,5 +34,15 @@ public class TimeManager : TimeBase
         {
             TimeEvents.OnDayEnded?.Invoke(); // 하루 종료 이벤트 발생
         }
+    }
+
+    protected override void GoToWork()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    protected override void GoToSleep()
+    {
+        throw new System.NotImplementedException();
     }
 }

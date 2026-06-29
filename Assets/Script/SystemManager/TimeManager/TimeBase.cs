@@ -5,6 +5,14 @@ public abstract class TimeBase : MonoBehaviour
 {
     [SerializeField] private int privateNowDay = 1;
 
+    [SerializeField] protected int workTime = 10;
+    [SerializeField] protected int sleepTime = 24;
+
+    protected const float realSecondsPerDay = 86400; // 실제 하루의 초 수 (24시간 * 60분 * 60초)
+    protected const int secondsPerHour = 3600; // 한 시간의 초 수
+
+    protected bool isWorking = false;
+
     // 날짜가 넘어갈 때 호출하는 함수 (예: 자고 일어났을 때)
     public virtual void NextDay()
     {
@@ -13,7 +21,9 @@ public abstract class TimeBase : MonoBehaviour
 
         ProcessDayActions();
 
-        if(BuffManager.Instance != null)
+        isWorking = false; // 하루가 끝나면 작업 상태를 초기화
+
+        if (BuffManager.Instance != null)
         {
             BuffManager.Instance.DayCheck(1); // 버프 지속 시간 감소
         }
@@ -49,4 +59,7 @@ public abstract class TimeBase : MonoBehaviour
             }
         }
     }
+
+    protected abstract void GoToWork();
+    protected abstract void GoToSleep();
 }
