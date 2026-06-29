@@ -15,4 +15,6 @@ MonoBehaviour:
   id: 105
   itemName: "\uAC00\uB8E8"
   icon: {fileID: -2039430546730315554, guid: 4ab15b7ed49e983488b363a7def6e6f4, type: 3}
+  refineIcon: {fileID: -2039430546730315554, guid: 4ab15b7ed49e983488b363a7def6e6f4, type: 3}
   description: "\uAC00\uB8E8\uB2E4"
+  buffEffect: {fileID: 0}

@@ -13,7 +13,7 @@ public class CookingResourcePanelController : MonoBehaviour
         _IM = InventoryManager.Instance;
         List<ItemSlot> slots = new List<ItemSlot>(_IM.slots);
 
-        CookingResourceButton temp = new CookingResourceButton();
+        CookingResourceButton temp = null;
 
         foreach (ItemSlot slot in slots)
         {

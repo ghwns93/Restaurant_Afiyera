@@ -5,6 +5,7 @@ public class CookingWorkerManager : MonoBehaviour
     public static CookingWorkerManager Instance { get; private set; }
     [SerializeField] private CookingWorker[] _workers;
 
+    [SerializeField] GameObject _refineObject;
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -29,5 +30,12 @@ public class CookingWorkerManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void CreateRefineObject(ItemData data,Transform pos)
+    {
+        CookingRefineResource refine = Instantiate(_refineObject, pos).GetComponent<CookingRefineResource>();
+        refine._data = data;
+        refine._sprite.sprite = data.refineIcon;
     }
 }

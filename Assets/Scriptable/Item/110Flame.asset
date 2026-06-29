@@ -15,4 +15,6 @@ MonoBehaviour:
   id: 110
   itemName: "\uBD88\uAF43"
   icon: {fileID: 1375682084760014563, guid: 5d505297a17b7494fb26832c5e883b2f, type: 3}
+  refineIcon: {fileID: 1375682084760014563, guid: 5d505297a17b7494fb26832c5e883b2f, type: 3}
   description: "\uBD88\uAF43\uC774\uB2E4"
+  buffEffect: {fileID: 0}

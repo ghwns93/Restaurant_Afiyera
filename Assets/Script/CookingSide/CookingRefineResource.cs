@@ -3,6 +3,6 @@ using UnityEngine.UI;
 
 public class CookingRefineResource : MonoBehaviour
 {
-    [SerializeField] private ItemData _data;
-    [SerializeField] private Image _sprite;
+    public ItemData _data;
+    public Image _sprite;
 }

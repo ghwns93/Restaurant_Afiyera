@@ -18,6 +18,6 @@ public class CookingWorker : MonoBehaviour
 
     public void InstantiateMaterial()
     {
-        Debug.Log("Instantiate Material");
+        CookingWorkerManager.Instance.CreateRefineObject(_data,_matSlot.transform);
     }
 }

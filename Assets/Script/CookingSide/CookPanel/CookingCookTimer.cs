@@ -1,9 +1,9 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System;
 
-public class CookingTimeClock : MonoBehaviour
+public class CookingCookTimer : MonoBehaviour
 {
     [SerializeField] private GameObject _timer;
     [SerializeField] private Image _fill;
@@ -11,27 +11,27 @@ public class CookingTimeClock : MonoBehaviour
 
     public event Action OnTimerEnd;
 
-    public void ActiveFillTimer()
+    public void ActiveCookTimer()
     {
         _fill.fillAmount = 1;
-        _timer.SetActive(true);
-        StartCoroutine(FillTimer());
+        //_timer.SetActive(true);
+        StartCoroutine(CookTimer());
     }
 
-    IEnumerator FillTimer()
+    IEnumerator CookTimer()
     {
         float nt = _clockTime;
 
-        if (nt <= 0)
+        if(nt<= 0)
         {
-            _fill.fillAmount = 0;
-            _timer.SetActive(false);
+            _fill.fillAmount = 1;
+            //_timer.SetActive(false);
             OnTimerEnd?.Invoke();
             OnTimerEnd = null;
             yield break;
         }
 
-        while (nt > 0)
+        while(nt > 0)
         {
             _fill.fillAmount = nt / _clockTime;
             nt -= Time.deltaTime;
@@ -39,8 +39,8 @@ public class CookingTimeClock : MonoBehaviour
             yield return null;
         }
 
-        _fill.fillAmount = 0;
-        _timer.SetActive(false);
+        _fill.fillAmount = 1;
+        //_timer.SetActive(false);
         OnTimerEnd?.Invoke();
         OnTimerEnd = null;
     }
