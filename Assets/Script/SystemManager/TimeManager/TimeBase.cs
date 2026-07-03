@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +7,42 @@ public abstract class TimeBase : MonoBehaviour
     [SerializeField] private int privateNowDay = 1;
 
     [SerializeField] protected int workTime = 10;
+    [SerializeField] protected int nightOpenTime = 22;
     [SerializeField] protected int sleepTime = 24;
+
+    public static TimeBase Instance;
+
+    protected bool todayNightRestaurantHasOpen = false; // 오늘 밤 식당이 열리는지 여부
+    protected bool todayNightRestaurantIsWorked = false; // 오늘 밤 식당이 열렸는지 여부
 
     protected const float realSecondsPerDay = 86400; // 실제 하루의 초 수 (24시간 * 60분 * 60초)
     protected const int secondsPerHour = 3600; // 한 시간의 초 수
+    protected const int secondsPerMinute = 60; // 일 분의 초 수
 
     protected bool isWorking = false;
+
+    protected virtual void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
+        TimeEvents.OnNightRestaurant += NightRestaurantOpen;
+    }
+
+    private void OnDisable()
+    {
+        TimeEvents.OnNightRestaurant -= NightRestaurantOpen;
+    }
+
+    public void NightRestaurantOpen()
+    {
+        todayNightRestaurantHasOpen = true;
+    }
 
     // 날짜가 넘어갈 때 호출하는 함수 (예: 자고 일어났을 때)
     public virtual void NextDay()
@@ -22,6 +53,10 @@ public abstract class TimeBase : MonoBehaviour
         ProcessDayActions();
 
         isWorking = false; // 하루가 끝나면 작업 상태를 초기화
+
+        // 밤 식당 상태 초기화
+        todayNightRestaurantHasOpen = false;
+        todayNightRestaurantIsWorked = false; 
 
         if (BuffManager.Instance != null)
         {
@@ -60,6 +95,14 @@ public abstract class TimeBase : MonoBehaviour
         }
     }
 
+    public void TempNightOpen()
+    {
+        TimeEvents.OnNightRestaurant?.Invoke();
+    }
+
+    public abstract void SetNowTime(int hour);
+
     protected abstract void GoToWork();
+    protected abstract void GoToNightWork();
     protected abstract void GoToSleep();
 }

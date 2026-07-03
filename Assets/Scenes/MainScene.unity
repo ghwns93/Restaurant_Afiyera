@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4621af7f11a20469a9aadd1d218f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuffManager
+  activeBuff: []
 --- !u!4 &278446598
 Transform:
   m_ObjectHideFlags: 0
@@ -471,7 +472,7 @@ MonoBehaviour:
   - type: 3
     sceneName: FarmScene
   - type: 4
-    sceneName: RestaurantScene
+    sceneName: TempCookScene
   - type: 5
     sceneName: ShopScene
   - type: 6
@@ -482,6 +483,8 @@ MonoBehaviour:
     sceneName: NpcInterationUiScene
   - type: 9
     sceneName: HomeScene
+  - type: 10
+    sceneName: TempNightCookScene
   optionOpened: 0
 --- !u!1 &1356914880
 GameObject:

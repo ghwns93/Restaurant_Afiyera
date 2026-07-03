@@ -4,9 +4,6 @@ using UnityEngine;
 // 일정시간이 + 되는 방식
 public class TimeManager : TimeBase
 {
-    [SerializeField]
-    private int currentMinutes = 15 * 60;
-
     private int nowMinutes = 0;
 
     private int nowDay = 0;
@@ -27,22 +24,54 @@ public class TimeManager : TimeBase
 
     private void HandleTimeConsumed(int minutes)
     {
-        nowMinutes = Mathf.Min(currentMinutes, nowMinutes + minutes);
-        Debug.Log($"현재 시간 {nowMinutes / 60} 시 {nowMinutes % 60} 분");
+        nowMinutes = Mathf.Min((sleepTime * secondsPerMinute), nowMinutes + minutes);
+        Debug.Log($"현재 시간 {nowMinutes / secondsPerMinute} 시 {nowMinutes % secondsPerMinute} 분");
 
-        if (currentMinutes <= nowMinutes)
+        if (nowMinutes >= (workTime * secondsPerMinute) && isWorking == false)
         {
-            TimeEvents.OnDayEnded?.Invoke(); // 하루 종료 이벤트 발생
+            GoToWork();
+        }
+        else if (nowMinutes >= (nightOpenTime * secondsPerMinute) 
+              && todayNightRestaurantHasOpen == true 
+              && todayNightRestaurantIsWorked == false)
+        {
+            GoToNightWork();
+        }
+        else if ((sleepTime * secondsPerMinute) <= nowMinutes)
+        {
+            //강제 취침 이벤트 발생
+            GoToSleep();
         }
     }
 
     protected override void GoToWork()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("일하러 갈 시간");
+        isWorking = true;
+        RestaurantManager.Instance.OpenRestaurnat();
+    }
+
+    protected override void GoToNightWork()
+    {
+        Debug.Log("심야식당 오픈!");
+        todayNightRestaurantIsWorked = true;
+        RestaurantManager.Instance.OpenNightRestaurnat();
     }
 
     protected override void GoToSleep()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("자러 갈 시간");
+
+        nowMinutes = 0; // 하루가 끝나면 시간 초기화
+
+        TimeEvents.OnDayEnded?.Invoke(); // 하루 종료 이벤트 발생
     }
+
+    public override void SetNowTime(int hour)
+    {
+        isWorking = true;
+        nowMinutes = hour * secondsPerMinute;
+    }
+
+    
 }
