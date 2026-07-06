@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 104Feather
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 104
+  cookTime: 4
   itemName: "\uAE43\uD138"
   icon: {fileID: 3040524374143109106, guid: ca61adc608cbebc428c0a5695d65fab7, type: 3}
   refineIcon: {fileID: 3040524374143109106, guid: ca61adc608cbebc428c0a5695d65fab7, type: 3}

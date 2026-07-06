@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 103Bead
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 103
+  cookTime: 3
   itemName: "\uAD6C\uC2AC"
   icon: {fileID: 418469737902591561, guid: f2adc6f5c9bc7b643860669d34a54aa2, type: 3}
   refineIcon: {fileID: 418469737902591561, guid: f2adc6f5c9bc7b643860669d34a54aa2, type: 3}

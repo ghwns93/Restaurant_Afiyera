@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 102Milk
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 102
+  cookTime: 2
   itemName: "\uC6B0\uC720"
   icon: {fileID: -5852625888509824730, guid: e63e946f14013044c961a87ec6120300, type: 3}
   refineIcon: {fileID: -5852625888509824730, guid: e63e946f14013044c961a87ec6120300, type: 3}

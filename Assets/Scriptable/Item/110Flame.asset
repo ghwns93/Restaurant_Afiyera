@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 110Flame
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 110
+  cookTime: 2
   itemName: "\uBD88\uAF43"
   icon: {fileID: 1375682084760014563, guid: 5d505297a17b7494fb26832c5e883b2f, type: 3}
   refineIcon: {fileID: 1375682084760014563, guid: 5d505297a17b7494fb26832c5e883b2f, type: 3}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7015ba7124b92aa4791d2c3cee48c601, type: 3}
+  m_Name: 1020702
+  m_EditorClassIdentifier: Assembly-CSharp::FoodData
+  id: 1020702
+  foodName: TestFood1
+  cookType: 2
+  plateType: 2
+  mat: 660000006b000000
+  iconPlated: {fileID: -6625976092639481393, guid: ad0ed780831cd154ea65c232e4fe0dc4, type: 3}
+  iconCooked: {fileID: -7930096565095538899, guid: 15c5bd44e8276124ba1790b9cad4df21, type: 3}
+  description: 

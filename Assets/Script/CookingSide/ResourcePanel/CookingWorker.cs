@@ -4,7 +4,7 @@ public class CookingWorker : MonoBehaviour
 {
     [SerializeField] private ItemData _data;
     [SerializeField] private CookingTimeClock _clock;
-    [SerializeField] private GameObject _matSlot;
+    [SerializeField] private CookingSlot _matSlot;
 
     public bool _isWorking = false;
 
@@ -18,6 +18,15 @@ public class CookingWorker : MonoBehaviour
 
     public void InstantiateMaterial()
     {
-        CookingWorkerManager.Instance.CreateRefineObject(_data,_matSlot.transform);
+        _matSlot.OnImageMovedEvent += (x) => OnMove();
+        CookingWorkerManager.Instance.CreateRefineObject(_data, _matSlot.transform);
+        this.GetComponentInChildren<CookingSlot>()._isSnapped = true;
     }
+
+    public void OnMove()
+    {
+        _isWorking = false;
+        _matSlot.OnImageMovedEvent -= (x) => OnMove();
+    }
+
 }

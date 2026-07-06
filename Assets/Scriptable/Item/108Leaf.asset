@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 108Leaf
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 108
+  cookTime: 4
   itemName: "\uC774\uD30C\uB9AC"
   icon: {fileID: 8216710204414951377, guid: b1cca96259a74f24e88e30e01609e8ba, type: 3}
   refineIcon: {fileID: 8216710204414951377, guid: b1cca96259a74f24e88e30e01609e8ba, type: 3}

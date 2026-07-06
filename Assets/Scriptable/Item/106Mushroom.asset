@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 106Mushroom
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 106
+  cookTime: 2
   itemName: "\uBC84\uC12F"
   icon: {fileID: -9116413989022073697, guid: ad6ac29f44bc8944f82817ad902097cd, type: 3}
   refineIcon: {fileID: -9116413989022073697, guid: ad6ac29f44bc8944f82817ad902097cd, type: 3}

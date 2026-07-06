@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 112Fruit
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 112
+  cookTime: 4
   itemName: "\uC5F4\uB9E4"
   icon: {fileID: 3528951527923448331, guid: 63445398db3494a458e771150cc57da1, type: 3}
   refineIcon: {fileID: 3528951527923448331, guid: 63445398db3494a458e771150cc57da1, type: 3}

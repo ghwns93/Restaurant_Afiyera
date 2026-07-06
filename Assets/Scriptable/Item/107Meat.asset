@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 107Meat
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 107
+  cookTime: 3
   itemName: "\uACE0\uAE30"
   icon: {fileID: 9082333107167224560, guid: d98b2f9234b6b3343a34a6640be46213, type: 3}
   refineIcon: {fileID: 9082333107167224560, guid: d98b2f9234b6b3343a34a6640be46213, type: 3}

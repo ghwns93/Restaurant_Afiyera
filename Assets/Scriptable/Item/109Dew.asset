@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 109Dew
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 109
+  cookTime: 1
   itemName: "\uC774\uC2AC"
   icon: {fileID: 6355096352277840901, guid: faa9da6be20531c469ee11df81f56e14, type: 3}
   refineIcon: {fileID: 6355096352277840901, guid: faa9da6be20531c469ee11df81f56e14, type: 3}

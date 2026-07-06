@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 101Beard
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 101
+  cookTime: 1
   itemName: "\uC218\uC5FC"
   icon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
   refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
