@@ -13,7 +13,8 @@ public enum SceneType
     Village,
     NpcSelectUI,
     NpcInteractionUI,
-    Home
+    Home,
+    NightRestaurant,
 }
 
 public class SceneController : MonoBehaviour

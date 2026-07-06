@@ -6,8 +6,6 @@ using UnityEngine;
 // 시간이 흐르는 방식
 public class DayManager : TimeBase
 {
-    public static DayManager Instance;
-
     [SerializeField] private float oneDayDurationInSeconds = 300; // 하루가 몇 초인지 설정 (테스트용)
 
     private float nowOneDayTime = 0;
@@ -17,15 +15,9 @@ public class DayManager : TimeBase
 
     private Coroutine ClockCoroutine;
 
-    private void Awake()
+    protected override void Awake()
     {
-        if(Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
+        base.Awake();
 
         timePerOnce = realSecondsPerDay / oneDayDurationInSeconds; // 실제 시간 대비 게임 내 시간 비율 계산
     }
@@ -89,6 +81,12 @@ public class DayManager : TimeBase
             {
                 GoToWork();
             }
+            else if (nowOneDayTime >= (nightOpenTime * secondsPerHour)
+                    && todayNightRestaurantHasOpen == true
+                    && todayNightRestaurantIsWorked == false)
+            {
+                GoToNightWork();
+            }
             else if(nowOneDayTime >= (sleepTime * secondsPerHour))
             {
                 GoToSleep();
@@ -108,6 +106,14 @@ public class DayManager : TimeBase
     {
         Debug.Log("일하러 갈 시간");
         isWorking = true;
+        RestaurantManager.Instance.OpenRestaurnat();
+    }
+
+    protected override void GoToNightWork()
+    {
+        Debug.Log("심야식당 오픈!");
+        todayNightRestaurantIsWorked = true;
+        RestaurantManager.Instance.OpenNightRestaurnat();
     }
 
     protected override void GoToSleep()
@@ -117,8 +123,13 @@ public class DayManager : TimeBase
         nowOneDayTime = 0; // 하루가 끝나면 시간 초기화
         nowTime = 0;
 
-        isWorking = false;
-
         NextDay(); // 다음 날로 넘어감
+    }
+
+    public override void SetNowTime(int hour)
+    {
+        isWorking = true;
+        nowOneDayTime = hour * secondsPerHour;
+        nowTime = hour;
     }
 }

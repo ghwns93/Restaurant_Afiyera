@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: 34463613af247a64aaf0228c8042e235
@@ -29,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeScene.unity
     guid: a790898136c6bd7438dd72760fb5ed33
+  - enabled: 1
+    path: Assets/Scenes/TempCookScene.unity
+    guid: a9089fc3e1f54e241b132cd52155a4d6
+  - enabled: 1
+    path: Assets/Scenes/TempNightCookScene.unity
+    guid: 7cda9092217657d42b2f606716655361
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
