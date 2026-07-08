@@ -21,5 +21,7 @@ public class NodeManagementAction : NpcInteractionBase
         }
 
         NpcTalkUIManager.Instance.ShowSelectionButtons(unlockedTalk, actor);
+
+        NpcInteractionManager.Instance.CompleteQuest(targetNpcId, this, questType);
     }
 }

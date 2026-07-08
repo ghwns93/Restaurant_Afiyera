@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc71f887df68014d9084f46cd485eaf, type: 3}
   m_Name: Management Action
   m_EditorClassIdentifier: Assembly-CSharp::NodeManagementAction
+  questType: 0
   dialogueKey: "\uAD00\uB9AC"
-  isUnRocked: 1
+  targetNpcId: 
+  unlockConditions:
+  - {fileID: 11400000, guid: 346d8c7efacbfc2428f4c7d8c8cc956d, type: 2}
+  - {fileID: 11400000, guid: 57abb98dfde7eee4e81d055a29277ca6, type: 2}
   subNpcInteractionBase:
   - {fileID: 11400000, guid: fb0f8cc8132eeb84d8455b443c30298b, type: 2}
   - {fileID: 11400000, guid: d2fc803370bfa9f4cafc8bed521ca3c8, type: 2}

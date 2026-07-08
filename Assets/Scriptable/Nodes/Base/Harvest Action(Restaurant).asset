@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2ce9b2b5d1161498b23494ac9eec9e, type: 3}
   m_Name: Harvest Action(Restaurant)
   m_EditorClassIdentifier: Assembly-CSharp::NodeHarvestAction
-  dialogueKey: "\uC785\uC7A5"
-  isUnRocked: 1
+  questType: 0
+  dialogueKey: "\uC601\uC5C5\uC2DC\uC791"
+  targetNpcId: 
+  unlockConditions:
+  - {fileID: 11400000, guid: 9104fd4664c016a4fb1e3239f2606b6b, type: 2}

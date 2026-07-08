@@ -7,7 +7,7 @@ public class QuestLockCondition : QuestCondition
 
     public void SetLock(bool value) => isLocked = value;
 
-    public override bool IsMet()
+    public override bool IsMet(string targetId)
     {
         // 락이 걸려있으면(true) 조건 만족 못함(false)
         return !isLocked;

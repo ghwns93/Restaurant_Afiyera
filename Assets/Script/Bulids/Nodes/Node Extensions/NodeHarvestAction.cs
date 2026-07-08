@@ -9,5 +9,7 @@ public class NodeHarvestAction : NpcInteractionBase
         BasicNode bn = actor.GetComponent<BasicNode>();
 
         bn.HarvestAction();
+
+        NpcInteractionManager.Instance.CompleteQuest(targetNpcId, this, questType);
     }
 }

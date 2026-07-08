@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efd7274787678d4b81358f11e3b5366, type: 3}
   m_Name: NightQuestCondition
   m_EditorClassIdentifier: Assembly-CSharp::TimeOfDayCondition
-  requiredTime: 0
+  requiredTime: 1

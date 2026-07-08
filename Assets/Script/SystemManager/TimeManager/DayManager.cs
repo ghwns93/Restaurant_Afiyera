@@ -105,7 +105,7 @@ public class DayManager : TimeBase
             {
                 nowTime = currentHour; // 시간 업데이트
             }
-            Debug.Log($"현재 시간: {nowTime}시");
+            //Debug.Log($"현재 시간: {nowTime}시");
         }
     }
 

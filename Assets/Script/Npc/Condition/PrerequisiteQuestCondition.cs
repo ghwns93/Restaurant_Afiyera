@@ -1,16 +1,28 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Quest/Conditions/PrerequisiteQuest")]
 public class PrerequisiteQuestCondition : QuestCondition
 {
     // 인스펙터에서 "어떤 퀘스트가 먼저 깨져야 하는지" 드래그 앤 드롭으로 지정
-    [SerializeField] private NpcInteractionBase targetRequiredQuest;
+    [SerializeField] private List<NpcInteractionBase> targetRequiredQuest;
 
-    public override bool IsMet()
+    public override bool IsMet(string targetId)
     {
         if (targetRequiredQuest == null) return true;
 
-        // QuestManager에게 이 선행 퀘스트가 완료되었는지 물어봅니다.
-        return NpcInteractionManager.Instance.IsQuestCompleted(targetRequiredQuest);
+        bool result;
+
+        foreach(var quest in targetRequiredQuest)
+        {
+            //선행 조건 전부 확인
+            result = NpcInteractionManager.Instance.IsQuestCompleted(targetId, quest);
+            if (!result)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

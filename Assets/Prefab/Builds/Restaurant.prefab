@@ -75,6 +75,7 @@ MonoBehaviour:
   npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: 94d340a9c390d3049879bdb601b6d767, type: 2}
+  - {fileID: 11400000, guid: 63a2e3725de16d54293796e4a1575933, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
 --- !u!61 &2608213310552081056
 BoxCollider2D:

@@ -5,7 +5,7 @@ public class TimeOfDayCondition : QuestCondition
 {
     public TimeState requiredTime;
 
-    public override bool IsMet()
+    public override bool IsMet(string targetId)
     {
         // DayManager(가칭)에서 현재 시간이 낮인지 밤인지 체크
 

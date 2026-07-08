@@ -77,10 +77,12 @@ public class FenceNode : BasicNode, IConnectable
     public override void ManagementCountAction()
     {
         Debug.Log("울타리 관리 수량 증가!");
+        NpcTalkUIManager.Instance.EndTalk();
     }
 
     public override void ManagementCycleAction()
     {
         Debug.Log("울타리 주기 감소 증가!");
+        NpcTalkUIManager.Instance.EndTalk();
     }
 }

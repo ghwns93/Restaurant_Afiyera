@@ -19,7 +19,11 @@ public class AfieraNode : BasicNode
     public override void HarvestAction()
     {
         SystemController.Instance.SetSystemPause(false);
-        SceneController.Instance.LoadSubScene(SceneType.Restaurant);
+
+        if (TimeBase.Instance.nowTimeState == TimeState.Day)
+            SceneController.Instance.LoadSubScene(SceneType.Restaurant);
+        else
+            TimeBase.Instance.GoToSleep();
     }
 
     public override void ManagementCountAction()

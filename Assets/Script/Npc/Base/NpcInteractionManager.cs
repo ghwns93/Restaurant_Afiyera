@@ -6,7 +6,7 @@ public class NpcInteractionManager : MonoBehaviour
     public static NpcInteractionManager Instance;
 
     // 퀘스트 ID와 완료 여부를 저장
-    private Dictionary<NpcInteractionInterface, QuestState> questComplete = new Dictionary<NpcInteractionInterface, QuestState>();
+    private Dictionary<string, QuestType> questComplete = new Dictionary<string, QuestType>();
 
     private void Awake()
     {
@@ -17,31 +17,26 @@ public class NpcInteractionManager : MonoBehaviour
         }
     }
 
-    public void CompleteQuest(NpcInteractionInterface id)
+    public void CompleteQuest(string targetId, NpcInteractionBase quest, QuestType questState)
     {
-        if (!questComplete.ContainsKey(id))
+        string key = targetId + "_" + quest.dialogueKey;
+
+        if (!questComplete.ContainsKey(key))
         {
-            //QuestState nextState = (id.resetType == QuestSO.ResetType.Permanent)
-            //? QuestState.PermanentlyLocked
-            //: QuestState.Completed;
+            questComplete.Add(key, questState);
         }
     }
 
     // 조건 충족 여부 확인
-    public bool IsQuestCompleted(NpcInteractionInterface id)
+    public bool IsQuestCompleted(string targetId, NpcInteractionBase quest)
     {
-        if (questComplete.TryGetValue(id, out QuestState state))
+        string key = targetId + "_" + quest.dialogueKey;
+
+        if (questComplete.ContainsKey(key))
         {
-            // Completed 상태이거나 영구 락 상태이면 완료된 것으로 판단
-            return state == QuestState.Completed || state == QuestState.PermanentlyLocked;
+            return true;
         }
+
         return false;
     }
-}
-
-public enum QuestState
-{
-    NotStarted,  // 시작 안 함 (진행 가능)
-    Completed,   // 완료됨 (리셋 대상)
-    PermanentlyLocked // 완료됨 (리셋 대상 아님)
 }

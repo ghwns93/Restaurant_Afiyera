@@ -13,9 +13,19 @@ public class BasicNpcScript : MonoBehaviour
 
     private List<NpcInteractionBase> copyedNpcInteractionList = new List<NpcInteractionBase>();
 
+    private string myNpcId;
+
     private void Start()
     {
+        CreateThisId();
         InputInteraction();
+    }
+
+    private void CreateThisId()
+    {
+        myNpcId = System.Guid.NewGuid().ToString();
+
+        Debug.Log("货肺款 扒拱 " + npcName + " 积己, ID: " + myNpcId);
     }
 
     public void InputInteraction()
@@ -25,6 +35,9 @@ public class BasicNpcScript : MonoBehaviour
             if (interaction != null)
             {
                 var newInteraction = Instantiate(interaction);
+
+                newInteraction.targetNpcId = myNpcId;
+
                 copyedNpcInteractionList.Add(newInteraction);
             }
         }
@@ -34,9 +47,15 @@ public class BasicNpcScript : MonoBehaviour
     {
         if (npcInteractionBase is NpcInteractionTalk)
         {
-            var unlockedTalk = copyedNpcInteractionList
-                               .Where(interaction => NpcInteractionManager.Instance.IsQuestCompleted(interaction))
-                               .ToList();
+            List<NpcInteractionBase> unlockedTalk = new List<NpcInteractionBase>();
+
+            foreach (var talk in copyedNpcInteractionList)
+            {
+                if (talk.CanActivate())
+                {
+                    unlockedTalk.Add(talk);
+                }
+            }
 
             NpcTalkUIManager.Instance.ShowSelectionButtons(unlockedTalk, gameObject);
         }

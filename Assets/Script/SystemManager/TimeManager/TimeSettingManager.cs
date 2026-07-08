@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class TimeSettingManager : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
-        SystemController.Instance.SetSystemPause(true);
+        if (SystemController.Instance != null)
+            SystemController.Instance.SetSystemPause(true);
     }
 
     private void OnDisable()
     {
-        SystemController.Instance.SetSystemPause(false);
+        if (SystemController.Instance != null)
+            SystemController.Instance.SetSystemPause(false);
     }
 }
