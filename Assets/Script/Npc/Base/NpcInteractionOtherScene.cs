@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[CreateAssetMenu(menuName = "Interaction/OtherScene")]
+[CreateAssetMenu(menuName = "Quest/Interaction/OtherScene")]
 public class NpcInteractionOtherScene : NpcInteractionBase
 {
     public SceneType targetScene; // 이동할 씬 타입

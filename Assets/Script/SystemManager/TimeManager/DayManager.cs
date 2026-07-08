@@ -30,7 +30,8 @@ public class DayManager : TimeBase
 
     private void Start()
     {
-        StartTime();
+        //StartTime();
+        SetDefaultTime();
     }
 
     private void OnDisable()
@@ -70,6 +71,12 @@ public class DayManager : TimeBase
         }
     }
 
+    private void SetDefaultTime()
+    {
+        nowOneDayTime = startTime * secondsPerHour; // 하루가 끝나면 시간 초기화
+        nowTime = startTime;
+    }
+
     private IEnumerator CountTime()
     {
         while (true)
@@ -97,32 +104,34 @@ public class DayManager : TimeBase
             if(currentHour > nowTime)
             {
                 nowTime = currentHour; // 시간 업데이트
-                //Debug.Log($"현재 시간: {nowTime}시");
             }
+            Debug.Log($"현재 시간: {nowTime}시");
         }
     }
 
-    protected override void GoToWork()
+    public override void GoToWork()
     {
         Debug.Log("일하러 갈 시간");
         isWorking = true;
-        RestaurantManager.Instance.OpenRestaurnat();
+
+        SystemController.Instance.SetSystemPause(false);
+        SceneController.Instance.LoadSubScene(SceneType.Restaurant);
     }
 
-    protected override void GoToNightWork()
+    public override void GoToNightWork()
     {
         Debug.Log("심야식당 오픈!");
         todayNightRestaurantIsWorked = true;
-        RestaurantManager.Instance.OpenNightRestaurnat();
+
+        SystemController.Instance.SetSystemPause(false);
+        SceneController.Instance.LoadSubScene(SceneType.NightRestaurant);
     }
 
-    protected override void GoToSleep()
+    public override void GoToSleep()
     {
         Debug.Log("자러 갈 시간");
 
-        nowOneDayTime = 0; // 하루가 끝나면 시간 초기화
-        nowTime = 0;
-
+        SetDefaultTime();
         NextDay(); // 다음 날로 넘어감
     }
 

@@ -472,7 +472,7 @@ MonoBehaviour:
   - type: 3
     sceneName: FarmScene
   - type: 4
-    sceneName: TempCookScene
+    sceneName: CookingScene
   - type: 5
     sceneName: ShopScene
   - type: 6
@@ -486,6 +486,56 @@ MonoBehaviour:
   - type: 10
     sceneName: TempNightCookScene
   optionOpened: 0
+--- !u!1 &1190981683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190981685}
+  - component: {fileID: 1190981684}
+  m_Layer: 0
+  m_Name: DayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1190981684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190981683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde5ac38e3e33df46834811179bef0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayManager
+  privateNowDay: 1
+  workTime: 10
+  nightOpenTime: 22
+  startTime: 7
+  sleepTime: 24
+  oneDayDurationInSeconds: 24
+--- !u!4 &1190981685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190981683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356914880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,3 +1355,4 @@ SceneRoots:
   - {fileID: 1715202532}
   - {fileID: 1762227831}
   - {fileID: 278446598}
+  - {fileID: 1190981685}

@@ -44,21 +44,25 @@ public class TimeManager : TimeBase
         }
     }
 
-    protected override void GoToWork()
+    public override void GoToWork()
     {
         Debug.Log("일하러 갈 시간");
         isWorking = true;
-        RestaurantManager.Instance.OpenRestaurnat();
+
+        SystemController.Instance.SetSystemPause(false);
+        SceneController.Instance.LoadSubScene(SceneType.Restaurant);
     }
 
-    protected override void GoToNightWork()
+    public override void GoToNightWork()
     {
         Debug.Log("심야식당 오픈!");
         todayNightRestaurantIsWorked = true;
-        RestaurantManager.Instance.OpenNightRestaurnat();
+
+        SystemController.Instance.SetSystemPause(false);
+        SceneController.Instance.LoadSubScene(SceneType.NightRestaurant);
     }
 
-    protected override void GoToSleep()
+    public override void GoToSleep()
     {
         Debug.Log("자러 갈 시간");
 

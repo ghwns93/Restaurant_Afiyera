@@ -4,11 +4,14 @@ public class TempCookAndNightCookScene : MonoBehaviour
 {
     public void CookEnd()
     {
-        RestaurantManager.Instance.CloseRestaurnat();
+        TimeBase.Instance.SetNowTime(17);
+        TimeBase.Instance.nowTimeState = TimeState.Night;
+
+        SceneController.Instance.LoadSubScene(SceneType.Village);
     }
 
     public void NightCookEnd()
     {
-        RestaurantManager.Instance.CloseNightRestaurnat();
+        TimeBase.Instance.GoToSleep();
     }
 }

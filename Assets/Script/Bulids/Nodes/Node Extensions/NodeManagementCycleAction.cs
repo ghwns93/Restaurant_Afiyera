@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Interaction/NodeManagementCycleAction")]
+[CreateAssetMenu(menuName = "Quest/Interaction/NodeManagementCycleAction")]
 public class NodeManagementCycleAction : NpcInteractionBase
 {
     // 로직: 직접적인 동작 발현

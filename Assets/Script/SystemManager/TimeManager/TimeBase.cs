@@ -6,11 +6,11 @@ public abstract class TimeBase : MonoBehaviour
 {
     [SerializeField] private int privateNowDay = 1;
 
-    [SerializeField] protected int workTime = 10;
-    [SerializeField] protected int nightOpenTime = 22;
-    [SerializeField] protected int sleepTime = 24;
+    [SerializeField] protected int workTime = 10;       //식당 진입 시간
+    [SerializeField] protected int nightOpenTime = 22;  //야간 식당 진입 시간
 
-    public static TimeBase Instance;
+    [SerializeField] protected int startTime = 7; // 게임 시작 시간 (기본값: 7시)
+    [SerializeField] protected int sleepTime = 24;
 
     protected bool todayNightRestaurantHasOpen = false; // 오늘 밤 식당이 열리는지 여부
     protected bool todayNightRestaurantIsWorked = false; // 오늘 밤 식당이 열렸는지 여부
@@ -20,6 +20,10 @@ public abstract class TimeBase : MonoBehaviour
     protected const int secondsPerMinute = 60; // 일 분의 초 수
 
     protected bool isWorking = false;
+
+    public static TimeBase Instance;
+
+    public TimeState nowTimeState = TimeState.Day;
 
     protected virtual void Awake()
     {
@@ -62,6 +66,11 @@ public abstract class TimeBase : MonoBehaviour
         {
             BuffManager.Instance.DayCheck(1); // 버프 지속 시간 감소
         }
+
+        SystemController.Instance.SetSystemPause(false);
+        SceneController.Instance.LoadSubScene(SceneType.Home);
+
+        nowTimeState = TimeState.Day;
     }
 
     protected virtual void ProcessDayActions()
@@ -95,14 +104,11 @@ public abstract class TimeBase : MonoBehaviour
         }
     }
 
-    public void TempNightOpen()
-    {
-        TimeEvents.OnNightRestaurant?.Invoke();
-    }
-
     public abstract void SetNowTime(int hour);
 
-    protected abstract void GoToWork();
-    protected abstract void GoToNightWork();
-    protected abstract void GoToSleep();
+    public abstract void GoToWork();
+    public abstract void GoToNightWork();
+    public abstract void GoToSleep();
 }
+
+public enum TimeState { Day, Night }

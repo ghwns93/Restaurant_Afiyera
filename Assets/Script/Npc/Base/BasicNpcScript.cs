@@ -28,11 +28,6 @@ public class BasicNpcScript : MonoBehaviour
                 copyedNpcInteractionList.Add(newInteraction);
             }
         }
-
-        foreach (var interaction in copyedNpcInteractionList)
-        {
-            NpcInteractionManager.Instance.InputQuest(interaction, interaction.isUnRocked);
-        }
     }
 
     private void SetNpcInteractionButton()

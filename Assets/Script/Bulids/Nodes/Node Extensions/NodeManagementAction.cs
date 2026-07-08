@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Interaction/NodeManagementAction")]
+[CreateAssetMenu(menuName = "Quest/Interaction/NodeManagementAction")]
 public class NodeManagementAction : NpcInteractionBase
 {
     [SerializeField] private List<NpcInteractionBase> subNpcInteractionBase;
@@ -10,14 +10,15 @@ public class NodeManagementAction : NpcInteractionBase
     // 로직: 직접적인 동작 발현
     public override void Execute(GameObject actor)
     {
-        foreach(var interaction in subNpcInteractionBase)
-        {
-            NpcInteractionManager.Instance.InputQuest(interaction, interaction.isUnRocked);
-        }
+        List<NpcInteractionBase> unlockedTalk = new List<NpcInteractionBase>();
 
-        var unlockedTalk = subNpcInteractionBase
-                            .Where(interaction => NpcInteractionManager.Instance.IsQuestCompleted(interaction))
-                            .ToList();
+        foreach(var talk in subNpcInteractionBase)
+        {
+            if (talk.CanActivate())
+            {
+                unlockedTalk.Add(talk);
+            }
+        }
 
         NpcTalkUIManager.Instance.ShowSelectionButtons(unlockedTalk, actor);
     }
