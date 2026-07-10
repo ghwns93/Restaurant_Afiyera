@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class BasicNode : MonoBehaviour
 {
+    public int NodeId;
+
     // 자식 클래스에서도 접근 가능하도록 protected 사용
     protected Vector3Int privateCellPos;
 

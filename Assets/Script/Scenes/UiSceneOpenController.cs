@@ -27,6 +27,8 @@ public class UiSceneOpenController : MonoBehaviour
         {
             SceneController.Instance.AddtionUiScene(scene);
         }
+
+        MasterSaveManager.Instance.OnSceneLoadedComplete();
     }
 
     private void OnDestroy()

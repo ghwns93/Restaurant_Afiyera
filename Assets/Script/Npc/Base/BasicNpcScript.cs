@@ -25,7 +25,7 @@ public class BasicNpcScript : MonoBehaviour
     {
         myNpcId = System.Guid.NewGuid().ToString();
 
-        Debug.Log("货肺款 扒拱 " + npcName + " 积己, ID: " + myNpcId);
+        //Debug.Log("货肺款 扒拱 " + npcName + " 积己, ID: " + myNpcId);
     }
 
     public void InputInteraction()

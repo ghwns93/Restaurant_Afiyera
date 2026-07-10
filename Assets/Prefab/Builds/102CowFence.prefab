@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6397234045570189907}
   - component: {fileID: 2997803301048720332}
   m_Layer: 6
-  m_Name: FoxFence
+  m_Name: 102CowFence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd57d5802f149045ae5f4264e57c460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FenceNode
-  harvestItem: {fileID: 11400000, guid: 9325da6257557734493feb5c55d7a95f, type: 2}
+  NodeId: 102
+  harvestItem: {fileID: 11400000, guid: d6e8ac2ff4921ac4c90ac5a8863ad698, type: 2}
   harvestAmount: 1
   harvestTime: 3
   privateDayCount: 1
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
-  npcName: "\uC5EC\uC6B0"
+  npcName: "\uC18C"
   npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: a876ada6ecdbc4d4185dcb7273888831, type: 2}

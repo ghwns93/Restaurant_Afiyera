@@ -80,7 +80,7 @@ public class BuildManager : MonoBehaviour
         return privateCachedNodeList;
     }
 
-    public bool PlaceNode(Vector3Int pos, GameObject prefab)
+    public bool PlaceNode(Vector3Int pos, GameObject prefab, bool isNew = true)
     {
         // 2. 생성 및 데이터 등록
         GameObject obj = Instantiate(prefab, transform);
@@ -92,6 +92,17 @@ public class BuildManager : MonoBehaviour
             // 설치 실패 시 생성된 오브젝트 제거
             Destroy(obj);
             return false;
+        }
+
+        if (isNew)
+        {
+            var nodeInfo = prefab.GetComponent<BasicNode>();
+
+            BuildLoadManager.Instance.BuildNewStructure(new BuildingData
+            {
+                id = nodeInfo.NodeId,
+                position = pos
+            });
         }
 
         return true;
