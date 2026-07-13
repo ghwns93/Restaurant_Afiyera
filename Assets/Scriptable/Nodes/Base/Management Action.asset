@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Management Action
   m_EditorClassIdentifier: Assembly-CSharp::NodeManagementAction
   questType: 0
+  questInteractionType: 2
   dialogueKey: "\uAD00\uB9AC"
   targetNpcId: 
   unlockConditions:

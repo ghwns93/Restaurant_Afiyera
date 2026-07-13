@@ -98,6 +98,7 @@ public abstract class TimeBase : MonoBehaviour
             }
             else
             {
+                //Debug.Log("단독 노드!");
                 // 그룹이 없는 단독 노드라면 바로 실행
                 node.DayAction();
             }

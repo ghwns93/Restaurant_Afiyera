@@ -40,5 +40,7 @@ public class UiSceneOpenController : MonoBehaviour
             //Debug.Log($"Closing UI Scene: {scene}");
             SceneController.Instance.CloseUiScene(scene);
         }
+
+        MasterSaveManager.Instance.CollectAllData();
     }
 }

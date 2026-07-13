@@ -7,7 +7,15 @@ public class AfieraNode : BasicNode
         if(BuildManager.Instance != null)
         {
             Vector3Int cellPos = BuildManager.Instance.PrivateTargetTilemap.WorldToCell(transform.position);
-            BuildManager.Instance.InsertNode(cellPos, gameObject);
+
+            var data = new BuildingData
+            {
+                id = NodeId,
+                position = cellPos,
+                remainHarvestTime = harvestTime
+            };
+
+            BuildManager.Instance.InsertNode(data, gameObject);
         }
     }
 

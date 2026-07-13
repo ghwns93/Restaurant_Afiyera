@@ -31,7 +31,7 @@ public class InventoryManager : MonoBehaviour
             slots.Add(new ItemSlot(item, count));
         }
 
-        Debug.Log($"{item.itemName} x{count} 인벤토리 추가 완료.");
+        //Debug.Log($"{item.itemName} x{count} 인벤토리 추가 완료.");
     }
 
     public void ReduceItem(ItemData item, int count)
@@ -48,7 +48,7 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        Debug.Log($"{item.itemName} x {count} 인벤토리 감소 완료.");
+        //Debug.Log($"{item.itemName} x {count} 인벤토리 감소 완료.");
     }
 
     public int GetItem(ItemData item)

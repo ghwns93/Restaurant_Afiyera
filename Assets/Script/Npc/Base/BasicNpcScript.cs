@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class BasicNpcScript : MonoBehaviour
 {
+    public int npcCode;
+
     public string npcName = "상인";
+
+    public TargetType targetType;
 
     public NpcInteractionBase npcInteractionBase; // NPC가 가진 상호작용 정보 (예: 대화, 퀘스트 등)
     [SerializeField]
@@ -23,9 +27,18 @@ public class BasicNpcScript : MonoBehaviour
 
     private void CreateThisId()
     {
-        myNpcId = System.Guid.NewGuid().ToString();
+        //myNpcId = System.Guid.NewGuid().ToString();
 
         //Debug.Log("새로운 건물 " + npcName + " 생성, ID: " + myNpcId);
+
+        if(targetType == TargetType.Building)
+        {
+            myNpcId = string.Format("{0}.{1}.{2}", transform.position.x, transform.position.y, transform.position.z);
+        }
+        else if (targetType == TargetType.Npc)
+        {
+            myNpcId = string.Format("npc.{0}.{1}", npcCode, npcName);
+        }
     }
 
     public void InputInteraction()
@@ -69,6 +82,20 @@ public class BasicNpcScript : MonoBehaviour
         SetNpcInteractionButton();
     }
 
+    public void ResetNpcInteraction(QuestInteractionType qit)
+    {
+        foreach (var interaction in copyedNpcInteractionList)
+        {
+            if(interaction.questInteractionType == qit)
+            {
+                NpcInteractionManager.Instance.ResetQuest(myNpcId, interaction);
+                break;
+            }
+        }
+    }
+
     private void OnDetected() => NpcSelectEvents.OnNPCDetected?.Invoke(this);
     private void OnLost() => NpcSelectEvents.OnNPCLost?.Invoke(this);
 }
+
+public enum TargetType { Building, Npc }

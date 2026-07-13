@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Harvest Action
   m_EditorClassIdentifier: Assembly-CSharp::NodeHarvestAction
   questType: 0
+  questInteractionType: 1
   dialogueKey: "\uC218\uD655"
   targetNpcId: 
   unlockConditions:

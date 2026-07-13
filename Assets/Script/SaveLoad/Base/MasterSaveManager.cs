@@ -11,7 +11,7 @@ public class MasterSaveManager : MonoBehaviour
 
     // 현재 게임의 모든 최신 데이터를 실시간으로 들고 있는 마스터 보따리(임시)
     // 나중에 Json 이든 바이너리든 저장방식 변경 필요
-    private SaveData currentSaveData;
+    public SaveData currentSaveData;
 
     private void Awake()
     {

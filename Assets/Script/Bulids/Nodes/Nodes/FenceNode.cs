@@ -10,9 +10,9 @@ public class FenceNode : BasicNode, IConnectable
     [SerializeField] private int privateMinCount = 3;
     public int MinConnectionCount => privateMinCount;
 
-    public override void Setup(Vector3Int pos)
+    public override void Setup(BuildingData bData)
     {
-        base.Setup(pos);
+        base.Setup(bData);
         //UpdateVisual(); // 설치 시 초기 그래픽 업데이트
     }
 
@@ -51,27 +51,38 @@ public class FenceNode : BasicNode, IConnectable
 
     public override void HarvestAction()
     {
-        if(isHarvested == true)
-        {               
-            NpcTalkUIManager.Instance.SetTalkText("이미 수확된 울타리입니다.");
-            return;
-        }
+        //상호작용 방식 변경
+        //if(isHarvested == true)
+        //{               
+        //    NpcTalkUIManager.Instance.SetTalkText("이미 수확된 울타리입니다.");
+        //    return;
+        //}
+        //isHarvested = true;
 
         InventoryManager.Instance.AddItem(harvestItem, harvestAmount);
-        isHarvested = true;
-        currentDayCount = 0;
+        currentDayCount = 1;
+
+        SaveBuildData();
 
         NpcTalkUIManager.Instance.EndTalk();
     }
 
     public override void DayAction()
     {
+        var npcScript = GetComponent<BasicNpcScript>();
+
         if (currentDayCount == harvestTime)
         {
-            isHarvested = false;
+            npcScript.ResetNpcInteraction(QuestInteractionType.Harvest);
+        }
+        else
+        {
+            currentDayCount = Mathf.Min(currentDayCount + 1, harvestTime); // 일 수 카운트 증가 (harvestTime 이상으로는 증가하지 않음)
         }
 
-        currentDayCount = Mathf.Max(currentDayCount + 1, harvestTime); // 일 수 카운트 증가 (harvestTime 이상으로는 증가하지 않음)
+        npcScript.ResetNpcInteraction(QuestInteractionType.Management);
+
+        SaveBuildData();
     }
 
     public override void ManagementCountAction()

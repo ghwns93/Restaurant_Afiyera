@@ -5,6 +5,8 @@ public abstract class NpcInteractionBase : ScriptableObject, NpcInteractionInter
 {
     public QuestType questType; // 인스펙터에서 선택 (반복 인지 한번인지 선택)
 
+    public QuestInteractionType questInteractionType; // 인스펙터에서 선택 (일반/수확/관리 구분)
+
     public string dialogueKey; // 대화 테이블 키
 
     public string targetNpcId; // 이 퀘스트를 수행할 NPC의 ID
@@ -36,3 +38,5 @@ public abstract class NpcInteractionBase : ScriptableObject, NpcInteractionInter
 }
 
 public enum QuestType { Repeat, Once }
+
+public enum QuestInteractionType { Talk, Harvest, Management }

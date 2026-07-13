@@ -81,7 +81,7 @@ public class BuildController : MonoBehaviour
         Vector3Int cellPos = privateBuildManager.PrivateTargetTilemap.WorldToCell(mouseWorldPos);
 
         // BuildManager에 설치 요청 (중복 검사는 BuildManager 내부에서 수행됨)
-        bool isResult = privateBuildManager.PlaceNode(cellPos, privateSelectedPrefab);
+        bool isResult = privateBuildManager.PlaceNewNode(cellPos, privateSelectedPrefab);
 
         if(isResult)
         {

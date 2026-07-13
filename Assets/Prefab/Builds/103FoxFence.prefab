@@ -56,7 +56,7 @@ MonoBehaviour:
   NodeId: 103
   harvestItem: {fileID: 11400000, guid: 9325da6257557734493feb5c55d7a95f, type: 2}
   harvestAmount: 1
-  harvestTime: 3
+  harvestTime: 2
   privateDayCount: 1
   nodeSize: 2
   spriteLU: {fileID: 7002804869604546225}

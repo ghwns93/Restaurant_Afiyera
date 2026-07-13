@@ -1260,6 +1260,50 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &264338174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264338176}
+  - component: {fileID: 264338175}
+  m_Layer: 0
+  m_Name: 'QuestLoadManager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &264338175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264338174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd40ecc76131c44198f93e76c401ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestLoadManager
+--- !u!4 &264338176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264338174}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305722189
 GameObject:
   m_ObjectHideFlags: 0
@@ -8479,7 +8523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
+  npcCode: 1
   npcName: "\uC0C1\uC778"
+  targetType: 0
   npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: f63f3b644d4db994f8a839719f55d88d, type: 2}
@@ -11667,7 +11713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c687268ad813e7c41b56e717f1b12d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildLoadManager
-  buildingDataList: []
 --- !u!1 &1561074612
 GameObject:
   m_ObjectHideFlags: 0
@@ -15042,4 +15087,5 @@ SceneRoots:
   - {fileID: 2031732303}
   - {fileID: 1802175418}
   - {fileID: 1556448262}
+  - {fileID: 264338176}
   - {fileID: 1194823702}

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -74,18 +75,57 @@ public class BuildManager : MonoBehaviour
     {
         if (privateIsDirty)
         {
-            privateCachedNodeList = new List<BasicNode>(privateAllNodes.Values);
+            //노드 설치 방식 변경으로 인해 수정
+            //privateCachedNodeList = new List<BasicNode>(privateAllNodes.Values);
+
+            privateCachedNodeList.Clear();
+
+            foreach (var node in privateAllNodes)
+            {
+                if(!privateCachedNodeList.Contains(node.Value))
+                {
+                    privateCachedNodeList.Add(node.Value);
+                }
+            }
+
             privateIsDirty = false;
         }
+
         return privateCachedNodeList;
     }
 
-    public bool PlaceNode(Vector3Int pos, GameObject prefab, bool isNew = true)
+    public void LoadedNode(BuildingData bData, GameObject prefab)
+    {
+        PlaceNode(bData, prefab);
+    }
+
+    public bool PlaceNewNode(Vector3Int pos, GameObject prefab)
+    {
+        var nodeInfo = prefab.GetComponent<BasicNode>();
+
+        var data = new BuildingData
+        {
+            id = nodeInfo.NodeId,
+            position = pos,
+            remainHarvestTime = nodeInfo.harvestTime
+        };
+
+        var result = PlaceNode(data, prefab);
+
+        if (result == true)
+        {
+            BuildLoadManager.Instance.NewDataStructure(data);
+        }
+
+        return result;
+    }
+
+    public bool PlaceNode(BuildingData data, GameObject prefab)
     {
         // 2. 생성 및 데이터 등록
         GameObject obj = Instantiate(prefab, transform);
 
-        bool result = InsertNode(pos, obj);
+        bool result = InsertNode(data, obj);
 
         if(result == false)
         {
@@ -94,25 +134,14 @@ public class BuildManager : MonoBehaviour
             return false;
         }
 
-        if (isNew)
-        {
-            var nodeInfo = prefab.GetComponent<BasicNode>();
-
-            BuildLoadManager.Instance.BuildNewStructure(new BuildingData
-            {
-                id = nodeInfo.NodeId,
-                position = pos
-            });
-        }
-
         return true;
     }
 
-    public bool InsertNode(Vector3Int pos, GameObject obj)
+    public bool InsertNode(BuildingData data, GameObject obj)
     {
         BasicNode newNode = obj.GetComponent<BasicNode>();
 
-        var NodeOffset = GenerateBuildingOffsets(pos, newNode.NodeSize);
+        var NodeOffset = GenerateBuildingOffsets(data.position, newNode.NodeSize);
 
         foreach (var offset in NodeOffset)
         {
@@ -133,7 +162,7 @@ public class BuildManager : MonoBehaviour
             }
         }
 
-        newNode.Setup(pos);
+        newNode.Setup(data);
 
         obj.transform.position = GetCenterWorldPosition(NodeOffset);
         obj.transform.position += (baseAnchor + new Vector3(0, (newNode.NodeSize * 2 + 1) * 0.25f, 0));
