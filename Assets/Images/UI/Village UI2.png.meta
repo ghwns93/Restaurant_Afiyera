@@ -1,0 +1,583 @@
+fileFormatVersion: 2
+guid: d7ae80cccbc663342acde96bb2af7734
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 870256145630651265
+    second: Village UI2_0
+  - first:
+      213: 4297080607656013666
+    second: Village UI2_1
+  - first:
+      213: 7790168974219824144
+    second: Village UI2_2
+  - first:
+      213: 5444637348259132169
+    second: Village UI2_3
+  - first:
+      213: -1264245413931527926
+    second: Village UI2_4
+  - first:
+      213: 2583946091083170251
+    second: Village UI2_5
+  - first:
+      213: -6126620114190040595
+    second: Village UI2_6
+  - first:
+      213: 349830727393707985
+    second: Village UI2_7
+  - first:
+      213: -9016488235064046553
+    second: Village UI2_8
+  - first:
+      213: 7438708085420259142
+    second: Village UI2_9
+  - first:
+      213: -867023912791687685
+    second: Village UI2_10
+  - first:
+      213: -6550029321391564057
+    second: Village UI2_11
+  - first:
+      213: 4640492202666065475
+    second: Village UI2_12
+  - first:
+      213: -6035572071972814540
+    second: Village UI2_13
+  - first:
+      213: -8157595060350897500
+    second: Village UI2_14
+  - first:
+      213: 2303442219549047334
+    second: Village UI2_15
+  - first:
+      213: 8398122008495948390
+    second: Village UI2_16
+  - first:
+      213: 1162959463567661378
+    second: Village UI2_17
+  - first:
+      213: -3086004776724981578
+    second: Village UI2_18
+  - first:
+      213: 5281592829832075744
+    second: Village UI2_19
+  - first:
+      213: -5390762469489806655
+    second: Village UI2_20
+  - first:
+      213: -3855391689818860875
+    second: Village UI2_21
+  - first:
+      213: -4437094054129299457
+    second: Village UI2_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Village UI2_0
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 833
+        width: 440
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1836ae78a55c31c00800000000000000
+      internalID: 870256145630651265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 197
+        width: 68
+        height: 717
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01d1b98e7f747ee0800000000000000
+      internalID: -1264245413931527926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_5
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 871
+        width: 22
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc185cd87450cd320800000000000000
+      internalID: 2583946091083170251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_8
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 714
+        width: 85
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72cc48bb8bffed280800000000000000
+      internalID: -9016488235064046553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 603
+        width: 94
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647fc4b77999b3760800000000000000
+      internalID: 7438708085420259142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_10
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 621
+        width: 59
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd38425856b7f3f0800000000000000
+      internalID: -867023912791687685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_11
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 619
+        width: 59
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea1016290f9915a0800000000000000
+      internalID: -6550029321391564057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_12
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 506
+        width: 94
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e71ea6217566040800000000000000
+      internalID: 4640492202666065475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_13
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 552
+        width: 85
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431cac9ad275d3ca0800000000000000
+      internalID: -6035572071972814540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_14
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 416
+        width: 94
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2bd4e63866ace80800000000000000
+      internalID: -8157595060350897500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_15
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 370
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62abbd89e7877ff10800000000000000
+      internalID: 2303442219549047334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_16
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 369
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6628ac8b87f1c8470800000000000000
+      internalID: 8398122008495948390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_17
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 322
+        width: 94
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24911227879a32010800000000000000
+      internalID: 1162959463567661378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 230
+        width: 94
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b81624810f4c25d0800000000000000
+      internalID: -3086004776724981578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_19
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 178
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9146612bcfb4940800000000000000
+      internalID: 5281592829832075744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 135
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c27d81781a2035b0800000000000000
+      internalID: -5390762469489806655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village UI2_21
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 167
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b29a525fa5ee7ac0800000000000000
+      internalID: -3855391689818860875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b0bd8c806a65cd14cad96f41675e093c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Village UI2_0: 870256145630651265
+      Village UI2_1: 4297080607656013666
+      Village UI2_10: -867023912791687685
+      Village UI2_11: -6550029321391564057
+      Village UI2_12: 4640492202666065475
+      Village UI2_13: -6035572071972814540
+      Village UI2_14: -8157595060350897500
+      Village UI2_15: 2303442219549047334
+      Village UI2_16: 8398122008495948390
+      Village UI2_17: 1162959463567661378
+      Village UI2_18: -3086004776724981578
+      Village UI2_19: 5281592829832075744
+      Village UI2_2: 7790168974219824144
+      Village UI2_20: -5390762469489806655
+      Village UI2_21: -3855391689818860875
+      Village UI2_22: -4437094054129299457
+      Village UI2_3: 5444637348259132169
+      Village UI2_4: -1264245413931527926
+      Village UI2_5: 2583946091083170251
+      Village UI2_6: -6126620114190040595
+      Village UI2_7: 349830727393707985
+      Village UI2_8: -9016488235064046553
+      Village UI2_9: 7438708085420259142
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

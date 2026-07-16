@@ -7,6 +7,9 @@ public class BuildController : MonoBehaviour
     [SerializeField] private BuildManager privateBuildManager;
     [SerializeField] private Camera privateMainCamera;
 
+    [SerializeField] private GameObject buildButtonPanel; // 빌드 모드 UI 패널
+    [SerializeField] private GameObject buildCloseButton; // 빌드 모드 UI 패널
+
     private GameObject privateSelectedPrefab; // 현재 선택된 건물 프리팹
 
     // 카메라 설정
@@ -33,6 +36,9 @@ public class BuildController : MonoBehaviour
     {
         privatePlayer = GameObject.FindGameObjectWithTag("Player");
         privateOriginalZoom = privateMainCamera.orthographicSize;
+
+        buildButtonPanel.SetActive(false);
+        buildCloseButton.SetActive(false);
     }
 
     private void Update()
@@ -55,6 +61,8 @@ public class BuildController : MonoBehaviour
     // UI 버튼에서 호출할 함수 (오브젝트 정보를 넘겨줌)
     public void SelectBuilding(GameObject buildingPrefab)
     {
+        buildCloseButton.SetActive(true);
+
         UIOpenRegistry.RegisterUI();
 
         privateIsBuildMode = true;
@@ -90,7 +98,7 @@ public class BuildController : MonoBehaviour
         }
     }
 
-    private void CancelBuildMode()
+    public void CancelBuildMode()
     {
         CameraController.Instance.SetFreeMode(false);
 
@@ -104,6 +112,9 @@ public class BuildController : MonoBehaviour
         privateMainCamera.orthographicSize = privateOriginalZoom;
         privateIsBuildMode = false;
         privateSelectedPrefab = null;
+
+        buildButtonPanel.SetActive(false);
+        buildCloseButton.SetActive(false);
 
         UIOpenRegistry.UnregisterUI();
     }
@@ -144,5 +155,10 @@ public class BuildController : MonoBehaviour
             // 4. 위치 튕기기 (이동)
             target.position = privateBuildManager.PrivateTargetTilemap.GetCellCenterWorld(nearestEmptyCell) + new Vector3(0f, characterHeight, 0f);
         }
+    }
+
+    public void OpenBuildButtonUI()
+    {
+        buildButtonPanel.SetActive(!buildButtonPanel.activeSelf);
     }
 }
