@@ -104,8 +104,10 @@ public class DayManager : TimeBase
             if(currentHour > nowTime)
             {
                 nowTime = currentHour; // 시간 업데이트
+
+                TimeEvents.OnNpcSpecificTimeReached?.Invoke(nowTime); // 이벤트 호출
             }
-            //Debug.Log($"현재 시간: {nowTime}시");
+            Debug.Log($"현재 시간: {nowTime}시");
         }
     }
 

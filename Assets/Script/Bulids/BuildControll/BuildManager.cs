@@ -392,4 +392,22 @@ public class BuildManager : MonoBehaviour
 
         return centerWorldPos;
     }
+
+    public RoadNode GetRoadAt(Vector3 worldPosition)
+    {
+        // 1. Grid나 Raycast 등을 사용해 해당 위치의 Road를 찾는 방식
+        Vector3Int pos = privateTargetTilemap.WorldToCell(worldPosition);
+
+        var node = GetNodeAt<RoadNode>(pos);
+
+        if (node != null)
+        {
+            if (node is RoadNode roadNode)
+            {
+                return roadNode;
+            }
+        }
+
+        return null;
+    }
 }
