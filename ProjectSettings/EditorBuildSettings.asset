@@ -32,6 +32,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CookingScene.unity
     guid: f64c975e9f064b3439228f0285f8d7b9
+  - enabled: 1
+    path: Assets/Scenes/SrotyAndRecipeScene.unity
+    guid: 960c155757628184aa7ed5cd5b531389
+  - enabled: 1
+    path: Assets/Scenes/WorkerDoWorkScene.unity
+    guid: 28e0e03a63c25254f8b90435e1d00e9f
+  - enabled: 1
+    path: Assets/Scenes/WorkerEnchantScene.unity
+    guid: 0795e7c5930c9034891e7c7c395a7c1b
+  - enabled: 1
+    path: Assets/Scenes/HomeKitchenScene.unity
+    guid: f35b243f2b9398f4f99f422cc731941d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -15,6 +15,10 @@ public enum SceneType
     NpcInteractionUI,
     Home,
     NightRestaurant,
+    StoryAndRecipe,
+    WorkerDoWork,
+    WorkerEnchant,
+    HomeKitchen,
 }
 
 public class SceneController : MonoBehaviour
