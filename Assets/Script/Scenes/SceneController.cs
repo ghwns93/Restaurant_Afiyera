@@ -19,6 +19,7 @@ public enum SceneType
     WorkerDoWork,
     WorkerEnchant,
     HomeKitchen,
+    HomeUi,
 }
 
 public class SceneController : MonoBehaviour

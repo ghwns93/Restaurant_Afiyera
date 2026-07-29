@@ -1,0 +1,115 @@
+{
+  "dialogueId": "intro_scene",
+  "startLineId": "intro_01",
+  "lines": [
+    {
+      "id": "intro_01",
+      "speakerId": "elder",
+      "text": "어서 오게, 여행자여. 이 마을에 온 걸 환영하네.",
+      "typingSpeed": 0.04,
+      "next": "intro_02",
+      "events": [
+        { "type": "SHOW_NPC", "npcId": "elder", "slot": 0 }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_02",
+      "speakerId": "guard",
+      "text": "촌장님! 북쪽 도로에서 수상한 무리가 목격됐습니다!",
+      "typingSpeed": 0.02,
+      "next": "intro_03",
+      "events": [
+        { "type": "SHOW_NPC", "npcId": "guard", "slot": 1 }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_03",
+      "speakerId": "elder",
+      "text": "...여행자여, 자네에게 부탁 하나 해도 되겠나?",
+      "typingSpeed": 0.05,
+      "next": "",
+      "events": [],
+      "choices": [
+        {
+          "text": "물론이죠. 도와드리겠습니다.",
+          "next": "accept_01",
+          "events": []
+        },
+        {
+          "text": "죄송하지만 지금은 바쁩니다.",
+          "next": "refuse_01",
+          "events": [
+            { "type": "HIDE_NPC", "npcId": "guard" }
+          ]
+        },
+        {
+          "text": "무슨 일인지 먼저 듣고 싶군요.",
+          "next": "ask_01",
+          "events": []
+        }
+      ]
+    },
+    {
+      "id": "accept_01",
+      "speakerId": "elder",
+      "text": "고맙네! 역시 자네라면 그렇게 말할 줄 알았지.",
+      "typingSpeed": 0.04,
+      "next": "accept_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "accept_02",
+      "speakerId": "guard",
+      "text": "그럼 북쪽 도로에서 뵙겠습니다. 먼저 가 있죠!",
+      "typingSpeed": 0.03,
+      "next": "",
+      "events": [
+        { "type": "HIDE_NPC", "npcId": "guard" }
+      ],
+      "choices": []
+    },
+    {
+      "id": "refuse_01",
+      "speakerId": "elder",
+      "text": "...그런가. 어쩔 수 없지. 마음이 바뀌면 언제든 찾아오게.",
+      "typingSpeed": 0.06,
+      "next": "",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "ask_01",
+      "speakerId": "elder",
+      "text": "북쪽 도로에 <color=#FF6666>도적떼</color>가 나타났다네. 상인들이 오가질 못하고 있어.",
+      "typingSpeed": 0.04,
+      "next": "ask_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "ask_02",
+      "speakerId": "elder",
+      "text": "이제 어떻게 하겠나?",
+      "typingSpeed": 0.05,
+      "next": "",
+      "events": [],
+      "choices": [
+        {
+          "text": "도와드리겠습니다.",
+          "next": "accept_01",
+          "events": []
+        },
+        {
+          "text": "거절하겠습니다.",
+          "next": "refuse_01",
+          "events": [
+            { "type": "HIDE_NPC", "npcId": "guard" }
+          ]
+        }
+      ]
+    }
+  ]
+}

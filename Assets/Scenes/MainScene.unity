@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20d6032f753e24fa491874a3c18335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
-  startScene: 9
+  startScene: 0
   sceneList:
   - type: 0
     sceneName: IntroScene
@@ -484,7 +484,7 @@ MonoBehaviour:
   - type: 9
     sceneName: HomeScene
   - type: 10
-    sceneName: TempNightCookScene
+    sceneName: NightCookScene
   - type: 11
     sceneName: SrotyAndRecipeScene
   - type: 12
@@ -493,6 +493,8 @@ MonoBehaviour:
     sceneName: WorkerEnchantScene
   - type: 14
     sceneName: HomeKitchenScene
+  - type: 15
+    sceneName: TestHomeUIScene
   optionOpened: 0
 --- !u!1 &1190981683
 GameObject:
