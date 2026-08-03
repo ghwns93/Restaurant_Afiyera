@@ -324,6 +324,71 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &483804539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483804541}
+  - component: {fileID: 483804540}
+  - component: {fileID: 483804542}
+  m_Layer: 0
+  m_Name: BuildManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &483804540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483804539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1228ba803ab45e2479143346eac30349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuildDicManager
+  dataList:
+  - {fileID: 812149568245938315, guid: be17ae4a09b889d40a953d6912f7c91d, type: 3}
+  - {fileID: 812149568245938315, guid: e77f3374b4a4a09449b937e448055fd7, type: 3}
+  - {fileID: 812149568245938315, guid: ca2c7d2d98a16944eb4d5d29a0af8017, type: 3}
+  - {fileID: 812149568245938315, guid: 346518f5663c8a34ab43998361db8d8f, type: 3}
+  - {fileID: 812149568245938315, guid: a3c66ff4ce656564dac09700f14cd62c, type: 3}
+  - {fileID: 812149568245938315, guid: 34fc324e949e6e540a27be0efca82f52, type: 3}
+  - {fileID: 812149568245938315, guid: 422f31db85ebd8145bcd73cd4835a31f, type: 3}
+--- !u!4 &483804541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483804539}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 123.55939, y: 66.00057, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483804542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483804539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67747f1b7e6a8ee4e89efe32809e0327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuildableCountManager
 --- !u!1 &1012991873
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +560,10 @@ MonoBehaviour:
     sceneName: HomeKitchenScene
   - type: 15
     sceneName: TestHomeUIScene
+  - type: 16
+    sceneName: ShopCodyScene
+  - type: 17
+    sceneName: ShopFlavoringScene
   optionOpened: 0
 --- !u!1 &1190981683
 GameObject:
@@ -531,7 +600,7 @@ MonoBehaviour:
   startTime: 7
   sleepTime: 24
   nowTimeState: 0
-  oneDayDurationInSeconds: 60
+  oneDayDurationInSeconds: 240
 --- !u!4 &1190981685
 Transform:
   m_ObjectHideFlags: 0
@@ -948,6 +1017,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1604999817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604999820}
+  - component: {fileID: 1604999819}
+  - component: {fileID: 1604999818}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1604999818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604999817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86b7fd144d21c843b436a8d5cc49b11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopUnlockManager
+--- !u!114 &1604999819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604999817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758387a8f07c3fa4ab4b309960b68662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopPurchaseHandler
+--- !u!4 &1604999820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604999817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.21272, y: -0.45434, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1628812281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,3 +1542,5 @@ SceneRoots:
   - {fileID: 278446598}
   - {fileID: 1190981685}
   - {fileID: 1628812283}
+  - {fileID: 483804541}
+  - {fileID: 1604999820}

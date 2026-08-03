@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2608213310552081056}
   - component: {fileID: 6397234045570189907}
   - component: {fileID: 2997803301048720332}
+  - component: {fileID: -2051261211146833544}
   m_Layer: 6
   m_Name: 103FoxFence
   m_TagString: Untagged
@@ -54,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FenceNode
   NodeId: 103
+  NodeName: "\uC5EC\uC6B0"
   harvestItem: {fileID: 11400000, guid: 9325da6257557734493feb5c55d7a95f, type: 2}
   harvestAmount: 1
   harvestTime: 2
@@ -76,7 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
+  npcCode: 0
   npcName: "\uC5EC\uC6B0"
+  targetType: 0
   npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: a876ada6ecdbc4d4185dcb7273888831, type: 2}
@@ -153,6 +157,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4e3712f08695e48a97c774d7b14042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroupSorting
+--- !u!114 &-2051261211146833544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812149568245938315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa73ba606a8afc64eaacc099fb2e2859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopUnlockableItem
+  unlockID: FoxFence
+  isUnlockedByDefault: 1
+  lockedVisual: {fileID: 0}
+  unlockedVisual: {fileID: 0}
 --- !u!1 &1139612976707902969
 GameObject:
   m_ObjectHideFlags: 0

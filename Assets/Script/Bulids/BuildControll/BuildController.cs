@@ -147,7 +147,7 @@ public class BuildController : MonoBehaviour
         Vector3Int cellPos = privateBuildManager.PrivateTargetTilemap.WorldToCell(pivot);
 
         // 2. 해당 위치에 건물이 있는지 확인
-        if (privateBuildManager.HasNodeAt(cellPos))
+        if (privateBuildManager.HasOverlapNodeAt(cellPos))
         {
             // 3. 가장 가까운 빈 공간 찾기 (주변 8칸 탐색)
             Vector3Int nearestEmptyCell = privateBuildManager.FindNearestEmptyCell(cellPos);

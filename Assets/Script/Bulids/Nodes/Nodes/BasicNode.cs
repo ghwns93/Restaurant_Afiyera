@@ -3,6 +3,11 @@ using UnityEngine;
 public abstract class BasicNode : MonoBehaviour
 {
     public int NodeId;
+    public string NodeName;
+    public Sprite NodeMarkSprite;
+
+    public bool IsOverlapable = false; // 건물 npc랑 유저 겹치기 가능 여부
+    public bool IsBuildable = true; // 건물 설치 가능 여부
 
     // 자식 클래스에서도 접근 가능하도록 protected 사용
     protected Vector3Int privateCellPos;

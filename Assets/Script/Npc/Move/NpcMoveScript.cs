@@ -88,6 +88,7 @@ public class NpcMoveScript : MonoBehaviour
 
         // 4. 이동 수행
         previousTilePosition = currentPos;
+
         tileMover.MoveTo(nextTargetPos, OnReachedTileCenter);
     }
 

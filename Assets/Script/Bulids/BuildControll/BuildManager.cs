@@ -51,6 +51,17 @@ public class BuildManager : MonoBehaviour
         return privateAllNodes.ContainsKey(pos);
     }
 
+    // 특정 좌표에 유저와 겹칠수 없는 건물이 있는지 확인
+    public bool HasOverlapNodeAt(Vector3Int pos)
+    {
+        if (privateAllNodes.TryGetValue(pos, out BasicNode node))
+        {
+            return !node.IsOverlapable;
+        }
+
+        return false;
+    }
+
     // 특정 좌표에 특정타입의 건물이 있는지 확인
     public bool HasNodeAt<T>(Vector3Int pos) where T : BasicNode
     {

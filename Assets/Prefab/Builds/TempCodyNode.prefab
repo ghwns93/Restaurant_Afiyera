@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6397234045570189907}
   - component: {fileID: 2997803301048720332}
   - component: {fileID: 6461435071944722885}
-  - component: {fileID: -1284852642802364213}
+  - component: {fileID: 817205985294749446}
+  - component: {fileID: -3394591089105237074}
   m_Layer: 6
-  m_Name: Road
+  m_Name: TempCodyNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +110,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1538526221817051791, guid: 351d41ac235e37549966aabc540121eb, type: 3}
+  m_Sprite: {fileID: -4290952285889021436, guid: d8705b91f15496044b0e79d32e28dc0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,7 +120,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &-1284852642802364213
+--- !u!114 &817205985294749446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,12 +129,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 812149568245938315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e6f4e2442bb4a47807a7fb69a5d941, type: 3}
+  m_Script: {fileID: 11500000, guid: aa73ba606a8afc64eaacc099fb2e2859, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RoadNode
-  NodeId: 0
+  m_EditorClassIdentifier: Assembly-CSharp::ShopUnlockableItem
+  unlockID: Cody1
+  isUnlockedByDefault: 0
+  unlockCost: 0
+  lockedVisual: {fileID: 0}
+  unlockedVisual: {fileID: 0}
+--- !u!114 &-3394591089105237074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812149568245938315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f7c4fe5ef4571419e6ea6a4a14ef55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CodyNode
+  NodeId: 10001
+  NodeName: "\uC784\uC2DC\uCF54\uB514"
+  NodeMarkSprite: {fileID: -4290952285889021436, guid: d8705b91f15496044b0e79d32e28dc0d, type: 3}
   harvestItem: {fileID: 0}
-  harvestAmount: 1
-  harvestTime: 3
-  privateDayCount: 1
+  harvestAmount: 0
+  harvestTime: 0
+  privateDayCount: 0
   nodeSize: 1

@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 // 대화씬 전체를 제어하는 매니저.
 // - JSON 로드 → id 기반 그래프 탐색으로 라인 재생 (선택지 분기 지원)
 // - 라인/선택지 이벤트 처리 (NPC 중도 등장/퇴장)
 // - TMP maxVisibleCharacters 기반 타자 효과 (리치 텍스트 안전)
 // - 클릭 1회: 타이핑 즉시 완성 / 2회: 다음 라인
-// - 선택지가 있는 라인은 타이핑 완료 후 버튼 표시, 선택 전까지 진행 입력 차단
+// - 오토 모드: 타이핑 완료 후 일정 시간 뒤 자동 진행 (선택지에서 정지)
+// - 스킵 모드: Ctrl 홀드 또는 토글로 빠르게 넘기기 (선택지에서 정지)
 public class DialogueManager : MonoBehaviour
 {
     [Header("UI 참조")]
@@ -28,6 +30,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private AudioSource typingSfx;            // 글자 출력음 (선택)
     [SerializeField] private int sfxEveryNChars = 2;           // N글자마다 효과음 1회
 
+    [Header("오토 모드")]
+    [SerializeField] private float autoBaseDelay = 1.0f;       // 오토 진행 기본 대기 시간
+    [SerializeField] private float autoDelayPerChar = 0.03f;   // 글자 수에 비례해 추가되는 대기 시간 (긴 문장 = 더 오래 표시)
+
+    [Header("모드 변경 알림 (UI 버튼 하이라이트용)")]
+    public UnityEvent<bool> onAutoModeChanged;
+
     private DialogueData currentDialogue;
     private Dictionary<string, DialogueLine> lineMap; // id → 라인 빠른 조회
     private DialogueLine currentLine;
@@ -35,9 +44,14 @@ public class DialogueManager : MonoBehaviour
     private bool choicesVisible;
     private bool dialogueActive;
     private Coroutine typingRoutine;
+    private Coroutine autoRoutine;
     private readonly List<DialogueChoiceButton> spawnedButtons = new List<DialogueChoiceButton>();
 
+    // 모드 상태
+    private bool autoMode;
+
     public bool IsDialogueActive => dialogueActive;
+    public bool IsAutoMode => autoMode;
 
     private void Start()
     {
@@ -45,20 +59,74 @@ public class DialogueManager : MonoBehaviour
         if (nextIndicator != null) nextIndicator.SetActive(false);
         if (choiceContainer != null) choiceContainer.gameObject.SetActive(false);
 
-        //임시
         StartDialogueFromResources("dialogue_intro");
     }
 
     private void Update()
     {
         if (!dialogueActive) return;
-        if (choicesVisible) return; // 선택지 표시 중엔 버튼으로만 진행
+
+        // 선택지 표시 중엔 스킵/오토/진행 입력 전부 정지. 버튼으로만 진행
+        if (choicesVisible) return;
 
         // 마우스 클릭 / 스페이스 / 엔터로 진행
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
+            // 수동 조작 시 오토 모드 해제 (유지하고 싶으면 이 줄 제거)
+            if (autoMode) SetAutoMode(false);
             OnAdvanceInput();
         }
+    }
+
+    // ===== 모드 제어 (UI 버튼의 onClick에 연결) =====
+
+    public void ToggleAutoMode() => SetAutoMode(!autoMode);
+
+    public void SetAutoMode(bool on)
+    {
+        if (autoMode == on) return;
+        autoMode = on;
+        onAutoModeChanged?.Invoke(on);
+
+        if (on)
+        {
+            // 이미 타이핑이 끝나 대기 중인 상태에서 켰다면 즉시 오토 카운트 시작
+            if (dialogueActive && !isTyping && !choicesVisible)
+                StartAutoAdvance();
+        }
+        else
+        {
+            CancelAutoAdvance();
+        }
+    }
+
+    // ===== 오토 =====
+
+    private void StartAutoAdvance()
+    {
+        CancelAutoAdvance();
+        autoRoutine = StartCoroutine(AutoAdvanceRoutine());
+    }
+
+    private void CancelAutoAdvance()
+    {
+        if (autoRoutine != null)
+        {
+            StopCoroutine(autoRoutine);
+            autoRoutine = null;
+        }
+    }
+
+    private IEnumerator AutoAdvanceRoutine()
+    {
+        // 긴 문장일수록 읽을 시간을 더 준다
+        int charCount = bodyText.textInfo.characterCount;
+        float wait = autoBaseDelay + charCount * autoDelayPerChar;
+        yield return new WaitForSeconds(wait);
+
+        autoRoutine = null;
+        if (dialogueActive && !choicesVisible && !isTyping)
+            JumpToLine(currentLine.next);
     }
 
     // ===== 외부에서 대화 시작 =====
@@ -135,6 +203,8 @@ public class DialogueManager : MonoBehaviour
     // id로 라인 이동. 비어있거나 없는 id면 대화 종료
     private void JumpToLine(string lineId)
     {
+        CancelAutoAdvance(); // 라인 전환 시 남아있는 오토 카운트 초기화
+
         if (string.IsNullOrEmpty(lineId))
         {
             EndDialogue();
@@ -177,23 +247,23 @@ public class DialogueManager : MonoBehaviour
         switch (ev.type)
         {
             case DialogueEventType.ShowNpc:
-            {
-                if (ev.slot < 0 || ev.slot >= npcSlots.Length)
                 {
-                    Debug.LogWarning($"[DialogueManager] 잘못된 슬롯 번호: {ev.slot}");
-                    return;
+                    if (ev.slot < 0 || ev.slot >= npcSlots.Length)
+                    {
+                        Debug.LogWarning($"[DialogueManager] 잘못된 슬롯 번호: {ev.slot}");
+                        return;
+                    }
+                    var npc = NpcDicManager.Instance.GetData(ev.npcId);
+                    npcSlots[ev.slot].Show(ev.npcId, npc != null ? npc.portrait : null);
+                    break;
                 }
-                var npc = NpcDicManager.Instance.GetData(ev.npcId);
-                npcSlots[ev.slot].Show(ev.npcId, npc != null ? npc.portrait : null);
-                break;
-            }
             case DialogueEventType.HideNpc:
-            {
-                foreach (var slot in npcSlots)
-                    if (slot.CurrentNpcId == ev.npcId)
-                        slot.Hide();
-                break;
-            }
+                {
+                    foreach (var slot in npcSlots)
+                        if (slot.CurrentNpcId == ev.npcId)
+                            slot.Hide();
+                    break;
+                }
             default:
                 Debug.LogWarning($"[DialogueManager] 알 수 없는 이벤트 타입: {ev.type}");
                 break;
@@ -248,15 +318,18 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         typingRoutine = null;
 
-        // 선택지가 있으면 "▼" 대신 선택지 버튼 표시
+        // 선택지가 있으면 "▼" 대신 선택지 버튼 표시 (오토/스킵도 여기서 정지)
         if (currentLine.HasChoices)
         {
             ShowChoices(currentLine.choices);
+            return;
         }
-        else
-        {
-            if (nextIndicator != null) nextIndicator.SetActive(true);
-        }
+
+        if (nextIndicator != null) nextIndicator.SetActive(true);
+
+        // 오토 모드면 자동 진행 카운트 시작 (스킵 중엔 TickSkip이 진행을 담당)
+        if (autoMode)
+            StartAutoAdvance();
     }
 
     // ===== 선택지 =====
@@ -303,6 +376,8 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogueActive = false;
+        CancelAutoAdvance();
+        SetAutoMode(false);   // 오토도 해제 (유지하고 싶으면 이 줄 제거)
         if (choicesVisible) HideChoices();
         dialoguePanel.SetActive(false);
 
@@ -310,5 +385,59 @@ public class DialogueManager : MonoBehaviour
             if (slot.IsOccupied) slot.Hide();
 
         // 필요하면 여기서 onDialogueEnd 이벤트 발행 (퀘스트 시작, 플레이어 조작 복구 등)
+    }
+
+    // ===== 스킵: 가장 가까운 선택지(없으면 마지막 라인)까지 즉시 점프 =====
+    // 스킵 버튼의 onClick에 연결
+    public void SkipToChoiceOrEnd()
+    {
+        if (!dialogueActive || choicesVisible) return;
+
+        // 진행 중인 타이핑/오토 정리
+        if (typingRoutine != null) StopCoroutine(typingRoutine);
+        typingRoutine = null;
+        CancelAutoAdvance();
+        isTyping = false;
+
+        // 그래프를 따라 전진. 선택지 라인을 만나거나 next가 없으면 정지
+        var visited = new HashSet<string> { currentLine.id }; // 순환 참조 안전장치
+        DialogueLine line = currentLine;
+
+        while (!line.HasChoices && !string.IsNullOrEmpty(line.next))
+        {
+            if (!lineMap.TryGetValue(line.next, out DialogueLine nextLine))
+            {
+                Debug.LogError($"[DialogueManager] 존재하지 않는 라인 id: {line.next}. 대화를 종료합니다.");
+                EndDialogue();
+                return;
+            }
+            if (!visited.Add(nextLine.id)) break; // 무한 루프 감지 시 중단
+
+            line = nextLine;
+
+            // 건너뛰는 라인의 이벤트도 전부 실행 → NPC 등장/퇴장 상태가 정상적으로 반영됨
+            if (line.events != null)
+                foreach (var ev in line.events)
+                    HandleEvent(ev);
+        }
+
+        currentLine = line;
+        ShowLineInstantly(line);
+    }
+
+    // 타자 효과 없이 라인을 즉시 완성 상태로 표시
+    private void ShowLineInstantly(DialogueLine line)
+    {
+        var npc = NpcDicManager.Instance.GetData(line.speakerId);
+        nameText.text = npc != null ? npc.displayName : line.speakerId;
+
+        foreach (var slot in npcSlots)
+            slot.SetSpeaking(slot.IsOccupied && slot.CurrentNpcId == line.speakerId);
+
+        bodyText.text = line.text;
+        bodyText.maxVisibleCharacters = int.MaxValue;
+        bodyText.ForceMeshUpdate();
+
+        FinishTyping(); // 선택지 라인이면 버튼 표시, 아니면 ▼ 표시
     }
 }

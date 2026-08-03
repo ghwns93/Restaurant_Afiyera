@@ -20,6 +20,8 @@ public enum SceneType
     WorkerEnchant,
     HomeKitchen,
     HomeUi,
+    ShopCody,
+    ShopFlavoring,
 }
 
 public class SceneController : MonoBehaviour
