@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class SetShopButtonInfo : MonoBehaviour
 {
-    private string name;
+    private string productName;
     private string price;
     private Sprite sprite;
 
@@ -17,15 +17,15 @@ public class SetShopButtonInfo : MonoBehaviour
 
     public void SetButton(string name, string price, Sprite sprite)
     {
-        this.name = name;
-        this.price = price;
-        this.sprite = sprite;
+        this.productName = string.IsNullOrEmpty(name) ? this.productName : name;
+        this.price = string.IsNullOrEmpty(price) ? this.price : price;
+        this.sprite = sprite == null ? this.sprite : sprite;
         UpdateUI();
     }
 
     private void UpdateUI()
     {
-        if (nameText != null) nameText.text = name;
+        if (nameText != null) nameText.text = productName;
         if (priceText != null) priceText.text = price;
         if (image != null) image.sprite = sprite;
     }

@@ -54,6 +54,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622e3b465c3b9974db9b1d2d579a0881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AfieraNode
+  NodeId: 0
+  NodeName: 
+  NodeMarkSprite: {fileID: 0}
+  IsOverlapable: 0
+  IsBuildable: 1
   harvestItem: {fileID: 0}
   harvestAmount: 1
   harvestTime: 3
@@ -71,11 +76,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
+  npcCode: 0
   npcName: "\uC2DD\uB2F9"
+  targetType: 0
   npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: 94d340a9c390d3049879bdb601b6d767, type: 2}
-  - {fileID: 11400000, guid: 63a2e3725de16d54293796e4a1575933, type: 2}
+  - {fileID: 11400000, guid: b4144706c84b1ea43a50feea105177fc, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
 --- !u!61 &2608213310552081056
 BoxCollider2D:

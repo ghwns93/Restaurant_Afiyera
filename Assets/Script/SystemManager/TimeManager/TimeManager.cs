@@ -62,13 +62,13 @@ public class TimeManager : TimeBase
         SceneController.Instance.LoadSubScene(SceneType.NightRestaurant);
     }
 
-    public override void GoToSleep()
+    public override void GoToSleep(bool IsForcibly = true)
     {
         Debug.Log("자러 갈 시간");
 
         nowMinutes = 0; // 하루가 끝나면 시간 초기화
 
-        TimeEvents.OnDayEnded?.Invoke(); // 하루 종료 이벤트 발생
+        TimeEvents.OnDayEnded?.Invoke(IsForcibly); // 하루 종료 이벤트 발생
     }
 
     public override void SetNowTime(int hour)

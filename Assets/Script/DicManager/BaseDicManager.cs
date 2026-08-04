@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseDicManager<TKey, TValue> : MonoBehaviour where TValue : Object
+public abstract class BaseDicManager<TSelf, TKey, TValue> : MonoBehaviour
+    where TSelf : BaseDicManager<TSelf, TKey, TValue>
 {
-    private static BaseDicManager<TKey, TValue> _instance;
-    public static BaseDicManager<TKey, TValue> Instance => _instance;
+    public static TSelf Instance { get; protected set; }
 
     [SerializeField] protected List<TValue> dataList;
     protected Dictionary<TKey, TValue> dataDic = new Dictionary<TKey, TValue>();
 
     protected virtual void Awake()
     {
-        if (_instance == null)
+        if (Instance == null)
         {
-            _instance = this;
+            Instance = this as TSelf;
             DontDestroyOnLoad(gameObject);
             InitDictionary(); // Awake 시점에 자동 세팅
         }
@@ -51,7 +51,7 @@ public abstract class BaseDicManager<TKey, TValue> : MonoBehaviour where TValue 
         if (dataDic.TryGetValue(key, out TValue value))
             return value;
 
-        return null;
+        return default;
     }
 
     public List<TValue> GetAllDataList()

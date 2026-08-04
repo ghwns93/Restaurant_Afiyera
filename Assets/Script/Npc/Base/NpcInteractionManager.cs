@@ -1,7 +1,9 @@
+using NUnit.Framework.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class NpcInteractionManager : MonoBehaviour
 {
@@ -19,11 +21,6 @@ public class NpcInteractionManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void OnDisable()
-    {
-        SaveQuestData();
     }
 
     public void LoadQuestData(List<QuestData> questDataList)
@@ -46,6 +43,8 @@ public class NpcInteractionManager : MonoBehaviour
         if (!questComplete.ContainsKey(key))
         {
             questComplete.Add(key, questState);
+
+            SaveQuestData();
         }
     }
 
@@ -69,6 +68,12 @@ public class NpcInteractionManager : MonoBehaviour
         if (questComplete.ContainsKey(key))
         {
             questComplete.Remove(key);
+
+            SaveQuestData();
+        }
+        else
+        {
+            Debug.Log("일치하는 퀘스트가 없습니다.");
         }
     }
 

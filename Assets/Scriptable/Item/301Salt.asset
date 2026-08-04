@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb291f23fe5e3c44a39d762b1a7ac11, type: 3}
+  m_Name: 301Salt
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  id: 301
+  cookTime: 1
+  itemName: "\uC18C\uAE08"
+  icon: {fileID: 8444315177936053247, guid: ac445fe4aef516e4995c87a9510b3317, type: 3}
+  refineIcon: {fileID: 8444315177936053247, guid: ac445fe4aef516e4995c87a9510b3317, type: 3}
+  itemType: 1
+  description: "\uC870\uBBF8\uB8CC \uC18C\uAE08"
+  buffEffect: {fileID: 0}

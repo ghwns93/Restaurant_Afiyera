@@ -10,6 +10,8 @@ public class BuildController : MonoBehaviour
     [SerializeField] private GameObject buildButtonPanel; // 빌드 모드 UI 패널
     [SerializeField] private GameObject buildCloseButton; // 빌드 모드 UI 패널
 
+    [SerializeField] private BuildListBtnMaker buildListMaker;
+
     private GameObject privateSelectedPrefab; // 현재 선택된 건물 프리팹
 
     // 카메라 설정
@@ -82,6 +84,18 @@ public class BuildController : MonoBehaviour
 
     private void HandleBuildInput()
     {
+        var nodeInfo = privateSelectedPrefab.GetComponent<BasicNode>();
+        var unlockableItem = privateSelectedPrefab.GetComponent<ShopUnlockableItem>();
+
+        if (unlockableItem != null)
+        {
+            if(BuildableCountManager.Instance.GetBuildableCount(nodeInfo.NodeId) <= 0)
+            {
+                Debug.Log("설치 가능한 건물 수량이 부족합니다.");
+                return;
+            }
+        }
+
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Mathf.Abs(Camera.main.transform.position.z);
 
@@ -115,6 +129,8 @@ public class BuildController : MonoBehaviour
 
         buildButtonPanel.SetActive(false);
         buildCloseButton.SetActive(false);
+
+        buildListMaker.SetBuildButton();
 
         UIOpenRegistry.UnregisterUI();
     }

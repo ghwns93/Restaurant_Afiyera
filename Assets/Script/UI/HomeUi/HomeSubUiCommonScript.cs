@@ -11,6 +11,19 @@ public class HomeSubUiCommonScript : MonoBehaviour
 
     public void OpenSubSceneUi()
     {
-        SceneController.Instance.AddtionUiScene(sceneType);
+        SceneController.Instance.AddtionUiScene(sceneType);                     
+    }
+
+    public void OpenNewScene()
+    {
+        SystemController.Instance.SetSystemPause(false);
+        SceneController.Instance.LoadSubScene(sceneType);
+    }
+
+    public void GoToSleep()
+    {
+        TimeBase.Instance.GoToSleep(false);
+
+
     }
 }

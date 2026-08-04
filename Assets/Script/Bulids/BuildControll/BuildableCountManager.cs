@@ -31,8 +31,6 @@ public class BuildableCountManager : MonoBehaviour
         {
             buildableCountDic.Add(buildID, count);
         }
-
-        Debug.Log("건물 id : " + buildID + "의 개수 : " + buildableCountDic[buildID]);
     }
 
     public void UseBuildableCount(int buildID, int count)

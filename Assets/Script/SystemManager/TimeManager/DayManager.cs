@@ -129,12 +129,12 @@ public class DayManager : TimeBase
         SceneController.Instance.LoadSubScene(SceneType.NightRestaurant);
     }
 
-    public override void GoToSleep()
+    public override void GoToSleep(bool IsForcibly = true)
     {
-        Debug.Log("자러 갈 시간");
+        Debug.Log($"{IsForcibly} 자러 갈 시간");
 
         SetDefaultTime();
-        NextDay(); // 다음 날로 넘어감
+        NextDay(IsForcibly); // 다음 날로 넘어감
     }
 
     public override void SetNowTime(int hour)

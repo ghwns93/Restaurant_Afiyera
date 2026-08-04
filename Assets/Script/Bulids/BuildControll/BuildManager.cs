@@ -126,6 +126,8 @@ public class BuildManager : MonoBehaviour
         if (result == true)
         {
             BuildLoadManager.Instance.NewDataStructure(data);
+
+            BuildableCountManager.Instance.UseBuildableCount(nodeInfo.NodeId, 1);
         }
 
         return result;

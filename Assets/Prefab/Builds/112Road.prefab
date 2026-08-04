@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2997803301048720332}
   - component: {fileID: 6461435071944722885}
   - component: {fileID: -1284852642802364213}
-  - component: {fileID: 817205985294749446}
   m_Layer: 6
   m_Name: 112Road
   m_TagString: Untagged
@@ -142,20 +141,3 @@ MonoBehaviour:
   harvestTime: 3
   privateDayCount: 1
   nodeSize: 1
---- !u!114 &817205985294749446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812149568245938315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa73ba606a8afc64eaacc099fb2e2859, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShopUnlockableItem
-  unlockID: Road
-  isUnlockedByDefault: 1
-  unlockCost: 0
-  lockedVisual: {fileID: 0}
-  unlockedVisual: {fileID: 0}

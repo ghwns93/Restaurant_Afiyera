@@ -15,7 +15,7 @@ public class ShopSettingList : MonoBehaviour
 
     private void SettingList()
     {
-        var shopItems = ((BuildDicManager)BuildDicManager.Instance).GetTypeValue(new CodyNode().GetType());
+        var shopItems = BuildDicManager.Instance.GetTypeValue(new CodyNode().GetType());
 
         foreach (var item in shopItems)
         {
@@ -33,8 +33,16 @@ public class ShopSettingList : MonoBehaviour
 
                     buttonComponent.TargetItem = priceInfo;
                     buttonComponent.ConsumableType = ConsumableType.Build;
-                    buttonComponent.IsUnlimitedPurchase = true;
+                    buttonComponent.IsUnlimitedPurchase = priceInfo.IsUnlockedByDefault;
+                    buttonComponent.Unlockprice = priceInfo.UnlockCost;
+                    buttonComponent.Sellprice = priceInfo.SellCost;
+
                     buttonInfo.SetButton(NodeInfo.NodeName, priceInfo.UnlockCost.ToString(), NodeInfo.NodeMarkSprite);
+
+                    if (priceInfo.IsUnlockedByDefault)
+                    {
+                        buttonComponent.UpdateBuyButton();
+                    }
                 }
                 else
                 {

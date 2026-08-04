@@ -460,6 +460,7 @@ MonoBehaviour:
   npcSlots:
   - {fileID: 1776265149}
   - {fileID: 1506316065}
+  nightCookScene: {fileID: 713203760}
   choiceContainer: {fileID: 1435751798}
   choiceButtonPrefab: {fileID: 6331116254187693329, guid: d261749dabf1c9545bd8b5db97630260, type: 3}
   defaultTypingSpeed: 0.04

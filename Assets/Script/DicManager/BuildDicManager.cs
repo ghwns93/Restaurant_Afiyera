@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildDicManager : BaseDicManager<int, GameObject>
+public class BuildDicManager : BaseDicManager<BuildDicManager, int, GameObject>
 {
     protected override int GetKey(GameObject data)
     {

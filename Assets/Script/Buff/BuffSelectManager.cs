@@ -44,7 +44,7 @@ public class BuffSelectManager : MonoBehaviour
 
             tempSelectBuff.Clear();
 
-            SceneController.Instance.LoadSubScene(SceneType.Village);
+            SceneController.Instance.CloseUiScene(SceneType.HomeKitchen);
         }
     }
 }

@@ -15,7 +15,7 @@ public class ShopSettingFlavoringList : MonoBehaviour
 
     private void SettingList()
     {
-        var shopItems = ((BuildDicManager)BuildDicManager.Instance).GetTypeValue(new CodyNode().GetType());
+        var shopItems = FlavoringDicManager.Instance.GetTypeValue(ItemType.Flavoring);
 
         foreach (var item in shopItems)
         {
@@ -28,13 +28,21 @@ public class ShopSettingFlavoringList : MonoBehaviour
 
                 if (buttonComponent != null)
                 {
-                    var NodeInfo = item.GetComponent<BasicNode>();
+                    var NodeInfo = item.GetComponent<FlavoringData>();
                     var buttonInfo = newButton.GetComponent<SetShopButtonInfo>();
 
                     buttonComponent.TargetItem = priceInfo;
-                    buttonComponent.ConsumableType = ConsumableType.Build;
-                    buttonComponent.IsUnlimitedPurchase = true;
-                    buttonInfo.SetButton(NodeInfo.NodeName, priceInfo.UnlockCost.ToString(), NodeInfo.NodeMarkSprite);
+                    buttonComponent.ConsumableType = ConsumableType.Flavoring;
+                    buttonComponent.IsUnlimitedPurchase = priceInfo.IsUnlockedByDefault;
+                    buttonComponent.Unlockprice = priceInfo.UnlockCost;
+                    buttonComponent.Sellprice = priceInfo.SellCost;
+
+                    buttonInfo.SetButton(NodeInfo.ItemData.itemName, priceInfo.UnlockCost.ToString(), NodeInfo.ItemData.icon);
+
+                    if(priceInfo.IsUnlockedByDefault)
+                    {
+                        buttonComponent.UpdateBuyButton();
+                    }
                 }
                 else
                 {

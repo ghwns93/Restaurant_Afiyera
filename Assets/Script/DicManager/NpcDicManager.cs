@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NpcDicManager : BaseDicManager<string, NpcDatabase>
+public class NpcDicManager : BaseDicManager<NpcDicManager, string, NpcDatabase>
 {
     protected override string GetKey(NpcDatabase data)
     {

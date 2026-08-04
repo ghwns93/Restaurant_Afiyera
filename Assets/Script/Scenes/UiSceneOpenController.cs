@@ -7,7 +7,7 @@ public class UiSceneOpenController : MonoBehaviour
 {
     public List<SceneType> openableScenes;
 
-    private void Awake()
+    private void Start()
     {
         if(SceneController.Instance == null)
         {
@@ -28,7 +28,7 @@ public class UiSceneOpenController : MonoBehaviour
             SceneController.Instance.AddtionUiScene(scene);
         }
 
-        MasterSaveManager.Instance.OnSceneLoadedComplete();
+        //MasterSaveManager.Instance.OnSceneLoadedComplete();
     }
 
     private void OnDestroy()
@@ -40,7 +40,5 @@ public class UiSceneOpenController : MonoBehaviour
             //Debug.Log($"Closing UI Scene: {scene}");
             SceneController.Instance.CloseUiScene(scene);
         }
-
-        MasterSaveManager.Instance.CollectAllData();
     }
 }

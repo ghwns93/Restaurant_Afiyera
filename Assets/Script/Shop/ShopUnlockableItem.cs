@@ -8,8 +8,9 @@ public class ShopUnlockableItem : MonoBehaviour
     [Header("기본 해금 여부 (첫 시작 시)")]
     [SerializeField] private bool isUnlockedByDefault = false;
 
-    [Header("해금 비용")]
+    [Header("비용")]
     [SerializeField] private int unlockCost = 0;
+    [SerializeField] private int sellCost = 0; // 판매 가격 (선택 사항)
 
     [Header("상태에 따른 연출 (선택 사항)")]
     [SerializeField] private GameObject lockedVisual;   // 잠겼을 때 켤 오브젝트 (예: 자물쇠 아이콘)
@@ -19,6 +20,7 @@ public class ShopUnlockableItem : MonoBehaviour
 
     public int UnlockCost { get => unlockCost; set => unlockCost = value; }
     public bool IsUnlockedByDefault { get => isUnlockedByDefault; set => isUnlockedByDefault = value; }
+    public int SellCost { get => sellCost; set => sellCost = value; }
 
     private void Start()
     {

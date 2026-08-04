@@ -86,7 +86,7 @@ public class BasicNpcScript : MonoBehaviour
     {
         foreach (var interaction in copyedNpcInteractionList)
         {
-            if(interaction.questInteractionType == qit)
+            if (interaction.questInteractionType == qit)
             {
                 NpcInteractionManager.Instance.ResetQuest(myNpcId, interaction);
                 break;

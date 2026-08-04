@@ -17,16 +17,26 @@ public abstract class TempManagerBase<TClass, TData> : MonoBehaviour, ISaveable
         else Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        if(MasterSaveManager.Instance == null)
+        {
+            Debug.LogError("MasterSaveManager가 존재하지 않습니다. 씬에 MasterSaveManager를 배치하세요.");
+            return;
+        }
+        HandleLoadData(MasterSaveManager.Instance.currentSaveData);
+    }
+
     protected virtual void OnEnable()
     {
         // 총괄 매니저의 로드 완료 이벤트 구독
-        MasterSaveManager.OnSaveDataLoaded += HandleLoadData;
+        //MasterSaveManager.OnSaveDataLoaded += HandleLoadData;
     }
 
     protected virtual void OnDisable()
     {
         // 메모리 누수 방지를 위한 구독 해제
-        MasterSaveManager.OnSaveDataLoaded -= HandleLoadData;
+        //MasterSaveManager.OnSaveDataLoaded -= HandleLoadData;
     }
 
     // [로드] 총괄 매니저가 이벤트를 쐈을 때 실행되는 공통 로직

@@ -46,8 +46,6 @@ public abstract class BasicNode : MonoBehaviour
             orderLayer.SetFenceOrder(privateCellPos);
         }
 
-        //Debug.Log("설치시 남은 수확시간 : " + data.remainHarvestTime);
-
         currentDayCount = data.remainHarvestTime;
 
         nodesBasicNpcScript = GetComponent<BasicNpcScript>();

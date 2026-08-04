@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text bodyText;          // 대사 본문 (TextMeshPro)
     [SerializeField] private GameObject nextIndicator;   // "▼" 같은 다음 표시 아이콘
     [SerializeField] private NpcSlotView[] npcSlots;     // 화면에 배치된 NPC 슬롯들
+    [SerializeField] private TempCookAndNightCookScene nightCookScene;
 
     [Header("선택지 UI")]
     [SerializeField] private Transform choiceContainer;          // 버튼들이 배치될 부모 (Vertical Layout Group 권장)
@@ -385,6 +386,8 @@ public class DialogueManager : MonoBehaviour
             if (slot.IsOccupied) slot.Hide();
 
         // 필요하면 여기서 onDialogueEnd 이벤트 발행 (퀘스트 시작, 플레이어 조작 복구 등)
+
+        nightCookScene.NightCookEnd();
     }
 
     // ===== 스킵: 가장 가까운 선택지(없으면 마지막 라인)까지 즉시 점프 =====

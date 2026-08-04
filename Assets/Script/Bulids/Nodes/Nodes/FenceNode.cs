@@ -71,8 +71,12 @@ public class FenceNode : BasicNode, IConnectable
     {
         var npcScript = GetComponent<BasicNpcScript>();
 
+        Debug.Log($"{NodeName} 일 수 카운트 증가! 현재 일 수: {currentDayCount}, 수확까지 남은 일 수: {harvestTime - currentDayCount}");
+
         if (currentDayCount == harvestTime)
         {
+            Debug.Log($"{NodeName} 수확가능!");
+
             npcScript.ResetNpcInteraction(QuestInteractionType.Harvest);
         }
         else

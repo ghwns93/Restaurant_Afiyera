@@ -133,8 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopUnlockableItem
   unlockID: Cody1
-  isUnlockedByDefault: 0
+  isUnlockedByDefault: 1
   unlockCost: 0
+  sellCost: 20
   lockedVisual: {fileID: 0}
   unlockedVisual: {fileID: 0}
 --- !u!114 &-3394591089105237074
@@ -152,6 +153,8 @@ MonoBehaviour:
   NodeId: 10001
   NodeName: "\uC784\uC2DC\uCF54\uB514"
   NodeMarkSprite: {fileID: -4290952285889021436, guid: d8705b91f15496044b0e79d32e28dc0d, type: 3}
+  IsOverlapable: 0
+  IsBuildable: 1
   harvestItem: {fileID: 0}
   harvestAmount: 0
   harvestTime: 0

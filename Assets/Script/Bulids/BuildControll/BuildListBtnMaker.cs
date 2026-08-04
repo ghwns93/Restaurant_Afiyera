@@ -9,13 +9,15 @@ public class BuildListBtnMaker : MonoBehaviour
 
     [SerializeField] private BuildController bc;
 
-    void Start()
+    private void Start()
     {
         SetBuildButton();
     }
 
-    private void SetBuildButton()
+    public void SetBuildButton()
     {
+        ClearBuildListPanel();
+
         var buildItems = BuildDicManager.Instance.GetAllDataList();
 
         foreach(var item in buildItems)
@@ -26,15 +28,18 @@ public class BuildListBtnMaker : MonoBehaviour
             var nodeInfo = item.GetComponent<BasicNode>();
             Button btn = buildBtn.GetComponent<Button>();
 
-            if (shopUnlockItem != null && nodeInfo.IsBuildable)
+            if (nodeInfo.IsBuildable)
             {
-                if(!shopUnlockItem.IsUnlockedByDefault)
+                if (shopUnlockItem != null)
                 {
-                   int count = BuildableCountManager.Instance.GetBuildableCount(nodeInfo.NodeId);
-
-                    if(count <= 0)
+                    //if (shopUnlockItem.IsUnlockedByDefault)
                     {
-                        btn.interactable = false;
+                        int count = BuildableCountManager.Instance.GetBuildableCount(nodeInfo.NodeId);
+
+                        if (count <= 0)
+                        {
+                            btn.interactable = false;
+                        }
                     }
                 }
 
@@ -46,9 +51,19 @@ public class BuildListBtnMaker : MonoBehaviour
             }
             else
             {
-                Debug.LogError("ShopUnlockableItem 이 없는 건물입니다.");
+                Debug.LogError("설치 할 수 없는 건물입니다.");
                 Destroy(buildBtn);
             }
+        }
+    }
+
+    public void ClearBuildListPanel()
+    {
+        if (BuildListPanel == null) return;
+
+        for (int i = BuildListPanel.transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(BuildListPanel.transform.GetChild(i).gameObject);
         }
     }
 }

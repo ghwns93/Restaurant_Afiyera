@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Enter Action(NightRestaurant)
   m_EditorClassIdentifier: Assembly-CSharp::NodeHarvestAction
   questType: 0
+  questInteractionType: 0
   dialogueKey: "\uCDE8\uCE68"
   targetNpcId: 
   unlockConditions:

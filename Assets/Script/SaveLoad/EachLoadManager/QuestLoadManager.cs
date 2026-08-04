@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class QuestLoadManager : TempManagerBase<QuestLoadManager, List<QuestData>>
 {
+    private void OnDisable()
+    {
+        base.OnDisable();
+
+        if (MasterSaveManager.Instance != null && MasterSaveManager.Instance.currentSaveData != null)
+        {
+            MasterSaveManager.Instance.currentSaveData.quests = tempValues;
+
+            FileLogger.Log($"QuestLoadManager: {tempValues.Count}개의 퀘스트 데이터를 저장했습니다.");
+        }
+    }
+
+
     protected override List<QuestData> GetMyDataFromMaster(SaveData masterSaveData)
     {
         return masterSaveData.quests;

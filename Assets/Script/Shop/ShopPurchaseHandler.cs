@@ -26,12 +26,19 @@ public class ShopPurchaseHandler : MonoBehaviour
         switch (type)
         {
             case ConsumableType.Build:
-                // 기존 포션 매니저 호출
                 if (BuildableCountManager.Instance != null)
                 {
-                    int nodeId = ((BuildDicManager)BuildDicManager.Instance).GetNodeIdByUnlockID(unlockItemID);
+                    int nodeId = BuildDicManager.Instance.GetNodeIdByUnlockID(unlockItemID);
 
                     BuildableCountManager.Instance.AddBuildableCount(nodeId, amount);
+                }
+                break;
+            case ConsumableType.Flavoring:
+                if (InventoryManager.Instance != null)
+                {
+                    var itemData = FlavoringDicManager.Instance.GetNodeIdByUnlockID(unlockItemID);
+
+                    InventoryManager.Instance.AddItem(itemData, amount);
                 }
                 break;
 

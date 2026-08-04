@@ -5,6 +5,18 @@ using UnityEngine.UIElements;
 
 public class BuildLoadManager : TempManagerBase<BuildLoadManager, List<BuildingData>>
 {
+    private void OnDisable()
+    {
+        base.OnDisable();
+
+        if (MasterSaveManager.Instance != null && MasterSaveManager.Instance.currentSaveData != null)
+        {
+            MasterSaveManager.Instance.currentSaveData.buildings = new List<BuildingData>(new List<BuildingData>(tempValues));
+
+            //Debug.Log($"BuildLoadManager: {tempValues.Count}개의 건물 데이터를 저장했습니다.");
+        }
+    }
+
     protected override List<BuildingData> GetMyDataFromMaster(SaveData masterSaveData)
     {
         return new List<BuildingData>(masterSaveData.buildings);
@@ -17,6 +29,7 @@ public class BuildLoadManager : TempManagerBase<BuildLoadManager, List<BuildingD
 
     protected override void OnDataInitialized(List<BuildingData> initializedData)
     {
+        //Debug.Log($"BuildLoadManager: {initializedData.Count}개의 건물 데이터를 로드했습니다.");
         // [로드 후 행동] 이제 부모가 챙겨다 준 initializedData(tempValues)를 가지고 
         // 실제 프리팹을 맵에 스폰하거나 필요한 오브젝트에 Action을 쏘면 됩니다!
         foreach (var building in initializedData)
@@ -27,12 +40,19 @@ public class BuildLoadManager : TempManagerBase<BuildLoadManager, List<BuildingD
 
             if (prefab != null)
             {
+                //FileLogger.Log($"건물 Id : {building.id} / 건물 위치 : {building.position} / 남은 수확일 : {building.remainHarvestTime}");
+
                 BuildManager.Instance.LoadedNode(building, prefab);
             }
             else
             {
                 //Debug.LogWarning($"건물 ID {building.id}에 해당하는 프리팹을 찾을 수 없습니다.");
             }
+        }
+
+        if (TimeBase.Instance.IsNewDay)
+        {
+            TimeBase.Instance.ProcessDayActions();
         }
     }
 

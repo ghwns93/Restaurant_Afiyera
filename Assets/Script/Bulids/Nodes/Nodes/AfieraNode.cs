@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AfieraNode : BasicNode
 {
@@ -30,8 +31,8 @@ public class AfieraNode : BasicNode
 
         if (TimeBase.Instance.nowTimeState == TimeState.Day)
             SceneController.Instance.LoadSubScene(SceneType.Restaurant);
-        else
-            TimeBase.Instance.GoToSleep();
+        //else
+        //    TimeBase.Instance.GoToSleep();
     }
 
     public override void ManagementCountAction()
@@ -41,7 +42,8 @@ public class AfieraNode : BasicNode
 
     public override void ManagementCycleAction()
     {
-
+        SystemController.Instance.SetSystemPause(false);
+        SceneController.Instance.LoadSubScene(SceneType.Home);
     }
 
     public override void UpdateVisual()

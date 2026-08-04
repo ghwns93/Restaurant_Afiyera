@@ -12,6 +12,6 @@ public class TempCookAndNightCookScene : MonoBehaviour
 
     public void NightCookEnd()
     {
-        TimeBase.Instance.GoToSleep();
+        TimeBase.Instance.GoToSleep(false);
     }
 }

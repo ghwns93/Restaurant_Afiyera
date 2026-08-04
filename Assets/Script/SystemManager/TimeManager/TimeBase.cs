@@ -23,6 +23,8 @@ public abstract class TimeBase : MonoBehaviour
 
     public static TimeBase Instance;
 
+    public bool IsNewDay = false;
+
     public TimeState nowTimeState = TimeState.Day;
 
     protected virtual void Awake()
@@ -49,12 +51,13 @@ public abstract class TimeBase : MonoBehaviour
     }
 
     // 날짜가 넘어갈 때 호출하는 함수 (예: 자고 일어났을 때)
-    public virtual void NextDay()
+    public virtual void NextDay(bool IsForcibly = true)
     {
         privateNowDay++;
         //Debug.Log($"새로운 날이 밝았습니다! 현재 날짜: {privateNowDay}일");
 
-        ProcessDayActions();
+        //ProcessDayActions();
+        IsNewDay = true;
 
         isWorking = false; // 하루가 끝나면 작업 상태를 초기화
 
@@ -68,12 +71,14 @@ public abstract class TimeBase : MonoBehaviour
         }
 
         SystemController.Instance.SetSystemPause(false);
+
         SceneController.Instance.LoadSubScene(SceneType.Home);
+        if (!IsForcibly) SceneController.Instance.AddtionUiScene(SceneType.HomeKitchen);
 
         nowTimeState = TimeState.Day;
     }
 
-    protected virtual void ProcessDayActions()
+    public virtual void ProcessDayActions()
     {
         // BuildManager에 있는 모든 노드 리스트를 가져옵니다.
         var allNodes = BuildManager.Instance.GetAllNodes();
@@ -83,6 +88,8 @@ public abstract class TimeBase : MonoBehaviour
 
         foreach (var node in allNodes)
         {
+            if (node.DayCount <= 0) continue; // DayCount가 0 이하인 노드는 무시
+
             // 1. 날짜 주기 체크 (NowDay % DayCount == 0)
             if (privateNowDay % node.DayCount != 0) continue;
 
@@ -103,13 +110,15 @@ public abstract class TimeBase : MonoBehaviour
                 node.DayAction();
             }
         }
+
+        IsNewDay = false;
     }
 
     public abstract void SetNowTime(int hour);
 
     public abstract void GoToWork();
     public abstract void GoToNightWork();
-    public abstract void GoToSleep();
+    public abstract void GoToSleep(bool IsForcibly = true);
 }
 
 public enum TimeState { Day, Night }
