@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611aeba2c1b16c845b777f8cca2d2a33, type: 3}
   m_Name: TestOtherScene
   m_EditorClassIdentifier: Assembly-CSharp::NpcInteractionOtherScene
-  dialogueKey: "\uB2E4\uB978\uC52C\uC774\uB3D9"
-  isUnRocked: 1
+  questType: 0
+  questInteractionType: 0
+  dialogueKey: "\uC0C1\uC810\uC5F4\uAE30"
+  targetNpcId: 
+  unlockConditions: []
   targetScene: 0

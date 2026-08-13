@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class QuestLoadManager : TempManagerBase<QuestLoadManager, List<QuestData>>
 {
-    private void OnDisable()
+    protected override void OnDestroy()
     {
-        base.OnDisable();
+        base.OnDestroy();
 
         if (MasterSaveManager.Instance != null && MasterSaveManager.Instance.currentSaveData != null)
         {

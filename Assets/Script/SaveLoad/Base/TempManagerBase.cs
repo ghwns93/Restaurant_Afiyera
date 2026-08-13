@@ -21,7 +21,6 @@ public abstract class TempManagerBase<TClass, TData> : MonoBehaviour, ISaveable
     {
         if(MasterSaveManager.Instance == null)
         {
-            Debug.LogError("MasterSaveManager가 존재하지 않습니다. 씬에 MasterSaveManager를 배치하세요.");
             return;
         }
         HandleLoadData(MasterSaveManager.Instance.currentSaveData);
@@ -33,7 +32,7 @@ public abstract class TempManagerBase<TClass, TData> : MonoBehaviour, ISaveable
         //MasterSaveManager.OnSaveDataLoaded += HandleLoadData;
     }
 
-    protected virtual void OnDisable()
+    protected virtual void OnDestroy()
     {
         // 메모리 누수 방지를 위한 구독 해제
         //MasterSaveManager.OnSaveDataLoaded -= HandleLoadData;

@@ -107,7 +107,7 @@ public class DayManager : TimeBase
 
                 TimeEvents.OnNpcSpecificTimeReached?.Invoke(nowTime); // 이벤트 호출
             }
-            Debug.Log($"현재 시간: {nowTime}시");
+            //Debug.Log($"현재 시간: {nowTime}시");
         }
     }
 

@@ -9,6 +9,7 @@ public class NpcInteractionOtherScene : NpcInteractionBase
     // 로직: 다른 씬으로 이동
     public override void Execute(GameObject actor)
     {
-        SceneController.Instance.LoadSubScene(targetScene);
+        //SceneController.Instance.LoadSubScene(targetScene);
+        SceneController.Instance.LoadSubScene(SceneType.Shop);
     }
 }

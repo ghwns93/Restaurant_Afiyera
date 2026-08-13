@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,10 +19,18 @@ public class QuestData
 }
 
 [Serializable]
+public class PlayerData
+{
+    public Vector3 lastPosition;
+    public Vector3 lastCameraPosition;
+}
+
+[Serializable]
 public class SaveData
 {
     public int day;
 
     public List<BuildingData> buildings = new List<BuildingData>();
     public List<QuestData> quests = new List<QuestData>();
+    public PlayerData playerInfo = new PlayerData();
 }

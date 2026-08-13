@@ -5,9 +5,9 @@ using UnityEngine.UIElements;
 
 public class BuildLoadManager : TempManagerBase<BuildLoadManager, List<BuildingData>>
 {
-    private void OnDisable()
+    protected override void OnDestroy()
     {
-        base.OnDisable();
+        base.OnDestroy();
 
         if (MasterSaveManager.Instance != null && MasterSaveManager.Instance.currentSaveData != null)
         {

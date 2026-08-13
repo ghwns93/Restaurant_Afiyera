@@ -32,7 +32,11 @@ public class FreeMovement : MonoBehaviour
 
     void Update()
     {
-        if (!canMove) return;
+        if (!canMove)
+        {
+            moveInput = Vector2.zero; // 이동 입력 초기화
+            return;
+        }
 
         // WASD 입력 받기
         float h = Input.GetAxisRaw("Horizontal");
