@@ -15,11 +15,13 @@ public class DayManager : TimeBase
 
     private Coroutine ClockCoroutine;
 
+    public float TimePerOnce { get => timePerOnce; set => timePerOnce = value; }
+
     protected override void Awake()
     {
         base.Awake();
 
-        timePerOnce = realSecondsPerDay / oneDayDurationInSeconds; // 실제 시간 대비 게임 내 시간 비율 계산
+        TimePerOnce = realSecondsPerDay / oneDayDurationInSeconds; // 실제 시간 대비 게임 내 시간 비율 계산
     }
 
     private void OnEnable()
@@ -82,7 +84,7 @@ public class DayManager : TimeBase
         while (true)
         {
             yield return new WaitForSecondsRealtime(1); // 1초마다 체크
-            nowOneDayTime += timePerOnce; // 게임 내 시간 증가
+            nowOneDayTime += TimePerOnce; // 게임 내 시간 증가
 
             if(nowOneDayTime >= (workTime * secondsPerHour) && isWorking == false)
             {
@@ -100,6 +102,7 @@ public class DayManager : TimeBase
             }
 
             int currentHour = (int)(nowOneDayTime / secondsPerHour); // 현재 시간 계산
+            int currentMinute = (int)((nowOneDayTime % secondsPerHour) / secondsPerMinute); // 현재 분 계산
 
             if(currentHour > nowTime)
             {
@@ -107,7 +110,9 @@ public class DayManager : TimeBase
 
                 TimeEvents.OnNpcSpecificTimeReached?.Invoke(nowTime); // 이벤트 호출
             }
-            //Debug.Log($"현재 시간: {nowTime}시");
+
+            RecordNowTime(currentHour, currentMinute);
+            //Debug.Log($"현재 시간: {nowTime}시 {currentMinute}분");
         }
     }
 
@@ -142,5 +147,7 @@ public class DayManager : TimeBase
         isWorking = true;
         nowOneDayTime = hour * secondsPerHour;
         nowTime = hour;
+
+        RecordNowTime(nowTime, 0);
     }
 }

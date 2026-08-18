@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FenceNode : BasicNode, IConnectable
+public class FenceNode : BasicNode, IConnectable, EditorInterface
 {
     [SerializeField] private GameObject spriteLU; // 좌상
     [SerializeField] private GameObject spriteLD; // 좌하
@@ -99,5 +99,10 @@ public class FenceNode : BasicNode, IConnectable
     {
         Debug.Log("울타리 주기 감소 증가!");
         NpcTalkUIManager.Instance.EndTalk();
+    }
+
+    public GameObject GetEditorPrefab()
+    {
+        return this.gameObject;
     }
 }

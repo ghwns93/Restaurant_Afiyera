@@ -27,6 +27,9 @@ public abstract class TimeBase : MonoBehaviour
 
     public TimeState nowTimeState = TimeState.Day;
 
+    public int nowHour = 0;
+    public int nowMinute = 0;
+
     protected virtual void Awake()
     {
         if (Instance != null)
@@ -36,6 +39,8 @@ public abstract class TimeBase : MonoBehaviour
         }
 
         Instance = this;
+
+        nowHour = startTime;
 
         TimeEvents.OnNightRestaurant += NightRestaurantOpen;
     }
@@ -112,6 +117,12 @@ public abstract class TimeBase : MonoBehaviour
         }
 
         IsNewDay = false;
+    }
+
+    public void RecordNowTime(int hour, int minute)
+    {
+        nowHour = hour;
+        nowMinute = minute;
     }
 
     public abstract void SetNowTime(int hour);

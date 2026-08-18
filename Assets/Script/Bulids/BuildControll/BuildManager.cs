@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -29,7 +30,7 @@ public class BuildManager : MonoBehaviour
 
     // 모든 건물/울타리를 BasicNode 타입으로 통합 관리
     private Dictionary<Vector3Int, BasicNode> privateAllNodes = new Dictionary<Vector3Int, BasicNode>();
-    private List<BasicNode> privateCachedNodeList = new List<BasicNode>();
+    [SerializeField] private List<BasicNode> privateCachedNodeList = new List<BasicNode>();
     private bool privateIsDirty = true; // 리스트 갱신이 필요한지 체크하는 플래그
 
     public Tilemap PrivateTargetTilemap { get => privateTargetTilemap; set => privateTargetTilemap = value; }
@@ -46,9 +47,27 @@ public class BuildManager : MonoBehaviour
     }
 
     // 특정 좌표에 건물이 있는지 확인 (가장 중요한 체크 함수)
-    public bool HasNodeAt(Vector3Int pos)
+    public bool HasNodeAt(Vector3Int pos, params BasicNode[] exceptions)
     {
-        return privateAllNodes.ContainsKey(pos);
+        bool result = privateAllNodes.ContainsKey(pos);
+
+        if (exceptions.Length > 0 && result)
+        {
+            result = false;
+
+            var dup = privateAllNodes[pos];
+
+            foreach (var exception in exceptions)
+            {
+                if(dup != exception)
+                {
+                    result = true; 
+                    break;
+                }
+            }
+        }
+
+        return result;
     }
 
     // 특정 좌표에 유저와 겹칠수 없는 건물이 있는지 확인
@@ -178,7 +197,11 @@ public class BuildManager : MonoBehaviour
         newNode.Setup(data);
 
         obj.transform.position = GetCenterWorldPosition(NodeOffset);
-        obj.transform.position += (baseAnchor + new Vector3(0, (newNode.NodeSize * 2 + 1) * 0.25f, 0));
+
+        Vector3 yOffset = (newNode.NodeSize % 2 != 0) ? baseAnchor : Vector3.zero;
+
+        //obj.transform.position += (yOffset + new Vector3(0, (newNode.NodeSize * 2 + 1) * 0.25f, 0));
+        obj.transform.position -= yOffset;
 
         // 3. 만약 설치한 것이 울타리라면, 해당 칸을 동물 구역으로 설정
         if (newNode is FenceNode)
@@ -193,6 +216,40 @@ public class BuildManager : MonoBehaviour
         //NotifyNeighbors(pos);
 
         privateIsDirty = true;
+
+        return true;
+    }
+
+    public bool RelocateNode(BasicNode nodeData, Vector3Int newLocate)
+    {
+        var NodeOffset = GenerateBuildingOffsets(newLocate, nodeData.NodeSize);
+
+        foreach (var offset in NodeOffset)
+        {
+            // 설치하려는 건물의 크기에 해당하는 모든 칸이 유효한지 확인
+            if (FloorManager.Instance.GetFloorAt(offset) == null || HasNodeAt(offset, nodeData))
+            {
+                // 하나라도 겹치거나 바닥이 없으면 설치 실패 처리
+                return false;
+            }
+        }
+
+        var nodePos = privateAllNodes.Where(x => x.Value == nodeData).Select(x => x.Key).ToList();
+
+        if (nodePos.Count == 0) return false;
+
+        foreach (var pos in nodePos)
+        {
+            RemoveNode(pos);
+        }
+
+        foreach (var offset in NodeOffset)
+        {
+            if (!privateAllNodes.ContainsKey(offset))
+            {
+                privateAllNodes.Add(offset, nodeData);
+            }
+        }
 
         return true;
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RoadNode : BasicNode
+public class RoadNode : BasicNode, EditorInterface
 {
     private void Start()
     {
@@ -26,4 +26,9 @@ public class RoadNode : BasicNode
     public override void ManagementCycleAction(){}
 
     public override void UpdateVisual(){}
+
+    public GameObject GetEditorPrefab()
+    {
+        return this.gameObject;
+    }
 }

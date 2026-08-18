@@ -39,7 +39,7 @@ public class FileLogger : MonoBehaviour
                 writer.WriteLine("==========================================\n");
             }
 
-            Debug.Log($"[FileLogger] Debug log initialized at: {logFilePath}");
+            //Debug.Log($"[FileLogger] Debug log initialized at: {logFilePath}");
         }
         catch (Exception ex)
         {

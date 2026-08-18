@@ -27,6 +27,8 @@ public class TimeManager : TimeBase
         nowMinutes = Mathf.Min((sleepTime * secondsPerMinute), nowMinutes + minutes);
         Debug.Log($"현재 시간 {nowMinutes / secondsPerMinute} 시 {nowMinutes % secondsPerMinute} 분");
 
+        RecordNowTime((nowMinutes / secondsPerMinute), (nowMinutes % secondsPerMinute));
+
         if (nowMinutes >= (workTime * secondsPerMinute) && isWorking == false)
         {
             GoToWork();
@@ -75,6 +77,8 @@ public class TimeManager : TimeBase
     {
         isWorking = true;
         nowMinutes = hour * secondsPerMinute;
+
+        RecordNowTime(hour, 0);
     }
 
     

@@ -4,7 +4,7 @@ public class PlayerSaveData : MonoBehaviour
 {
     private void OnDisable()
     {
-        if (PlayerInfoLoadManager.Instance != null)
+        if (PlayerInfoLoadManager.Instance != null && Camera.main != null)
         {
             PlayerData currentData = new PlayerData
             {
