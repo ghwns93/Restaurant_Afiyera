@@ -4,6 +4,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static UnityEditor.PlayerSettings;
 
 public class BuildManager : MonoBehaviour
 {
@@ -241,6 +242,15 @@ public class BuildManager : MonoBehaviour
         foreach (var pos in nodePos)
         {
             RemoveNode(pos);
+
+            var delData = new BuildingData
+            {
+                id = nodeData.NodeId,
+                position = pos,
+                remainHarvestTime = nodeData.harvestTime
+            };
+
+            BuildLoadManager.Instance.DeleteBuildData(delData);
         }
 
         foreach (var offset in NodeOffset)
@@ -250,6 +260,16 @@ public class BuildManager : MonoBehaviour
                 privateAllNodes.Add(offset, nodeData);
             }
         }
+
+        // 货肺款 单捞磐 积己
+        var data = new BuildingData
+        {
+            id = nodeData.NodeId,
+            position = newLocate,
+            remainHarvestTime = nodeData.harvestTime
+        };
+
+        BuildLoadManager.Instance.NewDataStructure(data);
 
         return true;
     }

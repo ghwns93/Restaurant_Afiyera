@@ -10,5 +10,6 @@ public class NpcInteractionTalkEnd : NpcInteractionBase
     public override void Execute(GameObject actor)
     {
         NpcTalkUIManager.Instance.EndTalk();
+        NpcInteractionManager.Instance.CompleteQuest(targetNpcId, this, questType);
     }
 }

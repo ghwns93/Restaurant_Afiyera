@@ -19,13 +19,23 @@ public class BasicNpcScript : MonoBehaviour
 
     private string myNpcId;
 
+    public List<NpcInteractionBase> CopyedNpcInteractionList { get => copyedNpcInteractionList; set => copyedNpcInteractionList = value; }
+    public string MyNpcId { get => myNpcId; }
+
     private void Start()
     {
         CreateThisId();
         InputInteraction();
+
+        var questSet = gameObject.GetComponent<QuestBasedNpcController>();
+
+        if(questSet != null)
+        {
+            questSet.SetBns(this, myNpcId);
+        }
     }
 
-    private void CreateThisId()
+    public void CreateThisId()
     {
         //myNpcId = System.Guid.NewGuid().ToString();
 
@@ -49,20 +59,20 @@ public class BasicNpcScript : MonoBehaviour
             {
                 var newInteraction = Instantiate(interaction);
 
-                newInteraction.targetNpcId = myNpcId;
+                newInteraction.targetNpcId = MyNpcId;
 
-                copyedNpcInteractionList.Add(newInteraction);
+                CopyedNpcInteractionList.Add(newInteraction);
             }
         }
     }
 
-    private void SetNpcInteractionButton()
+    public void SetNpcInteractionButton()
     {
         if (npcInteractionBase is NpcInteractionTalk)
         {
             List<NpcInteractionBase> unlockedTalk = new List<NpcInteractionBase>();
 
-            foreach (var talk in copyedNpcInteractionList)
+            foreach (var talk in CopyedNpcInteractionList)
             {
                 if (talk.CanActivate())
                 {
@@ -84,11 +94,11 @@ public class BasicNpcScript : MonoBehaviour
 
     public void ResetNpcInteraction(QuestInteractionType qit)
     {
-        foreach (var interaction in copyedNpcInteractionList)
+        foreach (var interaction in CopyedNpcInteractionList)
         {
             if (interaction.questInteractionType == qit)
             {
-                NpcInteractionManager.Instance.ResetQuest(myNpcId, interaction);
+                NpcInteractionManager.Instance.ResetQuest(MyNpcId, interaction);
                 break;
             }
         }

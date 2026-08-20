@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class NpcInteractionManager : MonoBehaviour
 {
     public static NpcInteractionManager Instance;
+    public static event System.Action<string, NpcInteractionBase> OnQuestStateChanged;
 
     private readonly Func<string,string,string> makeKey = (k1,k2) => $"{k1}_{k2}";
 
@@ -45,12 +46,20 @@ public class NpcInteractionManager : MonoBehaviour
             questComplete.Add(key, questState);
 
             SaveQuestData();
+
+            OnQuestStateChanged?.Invoke(targetId, quest);
         }
     }
 
     // 조건 충족 여부 확인
     public bool IsQuestCompleted(string targetId, NpcInteractionBase quest)
     {
+        if(quest == null)
+        {
+            Debug.Log("quest is null");
+            return false;
+        }
+
         string key = makeKey(targetId, quest.dialogueKey);
 
         if (questComplete.ContainsKey(key))
@@ -74,6 +83,22 @@ public class NpcInteractionManager : MonoBehaviour
         else
         {
             Debug.Log("일치하는 퀘스트가 없습니다.");
+        }
+    }
+
+    public void ChangeQuestKey(string oldId, string newId, NpcInteractionBase quest)
+    {
+        string oldkey = makeKey(oldId, quest.dialogueKey);
+        string newkey = makeKey(newId, quest.dialogueKey);
+
+        if (questComplete.ContainsKey(oldkey))
+        {
+            var data = questComplete[oldkey];
+
+            questComplete.Remove(oldkey);
+            questComplete.Add(newkey, data);
+
+            SaveQuestData();
         }
     }
 

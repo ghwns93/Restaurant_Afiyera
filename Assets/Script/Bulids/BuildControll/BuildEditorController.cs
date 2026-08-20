@@ -82,6 +82,20 @@ public class BuildEditorController : BuildBase
         {
             privateSelectedPrefab.transform.position = WorldPos;
 
+            var questData = privateSelectedPrefab.GetComponent<BasicNpcScript>();
+
+            if (questData != null)
+            {
+                var oldid = questData.MyNpcId;
+
+                questData.CreateThisId();
+
+                foreach (var npc in questData.CopyedNpcInteractionList)
+                {
+                    NpcInteractionManager.Instance.ChangeQuestKey(oldid, questData.MyNpcId, npc);
+                }
+            }
+
             GroupSorting gs = privateSelectedPrefab.GetComponent<GroupSorting>();
 
             gs.SetFenceOrder(cellPos);
