@@ -21,6 +21,7 @@ public class QuestData
 [Serializable]
 public class PlayerData
 {
+    public int isNew = 0;
     public Vector3 lastPosition;
     public Vector3 lastCameraPosition;
 }

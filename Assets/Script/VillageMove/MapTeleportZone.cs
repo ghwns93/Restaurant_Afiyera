@@ -30,7 +30,7 @@ public class MapTeleportZone : MonoBehaviour
             // [화면이 완전 검은색으로 가려졌을 때 실행]
 
             // 플레이어 위치 이동
-            player.position = targetSpawnPoint.position;
+            player.position = targetSpawnPoint.GetChild(0).position;
 
             // 메인 카메라의 이동 위치를 스폰 지점으로 직접 순간이동 (카메라 추적 보정용)
             Camera mainCam = Camera.main;
@@ -51,5 +51,22 @@ public class MapTeleportZone : MonoBehaviour
         });
 
         isTeleporting = false;
+    }
+
+    private Vector3 AddPos()
+    {
+        switch (moveDirection)
+        {
+            case Direction.Left:
+                return Vector3.left;
+            case Direction.Right:
+                return Vector3.right;
+            case Direction.Up:
+                return Vector3.up;
+            case Direction.Down:
+                return Vector3.down;
+            default:
+                return Vector3.zero;
+        }
     }
 }

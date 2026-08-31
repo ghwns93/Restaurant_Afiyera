@@ -1,0 +1,24 @@
+{
+  "dialogues": [
+    {
+      "isCustomer": true,
+      "message": "안녕하세요! 오늘 날씨가 참 쌀쌀하네요."
+    },
+    {
+      "isCustomer": false,
+      "message": "네, 어서오세요! 속을 훈훈하게 채워줄 음식을 찾으시나요?"
+    },
+    {
+      "isCustomer": true,
+      "message": "네! 속이 뻥 뚫리게 **맵고** **뜨거운** 국물 요리가 땡기네요."
+    },
+    {
+      "isCustomer": false,
+      "message": "칼칼하고 김이 모락모락 나는 음식으로 준비해 드릴까요?"
+    },
+    {
+      "isCustomer": true,
+      "message": "좋습니다! 그리고 씹는 맛이 있게 **고기**가 듬뿍 들어가 있으면 좋겠어요!"
+    }
+  ]
+}

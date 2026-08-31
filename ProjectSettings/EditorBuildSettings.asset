@@ -6,55 +6,55 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/IntroScene.unity
+    path: Assets/Scenes/Common/IntroScene.unity
     guid: 34463613af247a64aaf0228c8042e235
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/Common/MainScene.unity
     guid: 9eb285e2342fa5049ba95f062365f913
   - enabled: 1
-    path: Assets/Scenes/NpcInterationUiScene.unity
+    path: Assets/Scenes/Common/NpcInterationUiScene.unity
     guid: 5769e71ed587fe0489a85767bf37935d
   - enabled: 1
-    path: Assets/Scenes/NpcSelectionUiScene.unity
+    path: Assets/Scenes/Common/NpcSelectionUiScene.unity
     guid: 9c9df15b662170b40ac95a7db1467751
   - enabled: 1
-    path: Assets/Scenes/OptionScene.unity
+    path: Assets/Scenes/Common/OptionScene.unity
     guid: 8fd48db1ee82344429595eb13e52b41b
   - enabled: 1
-    path: Assets/Scenes/VillageScene.unity
+    path: Assets/Scenes/Village/VillageScene.unity
     guid: 8951da4d0c2ea0246a7a211646d0fafa
   - enabled: 1
-    path: Assets/Scenes/HomeScene.unity
+    path: Assets/Scenes/Home/HomeScene.unity
     guid: a790898136c6bd7438dd72760fb5ed33
   - enabled: 1
-    path: Assets/Scenes/NightCookScene.unity
+    path: Assets/Scenes/Cooking/NightCookScene.unity
     guid: 7cda9092217657d42b2f606716655361
   - enabled: 1
-    path: Assets/Scenes/CookingScene.unity
+    path: Assets/Scenes/Cooking/CookingScene.unity
     guid: f64c975e9f064b3439228f0285f8d7b9
   - enabled: 1
-    path: Assets/Scenes/SrotyAndRecipeScene.unity
+    path: Assets/Scenes/Home/SrotyAndRecipeScene.unity
     guid: 960c155757628184aa7ed5cd5b531389
   - enabled: 1
-    path: Assets/Scenes/WorkerDoWorkScene.unity
+    path: Assets/Scenes/Home/WorkerDoWorkScene.unity
     guid: 28e0e03a63c25254f8b90435e1d00e9f
   - enabled: 1
-    path: Assets/Scenes/WorkerEnchantScene.unity
+    path: Assets/Scenes/Home/WorkerEnchantScene.unity
     guid: 0795e7c5930c9034891e7c7c395a7c1b
   - enabled: 1
-    path: Assets/Scenes/HomeKitchenScene.unity
+    path: Assets/Scenes/Home/HomeKitchenScene.unity
     guid: f35b243f2b9398f4f99f422cc731941d
   - enabled: 1
-    path: Assets/Scenes/TestHomeUIScene.unity
+    path: Assets/Scenes/Temp/TestHomeUIScene.unity
     guid: 718cbacf365a5f449a914b9ef3a421a2
   - enabled: 1
-    path: Assets/Scenes/ShopCodyScene.unity
+    path: Assets/Scenes/Shop/ShopCodyScene.unity
     guid: c84b15e8b622b1f4ead5acfc0284083e
   - enabled: 1
-    path: Assets/Scenes/ShopScene.unity
+    path: Assets/Scenes/Shop/ShopScene.unity
     guid: c2d6ede78bfcb29439cf2e23fb453108
   - enabled: 1
-    path: Assets/Scenes/ShopFlavoringScene.unity
+    path: Assets/Scenes/Shop/ShopFlavoringScene.unity
     guid: 964fce98b41ac7b46a0b9fd43e7a59b9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -6,6 +6,7 @@ public class CookingCookTypeManager : MonoBehaviour
     public static CookingCookTypeManager Instance { get; private set; }
 
     [SerializeField] private List<FoodData> _foodList;
+    [SerializeField] private List<CookTypeImage> _cookTypeImagelist;
     [SerializeField] private GameObject _foodPrefab;
 
     public GameObject FoodPrefab { get { return _foodPrefab; } }
@@ -14,6 +15,11 @@ public class CookingCookTypeManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+    }
+
+    public List<FoodData> GetAllFoodData()
+    { 
+        return _foodList; 
     }
 
     public FoodData GetFoodDataById(int id)
@@ -28,5 +34,18 @@ public class CookingCookTypeManager : MonoBehaviour
         (x.mat[0] == mat2 && x.mat[1] == mat1)) &&
         x.cookType == cookType);
     }
+
+    public Sprite GetCookTypeImage(CookType cookType)
+    {
+        return _cookTypeImagelist.Find(x => x.cookType == cookType).cookSprite;
+    }
 }
+
 public enum CookType { None, Fire, Ice, Time};
+
+[System.Serializable]
+public struct CookTypeImage
+{
+    public CookType cookType;
+    public Sprite cookSprite;
+}

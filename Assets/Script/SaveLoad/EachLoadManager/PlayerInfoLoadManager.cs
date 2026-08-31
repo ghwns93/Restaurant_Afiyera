@@ -29,11 +29,12 @@ public class PlayerInfoLoadManager : TempManagerBase<PlayerInfoLoadManager, Play
 
     protected override void OnDataInitialized(PlayerData initializedData)
     {
+        if (initializedData.isNew == 0) return;
+
         // [로드 후 행동] 이제 부모가 챙겨다 준 initializedData(tempValues)를 가지고 
         // 실제 프리팹을 맵에 스폰하거나 필요한 오브젝트에 Action을 쏘면 됩니다!
         GameObject player = GameObject.FindWithTag("Player");
 
-        //Debug.Log($"PlayerInfoLoadManager position loaded: {initializedData.lastPosition}");
         player.transform.position = initializedData.lastPosition;
         Camera.main.transform.position = initializedData.lastCameraPosition;
     }

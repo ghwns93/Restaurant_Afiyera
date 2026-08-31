@@ -1,0 +1,16 @@
+{
+  "dialogues": [
+    {
+      "isCustomer": true,
+      "message": "안녕하세요! 오늘 좀 얼큰한 게 땡기네요."
+    },
+    {
+      "isCustomer": false,
+      "message": "매콤한 국물 요리 쪽으로 추천해 드릴까요?"
+    },
+    {
+      "isCustomer": true,
+      "message": "좋아요! 해산물도 들어가 있으면 좋겠어요."
+    }
+  ]
+}

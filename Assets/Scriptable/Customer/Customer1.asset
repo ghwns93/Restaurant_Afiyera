@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeab3b78b6c83694596c88c37414fbbf, type: 3}
+  m_Name: Customer1
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  customerName: "\uCD0C\uC7A5\uB2D8"
+  customerSprite: {fileID: 21300000, guid: e9486c11de9965b4abe101487d360bd5, type: 3}
+  targetFood: {fileID: 11400000, guid: 8f4531b61b6bca7438c24ae8fe104b70, type: 2}
+  hintKeywords: 000000000200000004000000
+  dialogueJsonFile: {fileID: 4900000, guid: 80c34ece2d6ad364a8796d0490a2573b, type: 3}

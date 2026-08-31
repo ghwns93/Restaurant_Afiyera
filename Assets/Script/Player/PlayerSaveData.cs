@@ -8,6 +8,7 @@ public class PlayerSaveData : MonoBehaviour
         {
             PlayerData currentData = new PlayerData
             {
+                isNew = 1,
                 lastPosition = transform.position,
                 lastCameraPosition = Camera.main.transform.position
             };

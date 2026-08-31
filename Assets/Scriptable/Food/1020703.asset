@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
   id: 1020703
   foodName: TestFood1
+  seasoningTier: 0
   cookType: 3
   plateType: 3
   mat: 660000006b000000
   iconPlated: {fileID: -6625976092639481393, guid: ad0ed780831cd154ea65c232e4fe0dc4, type: 3}
   iconCooked: {fileID: -7930096565095538899, guid: 15c5bd44e8276124ba1790b9cad4df21, type: 3}
+  keywords: 050000000000000002000000
   description: 

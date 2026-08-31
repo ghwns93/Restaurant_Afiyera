@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "FoodData", menuName = "Cooking/FoodData")]
@@ -10,6 +11,12 @@ public class FoodData : ScriptableObject
     public PlateType plateType;
     public int[] mat;
     public Sprite iconPlated;
-    public Sprite iconCooked;
+    public Sprite iconCooked; 
+    public List<FoodKeyword> keywords;
     [TextArea] public string description;
+}
+
+public enum FoodKeyword
+{
+    Spicy, Sweet, Hot, Cold, Meat, Seafood, Noodle, Rice
 }
