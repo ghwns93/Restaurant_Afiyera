@@ -1,28 +1,31 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Tilemaps;
 
 public class NonEffectObjectSorting : MonoBehaviour
 {
+    private Tilemap targetTilemap;
+
     private void Start()
     {
+        targetTilemap = BuildManager.Instance.PrivateTargetTilemap;
         SetFenceOrder();
     }
 
     public void SetFenceOrder()
     {
-        for (int i = 0; i < transform.childCount; i++)
+        var spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (var sr in spriteRenderers)
         {
-            var child = transform.GetChild(i);
+            var childTransform = sr.transform;
 
-            if (child != null)
-            {
-                var spriteRenderers = child.GetComponent<SpriteRenderer>();
+            int originalSortingOrder = sr.sortingOrder;
 
-                if(spriteRenderers != null)
-                {
-                    spriteRenderers.sortingOrder = Mathf.RoundToInt(-(child.position.x + child.position.y) * 100 - 150);
-                }
-            }
+            //Vector3 footPos = childTransform.position;
+            //Vector3Int cellPos = targetTilemap.WorldToCell(footPos);
+
+            sr.sortingOrder = Mathf.RoundToInt(-(childTransform.position.y) * 100 - 150) + originalSortingOrder;
         }
     }
 }

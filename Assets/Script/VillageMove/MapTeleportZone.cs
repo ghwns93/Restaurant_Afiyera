@@ -10,11 +10,15 @@ public class MapTeleportZone : MonoBehaviour
     [Header("카메라 설정")]
     [SerializeField] private Collider2D targetMapBoundingCollider; // 이동할 맵의 영역 Collider
 
+    [Header("특정 UI 오픈")]
+    [SerializeField] private GameObject targetUi;
+    [SerializeField] private bool openUiOnTeleport = false;
+
     private bool isTeleporting = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !isTeleporting)
+        if (collision.CompareTag("Player") && !isTeleporting && targetSpawnPoint != null)
         {
             StartCoroutine(TeleportSequence(collision.transform));
         }
@@ -23,6 +27,8 @@ public class MapTeleportZone : MonoBehaviour
     private IEnumerator TeleportSequence(Transform player)
     {
         isTeleporting = true;
+
+        SystemController.Instance.SetSystemPause(false);
 
         // 1. 화면 전환 연출 시작
         yield return ScreenTransitionManager.Instance.PlayTransition(moveDirection, () =>
@@ -50,23 +56,17 @@ public class MapTeleportZone : MonoBehaviour
             }
         });
 
+        SystemController.Instance.SetSystemPause(true);
         isTeleporting = false;
+
+        OpenUi();
     }
 
-    private Vector3 AddPos()
+    private void OpenUi()
     {
-        switch (moveDirection)
+        if (targetUi != null)
         {
-            case Direction.Left:
-                return Vector3.left;
-            case Direction.Right:
-                return Vector3.right;
-            case Direction.Up:
-                return Vector3.up;
-            case Direction.Down:
-                return Vector3.down;
-            default:
-                return Vector3.zero;
+            targetUi.SetActive(openUiOnTeleport);
         }
     }
 }

@@ -13,6 +13,8 @@ public class NpcInteractionEventMove : NpcInteractionBase, IQuestEventListener
     public override void Execute(GameObject actor)
     {
         NpcTalkUIManager.Instance.SetTalkText(talkContent);
+
+        TimeEvents.OnNightRestaurant?.Invoke();
     }
 
     public void OnEvaluateState(GameObject ownerNpc)

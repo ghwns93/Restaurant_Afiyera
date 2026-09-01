@@ -255,7 +255,8 @@ public class DialogueManager : MonoBehaviour
                         return;
                     }
                     var npc = NpcDicManager.Instance.GetData(ev.npcId);
-                    npcSlots[ev.slot].Show(ev.npcId, npc != null ? npc.portrait : null);
+                    int portraitIndex = ev.portraitIndex <= npc.portraits.Length ? ev.portraitIndex : 0;
+                    npcSlots[ev.slot].Show(ev.npcId, npc != null ? npc.portraits[portraitIndex] : null);
                     break;
                 }
             case DialogueEventType.HideNpc:

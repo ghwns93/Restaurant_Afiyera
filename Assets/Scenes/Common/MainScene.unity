@@ -324,11 +324,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildDicManager
   dataList:
-  - {fileID: 812149568245938315, guid: be17ae4a09b889d40a953d6912f7c91d, type: 3}
   - {fileID: 812149568245938315, guid: e77f3374b4a4a09449b937e448055fd7, type: 3}
-  - {fileID: 812149568245938315, guid: ca2c7d2d98a16944eb4d5d29a0af8017, type: 3}
-  - {fileID: 812149568245938315, guid: 346518f5663c8a34ab43998361db8d8f, type: 3}
-  - {fileID: 812149568245938315, guid: a3c66ff4ce656564dac09700f14cd62c, type: 3}
+  - {fileID: 812149568245938315, guid: 6d2f6f98bf5b2204a8d017535e0ea838, type: 3}
+  - {fileID: 812149568245938315, guid: acdd838a2f1de50448fbeadc35d85a57, type: 3}
+  - {fileID: 812149568245938315, guid: bcac8b7cbc8ca1a49bab2155bd1f8bce, type: 3}
+  - {fileID: 812149568245938315, guid: b0e47e644a4878c458cc132fc1096a44, type: 3}
   - {fileID: 812149568245938315, guid: 34fc324e949e6e540a27be0efca82f52, type: 3}
   - {fileID: 812149568245938315, guid: 422f31db85ebd8145bcd73cd4835a31f, type: 3}
 --- !u!4 &483804541
@@ -1171,8 +1171,10 @@ MonoBehaviour:
     buildings: []
     quests: []
     playerInfo:
+      isNew: 0
       lastPosition: {x: 0, y: 0, z: 0}
       lastCameraPosition: {x: 0, y: 0, z: 0}
+      lastCameraBoundIndex: -1
 --- !u!4 &1628812283
 Transform:
   m_ObjectHideFlags: 0

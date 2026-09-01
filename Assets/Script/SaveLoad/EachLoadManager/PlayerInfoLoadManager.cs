@@ -37,6 +37,13 @@ public class PlayerInfoLoadManager : TempManagerBase<PlayerInfoLoadManager, Play
 
         player.transform.position = initializedData.lastPosition;
         Camera.main.transform.position = initializedData.lastCameraPosition;
+
+        var cameraBoundManager = Camera.main.GetComponent<SimpleCameraConfiner>();
+
+        if(cameraBoundManager != null)
+        {
+            cameraBoundManager.SetBoundByIndex(initializedData.lastCameraBoundIndex);
+        }
     }
 
     public void NewDataStructure(PlayerData newData)

@@ -18,6 +18,7 @@ MonoBehaviour:
   targetNpcId: 
   unlockConditions:
   - {fileID: 11400000, guid: 84deb55b379633648a0c0a690172acfd, type: 2}
-  movePos: {x: 95, y: -43.5, z: 0}
+  movePos: {x: 375, y: -38, z: 0}
   changeSprite: {fileID: 0}
-  talkContent: "\uB09A\uC2DC\uB294 \uC990\uAC70\uC6CC~"
+  talkContent: "\uC5ED\uC2DC \uB09A\uC2DC\uB294 \uC990\uAC70\uC6CC.\n\uD558\uACE0\uC2F6\uC740
+    \uC774\uC57C\uAE30\uAC00 \uC788\uC73C\uB2C8 \uC624\uB298 \uC800\uB141\uC5D0 \uBC29\uBB38\uD560\uAED8"

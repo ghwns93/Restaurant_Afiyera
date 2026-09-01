@@ -9,7 +9,12 @@
       "typingSpeed": 0.04,
       "next": "intro_02",
       "events": [
-        { "type": "SHOW_NPC", "npcId": "elder", "slot": 0 }
+        {
+          "type": "SHOW_NPC",
+          "npcId": "elder",
+          "slot": 0,
+          "portraitIndex": 0
+        }
       ],
       "choices": []
     },
@@ -20,7 +25,12 @@
       "typingSpeed": 0.02,
       "next": "intro_03",
       "events": [
-        { "type": "SHOW_NPC", "npcId": "guard", "slot": 1 }
+        {
+          "type": "SHOW_NPC",
+          "npcId": "guard",
+          "slot": 1,
+          "portraitIndex": 0
+        }
       ],
       "choices": []
     },
@@ -57,7 +67,14 @@
       "text": "고맙네! 역시 자네라면 그렇게 말할 줄 알았지.",
       "typingSpeed": 0.04,
       "next": "accept_02",
-      "events": [],
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId": "elder",
+          "slot": 0,
+          "portraitIndex": 1
+        }
+      ],
       "choices": []
     },
     {

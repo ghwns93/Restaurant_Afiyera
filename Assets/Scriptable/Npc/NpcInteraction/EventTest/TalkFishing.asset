@@ -18,4 +18,5 @@ MonoBehaviour:
   targetNpcId: 
   unlockConditions:
   - {fileID: 11400000, guid: 1ed888781f86e844fa617259489a046e, type: 2}
-  talkContent: "\uC88B\uC544 \uB09A\uC2DC\uD130\uB85C \uC774\uB3D9\uD558\uC790"
+  talkContent: "\uC88B\uC544 \uB09A\uC2DC\uD558\uB7EC\uAC00\uC790\n\uAC70\uC8FC\uAD6C\uC5ED\uC73C\uB85C
+    \uC640"

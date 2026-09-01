@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
@@ -5,6 +6,8 @@ public class SimpleCameraConfiner : MonoBehaviour
 {
     [Header("현재 카메라 제한 영역 (BoxCollider2D 또는 PolygonCollider2D)")]
     [SerializeField] private Collider2D currentBoundsCollider;
+
+    [SerializeField] private List<Collider2D> boundAreas;
 
     private Camera cam;
 
@@ -17,6 +20,32 @@ public class SimpleCameraConfiner : MonoBehaviour
     {
         // 카메라의 추적/이동 스크립트가 실행된 후(LateUpdate) 경계를 강제로 제한합니다.
         ClampCameraPosition();
+    }
+
+    public int GetNowBound()
+    {
+        for(int i = 0; i < boundAreas.Count; i++)
+        {
+            if (boundAreas[i] == currentBoundsCollider)
+            {
+                return i;
+            }
+        }
+
+        return -1; // 현재 바운드가 리스트에 없으면 -1 반환
+    }
+
+    public void SetBoundByIndex(int index)
+    {
+        if (index >= 0 && index < boundAreas.Count)
+        {
+            currentBoundsCollider = boundAreas[index];
+            ClampCameraPosition();
+        }
+        else
+        {
+            Debug.LogWarning("Invalid index for camera bounds.");
+        }
     }
 
     public void SetBounds(Collider2D newBounds)

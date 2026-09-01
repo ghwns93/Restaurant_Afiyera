@@ -24,6 +24,7 @@ public class PlayerData
     public int isNew = 0;
     public Vector3 lastPosition;
     public Vector3 lastCameraPosition;
+    public int lastCameraBoundIndex = -1; // 마지막 카메라 제한 영역 인덱스
 }
 
 [Serializable]

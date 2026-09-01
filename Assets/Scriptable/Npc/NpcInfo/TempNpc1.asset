@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcDatabase
   npcId: elder
   displayName: "\uB3C4\uB85C\uB871"
-  portrait: {fileID: 2910670893563852575, guid: f2f8b999eb411da419ffd7ca80f7a074, type: 3}
+  portraits:
+  - {fileID: -3870710029338204249, guid: 76ce465b4dbd659489925aaea8bfd319, type: 3}
+  - {fileID: 8862949129596543359, guid: ee4dbfe49bba4db408a956bd270ed428, type: 3}
+  - {fileID: 2910670893563852575, guid: f2f8b999eb411da419ffd7ca80f7a074, type: 3}

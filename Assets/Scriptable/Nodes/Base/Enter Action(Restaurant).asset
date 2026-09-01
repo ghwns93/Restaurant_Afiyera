@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2ce9b2b5d1161498b23494ac9eec9e, type: 3}
+  m_Script: {fileID: 11500000, guid: c1db05b91a02a964a8f0f5cc638f6a9a, type: 3}
   m_Name: Enter Action(Restaurant)
-  m_EditorClassIdentifier: Assembly-CSharp::NodeHarvestAction
+  m_EditorClassIdentifier: Assembly-CSharp::RestaurantEnterAction
   questType: 0
+  questInteractionType: 0
   dialogueKey: "\uC601\uC5C5\uC2DC\uC791"
   targetNpcId: 
   unlockConditions:

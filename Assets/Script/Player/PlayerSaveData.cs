@@ -6,11 +6,16 @@ public class PlayerSaveData : MonoBehaviour
     {
         if (PlayerInfoLoadManager.Instance != null && Camera.main != null)
         {
+            var mainCamera = Camera.main;
+
+            int cameraBound = mainCamera.GetComponent<SimpleCameraConfiner>().GetNowBound();
+
             PlayerData currentData = new PlayerData
             {
                 isNew = 1,
                 lastPosition = transform.position,
-                lastCameraPosition = Camera.main.transform.position
+                lastCameraPosition = mainCamera.transform.position,
+                lastCameraBoundIndex = cameraBound
             };
 
             //Debug.Log($"Player position saved: {currentData.lastPosition}");

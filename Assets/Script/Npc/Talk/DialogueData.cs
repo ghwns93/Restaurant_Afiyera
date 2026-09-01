@@ -42,6 +42,7 @@ public class DialogueEvent
     public string type;   // "SHOW_NPC", "HIDE_NPC" (확장 가능: "PLAY_SFX", "CAMERA_SHAKE"...)
     public string npcId;  // 대상 NPC id
     public int slot;      // SHOW_NPC일 때 화면에 표시할 슬롯 번호
+    public int portraitIndex; // SHOW_NPC일 때 표시할 초상화 인덱스
 }
 
 // 이벤트 타입 상수 (문자열 오타 방지용)

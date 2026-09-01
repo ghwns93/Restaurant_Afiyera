@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcInteractionTalkEndEventCheck
   questType: 0
   questInteractionType: 0
-  dialogueKey: "\uCC3D\uB2EB\uAE302"
+  dialogueKey: "\uCC3D\uB2EB\uAE30"
   targetNpcId: 
   unlockConditions:
   - {fileID: 11400000, guid: 6787f169fd90942468cb4bdd2ae6877f, type: 2}

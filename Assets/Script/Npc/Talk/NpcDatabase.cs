@@ -11,5 +11,5 @@ public class NpcDatabase : ScriptableObject
 {
     public string npcId;       // JSON의 speakerId / npcId와 매칭되는 키
     public string displayName; // 대화창 이름표에 표시할 이름
-    public Sprite portrait;    // 초상화 스프라이트
+    public Sprite[] portraits;    // 초상화 스프라이트
 }

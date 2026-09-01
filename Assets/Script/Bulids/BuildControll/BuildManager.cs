@@ -4,7 +4,6 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static UnityEditor.PlayerSettings;
 
 public class BuildManager : MonoBehaviour
 {
@@ -195,7 +194,6 @@ public class BuildManager : MonoBehaviour
             }
         }
 
-        newNode.Setup(data);
 
         obj.transform.position = GetCenterWorldPosition(NodeOffset);
 
@@ -215,6 +213,8 @@ public class BuildManager : MonoBehaviour
 
         // 고정 건물 크기로 변경으로 인해 안씀
         //NotifyNeighbors(pos);
+
+        newNode.Setup(data);
 
         privateIsDirty = true;
 
