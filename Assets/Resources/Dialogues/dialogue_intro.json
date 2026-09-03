@@ -51,7 +51,10 @@
           "text": "죄송하지만 지금은 바쁩니다.",
           "next": "refuse_01",
           "events": [
-            { "type": "HIDE_NPC", "npcId": "guard" }
+            {
+              "type": "HIDE_NPC",
+              "npcId": "guard"
+            }
           ]
         },
         {
@@ -82,9 +85,12 @@
       "speakerId": "guard",
       "text": "그럼 북쪽 도로에서 뵙겠습니다. 먼저 가 있죠!",
       "typingSpeed": 0.03,
-      "next": "",
+      "next": "tutorial_03",
       "events": [
-        { "type": "HIDE_NPC", "npcId": "guard" }
+        {
+          "type": "HIDE_NPC",
+          "npcId": "guard"
+        }
       ],
       "choices": []
     },
@@ -93,7 +99,7 @@
       "speakerId": "elder",
       "text": "...그런가. 어쩔 수 없지. 마음이 바뀌면 언제든 찾아오게.",
       "typingSpeed": 0.06,
-      "next": "",
+      "next": "tutorial_03",
       "events": [],
       "choices": []
     },
@@ -111,7 +117,7 @@
       "speakerId": "elder",
       "text": "이제 어떻게 하겠나?",
       "typingSpeed": 0.05,
-      "next": "",
+      "next": "tutorial_03",
       "events": [],
       "choices": [
         {
@@ -123,10 +129,36 @@
           "text": "거절하겠습니다.",
           "next": "refuse_01",
           "events": [
-            { "type": "HIDE_NPC", "npcId": "guard" }
+            {
+              "type": "HIDE_NPC",
+              "npcId": "guard"
+            }
           ]
         }
       ]
+    },
+    {
+      "id": "tutorial_03",
+      "speakerId": "elder",
+      "text": "저 상자를 옮겨보게.",
+      "typingSpeed": 0.04,
+      "next": "tutorial_end",
+      "events": [
+        {
+          "type": "ACTION_PLAY",
+          "actionId": "DragToZone"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "tutorial_end",
+      "speakerId": "elder",
+      "text": "완벽하네.",
+      "typingSpeed": 0.06,
+      "next": "",
+      "events": [],
+      "choices": []
     }
   ]
 }

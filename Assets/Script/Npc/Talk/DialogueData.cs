@@ -43,6 +43,7 @@ public class DialogueEvent
     public string npcId;  // 대상 NPC id
     public int slot;      // SHOW_NPC일 때 화면에 표시할 슬롯 번호
     public int portraitIndex; // SHOW_NPC일 때 표시할 초상화 인덱스
+    public string actionId;  // ▼ 추가: ACTION_PLAY일 때 어떤 액션인지 식별하는 키
 }
 
 // 이벤트 타입 상수 (문자열 오타 방지용)
@@ -50,4 +51,5 @@ public static class DialogueEventType
 {
     public const string ShowNpc = "SHOW_NPC";
     public const string HideNpc = "HIDE_NPC";
+    public const string ActionPlay = "ACTION_PLAY";  // ▼ 추가
 }

@@ -54,6 +54,12 @@ public class DialogueManager : MonoBehaviour
     public bool IsDialogueActive => dialogueActive;
     public bool IsAutoMode => autoMode;
 
+    [Header("액션 이벤트")]
+    public UnityEvent<string> onActionRequested; // actionId를 받아 실제 연출을 시작하는 곳
+
+    private bool waitingForAction;
+    private string pendingActionId;
+
     private void Start()
     {
         dialoguePanel.SetActive(false);
@@ -68,7 +74,7 @@ public class DialogueManager : MonoBehaviour
         if (!dialogueActive) return;
 
         // 선택지 표시 중엔 스킵/오토/진행 입력 전부 정지. 버튼으로만 진행
-        if (choicesVisible) return;
+        if (choicesVisible || waitingForAction) return;
 
         // 마우스 클릭 / 스페이스 / 엔터로 진행
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
@@ -227,9 +233,7 @@ public class DialogueManager : MonoBehaviour
         DialogueLine line = currentLine;
 
         // 1) 라인에 붙은 이벤트 먼저 실행 (등장 → 대사 순서가 자연스러움)
-        if (line.events != null)
-            foreach (var ev in line.events)
-                HandleEvent(ev);
+        ProcessLineEvents(line);
 
         // 2) 화자 이름 표시 + 말하는 NPC 강조
         var npc = NpcDicManager.Instance.GetData(line.speakerId);
@@ -255,7 +259,7 @@ public class DialogueManager : MonoBehaviour
                         return;
                     }
                     var npc = NpcDicManager.Instance.GetData(ev.npcId);
-                    int portraitIndex = ev.portraitIndex <= npc.portraits.Length ? ev.portraitIndex : 0;
+                    int portraitIndex = ev.portraitIndex < npc.portraits.Length ? ev.portraitIndex : 0;
                     npcSlots[ev.slot].Show(ev.npcId, npc != null ? npc.portraits[portraitIndex] : null);
                     break;
                 }
@@ -269,6 +273,23 @@ public class DialogueManager : MonoBehaviour
             default:
                 Debug.LogWarning($"[DialogueManager] 알 수 없는 이벤트 타입: {ev.type}");
                 break;
+        }
+    }
+
+    // 라인의 이벤트 처리: ACTION_PLAY는 예약(pendingActionId), 나머지는 즉시 실행
+    // PlayCurrentLine과 SkipToChoiceOrEnd 양쪽 공용
+    private void ProcessLineEvents(DialogueLine line)
+    {
+        pendingActionId = null;
+        if (line.events != null)
+        {
+            foreach (var ev in line.events)
+            {
+                if (ev.type == DialogueEventType.ActionPlay)
+                    pendingActionId = ev.actionId;
+                else
+                    HandleEvent(ev);
+            }
         }
     }
 
@@ -327,11 +348,30 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        // ▼ 추가: 예약된 액션이 있으면 발동하고 대기
+        if (!string.IsNullOrEmpty(pendingActionId))
+        {
+            waitingForAction = true;
+            if (nextIndicator != null) nextIndicator.SetActive(false);
+            onActionRequested?.Invoke(pendingActionId);
+            return;  // 오토 카운트도 시작하지 않음
+        }
+
         if (nextIndicator != null) nextIndicator.SetActive(true);
 
         // 오토 모드면 자동 진행 카운트 시작 (스킵 중엔 TickSkip이 진행을 담당)
         if (autoMode)
             StartAutoAdvance();
+    }
+
+    // 액션 완료 시 외부 스크립트가 호출. actionId가 일치해야 재개됨
+    public void NotifyActionComplete(string actionId)
+    {
+        if (!waitingForAction || pendingActionId != actionId) return;
+
+        waitingForAction = false;
+        pendingActionId = null;
+        JumpToLine(currentLine.next);  // 자동으로 다음 대사 진행
     }
 
     // ===== 선택지 =====
@@ -378,6 +418,8 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogueActive = false;
+        waitingForAction = false;
+        pendingActionId = null;
         CancelAutoAdvance();
         SetAutoMode(false);   // 오토도 해제 (유지하고 싶으면 이 줄 제거)
         if (choicesVisible) HideChoices();
@@ -395,7 +437,7 @@ public class DialogueManager : MonoBehaviour
     // 스킵 버튼의 onClick에 연결
     public void SkipToChoiceOrEnd()
     {
-        if (!dialogueActive || choicesVisible) return;
+        if (!dialogueActive || choicesVisible || waitingForAction) return;
 
         // 진행 중인 타이핑/오토 정리
         if (typingRoutine != null) StopCoroutine(typingRoutine);
@@ -407,7 +449,7 @@ public class DialogueManager : MonoBehaviour
         var visited = new HashSet<string> { currentLine.id }; // 순환 참조 안전장치
         DialogueLine line = currentLine;
 
-        while (!line.HasChoices && !string.IsNullOrEmpty(line.next))
+        while (!line.HasChoices && !HasActionEvent(line) && !string.IsNullOrEmpty(line.next))
         {
             if (!lineMap.TryGetValue(line.next, out DialogueLine nextLine))
             {
@@ -420,9 +462,7 @@ public class DialogueManager : MonoBehaviour
             line = nextLine;
 
             // 건너뛰는 라인의 이벤트도 전부 실행 → NPC 등장/퇴장 상태가 정상적으로 반영됨
-            if (line.events != null)
-                foreach (var ev in line.events)
-                    HandleEvent(ev);
+            ProcessLineEvents(line);
         }
 
         currentLine = line;
@@ -443,5 +483,14 @@ public class DialogueManager : MonoBehaviour
         bodyText.ForceMeshUpdate();
 
         FinishTyping(); // 선택지 라인이면 버튼 표시, 아니면 ▼ 표시
+    }
+
+    // 헬퍼 추가
+    private bool HasActionEvent(DialogueLine line)
+    {
+        if (line.events == null) return false;
+        foreach (var ev in line.events)
+            if (ev.type == DialogueEventType.ActionPlay) return true;
+        return false;
     }
 }
