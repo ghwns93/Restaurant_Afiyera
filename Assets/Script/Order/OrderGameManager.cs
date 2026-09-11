@@ -39,13 +39,9 @@ public class OrderGameManager : MonoBehaviour
     [SerializeField] private Image selectedFoodMat2;
     [SerializeField] private Image selectedFoodCook;
 
-    [SerializeField] private GameObject orderPanel;
-    [SerializeField] private GameObject cookPanel;
-
     private void Start()
     {
         allFoods = CookingCookTypeManager.Instance.GetAllFoodData();
-        cookPanel.SetActive(false);
 
         SpawnRandomCustomer();
     }
@@ -261,33 +257,28 @@ public class OrderGameManager : MonoBehaviour
         var matData2 = IngredientDicManager.Instance.GetData(selectedFood.mat[1]);
         var cookData = CookingCookTypeManager.Instance.GetCookTypeImage(selectedFood.cookType);
 
-        selectedFoodMat1.sprite = matData1.icon;
-        selectedFoodMat2.sprite = matData2.icon;
-        selectedFoodCook.sprite = cookData;
+        if (selectedFoodMat1 != null) selectedFoodMat1.sprite = matData1.icon;
+        if (selectedFoodMat2 != null) selectedFoodMat2.sprite = matData2.icon;
+        if (selectedFoodCook != null) selectedFoodCook.sprite = cookData;
     }
 
     public void OpenOrderPanel()
     {
-        orderPanel.SetActive(true);
-        cookPanel.SetActive(false);
-
         SelectedFood = null;
 
-        selectedFoodMat1.sprite = null;
-        selectedFoodMat2.sprite = null;
-        selectedFoodCook.sprite = null;
+        if (selectedFoodMat1 != null) selectedFoodMat1.sprite = null;
+        if (selectedFoodMat2 != null) selectedFoodMat2.sprite = null;
+        if (selectedFoodCook != null) selectedFoodCook.sprite = null;
     }
 
-    public void OpenCookPanel()
+    public bool IsSelectedFoodOk()
     {
         if (SelectedFood == null)
         {
-            Debug.Log("음식을 선택 해 주세요!");
-            return;
+            return false;
         }
 
-        orderPanel.SetActive(false);
-        cookPanel.SetActive(true);
+        return true;
     }
 }
 

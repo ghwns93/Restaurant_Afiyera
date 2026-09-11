@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f2f8b999eb411da419ffd7ca80f7a074
+guid: 518fe07065ee1f3439753a9878ab1e99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2910670893563852575
-    second: Char3_Angry1_0
+      213: -5697067001844015098
+    second: "\uC8FC\uBC29\uCABD\uBC30\uACBD2_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -96,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Char3_Angry1_0
+      name: "\uC8FC\uBC29\uCABD\uBC30\uACBD2_0"
       rect:
         serializedVersion: 2
-        x: 15
-        y: 102
-        width: 1665
-        height: 3264
+        x: 0
+        y: 0
+        width: 6800
+        height: 4120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1731fc91c7c46820800000000000000
-      internalID: 2910670893563852575
+      spriteID: 600ec750fb3ffe0b0800000000000000
+      internalID: -5697067001844015098
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2e3c80626a4dce94685fdb94822469ba
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Char3_Angry1_0: 2910670893563852575
+      "\uC8FC\uBC29\uCABD\uBC30\uACBD2_0": -5697067001844015098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13266,8 +13266,6 @@ MonoBehaviour:
   selectedFoodMat1: {fileID: 1386821474}
   selectedFoodMat2: {fileID: 1788137180}
   selectedFoodCook: {fileID: 482301234}
-  orderPanel: {fileID: 863868382}
-  cookPanel: {fileID: 1385828176}
 --- !u!4 &1969796447
 Transform:
   m_ObjectHideFlags: 0
