@@ -15,9 +15,9 @@ public class CookingWorkerManager : MonoBehaviour
     public bool CheckIsWorkerCanWork()
     {
         foreach (CookingWorker worker in _workers)
-            if (worker._isWorking) return false;
+            if (!worker._isWorking) return true;
 
-        return true;
+        return false;
     }
 
     public void StartWorking(ItemData data)
@@ -37,5 +37,6 @@ public class CookingWorkerManager : MonoBehaviour
         CookingRefineResource refine = Instantiate(_refineObject, pos).GetComponent<CookingRefineResource>();
         refine._data = data;
         refine._sprite.sprite = data.refineIcon;
+        refine.transform.SetSiblingIndex(1);
     }
 }

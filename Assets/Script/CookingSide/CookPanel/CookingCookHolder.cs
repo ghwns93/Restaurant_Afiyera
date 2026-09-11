@@ -18,7 +18,6 @@ public class CookingCookHolder : MonoBehaviour
 
     private void Awake()
     {
-        _slot = this.GetComponent<CookingSlot>();
         _cookStartTime = new int[2] { -1, -1 };
         _matCookDone = new bool[2];
 
@@ -28,7 +27,7 @@ public class CookingCookHolder : MonoBehaviour
 
     private void AddResourceAndCheck()
     {
-        GameObject go = this.transform.GetChild(1).gameObject;
+        GameObject go = _slot.transform.GetChild(0).gameObject;
         _resourceData.Add(go.GetComponent<CookingRefineResource>()._data);
         _slot.OnImageMoved(null);
         Destroy(go);
@@ -112,7 +111,7 @@ public class CookingCookHolder : MonoBehaviour
 
     private void EndCook(bool isBurned)
     {
-        GameObject go = Instantiate(CookingCookTypeManager.Instance.FoodPrefab, this.transform);
+        GameObject go = Instantiate(CookingCookTypeManager.Instance.FoodPrefab, _slot.transform);
 
         if (!isBurned)
             go.GetComponent<CookingFoodResource>().SetFoodData(

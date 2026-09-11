@@ -20,7 +20,6 @@ public class CookingSlot : MonoBehaviour
 
     public void OnImageMoved(DragImage image)
     {
-        Debug.Log("?");
         _isSnapped=false;
         Debug.Log("Image Moved");
         OnImageMovedEvent?.Invoke(image);
