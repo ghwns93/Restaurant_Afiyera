@@ -506,7 +506,7 @@ MonoBehaviour:
   - type: 3
     sceneName: FarmScene
   - type: 4
-    sceneName: CookingScene
+    sceneName: NewCookingScene
   - type: 5
     sceneName: ShopScene
   - type: 6
