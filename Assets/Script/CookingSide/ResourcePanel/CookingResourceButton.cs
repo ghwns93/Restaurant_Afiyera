@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class CookingResourceButton : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private ItemData _data;
+    [SerializeField] private ItemIngredientData _data;
     [SerializeField] private Image _icon;
     [SerializeField] private TextMeshProUGUI _name;
     [SerializeField] private TextMeshProUGUI _count;
@@ -17,14 +17,14 @@ public class CookingResourceButton : MonoBehaviour, IPointerClickHandler
         if (!CookingWorkerManager.Instance.CheckIsWorkerCanWork()) return;
 
         InventoryManager.Instance.ReduceItem(this._data,1);
-        this._count.text = InventoryManager.Instance.GetItem(this._data).ToString();
+        this._count.text = InventoryManager.Instance.GetItemCount(this._data).ToString();
         CookingWorkerManager.Instance.StartWorking(_data);
     }
 
     private void Awake()
     {
-        this._icon.sprite = _data.icon;
-        this._name.text = _data.itemName;
+        this._icon.sprite = _data.Icon;
+        this._name.text = _data.ItemName;
         this._count.text = "-";
 
         this.gameObject.SetActive(false);

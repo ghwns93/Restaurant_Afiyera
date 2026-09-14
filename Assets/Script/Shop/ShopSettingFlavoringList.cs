@@ -37,7 +37,7 @@ public class ShopSettingFlavoringList : MonoBehaviour
                     buttonComponent.Unlockprice = priceInfo.UnlockCost;
                     buttonComponent.Sellprice = priceInfo.SellCost;
 
-                    buttonInfo.SetButton(NodeInfo.ItemData.itemName, priceInfo.UnlockCost.ToString(), NodeInfo.ItemData.icon);
+                    buttonInfo.SetButton(NodeInfo.ItemData.ItemName, priceInfo.UnlockCost.ToString(), NodeInfo.ItemData.Icon);
 
                     if(priceInfo.IsUnlockedByDefault)
                     {

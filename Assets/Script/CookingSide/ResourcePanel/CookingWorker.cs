@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class CookingWorker : MonoBehaviour
 {
-    [SerializeField] private ItemData _data;
+    [SerializeField] private ItemIngredientData _data;
     [SerializeField] private CookingTimeClock _clock;
     [SerializeField] private CookingSlot _matSlot;
 
     public bool _isWorking = false;
 
-    public void StartWorking(ItemData data)
+    public void StartWorking(ItemIngredientData data)
     {
         _isWorking = true;
         this._data = data;

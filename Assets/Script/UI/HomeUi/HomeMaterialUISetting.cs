@@ -15,15 +15,18 @@ public class HomeMaterialUISetting : MonoBehaviour
 
     private void SetMaterialButton()
     {
-        var list = InventoryManager.Instance.slots.Where(slot => slot.quantity > 0).ToList();
+        var list = InventoryManager.Instance.slots.Where(slot => slot.Quantity > 0).ToList();
 
         foreach(var slot in list)
         {
-            GameObject btn = Instantiate(materialBtn, transform);
+            if (slot is ItemIngredientData)
+            {
+                GameObject btn = Instantiate(materialBtn, transform);
 
-            var homeButton = btn.GetComponent<HomeMaterialUiButton>();
-            homeButton.itemInfo = slot.itemData;
-            homeButton.SetButton();
+                var homeButton = btn.GetComponent<HomeMaterialUiButton>();
+                homeButton.itemInfo = (ItemIngredientData)slot.ItemData;
+                homeButton.SetButton();
+            }
         }
     }
 }

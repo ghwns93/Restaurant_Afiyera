@@ -6,6 +6,6 @@ public class IngredientDicManager : BaseDicManager<IngredientDicManager, int, It
 {
     protected override int GetKey(ItemData data)
     {
-        return data.id;
+        return data.Id;
     }
 }

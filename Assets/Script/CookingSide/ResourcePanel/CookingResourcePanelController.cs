@@ -17,10 +17,10 @@ public class CookingResourcePanelController : MonoBehaviour
 
         foreach (ItemSlot slot in slots)
         {
-            temp = _buttons.Find(x => x.Data.id == slot.itemData.id);
+            temp = _buttons.Find(x => x.Data.Id == slot.ItemData.Id);
             if (temp != null)
             {
-                temp.ActiveAndSetCount(slot.quantity);
+                temp.ActiveAndSetCount(slot.Quantity);
             }
         }
     }

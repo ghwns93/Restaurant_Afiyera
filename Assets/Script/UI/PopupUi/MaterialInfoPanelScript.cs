@@ -9,10 +9,10 @@ public class MaterialInfoPanelScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI matDescriptionText;
     [SerializeField] private TextMeshProUGUI matSubDescriptionText;
 
-    public void SetMaterialInfo(ItemData showItem)
+    public void SetMaterialInfo(ItemIngredientData showItem)
     {
-        if (matImage != null) matImage.sprite = showItem.icon;
-        if (matNameText != null) matNameText.text = showItem.itemName;
+        if (matImage != null) matImage.sprite = showItem.Icon;
+        if (matNameText != null) matNameText.text = showItem.ItemName;
         if (matDescriptionText != null) matDescriptionText.text = showItem.description;
 
         if (matSubDescriptionText != null)

@@ -7,7 +7,7 @@ public class CookingCookHolder : MonoBehaviour
     [SerializeField] private CookingCookTimer _timer;
     [SerializeField] private CookType _cookType;
 
-    [SerializeField] private List<ItemData> _resourceData;
+    [SerializeField] private List<ItemIngredientData> _resourceData;
 
     private int[] _cookStartTime;
     private bool[] _matCookDone;
@@ -115,7 +115,7 @@ public class CookingCookHolder : MonoBehaviour
 
         if (!isBurned)
             go.GetComponent<CookingFoodResource>().SetFoodData(
-                CookingCookTypeManager.Instance.GetFoodDataByMat(_resourceData[0].id, _resourceData[1].id, this._cookType),this._isSeasoned);
+                CookingCookTypeManager.Instance.GetFoodDataByMat(_resourceData[0].Id, _resourceData[1].Id, this._cookType),this._isSeasoned);
         else
             go.GetComponent<CookingFoodResource>().SetFoodData(
                 CookingCookTypeManager.Instance.GetFoodDataById(1000000),this._isSeasoned);

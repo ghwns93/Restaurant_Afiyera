@@ -257,8 +257,8 @@ public class OrderGameManager : MonoBehaviour
         var matData2 = IngredientDicManager.Instance.GetData(selectedFood.mat[1]);
         var cookData = CookingCookTypeManager.Instance.GetCookTypeImage(selectedFood.cookType);
 
-        if (selectedFoodMat1 != null) selectedFoodMat1.sprite = matData1.icon;
-        if (selectedFoodMat2 != null) selectedFoodMat2.sprite = matData2.icon;
+        if (selectedFoodMat1 != null) selectedFoodMat1.sprite = matData1.Icon;
+        if (selectedFoodMat2 != null) selectedFoodMat2.sprite = matData2.Icon;
         if (selectedFoodCook != null) selectedFoodCook.sprite = cookData;
     }
 

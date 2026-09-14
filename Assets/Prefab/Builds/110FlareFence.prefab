@@ -58,7 +58,7 @@ MonoBehaviour:
   NodeMarkSprite: {fileID: 0}
   IsOverlapable: 0
   IsBuildable: 1
-  harvestItem: {fileID: 11400000, guid: fd454fe1c73469947a9218b1ab0c6910, type: 2}
+  harvestItem: {fileID: 11400000, guid: 09973a05c01fe0b4db8a17f63925edd2, type: 2}
   harvestAmount: 1
   harvestTime: 3
   privateDayCount: 1

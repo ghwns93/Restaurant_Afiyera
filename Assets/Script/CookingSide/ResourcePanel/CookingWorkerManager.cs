@@ -20,7 +20,7 @@ public class CookingWorkerManager : MonoBehaviour
         return false;
     }
 
-    public void StartWorking(ItemData data)
+    public void StartWorking(ItemIngredientData data)
     {
         for(int i = 0; i< _workers.Length; i++)
         {
@@ -32,7 +32,7 @@ public class CookingWorkerManager : MonoBehaviour
         }
     }
 
-    public void CreateRefineObject(ItemData data,Transform pos)
+    public void CreateRefineObject(ItemIngredientData data,Transform pos)
     {
         CookingRefineResource refine = Instantiate(_refineObject, pos).GetComponent<CookingRefineResource>();
         refine._data = data;

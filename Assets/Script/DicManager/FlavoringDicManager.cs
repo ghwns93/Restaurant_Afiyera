@@ -8,7 +8,7 @@ public class FlavoringDicManager : BaseDicManager<FlavoringDicManager,int, GameO
     {
         var flavoringData = data.GetComponent<FlavoringData>();
 
-        return flavoringData.ItemData.id;
+        return flavoringData.ItemData.Id;
     }
 
     public List<GameObject> GetTypeValue(ItemType bs)
@@ -24,7 +24,7 @@ public class FlavoringDicManager : BaseDicManager<FlavoringDicManager,int, GameO
                 continue;
             }
 
-            if (flavoringData.ItemData.itemType == bs)
+            if (flavoringData.ItemData.ItemType == bs)
             {
                 resultList.Add(data);
             }

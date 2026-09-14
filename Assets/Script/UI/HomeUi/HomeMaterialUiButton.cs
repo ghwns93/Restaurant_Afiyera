@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HomeMaterialUiButton : MonoBehaviour
 {
     [NonSerialized]
-    public ItemData itemInfo;
+    public ItemIngredientData itemInfo;
 
     private bool selected = false;
     private Image image;
@@ -21,7 +21,7 @@ public class HomeMaterialUiButton : MonoBehaviour
     private void SetSprite()
     {
         if (image == null) image = GetComponent<Image>();
-        if (image != null) image.sprite = itemInfo.icon;
+        if (image != null) image.sprite = itemInfo.Icon;
     }
 
     public void OnClick()

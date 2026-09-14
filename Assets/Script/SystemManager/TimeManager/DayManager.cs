@@ -86,20 +86,20 @@ public class DayManager : TimeBase
             yield return new WaitForSecondsRealtime(1); // 1초마다 체크
             nowOneDayTime += TimePerOnce; // 게임 내 시간 증가
 
-            if(nowOneDayTime >= (workTime * secondsPerHour) && isWorking == false)
-            {
-                GoToWork();
-            }
-            else if (nowOneDayTime >= (nightOpenTime * secondsPerHour)
-                    && todayNightRestaurantHasOpen == true
-                    && todayNightRestaurantIsWorked == false)
-            {
-                GoToNightWork();
-            }
-            else if(nowOneDayTime >= (sleepTime * secondsPerHour))
-            {
-                GoToSleep();
-            }
+            //if(nowOneDayTime >= (workTime * secondsPerHour) && isWorking == false)
+            //{
+            //    GoToWork();
+            //}
+            //else if (nowOneDayTime >= (nightOpenTime * secondsPerHour)
+            //        && todayNightRestaurantHasOpen == true
+            //        && todayNightRestaurantIsWorked == false)
+            //{
+            //    GoToNightWork();
+            //}
+            //else if(nowOneDayTime >= (sleepTime * secondsPerHour))
+            //{
+            //    GoToSleep();
+            //}
 
             int currentHour = (int)(nowOneDayTime / secondsPerHour); // 현재 시간 계산
             int currentMinute = (int)((nowOneDayTime % secondsPerHour) / secondsPerMinute); // 현재 분 계산
