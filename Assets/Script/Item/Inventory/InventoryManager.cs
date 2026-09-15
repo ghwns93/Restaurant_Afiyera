@@ -17,6 +17,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private bool testMode = false; // 테스트 모드 활성화 여부
     [SerializeField] private List<ItemSlot> testItems; // 테스트용 아이템 리스트
 
+    [SerializeField] private int gold = 0; // 골드 초기값
+
     private void Awake()
     {
         if (instance == null)
@@ -137,5 +139,20 @@ public class InventoryManager : MonoBehaviour
     public List<ItemSlot> GetSlots()
     {
         return slots;
+    }
+
+    public void AddGold(int amount)
+    {
+        if (amount <= 0) return;
+        gold += amount;
+        onInventoryChangedCallback?.Invoke();
+    }
+
+    public void ReduceGold(int amount)
+    {
+        if (amount <= 0) return;
+        gold -= amount;
+        if (gold < 0) gold = 0;
+        onInventoryChangedCallback?.Invoke();
     }
 }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ff335baa4e2a04ab8998e64e79dee6, type: 3}
+  m_Name: Q01.MilkQuest
+  m_EditorClassIdentifier: Assembly-CSharp::NpcInteractionChoice
+  questType: 0
+  questInteractionType: 0
+  dialogueKey: "\uC6B0\uC720\uAC00 \uBA39\uACE0\uC2F6\uB2E4"
+  targetNpcId: 
+  unlockConditions:
+  - {fileID: 11400000, guid: ffc1f264a11bbbb43a55f24e6e4e6197, type: 2}
+  - {fileID: 11400000, guid: 4f65faa7594342b418f182a8d2000263, type: 2}
+  talkContent: "\uC0AC\uB78C \uC88B\uC544 \uCCAD\uB144 \uD55C\uD14C \uB4E3\uACE0
+    \uC654\uAD6C\uB098?\n\uADF8\uB7FC \uC6B0\uC720 \uC880 \uAC00\uC838\uB2E4 \uC904\uB798?"
+  choiceList:
+  - {fileID: 11400000, guid: 8e3c91b4aea7eed4da1c133f28267226, type: 2}
+  - {fileID: 11400000, guid: 1f7579b3d132d2946b95617c5c3dd148, type: 2}
