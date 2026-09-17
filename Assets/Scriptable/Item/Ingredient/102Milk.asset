@@ -18,6 +18,8 @@ MonoBehaviour:
   itemType: 0
   isStackable: 1
   maxStackCount: 99
+  baseSellPrice: 50
+  baseBuyPrice: 40
   description: "\uC6B0\uC720\uB2E4"
   cookTime: 1
   refineIcon: {fileID: -5852625888509824730, guid: e63e946f14013044c961a87ec6120300, type: 3}

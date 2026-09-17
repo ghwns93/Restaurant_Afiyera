@@ -30,8 +30,6 @@ public class NpcInteractionChoice : NpcInteractionBase
 
         NpcTalkUIManager.Instance.ShowSelectionButtons(unlockedTalk, actor);
 
-        Debug.Log($"[NpcInteractionChoice] targetNpcId: {targetNpcId}");
-
         NpcInteractionManager.Instance.CompleteQuest(targetNpcId, this, questType);
     }
 }

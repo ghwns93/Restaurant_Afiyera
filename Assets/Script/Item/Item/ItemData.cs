@@ -3,12 +3,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class ItemData : ScriptableObject
 {
-    [SerializeField] private int id;                          // 고유 ID (딕셔너리 관리용)
-    [SerializeField] private string itemName;                 // 이름
-    [SerializeField] private Sprite icon;                     // UI에 표시할 아이콘
-    [SerializeField] private ItemType itemType;               // 아이템 타입
-    [SerializeField] private bool isStackable;                // 중첩 가능 여부
-    [SerializeField]  private int maxStackCount = 99;          // 최대 중첩 수량
+    [SerializeField] private int id;                        // 고유 ID (딕셔너리 관리용)
+    [SerializeField] private string itemName;               // 이름
+    [SerializeField] private Sprite icon;                   // UI에 표시할 아이콘
+    [SerializeField] private ItemType itemType;             // 아이템 타입
+    [SerializeField] private bool isStackable;              // 중첩 가능 여부
+    [SerializeField] private int maxStackCount = 99;        // 최대 중첩 수량
+    [SerializeField] private int baseSellPrice;             // 기본 판매 가격
+    [SerializeField] private int baseBuyPrice;              // 기본 구매 가격
     [TextArea] public string description;   // 설명
 
     public int Id => id;
@@ -18,6 +20,8 @@ public class ItemData : ScriptableObject
     public bool IsStackable => isStackable;
     public int MaxStackCount => maxStackCount;
     public string Description => description;
+    public int BaseSellPrice { get => baseSellPrice; set => baseSellPrice = value; }
+    public int BaseBuyPrice { get => baseBuyPrice; set => baseBuyPrice = value; }
 }
 
 public enum ItemType

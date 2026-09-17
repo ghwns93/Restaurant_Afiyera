@@ -45,17 +45,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Temp/TestHomeUIScene.unity
     guid: 718cbacf365a5f449a914b9ef3a421a2
   - enabled: 1
-    path: Assets/Scenes/Shop/ShopCodyScene.unity
-    guid: c84b15e8b622b1f4ead5acfc0284083e
-  - enabled: 1
-    path: Assets/Scenes/Shop/ShopScene.unity
-    guid: c2d6ede78bfcb29439cf2e23fb453108
-  - enabled: 1
-    path: Assets/Scenes/Shop/ShopFlavoringScene.unity
-    guid: 964fce98b41ac7b46a0b9fd43e7a59b9
-  - enabled: 1
     path: Assets/Scenes/Cooking/NewCookingScene.unity
     guid: 18d0d7667e58c174eb793f1d64483278
+  - enabled: 1
+    path: Assets/Scenes/Shop/ShopUiScene.unity
+    guid: e964e4bc982b9db4cb84c587ca64162a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

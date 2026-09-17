@@ -128251,9 +128251,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 885454978}
-  - component: {fileID: 885454981}
   - component: {fileID: 885454980}
   - component: {fileID: 885454979}
+  - component: {fileID: 885454981}
   m_Layer: 6
   m_Name: Shop
   m_TagString: Untagged
@@ -128395,15 +128395,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 885454977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d8550c05fd70774f991da72da20ec69, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
+  m_EditorClassIdentifier: Assembly-CSharp::ShopNpcScript
   npcCode: 0
   npcName: "\uC0C1\uC810"
   targetType: 0
-  npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
-  npcInteractionList:
-  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcImage: {fileID: -8366408283500284133, guid: 0d84248991e9c434fb4d02500dc75f54, type: 3}
+  npcInteractionBase: {fileID: 11400000, guid: 7c4be18aef2378f4689dd0d7d1a5e99b, type: 2}
+  npcInteractionList: []
+  shopItemList:
+  - itemData: {fileID: 11400000, guid: c8d748ce200977a47ae9d50a840eceb6, type: 2}
+    basePrice: 100
+    currentPrice: 0
+    previousPrice: 0
 --- !u!1 &886199574
 GameObject:
   m_ObjectHideFlags: 0
@@ -156654,6 +156659,50 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1843935076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843935078}
+  - component: {fileID: 1843935077}
+  m_Layer: 0
+  m_Name: NpcLoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1843935077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843935076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eff716b38036a4db6fd2def222f4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcLoadManager
+--- !u!4 &1843935078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843935076}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850977149
 GameObject:
   m_ObjectHideFlags: 0
@@ -160071,7 +160120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa34c9e5aa014f54cb031a11cbe207a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiSceneOpenController
-  openableScenes: 0700000008000000
+  openableScenes: 070000000800000005000000
 --- !u!1 &1962333602
 GameObject:
   m_ObjectHideFlags: 0
@@ -165149,6 +165198,7 @@ MonoBehaviour:
   npcCode: 0
   npcName: "\uBAA9\uC7A5"
   targetType: 0
+  npcImage: {fileID: 0}
   npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
@@ -165759,6 +165809,7 @@ MonoBehaviour:
   npcCode: 2
   npcName: "\uB09A\uC2DC\uC88B\uC544 \uCCAD\uB144"
   targetType: 1
+  npcImage: {fileID: 0}
   npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: bbbf7f75a0a49d34d9dce58488c7d908, type: 2}
@@ -166048,6 +166099,7 @@ MonoBehaviour:
   npcCode: 3
   npcName: "\uC6B0\uC720 \uC88B\uC544 \uCCAD\uB144"
   targetType: 1
+  npcImage: {fileID: 0}
   npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
@@ -166103,6 +166155,7 @@ MonoBehaviour:
   npcCode: 0
   npcName: "\uC5EC\uAD00"
   targetType: 0
+  npcImage: {fileID: 0}
   npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
@@ -166325,6 +166378,7 @@ MonoBehaviour:
   npcCode: 4
   npcName: "\uC0AC\uB78C\uC88B\uC544 \uCCAD\uB144"
   targetType: 1
+  npcImage: {fileID: 0}
   npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: df939ff0d1f146044a8503827865dcd1, type: 2}
@@ -166511,11 +166565,11 @@ SceneRoots:
   - {fileID: 989406033}
   - {fileID: 668767335}
   - {fileID: 318546577}
-  - {fileID: 1958562214}
   - {fileID: 1585168208}
   - {fileID: 2031732303}
   - {fileID: 1802175418}
   - {fileID: 1556448262}
+  - {fileID: 1843935078}
   - {fileID: 264338176}
   - {fileID: 1631470302}
   - {fileID: 734768699}
@@ -166527,3 +166581,4 @@ SceneRoots:
   - {fileID: 1178421134}
   - {fileID: 773234721}
   - {fileID: 1537376194}
+  - {fileID: 1958562214}

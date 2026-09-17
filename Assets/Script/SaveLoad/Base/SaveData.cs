@@ -19,6 +19,13 @@ public class QuestData
 }
 
 [Serializable]
+public class NpcData
+{
+    public string npcId;
+    public List<ShopItemData> shopItemList;
+}
+
+[Serializable]
 public class PlayerData
 {
     public int isNew = 0;
@@ -34,5 +41,6 @@ public class SaveData
 
     public List<BuildingData> buildings = new List<BuildingData>();
     public List<QuestData> quests = new List<QuestData>();
+    public List<NpcData> npcs = new List<NpcData>();
     public PlayerData playerInfo = new PlayerData();
 }

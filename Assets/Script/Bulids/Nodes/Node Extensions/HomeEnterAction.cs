@@ -7,6 +7,10 @@ public class HomeEnterAction : NpcInteractionBase
     public override void Execute(GameObject actor)
     {
         SystemController.Instance.SetSystemPause(false);
+
+        TimeBase.Instance.IsNewDay = false;
+
         SceneController.Instance.LoadSubScene(SceneType.Home);
+        //SceneController.Instance.AddtionUiScene(SceneType.Home);
     }
 }

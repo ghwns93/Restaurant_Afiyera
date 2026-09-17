@@ -11,6 +11,8 @@ public abstract class TempManagerBase<TClass, TData> : MonoBehaviour, ISaveable
     // 자식 매니저들이 실시간으로 다룰 임시 데이터 데이터 (인스펙터 확인을 위해 Protected)
     protected TData tempValues;
 
+    public bool loaded = false;
+
     protected virtual void Awake()
     {
         if (Instance == null) Instance = this as TClass;
@@ -23,7 +25,10 @@ public abstract class TempManagerBase<TClass, TData> : MonoBehaviour, ISaveable
         {
             return;
         }
+
         HandleLoadData(MasterSaveManager.Instance.currentSaveData);
+
+        loaded = true;
     }
 
     protected virtual void OnEnable()
@@ -39,7 +44,7 @@ public abstract class TempManagerBase<TClass, TData> : MonoBehaviour, ISaveable
     }
 
     // [로드] 총괄 매니저가 이벤트를 쐈을 때 실행되는 공통 로직
-    private void HandleLoadData(SaveData masterSaveData)
+    protected void HandleLoadData(SaveData masterSaveData)
     {
         // 부모가 마스터 데이터 보따리에서 "내 영역의 데이터"만 쏙 골라옵니다.
         TData extractedData = GetMyDataFromMaster(masterSaveData);

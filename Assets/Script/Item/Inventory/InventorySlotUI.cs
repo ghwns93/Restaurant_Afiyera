@@ -9,11 +9,16 @@ public class InventorySlotUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI quantityText;  // 수량을 표시할 텍스트 컴포넌트 (기본 Text라면 Text로 변경)
 
     private ItemData currentItemData;
+    private int currentQuantity;
+
+    public ItemData CurrentItemData { get => currentItemData; set => currentItemData = value; }
+    public int CurrentQuantity { get => currentQuantity; set => currentQuantity = value; }
 
     // 슬롯에 아이템 정보 반영
     public void SetItem(ItemData itemData, int quantity)
     {
-        currentItemData = itemData;
+        CurrentItemData = itemData;
+        CurrentQuantity = quantity;
 
         if (iconImage != null)
         {
@@ -40,7 +45,7 @@ public class InventorySlotUI : MonoBehaviour
     // 슬롯을 비우는 메서드
     public void ClearSlot()
     {
-        currentItemData = null;
+        CurrentItemData = null;
 
         if (iconImage != null)
         {

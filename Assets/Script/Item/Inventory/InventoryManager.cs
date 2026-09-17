@@ -141,6 +141,11 @@ public class InventoryManager : MonoBehaviour
         return slots;
     }
 
+    public int GetGold()
+    {
+        return gold;
+    }
+
     public void AddGold(int amount)
     {
         if (amount <= 0) return;

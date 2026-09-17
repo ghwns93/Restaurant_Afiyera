@@ -28,6 +28,7 @@ public class DayManager : TimeBase
     {
         // 이벤트 구독
         SystemController.OnSystemStateChanged += HandleSystemState;
+        TimeEvents.OnDayEnded += NextDay;
     }
 
     private void Start()
@@ -42,6 +43,7 @@ public class DayManager : TimeBase
 
         // 메모리 누수 방지를 위해 해제 필수!
         SystemController.OnSystemStateChanged -= HandleSystemState;
+        TimeEvents.OnDayEnded -= NextDay;
     }
 
     private void HandleSystemState(bool isPaused)
@@ -136,10 +138,10 @@ public class DayManager : TimeBase
 
     public override void GoToSleep(bool IsForcibly = true)
     {
-        Debug.Log($"{IsForcibly} 자러 갈 시간");
+        //Debug.Log($"{IsForcibly} 자러 갈 시간");
 
         SetDefaultTime();
-        NextDay(IsForcibly); // 다음 날로 넘어감
+        TimeEvents.OnDayEnded?.Invoke(IsForcibly); // 하루 종료 이벤트 발생
     }
 
     public override void SetNowTime(int hour)

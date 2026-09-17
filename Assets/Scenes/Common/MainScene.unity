@@ -508,7 +508,7 @@ MonoBehaviour:
   - type: 4
     sceneName: NewCookingScene
   - type: 5
-    sceneName: ShopScene
+    sceneName: ShopUiScene
   - type: 6
     sceneName: VillageScene
   - type: 7
@@ -529,10 +529,6 @@ MonoBehaviour:
     sceneName: HomeKitchenScene
   - type: 15
     sceneName: TestHomeUIScene
-  - type: 16
-    sceneName: ShopCodyScene
-  - type: 17
-    sceneName: ShopFlavoringScene
   optionOpened: 0
 --- !u!1 &1190981683
 GameObject:
@@ -1240,6 +1236,7 @@ MonoBehaviour:
   testItems:
   - testItemData: {fileID: 11400000, guid: bca5bf4489b24734db8a9476eb260801, type: 2}
     testQuantity: 1
+  gold: 0
 --- !u!1 &1762227830
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,5 @@ public class HomeSubUiCommonScript : MonoBehaviour
     public void GoToSleep()
     {
         TimeBase.Instance.GoToSleep(false);
-
-
     }
 }

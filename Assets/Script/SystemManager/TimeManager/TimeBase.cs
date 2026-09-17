@@ -115,8 +115,6 @@ public abstract class TimeBase : MonoBehaviour
                 node.DayAction();
             }
         }
-
-        IsNewDay = false;
     }
 
     public void RecordNowTime(int hour, int minute)

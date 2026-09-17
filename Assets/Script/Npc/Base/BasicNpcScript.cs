@@ -11,6 +11,8 @@ public class BasicNpcScript : MonoBehaviour
 
     public TargetType targetType;
 
+    public Sprite npcImage;
+
     public NpcInteractionBase npcInteractionBase; // NPC가 가진 상호작용 정보 (예: 대화, 퀘스트 등)
     [SerializeField]
     private List<NpcInteractionBase> npcInteractionList;
@@ -24,12 +26,17 @@ public class BasicNpcScript : MonoBehaviour
 
     private void Start()
     {
+        StartRoutine();
+    }
+
+    public virtual void StartRoutine()
+    {
         CreateThisId();
         InputInteraction();
 
         var questSet = gameObject.GetComponent<QuestBasedNpcController>();
 
-        if(questSet != null)
+        if (questSet != null)
         {
             questSet.SetBns(this, myNpcId);
         }
