@@ -119,6 +119,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &63394615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63394617}
+  - component: {fileID: 63394616}
+  m_Layer: 0
+  m_Name: NpcSpecialEventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &63394616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63394615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85763d1841da19045bf02a98c1387f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcSpecialEventManager
+  allSpecialEvents:
+  - {fileID: 11400000, guid: 51908b86e78b0c34a862d6ad362d5597, type: 2}
+  - {fileID: 11400000, guid: 3f512f855fdf7fb41bed670d5b4552ea, type: 2}
+--- !u!4 &63394617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63394615}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 921.0019, y: 588.7522, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278446596
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +498,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfe711aa8629474b8d2a5f4d7c965a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SystemController
+--- !u!1 &1122363519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1122363521}
+  - component: {fileID: 1122363520}
+  m_Layer: 0
+  m_Name: IngredientDicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1122363520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122363519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c87a31e5adb9b439ab1dea2ed31beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientDicManager
+  dataList:
+  - {fileID: 11400000, guid: b1c18e35a55f2d649994e210cbe797a4, type: 2}
+  - {fileID: 11400000, guid: 6f1e6c2d98c341941bfabceb932a5711, type: 2}
+  - {fileID: 11400000, guid: 454004681ed653e48b2b2e7bce79d735, type: 2}
+  - {fileID: 11400000, guid: c8a1051064f7adb46b2d97cd1ee501a7, type: 2}
+  - {fileID: 11400000, guid: 09973a05c01fe0b4db8a17f63925edd2, type: 2}
+  - {fileID: 11400000, guid: fb207a6af6dd65e4fb0c7e4cb3697490, type: 2}
+--- !u!4 &1122363521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122363519}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 162.44276, y: -34.61405, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169680852
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +627,8 @@ MonoBehaviour:
     sceneName: HomeKitchenScene
   - type: 15
     sceneName: TestHomeUIScene
+  - type: 18
+    sceneName: InviteCustomerScene
   optionOpened: 0
 --- !u!1 &1190981683
 GameObject:
@@ -1166,6 +1266,7 @@ MonoBehaviour:
     day: 0
     buildings: []
     quests: []
+    npcs: []
     playerInfo:
       isNew: 0
       lastPosition: {x: 0, y: 0, z: 0}
@@ -1615,3 +1716,5 @@ SceneRoots:
   - {fileID: 1604999820}
   - {fileID: 1209563708}
   - {fileID: 1456225495}
+  - {fileID: 1122363521}
+  - {fileID: 63394617}

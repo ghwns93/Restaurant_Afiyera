@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop/ShopUiScene.unity
     guid: e964e4bc982b9db4cb84c587ca64162a
+  - enabled: 1
+    path: Assets/Scenes/Village/InviteCustomerScene.unity
+    guid: 2c6e35e078569a241afb8a6097124016
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -49,10 +49,12 @@ MonoBehaviour:
   npcCode: 0
   npcName: "\uC2DD\uB2F9"
   targetType: 0
+  npcImage: {fileID: 0}
   npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: 89ce976773aded347904f537edf5f3f3, type: 2}
   - {fileID: 11400000, guid: 15ab5d33143c444498a87891b113e612, type: 2}
+  - {fileID: 11400000, guid: 17e62f529d52955408f701158623cfb7, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
 --- !u!212 &6461435071944722885
 SpriteRenderer:
@@ -159,8 +161,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: -1.05}
-      - {x: 0.58, y: -1.35}
-      - {x: 1.7, y: -0.77}
-      - {x: 1.15, y: -0.5}
+    - - {x: 0.35, y: -4.31}
+      - {x: 2.41, y: -5.38}
+      - {x: 6.88, y: -3.08}
+      - {x: 4.86, y: -2.06}
   m_UseDelaunayMesh: 1

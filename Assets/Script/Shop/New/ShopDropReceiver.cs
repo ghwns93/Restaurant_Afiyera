@@ -28,6 +28,12 @@ public class ShopDropReceiver : MonoBehaviour, IDropHandler
                 int soldCount = slotData.Quantity; // 전부 판매
 
                 int unitPrice = soldItem.BaseSellPrice;
+
+                if (soldItem.ItemType == ItemType.Ingredient)
+                {
+                    unitPrice = ShopManager.Instance.CheckIngredientPrice((ItemIngredientData)soldItem);
+                }
+
                 int totalEarnings = unitPrice * soldCount * sellPriceMultiplier;
 
                 // 인벤토리에서 제거 및 골드 지급

@@ -11,6 +11,7 @@ public class ShopSlotUI : MonoBehaviour, IPointerClickHandler
     [SerializeField] private TextMeshProUGUI itemPriceText;    // 4. 물건값
     [SerializeField] private Image itemChangeImage;            // 7. 증감 이미지
     [SerializeField] private TextMeshProUGUI priceChangeText;  // 7. 가격 변동 증감량 표시 (예: "+50" 또는 "-20")
+    [SerializeField] private GameObject soldOutPanel;          // 8. 품절 패널
 
     private ShopItemData boundShopItem;                        // 연결된 상점 아이템 데이터
 
@@ -31,6 +32,7 @@ public class ShopSlotUI : MonoBehaviour, IPointerClickHandler
             if (itemNameText != null) itemNameText.text = data.ItemName;
             if (itemDescText != null) itemDescText.text = data.Description;
             if (itemPriceText != null) itemPriceText.text = boundShopItem.CurrentPrice.ToString();
+            if (soldOutPanel != null) soldOutPanel.SetActive(boundShopItem.StockCount <= 0);
 
             UpdatePriceChangeUI();
         }
@@ -66,6 +68,12 @@ public class ShopSlotUI : MonoBehaviour, IPointerClickHandler
     // 마우스 클릭 시 더블클릭 판정
     public void OnPointerClick(PointerEventData eventData)
     {
+        if(boundShopItem.StockCount <= 0)
+        {
+            // 품절된 아이템은 클릭 무시
+            return;
+        }
+
         float timeSinceLastClick = Time.time - lastClickTime;
 
         if (timeSinceLastClick <= doubleClickThreshold)

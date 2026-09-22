@@ -17,3 +17,5 @@ MonoBehaviour:
   dialogueKey: "\uC219\uC18C\uB85C"
   targetNpcId: 
   unlockConditions: []
+  enterSceneType: 9
+  isNewDay: 0

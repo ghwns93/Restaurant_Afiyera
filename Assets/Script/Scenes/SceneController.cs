@@ -22,6 +22,7 @@ public enum SceneType
     HomeUi,
     ShopCody,
     ShopFlavoring,
+    InviteCustomer,
 }
 
 public class SceneController : MonoBehaviour

@@ -136635,7 +136635,6 @@ GameObject:
   - component: {fileID: 1143361270}
   - component: {fileID: 1143361269}
   - component: {fileID: 1143361268}
-  - component: {fileID: 1143361271}
   m_Layer: 5
   m_Name: BookmarkBtn (1)
   m_TagString: Untagged
@@ -136705,19 +136704,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1143361269}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1143361271}
-        m_TargetAssemblyTypeName: OpenInviteUi, Assembly-CSharp
-        m_MethodName: OpenInviteUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1143361269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136756,19 +136743,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143361266}
   m_CullTransparentMesh: 1
---- !u!114 &1143361271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143361266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 242b9080da8b355468c95c71c16a79bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenInviteUi
-  townType: 0
 --- !u!1 &1143579844
 GameObject:
   m_ObjectHideFlags: 0
@@ -152095,6 +152069,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Restaurant
       objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: -4.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: 2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: -5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: 6.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 4.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750276503884283047, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -2.06
+      objectReference: {fileID: 0}
     - target: {fileID: 6268459671768181698, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
       propertyPath: m_LocalPosition.x
       value: -207.66
@@ -160121,7 +160127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa34c9e5aa014f54cb031a11cbe207a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiSceneOpenController
-  openableScenes: 07000000080000000500000012000000
+  openableScenes: 070000000800000005000000
 --- !u!1 &1962333602
 GameObject:
   m_ObjectHideFlags: 0
@@ -166105,7 +166111,6 @@ MonoBehaviour:
   npcInteractionList:
   - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
   - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
-  - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
 --- !u!114 &4987516013039827213
 MonoBehaviour:
@@ -166384,7 +166389,6 @@ MonoBehaviour:
   npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
   npcInteractionList:
   - {fileID: 11400000, guid: df939ff0d1f146044a8503827865dcd1, type: 2}
-  - {fileID: 11400000, guid: 965a4431b1f28724b97080d47c3e32de, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
 --- !u!114 &6619987164165470754
 MonoBehaviour:

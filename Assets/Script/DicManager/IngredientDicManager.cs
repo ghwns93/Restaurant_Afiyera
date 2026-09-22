@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class IngredientDicManager : BaseDicManager<IngredientDicManager, int, ItemData>
+public class IngredientDicManager : BaseDicManager<IngredientDicManager, int, ItemIngredientData>
 {
-    protected override int GetKey(ItemData data)
+    protected override int GetKey(ItemIngredientData data)
     {
         return data.Id;
     }

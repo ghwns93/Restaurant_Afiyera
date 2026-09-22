@@ -66,7 +66,8 @@ public class DialogueManager : MonoBehaviour
         if (nextIndicator != null) nextIndicator.SetActive(false);
         if (choiceContainer != null) choiceContainer.gameObject.SetActive(false);
 
-        StartDialogueFromResources("dialogue_intro");
+        //StartDialogueFromResources("dialogue_intro");
+        StartDialogue();
     }
 
     private void Update()
@@ -148,6 +149,13 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         StartDialogue(json.text);
+    }
+
+    public void StartDialogue()
+    {
+        string json = NpcSpecialEventManager.Instance.GetSelectedId()?.DialogueJsonText;
+
+        StartDialogue(json);
     }
 
     // JSON 문자열로 직접 시작 (파일, 서버, StreamingAssets 등 어디서 오든 사용 가능)

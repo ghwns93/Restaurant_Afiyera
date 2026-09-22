@@ -17,6 +17,8 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private List<ShopItemData> shopItemList = new List<ShopItemData>(); // 상점에서 판매하는 아이템 리스트
     private List<ShopSlotUI> spawnedSlots = new List<ShopSlotUI>();
 
+    [SerializeField] private List<BuyIngredientData> ingredientItemList = new List<BuyIngredientData>(); // 상점에서 구매하는 아이템 가격
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -26,7 +28,7 @@ public class ShopManager : MonoBehaviour
     }
 
     // 상점 열기
-    public void OpenShop(List<ShopItemData> itemList, Sprite npcImage)
+    public void OpenShop(List<ShopItemData> itemList, List<BuyIngredientData> buyData, Sprite npcImage)
     {
         if (itemList != null) shopItemList = itemList;
         else
@@ -36,6 +38,13 @@ public class ShopManager : MonoBehaviour
         }
 
         if (shopNpcImage != null && npcImage != null) shopNpcImage.sprite = npcImage;
+        else
+        {
+            CloseShop();
+            return;
+        }
+
+        if(buyData != null) ingredientItemList = buyData;
         else
         {
             CloseShop();
@@ -128,8 +137,12 @@ public class ShopManager : MonoBehaviour
                 InventoryManager.Instance.ReduceGold(itemPrice); // 혹은 골드 감소 메서드명
                 InventoryManager.Instance.AddItem(shopItem.ItemData, 1); // 인벤토리에 추가하는 메서드
 
+                shopItem.StockCount--; // 재고 감소
+
                 // 3. UI 갱신
                 UpdatePlayerGoldUI();
+                RefreshShopUI();
+
                 Debug.Log($"[상점] {shopItem.ItemData.ItemName}을(를) {itemPrice} 골드에 구매했습니다!");
             }
             else
@@ -138,5 +151,20 @@ public class ShopManager : MonoBehaviour
                 // TODO: 골드 부족 팝업이나 UI 피드백 연동 가능
             }
         }
+    }
+
+    public int CheckIngredientPrice(ItemIngredientData item)
+    {
+        if (item == null) return 0;
+        
+        foreach (var ingredient in ingredientItemList)
+        {
+            if (ingredient.itemData == item)
+            {
+                return ingredient.buyPrice;
+            }
+        }
+
+        return item.BaseBuyPrice; // 해당 아이템이 없으면 기본값 반환
     }
 }

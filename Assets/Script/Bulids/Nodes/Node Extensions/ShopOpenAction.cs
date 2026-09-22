@@ -16,6 +16,6 @@ public class ShopOpenAction : NpcInteractionBase
             return;
         }
 
-        ShopManager.Instance.OpenShop(npcInfo.ShopItemList, npcInfo.npcImage);
+        ShopManager.Instance.OpenShop(npcInfo.ShopItemList, npcInfo.IngredientItemList, npcInfo.npcImage);
     }
 }
