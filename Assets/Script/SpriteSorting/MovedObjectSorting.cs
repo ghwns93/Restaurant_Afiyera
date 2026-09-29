@@ -4,27 +4,21 @@ using UnityEngine.Tilemaps;
 public class MovedObjectSorting : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private Tilemap targetTilemap;
 
     private int originalSortingOrder;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // 씬에 있는 타일맵을 찾아서 연결 (또는 매니저를 통해 참조)
-        targetTilemap = BuildManager.Instance.PrivateTargetTilemap;
 
         originalSortingOrder = spriteRenderer.sortingOrder;
     }
 
     private void LateUpdate()
     {
-        if (targetTilemap == null) return;
-
         // 1. NPC의 '발바닥 위치'를 기준으로 정확한 타일 좌표를 얻습니다.
         // (NPC 스프라이트의 Pivot이 반드시 'Bottom Center'로 설정되어 있어야 합니다)
         Vector3 footPos = transform.position;
-        //Vector3Int cellPos = targetTilemap.WorldToCell(footPos);
 
         // 2. 울타리와 동일한 베이스 레이어를 계산합니다 (1000 단위 적용).
         int baseOrder = Mathf.RoundToInt(-(footPos.y) * 100 - 150);

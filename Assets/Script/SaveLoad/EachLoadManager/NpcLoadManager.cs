@@ -11,8 +11,6 @@ public class NpcLoadManager : TempManagerBase<NpcLoadManager, List<NpcData>>
         if (MasterSaveManager.Instance != null && MasterSaveManager.Instance.currentSaveData != null)
         {
             MasterSaveManager.Instance.currentSaveData.npcs = tempValues;
-
-            Debug.Log($"NpcLoadManager: {tempValues.Count}개의 npc 데이터를 저장했습니다.");
         }
     }
 
@@ -44,8 +42,6 @@ public class NpcLoadManager : TempManagerBase<NpcLoadManager, List<NpcData>>
         }
 
         tempValues.Add(newData);
-
-        Debug.Log($"NpcLoadManager: 새로운 NPC 데이터({newData.npcId})를 추가했습니다. 현재 NPC 수: {tempValues.Count}");
     }
 
     public NpcData GetNpcDataById(string npcId)

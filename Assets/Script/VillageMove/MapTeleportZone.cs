@@ -10,9 +10,9 @@ public class MapTeleportZone : MonoBehaviour
     [Header("카메라 설정")]
     [SerializeField] private Collider2D targetMapBoundingCollider; // 이동할 맵의 영역 Collider
 
-    [Header("특정 UI 오픈")]
-    [SerializeField] private GameObject targetUi;
-    [SerializeField] private bool openUiOnTeleport = false;
+    //[Header("특정 UI 오픈")]
+    //[SerializeField] private GameObject targetUi;
+    //[SerializeField] private bool openUiOnTeleport = false;
 
     private bool isTeleporting = false;
 
@@ -59,14 +59,14 @@ public class MapTeleportZone : MonoBehaviour
         SystemController.Instance.SetSystemPause(true);
         isTeleporting = false;
 
-        OpenUi();
+        //OpenUi();
     }
 
-    private void OpenUi()
-    {
-        if (targetUi != null)
-        {
-            targetUi.SetActive(openUiOnTeleport);
-        }
-    }
+    //private void OpenUi()
+    //{
+    //    if (targetUi != null)
+    //    {
+    //        targetUi.SetActive(openUiOnTeleport);
+    //    }
+    //}
 }

@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class NpcInteractionManager : MonoBehaviour
 {
     public static NpcInteractionManager Instance;
-    public static event System.Action<string, NpcInteractionBase> OnQuestStateChanged;
+    public static event Action<string, NpcInteractionBase> OnQuestStateChanged;
 
     private readonly Func<string,string,string> makeKey = (k1,k2) => $"{k1}_{k2}";
 

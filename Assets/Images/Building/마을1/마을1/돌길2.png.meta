@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: 7a37c8ee17efcb9489b05d9c5a845f25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3383609032990848037
+    second: "\uB3CC\uAE382_0"
+  - first:
+      213: 1782190017982777253
+    second: "\uB3CC\uAE382_1"
+  - first:
+      213: 3667877426461401066
+    second: "\uB3CC\uAE382_2"
+  - first:
+      213: -3912969935674857684
+    second: "\uB3CC\uAE382_3"
+  - first:
+      213: 4073671878056576261
+    second: "\uB3CC\uAE382_4"
+  - first:
+      213: 5353456381549334568
+    second: "\uB3CC\uAE382_5"
+  - first:
+      213: 6568880161802259786
+    second: "\uB3CC\uAE382_6"
+  - first:
+      213: 1149250836506322157
+    second: "\uB3CC\uAE382_7"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\uB3CC\uAE382_0"
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 1611
+        width: 910
+        height: 412
+      alignment: 9
+      pivot: {x: 0.11, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb07c9f2810b01d0800000000000000
+      internalID: -3383609032990848037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b0dfc5833e5d6a9499f0103c46289618
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "\uB3CC\uAE382_0": -3383609032990848037
+      "\uB3CC\uAE382_1": 1782190017982777253
+      "\uB3CC\uAE382_2": 3667877426461401066
+      "\uB3CC\uAE382_3": -3912969935674857684
+      "\uB3CC\uAE382_4": 4073671878056576261
+      "\uB3CC\uAE382_5": 5353456381549334568
+      "\uB3CC\uAE382_6": 6568880161802259786
+      "\uB3CC\uAE382_7": 1149250836506322157
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

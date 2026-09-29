@@ -29,6 +29,8 @@ public class ShopNpcScript : BasicNpcScript
 
     private void SetBuyIngredientList()
     {
+        if (IngredientDicManager.Instance == null) return;
+
         var allList = IngredientDicManager.Instance.GetAllDataList();
 
         foreach (var item in allList)

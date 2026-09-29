@@ -4,11 +4,8 @@ using UnityEngine.Tilemaps;
 
 public class NonEffectObjectSorting : MonoBehaviour
 {
-    private Tilemap targetTilemap;
-
     private void Start()
     {
-        targetTilemap = BuildManager.Instance.PrivateTargetTilemap;
         SetFenceOrder();
     }
 
