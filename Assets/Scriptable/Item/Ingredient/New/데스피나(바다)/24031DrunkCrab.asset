@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 24031DrunkCrab
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 24031
+  itemName: "\uCDE8\uD574\uBC29\uAC8C"
+  icon: {fileID: 0}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uBC29\uC6B8 \uD558\uB098\uC5D0 \uACE0\uC9D1\uC744 \uAC00\uC9C0\uACE0
+    \uC624\uB79C \uC138\uC6D4 \uAD74\uB9B0 \uD30C\uD2F0\uBC29\uAC8C.\r\n\uB2E8\uB9DB\uC774
+    \uC904\uC5C8\uACE0 \uD0C4\uC0B0\uB3C4 \uC5C6\uC5B4\uC84C\uC9C0\uB9CC\r\n\uB18D\uBC00\uD55C
+    \uACFC\uC2E4\uD5A5\uC744 \uB744\uAC8C \uB418\uC5C8\uB2E4."
+  cookTime: 0
+  refineIcon: {fileID: 0}
+  buffEffect: {fileID: 0}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

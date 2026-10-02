@@ -11,7 +11,7 @@ public class NpcSelectButton : MonoBehaviour
     public void Setup(BasicNpcScript npc)
     {
         TargetNPC = npc;
-        nameText.text = npc.npcName;
+        nameText.text = npc.MyNpcBasicInfo.npcName;
         SetHighlight(false);
     }
 

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PrerequisiteQuestCondition
   targetRequiredQuest:
   - {fileID: 11400000, guid: 633c39661964e5f4fb628d83ed8a4d8b, type: 2}
-  otherNpcId: "npc.4.\uC0AC\uB78C\uC88B\uC544 \uCCAD\uB144"
+  otherNpcInfo: {fileID: 11400000, guid: bc76dbc225719cf46977375b7d3f235d, type: 2}

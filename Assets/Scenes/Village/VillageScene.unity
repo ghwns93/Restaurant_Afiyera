@@ -25352,20 +25352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8550c05fd70774f991da72da20ec69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopNpcScript
-  npcCode: 0
-  npcName: "\uC0C1\uC810"
-  targetType: 0
-  npcImage: {fileID: -8366408283500284133, guid: 0d84248991e9c434fb4d02500dc75f54, type: 3}
-  npcInteractionBase: {fileID: 11400000, guid: 7c4be18aef2378f4689dd0d7d1a5e99b, type: 2}
-  npcInteractionList: []
-  shopItemList:
-  - itemData: {fileID: 11400000, guid: c8d748ce200977a47ae9d50a840eceb6, type: 2}
-    maxStockCount: 1
-    stockLimited: 1
-    basePrice: 100
-    currentPrice: 0
-    previousPrice: 0
-    stockCount: 0
+  npcBasicInfo: {fileID: 11400000, guid: 2e51d917317e7ad4ca2636b65fcc8a58, type: 2}
 --- !u!60 &885454982
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -55987,13 +55974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
-  npcCode: 0
-  npcName: "\uBAA9\uC7A5"
-  targetType: 0
-  npcImage: {fileID: 0}
-  npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
-  npcInteractionList:
-  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcBasicInfo: {fileID: 0}
 --- !u!1 &2137547914
 GameObject:
   m_ObjectHideFlags: 0
@@ -56234,16 +56215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
-  npcCode: 2
-  npcName: "\uB09A\uC2DC\uC88B\uC544 \uCCAD\uB144"
-  targetType: 1
-  npcImage: {fileID: 0}
-  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
-  npcInteractionList:
-  - {fileID: 11400000, guid: bbbf7f75a0a49d34d9dce58488c7d908, type: 2}
-  - {fileID: 11400000, guid: eb8f5607296f35541b2fa5a21c95772e, type: 2}
-  - {fileID: 11400000, guid: e6982ec7ae287ef428aa681417bc6b97, type: 2}
-  - {fileID: 11400000, guid: 5389e0d77a04d4e45b46e5932e00bc56, type: 2}
+  npcBasicInfo: {fileID: 0}
 --- !u!114 &1423177216551112730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56388,7 +56360,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8244878547748989164, guid: ec81fc98598f16f43ac14ba6ca4dd423, type: 3}
-  m_Color: {r: 1, g: 0.80702907, b: 0.5990566, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -56499,16 +56471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
-  npcCode: 3
-  npcName: "\uC6B0\uC720 \uC88B\uC544 \uCCAD\uB144"
-  targetType: 1
-  npcImage: {fileID: 0}
-  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
-  npcInteractionList:
-  - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
-  - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
-  - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
-  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcBasicInfo: {fileID: 11400000, guid: 7c0339277526ca04aa83a5b0b2b51391, type: 2}
 --- !u!1 &5244487936531286274
 GameObject:
   m_ObjectHideFlags: 0
@@ -56525,7 +56488,7 @@ GameObject:
   - component: {fileID: 7558918956525437874}
   - component: {fileID: 3568802784295056861}
   m_Layer: 6
-  m_Name: HumanLikeNpc
+  m_Name: SecretaryNpc
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56543,13 +56506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
-  npcCode: 0
-  npcName: "\uC5EC\uAD00"
-  targetType: 0
-  npcImage: {fileID: 0}
-  npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
-  npcInteractionList:
-  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcBasicInfo: {fileID: 0}
 --- !u!61 &5832592164100285012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56747,7 +56704,7 @@ GameObject:
   - component: {fileID: 1423177216551112730}
   - component: {fileID: 8015243287909648935}
   m_Layer: 6
-  m_Name: MilkLikeNpc
+  m_Name: VillageChief
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56765,15 +56722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911415b993c124ba462b9c999147a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicNpcScript
-  npcCode: 4
-  npcName: "\uC0AC\uB78C\uC88B\uC544 \uCCAD\uB144"
-  targetType: 1
-  npcImage: {fileID: 0}
-  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
-  npcInteractionList:
-  - {fileID: 11400000, guid: df939ff0d1f146044a8503827865dcd1, type: 2}
-  - {fileID: 11400000, guid: 965a4431b1f28724b97080d47c3e32de, type: 2}
-  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcBasicInfo: {fileID: 11400000, guid: bc76dbc225719cf46977375b7d3f235d, type: 2}
 --- !u!114 &6619987164165470754
 MonoBehaviour:
   m_ObjectHideFlags: 0

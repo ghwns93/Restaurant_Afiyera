@@ -6,63 +6,61 @@ public class NpcSpecialEventManager : MonoBehaviour
 {
     public static NpcSpecialEventManager Instance { get; private set; }
 
-    [Header("전체 마을 NPC 이벤트 Master Registry")]
-    [SerializeField] private List<NpcSpecialEventData> allSpecialEvents;
+    [Header("전체 Special Event Unlock Action Registry")]
+    [SerializeField] private List<SpecialEventUnlockAction> allSpecialActions;
 
-    // 해금된 이벤트 ID 목록 보관
-    private readonly HashSet<string> unlockedEventIds = new HashSet<string>();
+    // 플레이어가 직접 대화하여 확인한 액션 ID (UI ? 해제용)
+    private readonly HashSet<string> seenActionIds = new HashSet<string>();
 
-    private string selectedEventId;
-
-    public string SelectedEventId
-    {
-        get => selectedEventId;
-        set => selectedEventId = value;
-    }
+    private NpcSpecialEventData SelectedEvent;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance == null)
         {
-            Destroy(this.gameObject);
-            return;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        Instance = this;
-    }
-
-    public void UnlockEvent(NpcSpecialEventData eventData)
-    {
-        if (eventData == null || string.IsNullOrEmpty(eventData.EventId)) return;
-
-        if (unlockedEventIds.Add(eventData.EventId))
+        else
         {
-            Debug.Log($"[SpecialEventManager] 이벤트 해금:({eventData.EventId})");
+            Destroy(gameObject);
         }
     }
 
     /// <summary>
-    /// 특정 이벤트가 해금되었는지 여부
+    /// 대화 시작 또는 완료 시점에 호출하여 UI의 ? 표시 해제
     /// </summary>
-    public bool IsEventUnlocked(string eventId)
+    public void MarkEventAsSeen(string actionName)
     {
-        return unlockedEventIds.Contains(eventId);
+        if (!string.IsNullOrEmpty(actionName))
+        {
+            seenActionIds.Add(actionName);
+        }
     }
 
     /// <summary>
-    /// 특정 마을 소속의 모든 NPC 이벤트 목록 가져오기
+    /// 플레이어가 직접 대화를 확인했는지 여부
     /// </summary>
-    public List<NpcSpecialEventData> GetEventsByTown(TownType town)
+    public bool IsEventSeen(string actionName)
     {
-        return allSpecialEvents.Where(e => e.Town == town).ToList();
+        return seenActionIds.Contains(actionName);
+    }
+
+    /// <summary>
+    /// 특정 마을 소속의 SpecialEventUnlockAction 목록만 추출
+    /// </summary>
+    public List<SpecialEventUnlockAction> GetSpecialActionsByTown(TownType town)
+    {
+        return allSpecialActions.Where(a => a != null && a.UnlockEventData.Town == town).ToList();
+    }
+
+    public void SetSelectedEventId(NpcSpecialEventData selectedEvent)
+    {
+        SelectedEvent = selectedEvent;
     }
 
     public NpcSpecialEventData GetSelectedId()
     {
-        return allSpecialEvents.FirstOrDefault(e => e.EventId == selectedEventId);
-    }
-
-    public void SetSelectedEventId(string eventId)
-    {
-        selectedEventId = eventId;
+        return SelectedEvent;
     }
 }

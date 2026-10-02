@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85763d1841da19045bf02a98c1387f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NpcSpecialEventManager
-  allSpecialEvents:
-  - {fileID: 11400000, guid: 51908b86e78b0c34a862d6ad362d5597, type: 2}
-  - {fileID: 11400000, guid: 3f512f855fdf7fb41bed670d5b4552ea, type: 2}
+  allSpecialActions:
+  - {fileID: 11400000, guid: 965a4431b1f28724b97080d47c3e32de, type: 2}
+  - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
 --- !u!4 &63394617
 Transform:
   m_ObjectHideFlags: 0
@@ -405,6 +405,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67747f1b7e6a8ee4e89efe32809e0327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildableCountManager
+--- !u!1 &550212291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550212293}
+  - component: {fileID: 550212292}
+  m_Layer: 0
+  m_Name: NpcDicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &550212292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550212291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9de89d2cde55948b069914b3c3a4ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcDicManager
+  dataList:
+  - {fileID: 11400000, guid: 7c0339277526ca04aa83a5b0b2b51391, type: 2}
+  - {fileID: 11400000, guid: 2e51d917317e7ad4ca2636b65fcc8a58, type: 2}
+  - {fileID: 11400000, guid: 164f3a837feb4ba45803a3cd311235fc, type: 2}
+  - {fileID: 11400000, guid: 82d98600540037d4b81a25664658acd3, type: 2}
+  - {fileID: 11400000, guid: a681d3703349a3a48a7f8c94c355e75f, type: 2}
+  - {fileID: 11400000, guid: 032ba898269e6db40b00a83b0ac86496, type: 2}
+  - {fileID: 11400000, guid: 4c60a5bfb0553564caa8c8149f79d6d7, type: 2}
+  - {fileID: 11400000, guid: bc76dbc225719cf46977375b7d3f235d, type: 2}
+  - {fileID: 11400000, guid: b67248c9f28371c4fac361bf9c436456, type: 2}
+  - {fileID: 11400000, guid: 59022f011b702d74f9927a9efecce7e0, type: 2}
+  - {fileID: 11400000, guid: c82fa37895a93c740b27f0d30284e8ff, type: 2}
+  - {fileID: 11400000, guid: c10a4cdb7bc2e804785648ec2c1a3f02, type: 2}
+  - {fileID: 11400000, guid: 22f20cc655f4f9149a252d1097ecbfdc, type: 2}
+  - {fileID: 11400000, guid: 3ebc1a9fc97a58542afdd2b0df4b3d6f, type: 2}
+  - {fileID: 11400000, guid: 8fa117a860b159a4e87b9524d120b243, type: 2}
+  - {fileID: 11400000, guid: 1a02e6bcb7a54ac4ebdc8d920bb32e16, type: 2}
+  - {fileID: 11400000, guid: 4d57fdb6bac83dd4d8123dc7b4f0add3, type: 2}
+  - {fileID: 11400000, guid: ddaaceb738ffecf4f8cb198a515b423a, type: 2}
+  - {fileID: 11400000, guid: f492d6d5fdb950748b615405088a248a, type: 2}
+  - {fileID: 11400000, guid: 63100ee7f95fb1941a7562725ca6eb78, type: 2}
+  - {fileID: 11400000, guid: 5dac80c3ba134fd42ae6c011e9a1b37d, type: 2}
+  - {fileID: 11400000, guid: 575cee7ec792f5d4b984201c0a5e342c, type: 2}
+  - {fileID: 11400000, guid: 4d639e6cea6f92d43b15ecb2e44d6f0e, type: 2}
+  - {fileID: 11400000, guid: c78b7faa23208ef499988d6f0b2e0371, type: 2}
+  - {fileID: 11400000, guid: 2bd5f44bec567c4478fb98b487ac21c7, type: 2}
+  - {fileID: 11400000, guid: d7c021870d05b414b8921629218fd7fd, type: 2}
+  - {fileID: 11400000, guid: 6840e674230612c498885dcd0ec30daa, type: 2}
+  - {fileID: 11400000, guid: 66cc692fdc2bae0409ecf0e2640138c4, type: 2}
+  - {fileID: 11400000, guid: 60a51d2e1dc255b4ea6bc1f53e15758d, type: 2}
+  - {fileID: 11400000, guid: 0969ef9db0e2d0649b6fcdc3ee89011e, type: 2}
+  - {fileID: 11400000, guid: d2de9a7900665424a864e1a052c3f275, type: 2}
+--- !u!4 &550212293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550212291}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.43393, y: 0.42716, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1012991873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,3 +1794,4 @@ SceneRoots:
   - {fileID: 1456225495}
   - {fileID: 1122363521}
   - {fileID: 63394617}
+  - {fileID: 550212293}

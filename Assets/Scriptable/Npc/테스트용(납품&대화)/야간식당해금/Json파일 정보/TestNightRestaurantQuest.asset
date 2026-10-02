@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: TestNightRestaurantQuest
   m_EditorClassIdentifier: Assembly-CSharp::NpcSpecialEventData
   eventId: test1
-  npcSprite: {fileID: -2446827563165476410, guid: 550c5b547e43b044c8088a731a5fe270, type: 3}
+  eventName: "\uD14C\uC2A4\uD2B8\uC774\uBCA4\uD2B8"
   town: 0
+  npcInfo: {fileID: 11400000, guid: bc76dbc225719cf46977375b7d3f235d, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: b1c18e35a55f2d649994e210cbe797a4, type: 2}
   - {fileID: 11400000, guid: 6f1e6c2d98c341941bfabceb932a5711, type: 2}
   dialogueJsonFile: {fileID: 4900000, guid: df29fc02d8c4d79498b00836c3adb801, type: 3}
+  unlockConditions: []

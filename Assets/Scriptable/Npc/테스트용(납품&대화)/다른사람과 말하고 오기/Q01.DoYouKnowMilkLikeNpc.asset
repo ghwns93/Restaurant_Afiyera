@@ -18,7 +18,7 @@ MonoBehaviour:
   targetNpcId: 
   unlockConditions:
   - {fileID: 11400000, guid: e1c9bd05aa7f59541a4446c4577161a6, type: 2}
-  talkContent: "\uC6B0\uC720 \uC88B\uC544 \uCCAD\uB144\uC774 \uB3C4\uC6C0\uC774 \uD544\uC694\uD55C\uAC00\uBD10.\n\uD55C\uBC88
+  talkContent: "\uCD0C\uC7A5\uB2D8\uC774 \uB3C4\uC6C0\uC774 \uD544\uC694\uD55C\uAC00\uBD10.\n\uD55C\uBC88
     \uAC00\uBCF4\uB294\uAC8C \uC5B4\uB54C?"
   choiceList:
   - {fileID: 11400000, guid: 633c39661964e5f4fb628d83ed8a4d8b, type: 2}

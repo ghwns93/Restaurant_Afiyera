@@ -17,8 +17,7 @@ MonoBehaviour:
   dialogueKey: "\uC54C\uACA0\uC5B4\uC694."
   targetNpcId: 
   unlockConditions: []
-  talkContent: "\uC88B\uC558\uC5B4. \uC6B0\uC720 \uC88B\uC544 \uCCAD\uB144\uC740
-    \uBC14\uB85C \uC606 \uAC8C\uC2DC\uD310 \uC55E\uC5D0 \uC788\uC73C\uB2C8.\n\uB9D0\uC744
-    \uAC78\uC5B4\uBD10\uBD10."
+  talkContent: "\uC88B\uC558\uC5B4. \uCD0C\uC7A5\uB2D8\uC740 \uBC14\uB85C \uC606
+    \uAC8C\uC2DC\uD310 \uC55E\uC5D0 \uC788\uC73C\uB2C8.\n\uB9D0\uC744 \uAC78\uC5B4\uBD10\uBD10."
   choiceList:
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}

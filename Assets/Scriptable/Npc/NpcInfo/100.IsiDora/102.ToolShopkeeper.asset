@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a6ab2459590df49a05bc3734be8e80, type: 3}
+  m_Name: 102.ToolShopkeeper
+  m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
+  npcCode: 102
+  npcName: "\uB3C4\uAD6C\uC810\uC7A5"
+  npcImage: {fileID: 21300000, guid: a6e6ca6ab8b2fa747b460c8e8b54ed85, type: 3}
+  npcIconImage: {fileID: -4802568198485020010, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
+  npcSdImage: {fileID: 0}
+  isNightRestaurantNpc: 0
+  portraits: []
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: 7c4be18aef2378f4689dd0d7d1a5e99b, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcType: 1
+  shopItemList:
+  - itemData: {fileID: 11400000, guid: c8d748ce200977a47ae9d50a840eceb6, type: 2}
+    maxStockCount: 1
+    stockLimited: 1
+    basePrice: 100
+    currentPrice: 100
+    previousPrice: 100
+    stockCount: 1

@@ -5,24 +5,13 @@ using UnityEngine;
 
 public class BasicNpcScript : MonoBehaviour
 {
-    public int npcCode;
-
-    public string npcName = "상인";
-
-    public TargetType targetType;
-
-    public Sprite npcImage;
-
-    public NpcInteractionBase npcInteractionBase; // NPC가 가진 상호작용 정보 (예: 대화, 퀘스트 등)
-    [SerializeField]
-    private List<NpcInteractionBase> npcInteractionList;
+    [SerializeField] private NpcBasicInfo npcBasicInfo;
 
     private List<NpcInteractionBase> copyedNpcInteractionList = new List<NpcInteractionBase>();
 
-    private string myNpcId;
-
     public List<NpcInteractionBase> CopyedNpcInteractionList { get => copyedNpcInteractionList; set => copyedNpcInteractionList = value; }
-    public string MyNpcId { get => myNpcId; }
+    public string MyNpcId => npcBasicInfo.npcId;
+    public NpcBasicInfo MyNpcBasicInfo => npcBasicInfo;
 
     private void Start()
     {
@@ -31,36 +20,38 @@ public class BasicNpcScript : MonoBehaviour
 
     public virtual void StartRoutine()
     {
-        CreateThisId();
+        if(npcBasicInfo == null)
+        {
+            //Debug.LogError("NpcBasicInfo is not assigned in " + gameObject.name);
+            return;
+        }
+
         InputInteraction();
+        SetNpcImage();
 
         var questSet = gameObject.GetComponent<QuestBasedNpcController>();
 
         if (questSet != null)
         {
-            questSet.SetBns(this, myNpcId);
+            questSet.SetBns(this, MyNpcId);
         }
     }
 
-    public void CreateThisId()
+    private void SetNpcImage()
     {
-        //myNpcId = System.Guid.NewGuid().ToString();
-
-        //Debug.Log("새로운 건물 " + npcName + " 생성, ID: " + myNpcId);
-
-        if(targetType == TargetType.Building)
+        if(npcBasicInfo.npcSdImage != null)
         {
-            myNpcId = string.Format("{0}.{1}.{2}", transform.position.x, transform.position.y, transform.position.z);
-        }
-        else if (targetType == TargetType.Npc)
-        {
-            myNpcId = string.Format("npc.{0}.{1}", npcCode, npcName);
+            var npcSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            if (npcSpriteRenderer != null)
+            {
+                npcSpriteRenderer.sprite = npcBasicInfo.npcSdImage;
+            }
         }
     }
 
     public void InputInteraction()
     {
-        foreach (var interaction in npcInteractionList)
+        foreach (var interaction in npcBasicInfo.npcInteractionList)
         {
             if (interaction != null)
             {
@@ -75,7 +66,7 @@ public class BasicNpcScript : MonoBehaviour
 
     public void SetNpcInteractionButton()
     {
-        if (npcInteractionBase is NpcInteractionTalk)
+        if (npcBasicInfo.npcInteractionBase is NpcInteractionTalk)
         {
             List<NpcInteractionBase> unlockedTalk = new List<NpcInteractionBase>();
 
@@ -94,7 +85,7 @@ public class BasicNpcScript : MonoBehaviour
     public void NpcInteraction()
     {
         //NPC 상호작용 코드
-        npcInteractionBase.Execute(gameObject);
+        npcBasicInfo.npcInteractionBase.Execute(gameObject);
 
         SetNpcInteractionButton();
     }
@@ -114,5 +105,3 @@ public class BasicNpcScript : MonoBehaviour
     private void OnDetected() => NpcSelectEvents.OnNPCDetected?.Invoke(this);
     private void OnLost() => NpcSelectEvents.OnNPCLost?.Invoke(this);
 }
-
-public enum TargetType { Building, Npc }

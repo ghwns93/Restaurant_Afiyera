@@ -245,7 +245,7 @@ public class DialogueManager : MonoBehaviour
 
         // 2) 화자 이름 표시 + 말하는 NPC 강조
         var npc = NpcDicManager.Instance.GetData(line.speakerId);
-        nameText.text = npc != null ? npc.displayName : line.speakerId;
+        nameText.text = npc != null ? npc.npcName : line.speakerId;
 
         foreach (var slot in npcSlots)
             slot.SetSpeaking(slot.IsOccupied && slot.CurrentNpcId == line.speakerId);
@@ -481,7 +481,7 @@ public class DialogueManager : MonoBehaviour
     private void ShowLineInstantly(DialogueLine line)
     {
         var npc = NpcDicManager.Instance.GetData(line.speakerId);
-        nameText.text = npc != null ? npc.displayName : line.speakerId;
+        nameText.text = npc != null ? npc.npcName : line.speakerId;
 
         foreach (var slot in npcSlots)
             slot.SetSpeaking(slot.IsOccupied && slot.CurrentNpcId == line.speakerId);

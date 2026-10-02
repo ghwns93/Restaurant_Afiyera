@@ -6,17 +6,8 @@ using UnityEngine;
 
 public class ShopNpcScript : BasicNpcScript
 {
-    [SerializeField] private List<ShopItemData> shopItemList = new List<ShopItemData>(); // 상점에서 판매하는 아이템 리스트
-
-    [SerializeField] private List<BuyIngredientData> ingredientItemList = new List<BuyIngredientData>(); // 상점에서 구매하는 아이템 리스트
-
-    public List<ShopItemData> ShopItemList { get => shopItemList; set => shopItemList = value; }
-    public List<BuyIngredientData> IngredientItemList { get => ingredientItemList; set => ingredientItemList = value; }
-
-    private void Start()
-    {
-        StartRoutine();
-    }
+    public List<ShopItemData> ShopItemList => MyNpcBasicInfo.shopItemList;
+    public List<BuyIngredientData> IngredientItemList => MyNpcBasicInfo.ingredientItemList; 
 
     public override void StartRoutine()
     {
@@ -61,7 +52,7 @@ public class ShopNpcScript : BasicNpcScript
         }
 
         // 1. 상점 아이템 리스트 초기화
-        foreach (var item in shopItemList)
+        foreach (var item in ShopItemList)
         {
             if (item != null)
             {
@@ -126,7 +117,7 @@ public class ShopNpcScript : BasicNpcScript
             shopItem.UpdatePrice(newPrice);
         }
 
-        ShopManager.Instance.ChangeData(ShopItemList, npcImage);
+        ShopManager.Instance.ChangeData(ShopItemList, MyNpcBasicInfo.npcImage);
 
         NpcData nData = new NpcData
         {

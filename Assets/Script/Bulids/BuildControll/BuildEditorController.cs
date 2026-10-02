@@ -88,7 +88,7 @@ public class BuildEditorController : BuildBase
             {
                 var oldid = questData.MyNpcId;
 
-                questData.CreateThisId();
+                //questData.CreateThisId();
 
                 foreach (var npc in questData.CopyedNpcInteractionList)
                 {

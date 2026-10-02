@@ -45,7 +45,7 @@ public class TownNpcSlotUI : MonoBehaviour
 
         if (isUnlocked)
         {
-            npcIconImage.sprite = data.NpcSprite;
+            npcIconImage.sprite = data.NpcInfo.npcIconImage;
             eventData = data;
 
             var requiredIngredients = data.RequiredIngredients;
@@ -71,7 +71,7 @@ public class TownNpcSlotUI : MonoBehaviour
     {
         if (CheckAllIngredientsCollected())
         {
-            NpcSpecialEventManager.Instance.SetSelectedEventId(eventData.EventId);
+            NpcSpecialEventManager.Instance.SetSelectedEventId(eventData);
             OnStateChanged?.Invoke();
             OnActiveButton();
         }

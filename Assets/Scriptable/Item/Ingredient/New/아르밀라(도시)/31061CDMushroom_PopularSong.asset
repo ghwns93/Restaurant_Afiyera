@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 31061CDMushroom_PopularSong
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 31061
+  itemName: "CD\uBC84\uC12F-\uC720\uD589\uAC00"
+  icon: {fileID: 0}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uBA39\uC744 \uB54C \uC790\uB77C\uBA70 \uB4E4\uC740 \uB178\uB798\uAC00
+    \uB4E4\uB9AC\uB294 \uBC84\uC12F.\r\n\uB4E4\uC740 \uB178\uB798\uC5D0 \uB530\uB77C
+    \uB9DB\uC774 \uBCC0\uD654\uD55C\uB2E4.\r\n\uC9C0\uAE08 \uAC00\uC7A5 \uC720\uD589\uD558\uB294
+    \uC720\uD589\uAC00\uB97C \uB4E3\uACE0 \uC790\uB790\uB2E4.\r\n\uC2E0\uB098\uACE0
+    \uD1A1\uD1A1\uD280\uB294 \uB9DB\uC774 \uB09C\uB2E4."
+  cookTime: 0
+  refineIcon: {fileID: 0}
+  buffEffect: {fileID: 0}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

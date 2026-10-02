@@ -8,15 +8,15 @@ public class PrerequisiteQuestCondition : QuestCondition
     [SerializeField] private List<NpcInteractionBase> targetRequiredQuest;
 
     [Header("다른 NPC의 퀘스트를 확인할 경우, 해당 NPC id 입력")]
-    [SerializeField] private string otherNpcId = "";
+    [SerializeField] private NpcBasicInfo otherNpcInfo;
 
     public override bool IsMet(string targetId)
     {
         if (targetRequiredQuest == null) return true;
 
-        if (otherNpcId.Trim() != "")
+        if (otherNpcInfo != null)
         {
-            targetId = otherNpcId;
+            targetId = otherNpcInfo.npcId;
         }
 
         bool result;

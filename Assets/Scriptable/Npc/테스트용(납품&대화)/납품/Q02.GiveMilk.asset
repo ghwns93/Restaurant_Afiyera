@@ -25,4 +25,4 @@ MonoBehaviour:
   choiceList:
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   questCompleteTalkContent: "\uC5ED\uC2DC \uC6B0\uC720\uAC00 \uCD5C\uACE0\uC57C!"
-  questFailTalkContent: "\uC6B0\uC720\uAC00 \uBAA8\uC798\uB77C"
+  questFailTalkContent: "\uC6B0\uC720\uC758 \uAC2F\uC218\uAC00 \uCDA9\uBD84\uD558\uC9C0\uC54A\uC544"

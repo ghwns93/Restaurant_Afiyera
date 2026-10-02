@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a6ab2459590df49a05bc3734be8e80, type: 3}
+  m_Name: 101.VillageChief
+  m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
+  npcCode: 101
+  npcName: "\uCD0C\uC7A5"
+  npcImage: {fileID: 21300000, guid: 8ed604c0d7b7767428bc669c7970ad2e, type: 3}
+  npcIconImage: {fileID: 6272591594166438393, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
+  npcSdImage: {fileID: 0}
+  isNightRestaurantNpc: 1
+  portraits:
+  - {fileID: 21300000, guid: e9486c11de9965b4abe101487d360bd5, type: 3}
+  - {fileID: 21300000, guid: 9db6fb27baa778c4ab6d931631082371, type: 3}
+  - {fileID: 21300000, guid: 7d29c1dad4b1d644ea0f08b3e81b8a70, type: 3}
+  - {fileID: 21300000, guid: d0ce9b2990d12cc4080e9dfcb0fe1832, type: 3}
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
+  - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
+  - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcType: 0
+  shopItemList: []
