@@ -151,6 +151,7 @@ MonoBehaviour:
   allSpecialActions:
   - {fileID: 11400000, guid: 965a4431b1f28724b97080d47c3e32de, type: 2}
   - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
+  - {fileID: 11400000, guid: ca2147fc20fbd39479c76a778dcf750e, type: 2}
 --- !u!4 &63394617
 Transform:
   m_ObjectHideFlags: 0

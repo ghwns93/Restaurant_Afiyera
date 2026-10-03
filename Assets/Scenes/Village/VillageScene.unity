@@ -45455,10 +45455,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Restaurant
       objectReference: {fileID: 0}
-    - target: {fileID: 812149568245938315, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 6268459671768181698, guid: 3961f6626ca83104eb6a82fc24146966, type: 3}
       propertyPath: m_LocalPosition.x
       value: -207.66

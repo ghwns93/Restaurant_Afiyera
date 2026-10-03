@@ -52,40 +52,24 @@ public class TownNpcListUI : MonoBehaviour
             {
                 // 완료 여부는 NpcInteractionManager에서 체크
                 bool isCompleted = NpcInteractionManager.Instance.IsQuestCompleted(action.UnlockEventData.NpcInfo.npcId, action);
-                bool isConditionMet = action.CanActivate();
-                bool isSeenByPlayer = NpcSpecialEventManager.Instance.IsEventSeen(action.name);
+                //bool isConditionMet = action.CanActivate();
+                bool isSeenByPlayer = NpcSpecialEventManager.Instance.IsEventSeen(action.UnlockEventData.name);
 
-                if (!isCompleted)
-                {
-                    if (isConditionMet)
-                    {
-                        targetActionToShow = action;
-                        // 조건이 충족되어 진행 가능해도, 플레이어가 직접 대화해봐야만 ? 가 풀림
-                        isRevealedInUI = isSeenByPlayer;
-                    }
-                    else
-                    {
-                        targetActionToShow = action;
-                        isRevealedInUI = false;
-                    }
-                    break; // 진행 대상(또는 조건에 막힌 최우선) 스토리를 결정했으므로 이 NPC 탐색 종료
-                }
-                else
-                {
-                    // 이미 완료된 과거 스토리는 저장 (모두 완료했을 때의 최종 상태 노출용)
-                    targetActionToShow = action;
-                    isRevealedInUI = true;
-                }
+                if (isSeenByPlayer) continue;
+
+                // 조건이 충족되어 진행 가능해도, 플레이어가 직접 대화해봐야만 ? 가 풀림
+                targetActionToShow = action;
+                isRevealedInUI = isCompleted;
+
+                break; // 진행 대상(또는 조건에 막힌 최우선) 스토리를 결정했으므로 이 NPC 탐색 종료
             }
 
-            // NPC당 추출된 최종 1개 액션으로 UI 슬롯 생성
-            if (targetActionToShow != null)
+            if (targetActionToShow == null) continue; // 모든 스토리가 이미 완료되었거나, 플레이어가 이미 본 스토리라면 UI에 표시하지 않음
+
+            GameObject slotObj = Instantiate(npcSlotPrefab, contentParent);
+            if (slotObj.TryGetComponent<TownNpcSlotUI>(out var slot))
             {
-                GameObject slotObj = Instantiate(npcSlotPrefab, contentParent);
-                if (slotObj.TryGetComponent<TownNpcSlotUI>(out var slot))
-                {
-                    slot.Setup(targetActionToShow.UnlockEventData, isRevealedInUI);
-                }
+                slot.Setup(targetActionToShow.UnlockEventData, isRevealedInUI);
             }
         }
 
@@ -94,6 +78,7 @@ public class TownNpcListUI : MonoBehaviour
 
     public void CloseUI()
     {
+        SystemController.Instance.SetSystemPause(true);
         uiRoot.SetActive(false);
     }
 }

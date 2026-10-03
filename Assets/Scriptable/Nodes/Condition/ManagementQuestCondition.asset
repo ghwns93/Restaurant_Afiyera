@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dfdcc0d51f0b4419a1561fac17a0f1, type: 3}
-  m_Name: ManagementQuestConditon
+  m_Name: ManagementQuestCondition
   m_EditorClassIdentifier: Assembly-CSharp::PrerequisiteQuestCondition
   targetRequiredQuest:
   - {fileID: 11400000, guid: a876ada6ecdbc4d4185dcb7273888831, type: 2}

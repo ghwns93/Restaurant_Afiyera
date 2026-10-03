@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323f1073e8b4a5446b92c7a7e045399e, type: 3}
-  m_Name: TestNightRestaurantUnlock2
+  m_Name: TestNightRestaurantUnlock2-2
   m_EditorClassIdentifier: Assembly-CSharp::SpecialEventUnlockAction
   questType: 1
   questInteractionType: 0
-  dialogueKey: "\uC57C\uAC04\uC2DD\uB2F9 \uD574\uAE08 \uD018\uC2A4\uD2B8"
+  dialogueKey: "\uC57C\uAC04\uC2DD\uB2F9 \uD574\uAE08 \uD018\uC2A4\uD2B82"
   targetNpcId: 
   unlockConditions:
-  - {fileID: 11400000, guid: 893087512a79c06448301f697cb1cbfb, type: 2}
-  unlockEventData: {fileID: 11400000, guid: 3f512f855fdf7fb41bed670d5b4552ea, type: 2}
+  - {fileID: 11400000, guid: eb0a26aced6f99747bc8f0d32374d316, type: 2}
+  unlockEventData: {fileID: 11400000, guid: 78f9144aaaa1df84da68ce03cfa6ea8f, type: 2}

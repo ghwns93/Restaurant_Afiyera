@@ -6,6 +6,7 @@ public class OpenInviteUi : MonoBehaviour
 
     public void OpenInviteUI()
     {
+        SystemController.Instance.SetSystemPause(false);
         TownNpcListUI.Instance.OpenUI(townType);
     }
 }

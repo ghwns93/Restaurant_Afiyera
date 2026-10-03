@@ -437,6 +437,9 @@ public class DialogueManager : MonoBehaviour
             if (slot.IsOccupied) slot.Hide();
 
         // 필요하면 여기서 onDialogueEnd 이벤트 발행 (퀘스트 시작, 플레이어 조작 복구 등)
+        NpcSpecialEventManager.Instance.MarkEventAsSeen(NpcSpecialEventManager.Instance.GetSelectedId().name);
+
+        NpcSpecialEventManager.Instance.ResetEvent();
 
         nightCookScene.NightCookEnd();
     }

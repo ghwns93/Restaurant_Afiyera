@@ -16,6 +16,7 @@ MonoBehaviour:
   questInteractionType: 0
   dialogueKey: "\uC219\uC18C\uB85C"
   targetNpcId: 
-  unlockConditions: []
+  unlockConditions:
+  - {fileID: 11400000, guid: 919113c176f2bb34db5facc570ecaec3, type: 2}
   enterSceneType: 9
   isNewDay: 0

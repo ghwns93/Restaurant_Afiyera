@@ -27,6 +27,8 @@ public class TownNpcSlotUI : MonoBehaviour
 
     private NpcSpecialEventData eventData;
 
+    private bool selected = false;
+
     private void OnEnable()
     {
         // 이벤트 구독
@@ -63,17 +65,26 @@ public class TownNpcSlotUI : MonoBehaviour
                 }
             }
 
-            InActiveButton();
+            if(NpcSpecialEventManager.Instance.GetSelectedId() == eventData) OnActiveButton();
+            else InActiveButton();
         }
     }
 
     public void SelectButtonClick()
     {
-        if (CheckAllIngredientsCollected())
+        if (selected)
         {
-            NpcSpecialEventManager.Instance.SetSelectedEventId(eventData);
+            NpcSpecialEventManager.Instance.ResetEvent();
             OnStateChanged?.Invoke();
-            OnActiveButton();
+        }
+        else
+        {
+            if (CheckAllIngredientsCollected())
+            {
+                NpcSpecialEventManager.Instance.SetSelectedEventId(eventData);
+                OnStateChanged?.Invoke();
+                OnActiveButton();
+            }
         }
     }
 
@@ -97,6 +108,8 @@ public class TownNpcSlotUI : MonoBehaviour
         // 색상 변경
         targetImage.color = inactiveColor;
 
+        selected = false;
+
         //// 이미지 변경 (Sprite가 할당되어 있는 경우에만)
         //Sprite targetSprite = isActive ? activeSprite : inactiveSprite;
         //if (targetSprite != null)
@@ -110,5 +123,7 @@ public class TownNpcSlotUI : MonoBehaviour
         if (targetImage == null) return;
 
         targetImage.color = activeColor;
+
+        selected = true;
     }
 }

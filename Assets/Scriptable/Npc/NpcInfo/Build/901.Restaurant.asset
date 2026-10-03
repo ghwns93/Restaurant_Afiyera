@@ -10,26 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7a6ab2459590df49a05bc3734be8e80, type: 3}
-  m_Name: 101.VillageChief
+  m_Name: 901.Restaurant
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
-  npcCode: 101
-  npcName: "\uCD0C\uC7A5"
-  npcImage: {fileID: 21300000, guid: 8ed604c0d7b7767428bc669c7970ad2e, type: 3}
-  npcIconImage: {fileID: 6272591594166438393, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
+  npcCode: 901
+  npcName: "\uC2DD\uB2F9"
+  npcImage: {fileID: 0}
+  npcIconImage: {fileID: 0}
   npcSdImage: {fileID: 0}
-  isNightRestaurantNpc: 1
+  isNightRestaurantNpc: 0
   portraits:
   - {fileID: 21300000, guid: e9486c11de9965b4abe101487d360bd5, type: 3}
   - {fileID: 21300000, guid: 9db6fb27baa778c4ab6d931631082371, type: 3}
   - {fileID: 21300000, guid: 7d29c1dad4b1d644ea0f08b3e81b8a70, type: 3}
   - {fileID: 21300000, guid: d0ce9b2990d12cc4080e9dfcb0fe1832, type: 3}
   isInteractionNpc: 1
-  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionBase: {fileID: 11400000, guid: f09a4d9c74558e64885965f58cc3da5e, type: 2}
   npcInteractionList:
-  - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
-  - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
-  - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
-  - {fileID: 11400000, guid: ca2147fc20fbd39479c76a778dcf750e, type: 2}
+  - {fileID: 11400000, guid: 15ab5d33143c444498a87891b113e612, type: 2}
+  - {fileID: 11400000, guid: 17e62f529d52955408f701158623cfb7, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 0
   shopItemList: []

@@ -63,4 +63,9 @@ public class NpcSpecialEventManager : MonoBehaviour
     {
         return SelectedEvent;
     }
+
+    public void ResetEvent()
+    {
+        SelectedEvent = null;
+    }
 }
