@@ -19,6 +19,10 @@ public class ScreenTransitionManager : MonoBehaviour
 
     private Vector2 screenSize;
 
+    [SerializeField] private TownType currentTownType;
+
+    public TownType CurrentTownType { get => currentTownType; set => currentTownType = value; }
+
     private void Awake()
     {
         if (Instance == null) Instance = this;

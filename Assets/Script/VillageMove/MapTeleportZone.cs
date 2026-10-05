@@ -6,6 +6,7 @@ public class MapTeleportZone : MonoBehaviour
     [Header("이동 관련 설정")]
     [SerializeField] private Transform targetSpawnPoint; // 목적지 스폰 위치
     [SerializeField] private Direction moveDirection;    // 이동 연출 방향
+    [SerializeField] private TownType nextTown;          // 다음 마을
 
     [Header("카메라 설정")]
     [SerializeField] private Collider2D targetMapBoundingCollider; // 이동할 맵의 영역 Collider
@@ -56,6 +57,7 @@ public class MapTeleportZone : MonoBehaviour
             }
         });
 
+        ScreenTransitionManager.Instance.CurrentTownType = nextTown;
         SystemController.Instance.SetSystemPause(true);
         isTeleporting = false;
 

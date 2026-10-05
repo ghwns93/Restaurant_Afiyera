@@ -63,10 +63,13 @@ public class PlayerInteraction : MonoBehaviour
         // UI 생성 이벤트
         foreach (var npc in currentFoundNPCs)
         {
-            if (!nearNPCs.Contains(npc))
+            if (npc.MyNpcBasicInfo != null)
             {
-                nearNPCs.Add(npc);
-                NpcSelectEvents.OnNPCDetected?.Invoke(npc);
+                if (!nearNPCs.Contains(npc))
+                {
+                    nearNPCs.Add(npc);
+                    NpcSelectEvents.OnNPCDetected?.Invoke(npc);
+                }
             }
         }
 

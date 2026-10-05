@@ -1,29 +1,32 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TownNpcSlotUI : MonoBehaviour
 {
-    [SerializeField] private Image npcIconImage;
-    [SerializeField] private List<Image> matList;
 
     [Header("미해금 표기 설정")]
     [SerializeField] private GameObject lockedPanel;
 
+    [Header("해금 표기 설정")]
+    [SerializeField] private RectTransform backgroundPanel;
+    [SerializeField] private Image npcIconImage;
+    [SerializeField] private TextMeshProUGUI npcName;
+    [SerializeField] private GameObject matPanel;
+    [SerializeField] private List<Image> matList;
+
     public static event Action OnStateChanged;
 
-    [Header("버튼 이미지")]
-    [SerializeField] private Image targetImage;
+    [Header("선택 이미지")]
+    [SerializeField] private GameObject selectedImage;
 
-    [Header("활성화 버튼 색상")]
-    [SerializeField] private Color activeColor = Color.green;
-    [SerializeField] private Sprite activeSprite;
-
-    [Header("비활성화 버튼 색상")]
-    [SerializeField] private Color inactiveColor = Color.white;
-    [SerializeField] private Sprite inactiveSprite;
+    [Header("이미지 사이즈 조정")]
+    [Range(0.1f, 2.0f)]
+    [SerializeField] private float spriteRate = 1.0f;
+    [SerializeField] private float imageOffsetY = 0.0f;
 
     private NpcSpecialEventData eventData;
 
@@ -44,11 +47,18 @@ public class TownNpcSlotUI : MonoBehaviour
     public void Setup(NpcSpecialEventData data, bool isUnlocked)
     {
         lockedPanel.SetActive(!isUnlocked);
+        npcIconImage.gameObject.SetActive(isUnlocked);
+        npcName.gameObject.SetActive(isUnlocked);
+        matPanel.gameObject.SetActive(isUnlocked);
+        selectedImage.SetActive(false);
 
         if (isUnlocked)
         {
             npcIconImage.sprite = data.NpcInfo.npcIconImage;
+            npcName.text = data.NpcInfo.npcName;
             eventData = data;
+
+            FitNpcImageSize();
 
             var requiredIngredients = data.RequiredIngredients;
 
@@ -68,6 +78,29 @@ public class TownNpcSlotUI : MonoBehaviour
             if(NpcSpecialEventManager.Instance.GetSelectedId() == eventData) OnActiveButton();
             else InActiveButton();
         }
+    }
+
+    private void FitNpcImageSize()
+    {
+        // 사이즈 조정
+        float spriteWidth = npcIconImage.sprite.rect.size.x;
+        float spriteHeight = npcIconImage.sprite.rect.size.y;
+
+        float newWidth = spriteWidth * spriteRate;
+        float newHeight = spriteHeight * spriteRate;
+
+        Debug.Log($"Sprite Size: {spriteWidth} x {spriteHeight}, New Size: {newWidth} x {newHeight}");
+
+        npcIconImage.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
+
+
+        // 위치 조정
+        float floatBack = backgroundPanel.rect.height;
+        float floatImage = npcIconImage.rectTransform.rect.height;
+
+        float targetPosY = backgroundPanel.anchoredPosition.y - (floatBack * 0.5f) + (floatImage * 0.5f) + (imageOffsetY * 0.5f);
+
+        npcIconImage.rectTransform.anchoredPosition = new Vector2(npcIconImage.rectTransform.anchoredPosition.x, targetPosY);
     }
 
     public void SelectButtonClick()
@@ -103,26 +136,15 @@ public class TownNpcSlotUI : MonoBehaviour
 
     private void InActiveButton()
     {
-        if (targetImage == null) return;
-
-        // 색상 변경
-        targetImage.color = inactiveColor;
+        // 이미지 변경
+        selectedImage.SetActive(false);
 
         selected = false;
-
-        //// 이미지 변경 (Sprite가 할당되어 있는 경우에만)
-        //Sprite targetSprite = isActive ? activeSprite : inactiveSprite;
-        //if (targetSprite != null)
-        //{
-        //    targetImage.sprite = targetSprite;
-        //}
     }
 
     private void OnActiveButton()
     {
-        if (targetImage == null) return;
-
-        targetImage.color = activeColor;
+        selectedImage.SetActive(true);
 
         selected = true;
     }

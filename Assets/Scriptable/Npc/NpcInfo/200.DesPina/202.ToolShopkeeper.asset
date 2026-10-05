@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 202
   npcName: "\uB3C4\uAD6C\uC810\uC7A5"
-  npcImage: {fileID: 0}
-  npcIconImage: {fileID: 0}
-  npcSdImage: {fileID: 0}
-  isNightRestaurantNpc: 0
-  portraits: []
-  specialEventDataList: []
+  npcImage: {fileID: -1644196745144804770, guid: 37ff537037d221d42bc8588a61dd5b2f, type: 3}
+  npcIconImage: {fileID: 5391698267338935046, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
+  npcSdImage: {fileID: -5947015584199938089, guid: e3dc6243ab967dc46953a21c16efa14b, type: 3}
+  isNightRestaurantNpc: 1
+  portraits:
+  - {fileID: -1644196745144804770, guid: 37ff537037d221d42bc8588a61dd5b2f, type: 3}
+  - {fileID: -1091601771743441494, guid: 2fec51468634852478623c8899a7969b, type: 3}
+  - {fileID: 2918192747089194531, guid: 0a6554238129edd43884e446d8cc80d4, type: 3}
+  - {fileID: -8233015880927693885, guid: 92ba063533fc96748842edc6e0aec3c9, type: 3}
+  - {fileID: 3459613129990575748, guid: 3bf3218acb04ade4b98e6d6d347056eb, type: 3}
   isInteractionNpc: 0
   npcInteractionBase: {fileID: 0}
   npcInteractionList: []

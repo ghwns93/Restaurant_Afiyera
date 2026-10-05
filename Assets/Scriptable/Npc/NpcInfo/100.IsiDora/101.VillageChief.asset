@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 101
   npcName: "\uCD0C\uC7A5"
-  npcImage: {fileID: 21300000, guid: 8ed604c0d7b7767428bc669c7970ad2e, type: 3}
+  npcImage: {fileID: 21300000, guid: e9486c11de9965b4abe101487d360bd5, type: 3}
   npcIconImage: {fileID: 6272591594166438393, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
-  npcSdImage: {fileID: 0}
+  npcSdImage: {fileID: -4817471885051654188, guid: 9db39f4bc793ad545b7eee063f1422b2, type: 3}
   isNightRestaurantNpc: 1
   portraits:
   - {fileID: 21300000, guid: e9486c11de9965b4abe101487d360bd5, type: 3}

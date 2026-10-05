@@ -84,10 +84,13 @@ public class BasicNpcScript : MonoBehaviour
 
     public void NpcInteraction()
     {
-        //NPC 상호작용 코드
-        npcBasicInfo.npcInteractionBase.Execute(gameObject);
+        if (npcBasicInfo.isInteractionNpc)
+        {
+            //NPC 상호작용 코드
+            npcBasicInfo.npcInteractionBase.Execute(gameObject);
 
-        SetNpcInteractionButton();
+            SetNpcInteractionButton();
+        }
     }
 
     public void ResetNpcInteraction(QuestInteractionType qit)
