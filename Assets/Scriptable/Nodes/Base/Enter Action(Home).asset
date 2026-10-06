@@ -18,5 +18,5 @@ MonoBehaviour:
   targetNpcId: 
   unlockConditions:
   - {fileID: 11400000, guid: 919113c176f2bb34db5facc570ecaec3, type: 2}
-  enterSceneType: 9
+  enterSceneType: 10
   isNewDay: 0

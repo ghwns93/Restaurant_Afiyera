@@ -62,13 +62,7 @@ public class MapTeleportZone : MonoBehaviour
         isTeleporting = false;
 
         //OpenUi();
-    }
 
-    //private void OpenUi()
-    //{
-    //    if (targetUi != null)
-    //    {
-    //        targetUi.SetActive(openUiOnTeleport);
-    //    }
-    //}
+        SoundManager.Instance.ChangeVillageBgm(nextTown);
+    }
 }

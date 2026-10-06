@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9200823f5507f5d4eb4d36b5de4d7542, type: 3}
   m_Name: 013.SFX_ClickUp
   m_EditorClassIdentifier: 
-  soundName: 18
+  soundName: 6
   clip: {fileID: 8300000, guid: be82f55c06243ba47bda15710f7e554f, type: 3}
   group: {fileID: -1387078850697819475, guid: 9dae4ddf0d98e9b4985266e8a86adb07, type: 2}
   volume: 1

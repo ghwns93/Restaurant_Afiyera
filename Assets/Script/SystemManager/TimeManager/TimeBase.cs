@@ -77,7 +77,7 @@ public abstract class TimeBase : MonoBehaviour
 
         SystemController.Instance.SetSystemPause(false);
 
-        SceneController.Instance.LoadSubScene(SceneType.Home);
+        SceneController.Instance.LoadSubScene(SceneType.Village);
         //if (!IsForcibly) SceneController.Instance.AddtionUiScene(SceneType.HomeKitchen);
 
         nowTimeState = TimeState.Day;

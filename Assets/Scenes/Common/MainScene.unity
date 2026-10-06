@@ -678,10 +678,6 @@ MonoBehaviour:
     sceneName: MainScene
   - type: 2
     sceneName: OptionScene
-  - type: 3
-    sceneName: FarmScene
-  - type: 4
-    sceneName: NewCookingScene
   - type: 5
     sceneName: ShopUiScene
   - type: 6
@@ -690,22 +686,12 @@ MonoBehaviour:
     sceneName: NpcSelectionUiScene
   - type: 8
     sceneName: NpcInterationUiScene
-  - type: 9
-    sceneName: HomeScene
   - type: 10
     sceneName: NightCookScene
-  - type: 11
-    sceneName: SrotyAndRecipeScene
-  - type: 12
-    sceneName: WorkerDoWorkScene
-  - type: 13
-    sceneName: WorkerEnchantScene
-  - type: 14
-    sceneName: HomeKitchenScene
-  - type: 15
-    sceneName: TestHomeUIScene
   - type: 18
     sceneName: InviteCustomerScene
+  - type: 19
+    sceneName: InventoryScene
   optionOpened: 0
 --- !u!1 &1190981683
 GameObject:
@@ -745,7 +731,7 @@ MonoBehaviour:
   nowTimeState: 0
   nowHour: 0
   nowMinute: 0
-  oneDayDurationInSeconds: 360
+  oneDayDurationInSeconds: 288
 --- !u!4 &1190981685
 Transform:
   m_ObjectHideFlags: 0
@@ -1408,7 +1394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6415259d4254e64d80a9a42a5dee4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  maxSlotCount: 10
+  maxSlotCount: 20
   slots: []
   testMode: 1
   testItems:
@@ -1598,40 +1584,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   soundDataList:
-  - {fileID: 11400000, guid: 6ba85bbbfedf7444e883a9d0f84ab1e6, type: 2}
-  - {fileID: 11400000, guid: d9518f97932d3334d9959ae16c9edc09, type: 2}
-  - {fileID: 11400000, guid: c64f6e14330321347bb42e05b6269ad0, type: 2}
-  - {fileID: 11400000, guid: bb909be1fe1390444a09e05e44fde635, type: 2}
+  - {fileID: 11400000, guid: a4c938f0f9ffedf49939e57e01a142fc, type: 2}
+  - {fileID: 11400000, guid: abf2f66ddeab4e94ba053d003b26866f, type: 2}
+  - {fileID: 11400000, guid: f8ac137946b6acb46b6e5b2b12dd1e47, type: 2}
   - {fileID: 11400000, guid: d1fcdff17d738664c98064c1a9fdaa8d, type: 2}
   - {fileID: 11400000, guid: a69cb0e5d37a4c74ab07c2823072e78f, type: 2}
-  - {fileID: 11400000, guid: bfa4a0d7ca5069443a3e53a83f62ee40, type: 2}
-  - {fileID: 11400000, guid: 30879a7a9a7a9ad42bd30a53119ee018, type: 2}
-  - {fileID: 11400000, guid: 1074fc0ea1df0c849b12ba0ed3bf9a33, type: 2}
-  - {fileID: 11400000, guid: c181c70f71ccddf43a97134538247c97, type: 2}
-  - {fileID: 11400000, guid: b3aa9ce9592d5094b8b257442b4eb945, type: 2}
-  - {fileID: 11400000, guid: 0777d75b3aca0a64698059ceb70e3591, type: 2}
-  - {fileID: 11400000, guid: 824b058a53249c04f834850e4051dcd1, type: 2}
-  - {fileID: 11400000, guid: 624b38741652d214e92c3d4972fbd238, type: 2}
-  - {fileID: 11400000, guid: 23922a29334328f4e98b2d15690bc972, type: 2}
-  - {fileID: 11400000, guid: 7f90dc587df29744b831b8b58d84805d, type: 2}
-  - {fileID: 11400000, guid: c7f62d428859e99478c3e2a354f1c9de, type: 2}
   - {fileID: 11400000, guid: 8066e18420c0cfb47a05641b7ef047c0, type: 2}
   - {fileID: 11400000, guid: f0aa03887d18a254eb3c6d16c6fadab5, type: 2}
-  - {fileID: 11400000, guid: 748582bbac7fdba479654b45fa0d7bb9, type: 2}
-  - {fileID: 11400000, guid: 005b508de7343f441906e9be13f94e05, type: 2}
-  - {fileID: 11400000, guid: 9d8dff3cb19846146b52a0804e15895f, type: 2}
-  - {fileID: 11400000, guid: 18ec2a1a662e02f4aa98deb7630f4538, type: 2}
-  - {fileID: 11400000, guid: eaf189e8353ec2e458d91ed757236493, type: 2}
-  - {fileID: 11400000, guid: 0ee0e9670213648499d0a81e6a75014a, type: 2}
   - {fileID: 11400000, guid: d3249ed991b1f084f8c35e143ab0d491, type: 2}
-  - {fileID: 11400000, guid: c59a6b0a517c25144b4d78c280ba992b, type: 2}
-  - {fileID: 11400000, guid: cbe1bdef13b55c2429b41685c1eed22d, type: 2}
-  - {fileID: 11400000, guid: 296ec5af82b1d4e4a9c30120a2e8788f, type: 2}
-  - {fileID: 11400000, guid: 3950af54a03bbbe48aca802b99cda132, type: 2}
-  - {fileID: 11400000, guid: 3d4bf60ccf110aa4480061f3dee26c54, type: 2}
-  - {fileID: 11400000, guid: b4aac5aa704fb304189a5efba86e3a4f, type: 2}
-  - {fileID: 11400000, guid: 612bf749b61e77b43b7221bd06d43b65, type: 2}
-  - {fileID: 11400000, guid: 39b725903117d7444b271ab57cc148c5, type: 2}
+  villageBgmList:
+  - towntype: 0
+    soundName: 2
+  - towntype: 1
+    soundName: 3
+  - towntype: 2
+    soundName: 4
   bgmSource: {fileID: 1484669677}
   sfxSource: {fileID: 483642293}
 --- !u!1 &2075145515

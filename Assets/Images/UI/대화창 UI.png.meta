@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: d40a228585951c74c9474bc49352130e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8937460394621153457
+    second: "\uB300\uD654\uCC3D UI_0"
+  - first:
+      213: 3879422064227154970
+    second: "\uB300\uD654\uCC3D UI_1"
+  - first:
+      213: 1625627957359869209
+    second: "\uB300\uD654\uCC3D UI_2"
+  - first:
+      213: -1111451013892668446
+    second: "\uB300\uD654\uCC3D UI_3"
+  - first:
+      213: -3614796313578817761
+    second: "\uB300\uD654\uCC3D UI_4"
+  - first:
+      213: 5788608228229411702
+    second: "\uB300\uD654\uCC3D UI_5"
+  - first:
+      213: 2607541771436184235
+    second: "\uB300\uD654\uCC3D UI_6"
+  - first:
+      213: -3432558315250395309
+    second: "\uB300\uD654\uCC3D UI_7"
+  - first:
+      213: -4888438579903912404
+    second: "\uB300\uD654\uCC3D UI_8"
+  - first:
+      213: -2083597569778401103
+    second: "\uB300\uD654\uCC3D UI_9"
+  - first:
+      213: -7130546968643733773
+    second: "\uB300\uD654\uCC3D UI_10"
+  - first:
+      213: 941003019706290454
+    second: "\uB300\uD654\uCC3D UI_11"
+  - first:
+      213: -3639927420065495147
+    second: "\uB300\uD654\uCC3D UI_12"
+  - first:
+      213: 932772424621538375
+    second: "\uB300\uD654\uCC3D UI_13"
+  - first:
+      213: -3809723006317086943
+    second: "\uB300\uD654\uCC3D UI_14"
+  - first:
+      213: -1162054045055415189
+    second: "\uB300\uD654\uCC3D UI_15"
+  - first:
+      213: 7058476225417818910
+    second: "\uB300\uD654\uCC3D UI_16"
+  - first:
+      213: -4976503872750364450
+    second: "\uB300\uD654\uCC3D UI_17"
+  - first:
+      213: 7995287503545065599
+    second: "\uB300\uD654\uCC3D UI_18"
+  - first:
+      213: -3831554152850076994
+    second: "\uB300\uD654\uCC3D UI_19"
+  - first:
+      213: 1504122761393639654
+    second: "\uB300\uD654\uCC3D UI_20"
+  - first:
+      213: -2015977619043997855
+    second: "\uB300\uD654\uCC3D UI_21"
+  - first:
+      213: 54813971139490983
+    second: "\uB300\uD654\uCC3D UI_22"
+  - first:
+      213: 512244177270090751
+    second: "\uB300\uD654\uCC3D UI_23"
+  - first:
+      213: 4520267987224900438
+    second: "\uB300\uD654\uCC3D UI_24"
+  - first:
+      213: -1198387776827930690
+    second: "\uB300\uD654\uCC3D UI_25"
+  - first:
+      213: -6341613493976937089
+    second: "\uB300\uD654\uCC3D UI_26"
+  - first:
+      213: 7576432473421116258
+    second: "\uB300\uD654\uCC3D UI_27"
+  - first:
+      213: 5559219914597194343
+    second: "\uB300\uD654\uCC3D UI_28"
+  - first:
+      213: -5330590749471535582
+    second: "\uB300\uD654\uCC3D UI_29"
+  - first:
+      213: -8286493204309498394
+    second: "\uB300\uD654\uCC3D UI_30"
+  - first:
+      213: -310201861854871815
+    second: "\uB300\uD654\uCC3D UI_31"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\uB300\uD654\uCC3D UI_28"
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 12
+        width: 2318
+        height: 577
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ad7ddee01562d40800000000000000
+      internalID: 5559219914597194343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB300\uD654\uCC3D UI_29"
+      rect:
+        serializedVersion: 2
+        x: 3208
+        y: 153
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e04ceb4ffe506b0800000000000000
+      internalID: -5330590749471535582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB300\uD654\uCC3D UI_30"
+      rect:
+        serializedVersion: 2
+        x: 3211
+        y: 55
+        width: 91
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5a17b9556700d80800000000000000
+      internalID: -8286493204309498394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: de775fed95bf7984697408266d70f1ce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "\uB300\uD654\uCC3D UI_0": 8937460394621153457
+      "\uB300\uD654\uCC3D UI_1": 3879422064227154970
+      "\uB300\uD654\uCC3D UI_10": -7130546968643733773
+      "\uB300\uD654\uCC3D UI_11": 941003019706290454
+      "\uB300\uD654\uCC3D UI_12": -3639927420065495147
+      "\uB300\uD654\uCC3D UI_13": 932772424621538375
+      "\uB300\uD654\uCC3D UI_14": -3809723006317086943
+      "\uB300\uD654\uCC3D UI_15": -1162054045055415189
+      "\uB300\uD654\uCC3D UI_16": 7058476225417818910
+      "\uB300\uD654\uCC3D UI_17": -4976503872750364450
+      "\uB300\uD654\uCC3D UI_18": 7995287503545065599
+      "\uB300\uD654\uCC3D UI_19": -3831554152850076994
+      "\uB300\uD654\uCC3D UI_2": 1625627957359869209
+      "\uB300\uD654\uCC3D UI_20": 1504122761393639654
+      "\uB300\uD654\uCC3D UI_21": -2015977619043997855
+      "\uB300\uD654\uCC3D UI_22": 54813971139490983
+      "\uB300\uD654\uCC3D UI_23": 512244177270090751
+      "\uB300\uD654\uCC3D UI_24": 4520267987224900438
+      "\uB300\uD654\uCC3D UI_25": -1198387776827930690
+      "\uB300\uD654\uCC3D UI_26": -6341613493976937089
+      "\uB300\uD654\uCC3D UI_27": 7576432473421116258
+      "\uB300\uD654\uCC3D UI_28": 5559219914597194343
+      "\uB300\uD654\uCC3D UI_29": -5330590749471535582
+      "\uB300\uD654\uCC3D UI_3": -1111451013892668446
+      "\uB300\uD654\uCC3D UI_30": -8286493204309498394
+      "\uB300\uD654\uCC3D UI_31": -310201861854871815
+      "\uB300\uD654\uCC3D UI_4": -3614796313578817761
+      "\uB300\uD654\uCC3D UI_5": 5788608228229411702
+      "\uB300\uD654\uCC3D UI_6": 2607541771436184235
+      "\uB300\uD654\uCC3D UI_7": -3432558315250395309
+      "\uB300\uD654\uCC3D UI_8": -4888438579903912404
+      "\uB300\uD654\uCC3D UI_9": -2083597569778401103
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

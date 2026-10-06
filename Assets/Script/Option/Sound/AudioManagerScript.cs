@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using System.Linq;
+using TMPro;
 
 public class AudioManagerScript : MonoBehaviour
 {
@@ -14,11 +15,11 @@ public class AudioManagerScript : MonoBehaviour
     private Slider sfxSlider;        // SFX 볼륨 슬라이더 (0~1)
 
     [SerializeField]
-    private Text masterText;            // MASTER % 텍스트
+    private TextMeshProUGUI masterText;            // MASTER % 텍스트
     [SerializeField]
-    private Text bgmText;            // BGM % 텍스트
+    private TextMeshProUGUI bgmText;            // BGM % 텍스트
     [SerializeField]
-    private Text sfxText;            // SFX % 텍스트
+    private TextMeshProUGUI sfxText;            // SFX % 텍스트
 
     private float lastPlayTime = 0f;       // 미리듣기 연타 제한
 

@@ -14,6 +14,5 @@ public class SetNewDayAndLoadSceneAction : NpcInteractionBase
         TimeBase.Instance.IsNewDay = isNewDay;
 
         SceneController.Instance.LoadSubScene(enterSceneType);
-        //SceneController.Instance.AddtionUiScene(SceneType.Home);
     }
 }

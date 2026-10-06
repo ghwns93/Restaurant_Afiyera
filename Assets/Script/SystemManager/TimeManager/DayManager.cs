@@ -79,6 +79,11 @@ public class DayManager : TimeBase
     {
         nowOneDayTime = startTime * secondsPerHour; // 하루가 끝나면 시간 초기화
         nowTime = startTime;
+
+        int currentHour = (int)(nowOneDayTime / secondsPerHour); // 현재 시간 계산
+        int currentMinute = (int)((nowOneDayTime % secondsPerHour) / secondsPerMinute); // 현재 분 계산
+
+        RecordNowTime(currentHour, currentMinute);
     }
 
     private IEnumerator CountTime()
@@ -115,6 +120,8 @@ public class DayManager : TimeBase
 
             RecordNowTime(currentHour, currentMinute);
             //Debug.Log($"현재 시간: {nowTime}시 {currentMinute}분");
+
+            TimeEvents.OnTimeChanged?.Invoke(); // 시간 변경 이벤트 호출
         }
     }
 

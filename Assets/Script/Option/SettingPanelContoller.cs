@@ -11,6 +11,7 @@ public class SettingPanelContoller : MonoBehaviour
         public string tabName; // 인스펙터 식별용 (없어도 무방)
         public Button button;
         public GameObject panel;
+        public GameObject selectedImage;
     }
 
     [Header("탭 설정")]
@@ -65,6 +66,7 @@ public class SettingPanelContoller : MonoBehaviour
             {
                 // 인덱스가 맞으면 true, 아니면 false
                 tabs[i].panel.SetActive(i == index);
+                tabs[i].selectedImage.SetActive(i == index); // 선택된 탭 표시 이미지 활성화/비활성화
             }
         }
     }
@@ -72,10 +74,5 @@ public class SettingPanelContoller : MonoBehaviour
     public void closeSettingPanel()
     {
         SceneController.Instance.OptionSceneOpenOrClose();
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
     }
 }

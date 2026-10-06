@@ -23,6 +23,7 @@ public enum SceneType
     ShopCody,
     ShopFlavoring,
     InviteCustomer,
+    inventory,
 }
 
 public class SceneController : MonoBehaviour
@@ -58,23 +59,18 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (UIOpenRegistry.CanOpenOption)
-            {
-                OptionSceneOpenOrClose();
-            }
-        }
-    }
-
     public void OptionSceneOpenOrClose()
     {
         if (optionOpened == false)
+        {
+            SystemController.Instance.SetSystemPause(false);
             AddtionUiScene(SceneType.Option);
+        }
         else
+        {
+            SystemController.Instance.SetSystemPause(true);
             CloseUiScene(SceneType.Option);
+        }
 
         optionOpened = !optionOpened;
     }

@@ -11,6 +11,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private List<SoundData> soundDataList;
 
+    [SerializeField]
+    private List<VillageBgmInfo> villageBgmList;
+
     // 실제 검색에 사용할 딕셔너리
     private Dictionary<SoundName, SoundData> soundDictionary = new Dictionary<SoundName, SoundData>();
 
@@ -39,10 +42,7 @@ public class SoundManager : MonoBehaviour
                 PlayBgmSound(SoundName.BGM_Title);
                 break;
             case "VillageScene":
-                PlayBgmSound(SoundName.BGM_Farm);
-                break;
-            case "CookingGameScene":
-                PlayBgmSound(SoundName.BGM_Misson);
+                PlayBgmSound(SoundName.BGM_IsiDora);
                 break;
 
         }
@@ -63,6 +63,18 @@ public class SoundManager : MonoBehaviour
         {
             if (!soundDictionary.ContainsKey(data.soundName))
                 soundDictionary.Add(data.soundName, data);
+        }
+    }
+
+    public void ChangeVillageBgm(TownType townType)
+    {
+        foreach (var villageBgm in villageBgmList)
+        {
+            if (villageBgm.towntype == townType)
+            {
+                PlayBgmSound(villageBgm.soundName);
+                return;
+            }
         }
     }
 
@@ -97,4 +109,12 @@ public class SoundManager : MonoBehaviour
             }
         }
     }
+}
+
+
+[System.Serializable]
+public struct VillageBgmInfo
+{
+    public TownType towntype;
+    public SoundName soundName;
 }

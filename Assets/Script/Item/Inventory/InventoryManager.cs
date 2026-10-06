@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -7,7 +8,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance => instance;
 
     [Header("Inventory Settings")]
-    [SerializeField] private int maxSlotCount = 16; // 설정 값에 따라 늘어나는 인벤토리 칸 수
+    [SerializeField] private int maxSlotCount = 20; // 설정 값에 따라 늘어나는 인벤토리 칸 수
     public List<ItemSlot> slots = new List<ItemSlot>();
 
     public delegate void OnInventoryChanged();
@@ -17,7 +18,10 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private bool testMode = false; // 테스트 모드 활성화 여부
     [SerializeField] private List<ItemSlot> testItems; // 테스트용 아이템 리스트
 
+    [Header("Player Gold Settings")]
     [SerializeField] private int gold = 0; // 골드 초기값
+
+    public int MaxSlotCount => maxSlotCount;
 
     private void Awake()
     {
@@ -139,6 +143,13 @@ public class InventoryManager : MonoBehaviour
     public List<ItemSlot> GetSlots()
     {
         return slots;
+    }
+
+    public List<ItemSlot> GetSlots(int count)
+    {
+        var slicedSlots = slots.Take(count).ToList();
+
+        return slicedSlots;
     }
 
     public int GetGold()

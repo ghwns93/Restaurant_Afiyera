@@ -99,7 +99,7 @@ public class PlayerInventoryController : MonoBehaviour
     // 특정 슬롯을 선택 상태로 지정
     private void SelectSlot(int index)
     {
-        int inventoryLimit = InventoryManager.Instance != null ? InventoryManager.Instance.GetSlots().Count : MaxQuickSlots;
+        int inventoryLimit = InventoryManager.Instance != null ? InventoryManager.Instance.GetSlots(MaxQuickSlots).Count : MaxQuickSlots;
 
         // 유효 범위 체크 (인벤토리에 존재하는 칸 까지만 선택 가능하도록 제한)
         if (index < 0 || index >= MaxQuickSlots || index >= inventoryLimit) return;
@@ -116,7 +116,7 @@ public class PlayerInventoryController : MonoBehaviour
     {
         if (InventoryManager.Instance == null) return null;
 
-        var slots = InventoryManager.Instance.GetSlots();
+        var slots = InventoryManager.Instance.GetSlots(MaxQuickSlots);
 
         if (selectedSlotIndex < slots.Count && !slots[selectedSlotIndex].IsEmpty)
         {
@@ -131,7 +131,7 @@ public class PlayerInventoryController : MonoBehaviour
     {
         if (InventoryManager.Instance == null) return null;
 
-        var slots = InventoryManager.Instance.GetSlots();
+        var slots = InventoryManager.Instance.GetSlots(MaxQuickSlots);
 
         if (selectedSlotIndex < slots.Count)
         {

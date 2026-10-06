@@ -12,7 +12,10 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private Transform shopContentParent;      // 1. 상점 아이템들이 생성될 Content (Vertical Layout Group 등)
     [SerializeField] private GameObject shopSlotPrefab;        // 생성할 상점 슬롯 프리팹
     [SerializeField] private TextMeshProUGUI playerGoldText;   // 3. 내 골드량 표시 텍스트
-    [SerializeField] private Image shopNpcImage;   // npc이미지
+    [SerializeField] private ShopNpcImageScaler_v2 shopNpcImage;   // npc이미지
+    [SerializeField] private GameObject dragExplainImage;       // 드래그 설명 이미지
+
+    [SerializeField] private ShopPlayerInventorySetting playerInventorySetting; // 플레이어 인벤토리 UI 설정 스크립트
 
     [SerializeField] private List<ShopItemData> shopItemList = new List<ShopItemData>(); // 상점에서 판매하는 아이템 리스트
     private List<ShopSlotUI> spawnedSlots = new List<ShopSlotUI>();
@@ -25,11 +28,15 @@ public class ShopManager : MonoBehaviour
         else { Destroy(gameObject); return; }
 
         if (shopWindowPanel != null) shopWindowPanel.SetActive(false);
+
+        dragExplainImage.SetActive(false);
     }
 
     // 상점 열기
     public void OpenShop(List<ShopItemData> itemList, List<BuyIngredientData> buyData, Sprite npcImage)
     {
+        SystemController.Instance.SetSystemPause(false);
+
         if (itemList != null) shopItemList = itemList;
         else
         {
@@ -37,7 +44,10 @@ public class ShopManager : MonoBehaviour
             return;
         }
 
-        if (shopNpcImage != null && npcImage != null) shopNpcImage.sprite = npcImage;
+        if (shopNpcImage != null && npcImage != null)
+        {
+            shopNpcImage.SetNPCImage(npcImage);
+        }
         else
         {
             CloseShop();
@@ -72,7 +82,7 @@ public class ShopManager : MonoBehaviour
             return;
         }
 
-        if (shopNpcImage != null && npcImage != null) shopNpcImage.sprite = npcImage;
+        if (shopNpcImage != null && npcImage != null) shopNpcImage.SetNPCImage(npcImage);
         else
         {
             CloseShop();
@@ -108,12 +118,14 @@ public class ShopManager : MonoBehaviour
             }
         }
 
-        UpdatePlayerGoldUI();
+        UpdatePlayerUI();
     }
 
     // 3. 내 골드량 UI 갱신
-    public void UpdatePlayerGoldUI()
+    public void UpdatePlayerUI()
     {
+        playerInventorySetting.InitSlots(); // 플레이어 인벤토리 UI 갱신
+
         if (playerGoldText != null && InventoryManager.Instance != null)
         {
             // InventoryManager에 소지 골드를 관리하는 변수가 있다고 가정 (예: PlayerGold)
@@ -140,7 +152,7 @@ public class ShopManager : MonoBehaviour
                 shopItem.StockCount--; // 재고 감소
 
                 // 3. UI 갱신
-                UpdatePlayerGoldUI();
+                UpdatePlayerUI();
                 RefreshShopUI();
 
                 Debug.Log($"[상점] {shopItem.ItemData.ItemName}을(를) {itemPrice} 골드에 구매했습니다!");
@@ -166,5 +178,13 @@ public class ShopManager : MonoBehaviour
         }
 
         return item.BaseBuyPrice; // 해당 아이템이 없으면 기본값 반환
+    }
+
+    public void ShowDragExplainImage(bool show)
+    {
+        if (dragExplainImage != null)
+        {
+            dragExplainImage.SetActive(show);
+        }
     }
 }

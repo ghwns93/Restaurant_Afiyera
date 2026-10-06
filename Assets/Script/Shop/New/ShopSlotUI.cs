@@ -13,6 +13,9 @@ public class ShopSlotUI : MonoBehaviour, IPointerClickHandler
     [SerializeField] private TextMeshProUGUI priceChangeText;  // 7. 가격 변동 증감량 표시 (예: "+50" 또는 "-20")
     [SerializeField] private GameObject soldOutPanel;          // 8. 품절 패널
 
+    [SerializeField] private Sprite priceUpSprite;             // 가격 상승 스프라이트
+    [SerializeField] private Sprite priceDownSprite;           // 가격 하락 스프라이트
+
     private ShopItemData boundShopItem;                        // 연결된 상점 아이템 데이터
 
     private int slotIndex; // 몇 번째 상점 슬롯인지 저장
@@ -45,23 +48,25 @@ public class ShopSlotUI : MonoBehaviour, IPointerClickHandler
 
         int changeAmount = boundShopItem.PriceChangeAmount;
 
+        itemChangeImage.gameObject.SetActive(true); // 이미지 표시
+
         if (changeAmount > 0)
         {
             priceChangeText.text = $"+{changeAmount}";
             priceChangeText.color = Color.red; // 가격 상승 시 빨간색 (원하는 색상으로 변경 가능)
-            itemChangeImage.color = Color.red; // 가격 상승 시 빨간색
+            itemChangeImage.sprite = priceUpSprite;
         }
         else if (changeAmount < 0)
         {
             priceChangeText.text = changeAmount.ToString();
             priceChangeText.color = Color.blue; // 가격 하락 시 파란색
-            itemChangeImage.color = Color.blue; // 가격 하락 시 파란색
+            itemChangeImage.sprite = priceDownSprite;
         }
         else
         {
             priceChangeText.text = "-";
             priceChangeText.color = Color.gray;
-            itemChangeImage.color = Color.gray;
+            itemChangeImage.gameObject.SetActive(false); // 가격 변동이 없으면 이미지 숨김
         }
     }
 

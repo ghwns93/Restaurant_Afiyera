@@ -24,35 +24,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Village/VillageScene.unity
     guid: 8951da4d0c2ea0246a7a211646d0fafa
   - enabled: 1
-    path: Assets/Scenes/Home/HomeScene.unity
-    guid: a790898136c6bd7438dd72760fb5ed33
-  - enabled: 1
     path: Assets/Scenes/Cooking/NightCookScene.unity
     guid: 7cda9092217657d42b2f606716655361
-  - enabled: 1
-    path: Assets/Scenes/Home/SrotyAndRecipeScene.unity
-    guid: 960c155757628184aa7ed5cd5b531389
-  - enabled: 1
-    path: Assets/Scenes/Home/WorkerDoWorkScene.unity
-    guid: 28e0e03a63c25254f8b90435e1d00e9f
-  - enabled: 1
-    path: Assets/Scenes/Home/WorkerEnchantScene.unity
-    guid: 0795e7c5930c9034891e7c7c395a7c1b
-  - enabled: 1
-    path: Assets/Scenes/Home/HomeKitchenScene.unity
-    guid: f35b243f2b9398f4f99f422cc731941d
-  - enabled: 1
-    path: Assets/Scenes/Temp/TestHomeUIScene.unity
-    guid: 718cbacf365a5f449a914b9ef3a421a2
-  - enabled: 1
-    path: Assets/Scenes/Cooking/NewCookingScene.unity
-    guid: 18d0d7667e58c174eb793f1d64483278
   - enabled: 1
     path: Assets/Scenes/Shop/ShopUiScene.unity
     guid: e964e4bc982b9db4cb84c587ca64162a
   - enabled: 1
     path: Assets/Scenes/Village/InviteCustomerScene.unity
     guid: 2c6e35e078569a241afb8a6097124016
+  - enabled: 1
+    path: Assets/Scenes/Village/InventoryScene.unity
+    guid: 5e4ec4d84d60d9448bd67a2449196843
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

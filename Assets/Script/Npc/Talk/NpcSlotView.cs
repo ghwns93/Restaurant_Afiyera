@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class NpcSlotView : MonoBehaviour
 {
     [SerializeField] private Image portraitImage;
+    [SerializeField] private ShopNpcImageScaler_v2 imageScaler; // NPC 이미지 크기 조절용
     [SerializeField] private float fadeDuration = 0.25f;
     [SerializeField] private float slideOffsetY = 30f; // 등장 시 아래→위로 살짝 떠오르는 연출
 
@@ -35,8 +36,10 @@ public class NpcSlotView : MonoBehaviour
     public void Show(string npcId, Sprite portrait)
     {
         CurrentNpcId = npcId;
-        portraitImage.sprite = portrait;
+        //portraitImage.sprite = portrait;
         portraitImage.enabled = portrait != null;
+
+        imageScaler.SetNPCImage(portrait); // 이미지 크기 조절
 
         if (currentAnim != null) StopCoroutine(currentAnim);
         currentAnim = StartCoroutine(FadeRoutine(true));

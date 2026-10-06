@@ -38,6 +38,8 @@ public class InventoryDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandl
             if (slotData == null || slotData.ItemData == null) return;
         }
 
+        ShopManager.Instance?.ShowDragExplainImage(true);
+
         // 고스트 아이콘 생성
         CreateGhostIcon(itemIconImage.sprite);
     }
@@ -58,6 +60,7 @@ public class InventoryDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandl
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        ShopManager.Instance?.ShowDragExplainImage(false);
         DestroyGhostIcon();
     }
 
@@ -70,7 +73,7 @@ public class InventoryDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandl
         ghostIconObj.transform.SetAsLastSibling();
 
         RectTransform rectTransform = ghostIconObj.AddComponent<RectTransform>();
-        rectTransform.sizeDelta = new Vector2(50, 50); // 아이콘 크기
+        rectTransform.sizeDelta = new Vector2(167, 167); // 아이콘 크기
 
         ghostImageIcon = ghostIconObj.AddComponent<Image>();
         ghostImageIcon.sprite = iconSprite;

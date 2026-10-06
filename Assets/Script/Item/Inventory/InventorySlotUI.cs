@@ -4,7 +4,6 @@ using TMPro; // TextMeshPro를 사용 중이시라면 유지, 기본 Text라면 UnityEngine.UI
 
 public class InventorySlotUI : MonoBehaviour
 {
-    [SerializeField] private Image HighlightImage;          // 선택아이템 표시용 하이라이트
     [SerializeField] private Image iconImage;               // 아이템 아이콘을 표시할 이미지 컴포넌트
     [SerializeField] private TextMeshProUGUI quantityText;  // 수량을 표시할 텍스트 컴포넌트 (기본 Text라면 Text로 변경)
 
@@ -58,15 +57,5 @@ public class InventorySlotUI : MonoBehaviour
             quantityText.text = string.Empty;
             quantityText.gameObject.SetActive(false);
         }
-    }
-
-    public void HighlightSlot()
-    {
-        HighlightImage.color = Color.greenYellow;
-    }
-
-    public void ClearHighlight()
-    {
-        HighlightImage.color = Color.white;
     }
 }

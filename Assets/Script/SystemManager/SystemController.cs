@@ -7,6 +7,8 @@ public class SystemController : MonoBehaviour
     public static event Action<bool> OnSystemStateChanged;
     private bool isSystemPaused = true;
 
+    public bool IsSystemPaused => isSystemPaused;
+
     public static SystemController Instance;
 
     private void Awake()
