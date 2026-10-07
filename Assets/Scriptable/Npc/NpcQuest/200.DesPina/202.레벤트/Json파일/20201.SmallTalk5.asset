@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67adf6d06ed67944791b9ccb4905a7c1, type: 3}
+  m_Name: 20201.SmallTalk5
+  m_EditorClassIdentifier: Assembly-CSharp::NpcSpecialEventData
+  eventId: 20201
+  eventName: "\uC2A4\uCF5C\uD1A0\uD06C5"
+  town: 1
+  npcInfo: {fileID: 11400000, guid: 22f20cc655f4f9149a252d1097ecbfdc, type: 2}
+  storyOrder: 0
+  requiredIngredients:
+  - {fileID: 11400000, guid: 1a2254f46bbd17048a87ffbeb267417f, type: 2}
+  - {fileID: 11400000, guid: 9370b77365c57d149aa8246293b4237d, type: 2}
+  - {fileID: 11400000, guid: 8c717d0c1bb50ac44a26c103e5b0e1e8, type: 2}
+  foodSprite: {fileID: -2105619463127745242, guid: 5cf6fa5bd9eebdf4db8e9331ddcbc981, type: 3}
+  dialogueJsonFile: {fileID: 0}

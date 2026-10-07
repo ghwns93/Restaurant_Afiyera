@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 104.DecorShopkeeper
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 104
-  npcName: "\uC7A5\uC2DD\uD488\uC810\uC7A5"
+  npcName: "\uD30C\uD2B8\uB9C8"
   npcImage: {fileID: 6709077226104220419, guid: 06b961491dfead441921d76330df71f3, type: 3}
   npcIconImage: {fileID: 2922653090325273978, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: 4043312506764373012, guid: 63a8e9689dba2744fa87567d7e4d63b9, type: 3}

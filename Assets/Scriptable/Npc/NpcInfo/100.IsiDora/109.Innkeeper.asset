@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 109.Innkeeper
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 109
-  npcName: "\uC5EC\uAD00\uC8FC\uC778"
+  npcName: "\uD558\uD2F0\uC81C"
   npcImage: {fileID: 7089774175459154275, guid: ea8de6f5e13c9374e808cf89138b47c0, type: 3}
   npcIconImage: {fileID: -7827877518485814040, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: 7650844901488529949, guid: 524c49eb3c2412d499c8648c8ecdb988, type: 3}

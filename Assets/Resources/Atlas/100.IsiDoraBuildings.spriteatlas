@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 100.IsiDoraBuildings
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 8192
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 8192
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: c1e64ee0e171784408ad8703ebe046e4, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 9b1e01813d5e99e4c9d548e922901238: 7652406241827197538
+    - b43959125e0778146be5149c208fa2ea: -8167490398686449145
+    - fa43412325a18ea4db0bc525d19b8385: -1677220313966515241
+    - b6468783ab46222479906e38008eec70: 354993437735522857
+    - 4680d9a3c66ddc04faa117a7e926dbc0: -7472913650412547074
+    - 177c36b3828847b438f2bcaddd0b7819: -4086016546183226768
+    - 1a06bdf37e772184785c1377b20979be: -3983122800932556413
+    - d3828955b7b797a44a22720326cba7ac: 485038310159858067
+    - e9d1ce463bd23a940a70b58048c63d56: -2032611396278268562
+    - 53ef98d6961775f4ea3d344ba81d9cfd: -1328324072035983204
+    - 702065e655d9916419150a50be1f10cf: -6541169196251819173
+    - e5f35a37912aa0d43b6b1a64cd7e01a7: -940411541961646876
+    - 4aaf72084b6b5344d969b27358b2a27d: -5243546004768868623
+    - d12251b99c5916d4486443b59a426bb2: 331610287024492803
+    - 87a77a2ea3a1acf4997c703c1542d512: 9159342521510759785
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 7652406241827197538, guid: 9b1e01813d5e99e4c9d548e922901238, type: 3}
+  - {fileID: -8167490398686449145, guid: b43959125e0778146be5149c208fa2ea, type: 3}
+  - {fileID: -1677220313966515241, guid: fa43412325a18ea4db0bc525d19b8385, type: 3}
+  - {fileID: 354993437735522857, guid: b6468783ab46222479906e38008eec70, type: 3}
+  - {fileID: -7472913650412547074, guid: 4680d9a3c66ddc04faa117a7e926dbc0, type: 3}
+  - {fileID: -4086016546183226768, guid: 177c36b3828847b438f2bcaddd0b7819, type: 3}
+  - {fileID: -3983122800932556413, guid: 1a06bdf37e772184785c1377b20979be, type: 3}
+  - {fileID: 485038310159858067, guid: d3828955b7b797a44a22720326cba7ac, type: 3}
+  - {fileID: -2032611396278268562, guid: e9d1ce463bd23a940a70b58048c63d56, type: 3}
+  - {fileID: -1328324072035983204, guid: 53ef98d6961775f4ea3d344ba81d9cfd, type: 3}
+  - {fileID: -6541169196251819173, guid: 702065e655d9916419150a50be1f10cf, type: 3}
+  - {fileID: -940411541961646876, guid: e5f35a37912aa0d43b6b1a64cd7e01a7, type: 3}
+  - {fileID: -5243546004768868623, guid: 4aaf72084b6b5344d969b27358b2a27d, type: 3}
+  - {fileID: 331610287024492803, guid: d12251b99c5916d4486443b59a426bb2, type: 3}
+  - {fileID: 9159342521510759785, guid: 87a77a2ea3a1acf4997c703c1542d512, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uB9C8\uC744\uD68C\uAD00(white)_0"
+  - "\uAC74\uBB3C1(\uC88C\uC6B0\uBC18\uC804)_0"
+  - "\uBAA9\uC7A5_0"
+  - "\uC5EC\uAD00_0"
+  - "\uAC74\uBB3C2(\uC88C\uC6B0\uBC18\uC804)_0"
+  - "\uAC74\uBB3C2(white)_0"
+  - "\uC219\uC18C_0"
+  - "\uB3C4\uC11C\uAD00_0"
+  - "\uAC74\uBB3C1_0"
+  - "\uC0C1\uC810_0"
+  - "\uAC74\uBB3C2_0"
+  - "\uB9C8\uC744\uD68C\uAD00_0"
+  - "\uC2DD\uB2F9_0"
+  - "\uAC74\uBB3C1(white)_0"
+  - "\uC5EC\uAD00(white)_0"
+  m_RenderDataMap: {}
+  m_Tag: 100.IsiDoraBuildings
+  m_IsVariant: 0

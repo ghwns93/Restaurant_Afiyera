@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 204.FurnitureShopkeeper
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 204
-  npcName: "\uAC00\uAD6C\uC810\uC7A5"
+  npcName: "\uBC1C\uB9AC\uB098"
   npcImage: {fileID: 1405714464542499758, guid: 7c4381a9dd9fdc741b76bf89be1ba61d, type: 3}
   npcIconImage: {fileID: -377118369770451485, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: 1443041568598950247, guid: 2181c84213f818c4998a6e44a2cb5b67, type: 3}

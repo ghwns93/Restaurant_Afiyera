@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323f1073e8b4a5446b92c7a7e045399e, type: 3}
+  m_Name: Q02.SmallTalk3-2
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialEventUnlockAction
+  questType: 1
+  questInteractionType: 0
+  dialogueKey: "\uC2A4\uBAB0\uD1A0\uD06C3-2"
+  targetNpcId: 
+  unlockConditions:
+  - {fileID: 11400000, guid: 4adc82ab1381ae343a8c9fe27484e4ca, type: 2}
+  - {fileID: 11400000, guid: 6f3a3fc9f3ff6a2449976df06c5b6d87, type: 2}
+  unlockEventData: {fileID: 11400000, guid: 050fe67f83b43074b991c121340e848a, type: 2}
+  talkContent: 
+  choiceList: []

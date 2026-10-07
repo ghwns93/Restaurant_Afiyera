@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 31031CookBee
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 31031
+  itemName: "\uC694\uB9AC\uBC8C"
+  icon: {fileID: -4892004799308055623, guid: 066f9e7f6371c0a4b89f15d26c11863e, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uC720\uBA85\uD55C \uB9DB\uC9D1\uC774 \uC788\uB294 \uACF3\uC5D0 \uC790\uB9AC\uB97C
+    \uC7A1\uB294 \uBC8C.\r\n\uC790\uC2E0\uC758 \uAFC0\uC744 \uCD5C\uC0C1\uC73C\uB85C
+    \uB9CC\uB4E4\uAE30 \uC704\uD574 \uB9DB\uC9D1\uC758 \uB9DB\uC744 \uB530\uB77C
+    \uAFC0\uC744 \uC5F0\uB9C8\uD55C\uB2E4.\r\n\uC624\uB79C \uC138\uC6D4\uC744 \uAC70\uCE5C
+    \uAFC0\uC740 \uD55C \uC785\uB9CC\uC73C\uB85C\r\n\uD480\uCF54\uC2A4 \uC694\uB9AC\uC758
+    \uB9DB\uC744 \uC804\uBD80 \uB290\uB084 \uC218 \uC788\uB2E4\uACE0 \uD55C\uB2E4."
+  cookTime: 0
+  refineIcon: {fileID: 0}
+  buffEffect: {fileID: 0}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

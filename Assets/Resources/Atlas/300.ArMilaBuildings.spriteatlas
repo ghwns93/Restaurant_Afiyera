@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 300.ArMilaBuildings
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: fe8688ce2575d9f449765f2b6252cad2, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - b52f160451c543a448465a6df6fe0214: -9200742261013715028
+    - 70a637786aaaea544a12dc610a66a14e: -3640173620514873933
+    - 62d2ea79c0e206f43a4d3546f3f91c0c: -3079057321489875585
+    - c9d9c95a004777e4499b8b4bd3539b1d: 5473507335894614706
+    - 7edb414d047efa0469d80b2c859899d6: -6541169196251819173
+    - 7e7bd88dd5bfc5740a8a0fb0d5826429: -7251531543691257009
+    - 83ad83fe019702c4f928f4cea230e9fe: -2032611396278268562
+    - e5ab508f5780f664a941ca6ece655793: 1521721179879386818
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -9200742261013715028, guid: b52f160451c543a448465a6df6fe0214, type: 3}
+  - {fileID: -3640173620514873933, guid: 70a637786aaaea544a12dc610a66a14e, type: 3}
+  - {fileID: -3079057321489875585, guid: 62d2ea79c0e206f43a4d3546f3f91c0c, type: 3}
+  - {fileID: 5473507335894614706, guid: c9d9c95a004777e4499b8b4bd3539b1d, type: 3}
+  - {fileID: -6541169196251819173, guid: 7edb414d047efa0469d80b2c859899d6, type: 3}
+  - {fileID: -7251531543691257009, guid: 7e7bd88dd5bfc5740a8a0fb0d5826429, type: 3}
+  - {fileID: -2032611396278268562, guid: 83ad83fe019702c4f928f4cea230e9fe, type: 3}
+  - {fileID: 1521721179879386818, guid: e5ab508f5780f664a941ca6ece655793, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uAC74\uBB3C5_0"
+  - "\uAC74\uBB3C7_0"
+  - "\uAC74\uBB3C4_0"
+  - "\uAC74\uBB3C3_0"
+  - "\uAC74\uBB3C2_0"
+  - "\uAC74\uBB3C8_0"
+  - "\uAC74\uBB3C1_0"
+  - "\uAC74\uBB3C6_0"
+  m_RenderDataMap: {}
+  m_Tag: 300.ArMilaBuildings
+  m_IsVariant: 0

@@ -28,8 +28,6 @@ MonoBehaviour:
   npcInteractionList:
   - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
   - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
-  - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
-  - {fileID: 11400000, guid: ca2147fc20fbd39479c76a778dcf750e, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 0
   shopItemList: []

@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FoodAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 8192
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 8192
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: eb2fa02ee1820f747921bec3e5a69751, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - b7d564409e6bb4c498713887a81424ed: 3611296511297907851
+    - cdf58780525be3f4b8647c27d0afc9fb: -622758564559631915
+    - 4925ba02ad08b4247ad090b96b9381f9: 1931471528655643933
+    - 44c86e5464ed68f42b1ed3c903aacb84: 8303222238234737838
+    - 854a867423cbe8743becf4a253759470: -858217847646639537
+    - 68af17250f647b6459e38e0443a1d8dd: 8129613121896852674
+    - 78ddbd160741f2348a576aae6ef7528d: -6613490560012660531
+    - 29dc6697f5a2587469d10de7f7739059: -7463533155746094829
+    - 09609cc8ac2ff1745ae62360f43ad152: -7099936984313070738
+    - b961f3497722eed41a5caf2c36c741ef: -3159441495723793291
+    - 70175d495ea570240930808b094c7890: -2780089406583486561
+    - c0ee7dba92450774087785414e58a660: -4583217196980373207
+    - 43c2c60b7925feb41b345ae1528c6d33: 607009649373451305
+    - 5cf6fa5bd9eebdf4db8e9331ddcbc981: -2105619463127745242
+    - e89252cb796a3114aabbe48162196b87: -6723206307070551292
+    - 4385aaac305daa441b4a339f08199ab3: 1685668007072868825
+    - 112c1edc8dedee543abe64b2ac73bd0a: 1011764537947220781
+    - 2770341dc4b720a41980c87a1aa05ad4: 7947491683750529659
+    - 67926d8dcd1e49f45919fa21d39b5417: -9172094938502630411
+    - 67926d8dcd1e49f45919fa21d39b5417: -3098221242763873555
+    - 67926d8dcd1e49f45919fa21d39b5417: 2765931682814102245
+    - 2bfb7d6e73a454b458be7ad1f222476b: 2922146878253237397
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 3611296511297907851, guid: b7d564409e6bb4c498713887a81424ed, type: 3}
+  - {fileID: -622758564559631915, guid: cdf58780525be3f4b8647c27d0afc9fb, type: 3}
+  - {fileID: 1931471528655643933, guid: 4925ba02ad08b4247ad090b96b9381f9, type: 3}
+  - {fileID: 8303222238234737838, guid: 44c86e5464ed68f42b1ed3c903aacb84, type: 3}
+  - {fileID: -858217847646639537, guid: 854a867423cbe8743becf4a253759470, type: 3}
+  - {fileID: 8129613121896852674, guid: 68af17250f647b6459e38e0443a1d8dd, type: 3}
+  - {fileID: -6613490560012660531, guid: 78ddbd160741f2348a576aae6ef7528d, type: 3}
+  - {fileID: -7463533155746094829, guid: 29dc6697f5a2587469d10de7f7739059, type: 3}
+  - {fileID: -7099936984313070738, guid: 09609cc8ac2ff1745ae62360f43ad152, type: 3}
+  - {fileID: -3159441495723793291, guid: b961f3497722eed41a5caf2c36c741ef, type: 3}
+  - {fileID: -2780089406583486561, guid: 70175d495ea570240930808b094c7890, type: 3}
+  - {fileID: -4583217196980373207, guid: c0ee7dba92450774087785414e58a660, type: 3}
+  - {fileID: 607009649373451305, guid: 43c2c60b7925feb41b345ae1528c6d33, type: 3}
+  - {fileID: -2105619463127745242, guid: 5cf6fa5bd9eebdf4db8e9331ddcbc981, type: 3}
+  - {fileID: -6723206307070551292, guid: e89252cb796a3114aabbe48162196b87, type: 3}
+  - {fileID: 1685668007072868825, guid: 4385aaac305daa441b4a339f08199ab3, type: 3}
+  - {fileID: 1011764537947220781, guid: 112c1edc8dedee543abe64b2ac73bd0a, type: 3}
+  - {fileID: 7947491683750529659, guid: 2770341dc4b720a41980c87a1aa05ad4, type: 3}
+  - {fileID: -9172094938502630411, guid: 67926d8dcd1e49f45919fa21d39b5417, type: 3}
+  - {fileID: -3098221242763873555, guid: 67926d8dcd1e49f45919fa21d39b5417, type: 3}
+  - {fileID: 2765931682814102245, guid: 67926d8dcd1e49f45919fa21d39b5417, type: 3}
+  - {fileID: 2922146878253237397, guid: 2bfb7d6e73a454b458be7ad1f222476b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uCE58\uC988\uC0AC\uACFC\uBE75_0"
+  - "\uC232\uAE38_0"
+  - "\uCEF4\uD50C\uB808\uC778 \uCEE4\uD53C_0"
+  - "\uC309\uC0B4\uD55C\uBC14\uB78C\uD480\uAF43\uACFC\uC790_0"
+  - "\uC18C\uC6D0\uBE59\uC218_0"
+  - "\uBE59\uD558\uAE30\uC0DD\uC120\uBCF6\uC74C_0"
+  - "\uBC84\uD130\uC870\uAC1C\uD30C\uC2A4\uD0C0_0"
+  - "\uAC70\uBBF8\uC904\uAD6D\uC218_0"
+  - "\uC288\uD37C\uD30C\uD2F0\uB4DC\uB9C1\uD06C_0"
+  - "\uBD88\uB9DB\uCCB4\uB9AC\uD30C\uC774_0"
+  - "\uC774\uC2AC\uCF69\uB5A1_0"
+  - "\uC19C\uC19C\uD480\uAF43\uCC1C_0"
+  - "\uBE44\uC2A4\uCF13\uD3B8\uC9C0_0"
+  - "\uC740\uD558\uBCC4\uAF43\uB9CC\uB450_0"
+  - "\uAD6C\uB984\uBC84\uAC70_0"
+  - "\uC57C\uCC44\uC789\uC5B4\uAD6C\uC774_0"
+  - "\uAE30\uC5B5\uC758 \uD30C\uD3B8_0"
+  - "\uD574\uC801\uC758\uBCF4\uBB3C_0"
+  - "\uB098\uB9CC\uC758 \uD50C\uB808\uC774\uB9AC\uC2A4\uD2B8_2"
+  - "\uB098\uB9CC\uC758 \uD50C\uB808\uC774\uB9AC\uC2A4\uD2B8_1"
+  - "\uB098\uB9CC\uC758 \uD50C\uB808\uC774\uB9AC\uC2A4\uD2B8_0"
+  - "\uBCF4\uC11D \uD585\uC528_0"
+  m_RenderDataMap: {}
+  m_Tag: FoodAtlas
+  m_IsVariant: 0

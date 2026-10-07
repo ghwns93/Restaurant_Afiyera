@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 22011CheeseClam
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 22011
+  itemName: "\uCE58\uC988\uC870\uAC1C"
+  icon: {fileID: -3182339496134811183, guid: 1fdf01ce0593240469a7ac6c4ffbbfd0, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uC798 \uC219\uC131\uB41C \uD06C\uB9BC\uC870\uAC1C.\r\n\uB18D\uCD95\uB41C
+    \uD06C\uB9BC\uC774 \uB9C8\uCE58 \uCE58\uC988\uCC98\uB7FC \uCB49 \uB298\uC5B4\uB09C\uB2E4."
+  cookTime: 0
+  refineIcon: {fileID: 0}
+  buffEffect: {fileID: 0}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

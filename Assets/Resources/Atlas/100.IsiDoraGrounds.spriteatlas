@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 100.IsiDoraGrounds
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 29d52642937c32940bb1cbf7418e3d60, type: 3}
+    - {fileID: 102900000, guid: 94ee9e6f663020348818127097400a52, type: 3}
+    - {fileID: 2800000, guid: f2d991c86ae1e264498fac9bcfe2f79c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 0cb565810c8b17e41a030d1c265ea792: 1559679466970237334
+    - 27be5182d9217c8479241df49635c88d: 4690765399072675473
+    - 27be5182d9217c8479241df49635c88d: 5143954603138095214
+    - a20a06c36d5f2f84b8d8dc9c10737969: -8170317725686563851
+    - a052e357d80be154c949595cd196a27c: 2010129547718587399
+    - f68b2628484a92f4199e70e5ca8b604b: 3139726228559940008
+    - f2d991c86ae1e264498fac9bcfe2f79c: -202170807880980330
+    - 9d5a91e9920f1024c9e770b882874352: 4094617393393658716
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1559679466970237334, guid: 0cb565810c8b17e41a030d1c265ea792, type: 3}
+  - {fileID: 4690765399072675473, guid: 27be5182d9217c8479241df49635c88d, type: 3}
+  - {fileID: 5143954603138095214, guid: 27be5182d9217c8479241df49635c88d, type: 3}
+  - {fileID: -8170317725686563851, guid: a20a06c36d5f2f84b8d8dc9c10737969, type: 3}
+  - {fileID: 2010129547718587399, guid: a052e357d80be154c949595cd196a27c, type: 3}
+  - {fileID: 3139726228559940008, guid: f68b2628484a92f4199e70e5ca8b604b, type: 3}
+  - {fileID: -202170807880980330, guid: f2d991c86ae1e264498fac9bcfe2f79c, type: 3}
+  - {fileID: 4094617393393658716, guid: 9d5a91e9920f1024c9e770b882874352, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uAE38(\uB9C8\uC744\uC911\uC559)2_0"
+  - "\uD558\uCC9C_0"
+  - "\uD558\uCC9C_1"
+  - "\uB545\uBC14\uB2E5_0"
+  - "\uAE38(\uC0C1\uC810\uAC00)2_0"
+  - "\uAE38(\uC8FC\uAC70\uC9C0\uC5ED)2_0"
+  - "\uB2E4\uC74C\uC9C0\uC5ED \uD654\uC0B4\uD45C_0"
+  - "\uAE38(\uC2DD\uB2F9)2_0"
+  m_RenderDataMap: {}
+  m_Tag: 100.IsiDoraGrounds
+  m_IsVariant: 0

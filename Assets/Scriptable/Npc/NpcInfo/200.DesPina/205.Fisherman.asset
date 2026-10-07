@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 205.Fisherman
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 205
-  npcName: "\uB09A\uC2DC\uAFBC"
+  npcName: "\uC5D0\uAC8C"
   npcImage: {fileID: 6435658412453218170, guid: 19e76cdf2ccf570468158fa0c3dc6737, type: 3}
   npcIconImage: {fileID: 2515855643977172218, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: -1677650831921769064, guid: 7dbb14e83c790ef4b9bb2b8a5d068a4d, type: 3}

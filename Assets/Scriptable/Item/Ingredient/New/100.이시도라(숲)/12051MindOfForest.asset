@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 12051MindOfForest
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 12051
+  itemName: "\uC232\uC758 \uB9C8\uC74C"
+  icon: {fileID: -7847846391329840671, guid: d425982a028db17489c84f427c6150ec, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uC232\uC758 \uAE4A\uC740 \uACF3\uC5D0\uC11C \uB4DC\uBB3C\uAC8C \uCC44\uC9D1\uB418\uB294
+    \uB9C8\uB825 \uACB0\uC815.\r\n\uBA39\uC73C\uBA74 \uB9C8\uCE58 \uAE4A\uC740 \uC232\uC758
+    \uD55C\uAC00\uC6B4\uB370 \uC788\uB294 \uAC83 \uAC19\uC740 \uAE30\uBD84\uC88B\uC740
+    \uC0C1\uCF8C\uD568\uC774 \uB290\uAEF4\uC9C4\uB2E4."
+  cookTime: 1
+  refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
+  buffEffect: {fileID: 11400000, guid: 5285c672a4a8c4d4d82ce390eb9ec9b9, type: 2}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

@@ -11,6 +11,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private List<SoundData> soundDataList;
 
+    private SoundData currentBgmData;
+
     [SerializeField]
     private List<VillageBgmInfo> villageBgmList;
 
@@ -82,6 +84,10 @@ public class SoundManager : MonoBehaviour
     {
         if (soundDictionary.TryGetValue(name, out SoundData data))
         {
+            if (currentBgmData == data) return;
+
+            currentBgmData = data;
+
             // 믹서 그룹 설정 및 재생
             bgmSource.outputAudioMixerGroup = data.group;
             bgmSource.pitch = data.pitch;

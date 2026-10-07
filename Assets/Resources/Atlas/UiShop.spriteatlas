@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UiShop
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 5fc42639f5404b24fbb719d0fde42784, type: 3}
+    - {fileID: 2800000, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+    - {fileID: 2800000, guid: 571784aff4903f74982e0f8fcbcb2dc8, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - ef72c3e4f9cd11c44819d1206a8790e5: -6284293561515165212
+    - ef72c3e4f9cd11c44819d1206a8790e5: 7285932034747980629
+    - ef72c3e4f9cd11c44819d1206a8790e5: 2636957985315873075
+    - ef72c3e4f9cd11c44819d1206a8790e5: -4916886622003371169
+    - ef72c3e4f9cd11c44819d1206a8790e5: -1889547959521388871
+    - ef72c3e4f9cd11c44819d1206a8790e5: 4973305791137834786
+    - ef72c3e4f9cd11c44819d1206a8790e5: -8988973681752283195
+    - ef72c3e4f9cd11c44819d1206a8790e5: -8100917334542465436
+    - ef72c3e4f9cd11c44819d1206a8790e5: -3250552453549309778
+    - ef72c3e4f9cd11c44819d1206a8790e5: 3233632944717365198
+    - ef72c3e4f9cd11c44819d1206a8790e5: 3372927585031238336
+    - ef72c3e4f9cd11c44819d1206a8790e5: -4106854525965571476
+    - ef72c3e4f9cd11c44819d1206a8790e5: 6859112847655875131
+    - 5fc42639f5404b24fbb719d0fde42784: -1501484945541928761
+    - 571784aff4903f74982e0f8fcbcb2dc8: -330653472472239666
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -6284293561515165212, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: 7285932034747980629, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: 2636957985315873075, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: -4916886622003371169, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: -1889547959521388871, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: 4973305791137834786, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: -8988973681752283195, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: -8100917334542465436, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: -3250552453549309778, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: 3233632944717365198, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: 3372927585031238336, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: -4106854525965571476, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: 6859112847655875131, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+  - {fileID: -1501484945541928761, guid: 5fc42639f5404b24fbb719d0fde42784, type: 3}
+  - {fileID: -330653472472239666, guid: 571784aff4903f74982e0f8fcbcb2dc8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uC0C1\uC810UI_12"
+  - "\uC0C1\uC810UI_11"
+  - "\uC0C1\uC810UI_10"
+  - "\uC0C1\uC810UI_4"
+  - "\uC0C1\uC810UI_5"
+  - "\uC0C1\uC810UI_6"
+  - "\uC0C1\uC810UI_7"
+  - "\uC0C1\uC810UI_0"
+  - "\uC0C1\uC810UI_1"
+  - "\uC0C1\uC810UI_2"
+  - "\uC0C1\uC810UI_3"
+  - "\uC0C1\uC810UI_8"
+  - "\uC0C1\uC810UI_9"
+  - "\uC0C1\uC810 \uD310\uB9E4 Overlay_0"
+  - "\uC0C1\uC810\uBC30\uACBD_0"
+  m_RenderDataMap: {}
+  m_Tag: UiShop
+  m_IsVariant: 0

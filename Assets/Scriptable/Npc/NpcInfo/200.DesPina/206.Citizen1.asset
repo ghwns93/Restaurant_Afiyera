@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 206
   npcName: "\uC2DC\uBBFC1"
-  npcImage: {fileID: 0}
-  npcIconImage: {fileID: 0}
-  npcSdImage: {fileID: 0}
+  npcImage: {fileID: 2167858464173641110, guid: 56915b9e020731142a81295cc12a26a7, type: 3}
+  npcIconImage: {fileID: 1897381985, guid: 56915b9e020731142a81295cc12a26a7, type: 3}
+  npcSdImage: {fileID: 6160958616480825714, guid: d6e0c503dde261944b41807e39d84c43, type: 3}
   isNightRestaurantNpc: 0
   portraits: []
-  specialEventDataList: []
   isInteractionNpc: 0
   npcInteractionBase: {fileID: 0}
   npcInteractionList: []

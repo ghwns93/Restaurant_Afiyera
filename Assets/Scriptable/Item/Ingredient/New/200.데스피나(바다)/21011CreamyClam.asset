@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 21011CreamyClam
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 21011
+  itemName: "\uD06C\uB9BC\uC870\uAC1C"
+  icon: {fileID: -3182339496134811183, guid: 1fdf01ce0593240469a7ac6c4ffbbfd0, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uBD88\uC5D0 \uAC00\uC5F4\uD558\uBA74 \uC0B4\uC774 \uB179\uC544\uB0B4\uB824
+    \uB179\uC9C4\uD55C \uD06C\uB9BC\uC774 \uB418\uB294 \uC870\uAC1C.\r\n\uD5A5\uAE0B\uD55C
+    \uBC14\uB2E4 \uB0B4\uC74C\uACFC \uD06C\uB9AC\uBBF8\uD55C \uC2DD\uAC10\uC774 \uC798
+    \uC5B4\uC6B0\uB7EC\uC9C4\uB2E4."
+  cookTime: 0
+  refineIcon: {fileID: 0}
+  buffEffect: {fileID: 0}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

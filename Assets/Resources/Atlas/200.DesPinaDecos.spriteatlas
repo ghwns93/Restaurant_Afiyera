@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 200.DesPinaDecos
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 150309a38680ad042a942b49f197e5a5, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 8551d7f07f71f7b439d6d80b53ac593f: -4708365139066719956
+    - 864fcb01acb3f9846be82cb54a166890: -513911237945083525
+    - c361ff918a7a9db45a3035bccb5266d7: -2633837730872192088
+    - b5e575e1ed28928418a5265abcefedcb: 6018749233059494516
+    - aa123683d4fbd4947aeb0b86645b12cd: -5725598037571315076
+    - 8aeea2a3e58d790489cf73e95fee6536: 1317442049459063610
+    - 5ffbc2459f279fe41a06cedecca13dbf: -4256669924108540623
+    - 603d52d6279422b44a372f6dd1dff754: 2766797998850571083
+    - c1f0f35a464803a4495cc678b479b207: -458410781652712787
+    - caadca1e11449e846994188cace1fae8: -3324278835000532311
+    - e215de5e9e203ee4c8af68441b08315d: 3867092927072516655
+    - d550f41ff22e0ee48b57fb4738aace85: -7524102990086209452
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -4708365139066719956, guid: 8551d7f07f71f7b439d6d80b53ac593f, type: 3}
+  - {fileID: -513911237945083525, guid: 864fcb01acb3f9846be82cb54a166890, type: 3}
+  - {fileID: -2633837730872192088, guid: c361ff918a7a9db45a3035bccb5266d7, type: 3}
+  - {fileID: 6018749233059494516, guid: b5e575e1ed28928418a5265abcefedcb, type: 3}
+  - {fileID: -5725598037571315076, guid: aa123683d4fbd4947aeb0b86645b12cd, type: 3}
+  - {fileID: 1317442049459063610, guid: 8aeea2a3e58d790489cf73e95fee6536, type: 3}
+  - {fileID: -4256669924108540623, guid: 5ffbc2459f279fe41a06cedecca13dbf, type: 3}
+  - {fileID: 2766797998850571083, guid: 603d52d6279422b44a372f6dd1dff754, type: 3}
+  - {fileID: -458410781652712787, guid: c1f0f35a464803a4495cc678b479b207, type: 3}
+  - {fileID: -3324278835000532311, guid: caadca1e11449e846994188cace1fae8, type: 3}
+  - {fileID: 3867092927072516655, guid: e215de5e9e203ee4c8af68441b08315d, type: 3}
+  - {fileID: -7524102990086209452, guid: d550f41ff22e0ee48b57fb4738aace85, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uD4801_0"
+  - "\uD4805_0"
+  - "\uD4802_0"
+  - "\uD4804_0"
+  - "\uC57C\uC790\uC2182_0"
+  - "\uD574\uBCC0\uACC4\uB2E81_0"
+  - "\uD574\uBCC0\uACC4\uB2E82_0"
+  - "\uC6B8\uD0C0\uB9AC1_0"
+  - "\uC57C\uC790\uC2181_0"
+  - "\uD574\uBCC0\uBCF4\uD2B8_0"
+  - "\uD574\uBCC0\uB098\uBB341_0"
+  - "\uD4803_0"
+  m_RenderDataMap: {}
+  m_Tag: 200.DesPinaDecos
+  m_IsVariant: 0

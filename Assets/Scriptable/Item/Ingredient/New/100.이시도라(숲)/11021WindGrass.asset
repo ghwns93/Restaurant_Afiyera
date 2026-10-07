@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 11021WindGrass
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 11021
+  itemName: "\uBC14\uB78C\uD480"
+  icon: {fileID: -3759324874398757047, guid: d83718e6cc9bb2142929fbc1f589877c, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uBC14\uB78C\uC774 \uC798 \uB4DC\uB294 \uACF3\uC5D0\uC11C\uB9CC \uC790\uB77C\uB294
+    \uD480.\r\n\uAC04\uD639 \uC88B\uC740 \uB545\uC5D0\uC11C\uB294 \uAF43\uC744 \uD2D4\uC6B0\uAE30\uB3C4
+    \uD55C\uB2E4. \uC774\uB984 \uD0D3\uC778\uC9C0 \uC0AC\uB78C\uB4E4\uC758 \uC18C\uC6D0\uC744
+    \uB4E4\uC5B4 \uC900\uB2E4\uACE0\uB3C4 \uD55C\uB2E4."
+  cookTime: 1
+  refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
+  buffEffect: {fileID: 11400000, guid: 5285c672a4a8c4d4d82ce390eb9ec9b9, type: 2}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

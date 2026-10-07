@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum SceneType
 {
@@ -39,9 +41,13 @@ public class SceneController : MonoBehaviour
     public SceneType startScene;
     public List<SceneData> sceneList;
 
-    private string currentSubScene;
-
     public bool optionOpened = false;
+
+    [Header("Loading UI")]
+    [SerializeField] public GameObject loadingPanel;
+    [SerializeField] public Slider progressBar;
+
+    private string currentSubScene;
 
     internal static SceneController Instance;
 
@@ -84,21 +90,71 @@ public class SceneController : MonoBehaviour
 
     public void LoadSubScene(SceneType type)
     {
-        // 1. 이미 켜져 있는 서브 씬이 있다면 먼저 언로드
+        //// 1. 이미 켜져 있는 서브 씬이 있다면 먼저 언로드
+        //if (!string.IsNullOrEmpty(currentSubScene))
+        //{
+        //    SceneManager.UnloadSceneAsync(currentSubScene);
+        //}
+
+        //// 2. 리스트에서 맞는 씬 이름을 찾아서 로드
+        //SceneData data = sceneList.Find(s => s.type == type);
+
+        //if (data.sceneName != null)
+        //{
+        //    currentSubScene = data.sceneName;
+        //    // Additive 모드로 로드하여 메인 씬을 유지함
+        //    SceneManager.LoadSceneAsync(data.sceneName, LoadSceneMode.Additive);
+        //}
+
+        StartCoroutine(LoadSubSceneRoutine(type));
+    }
+
+    private IEnumerator LoadSubSceneRoutine(SceneType type)
+    {
+        // 1. 로딩창 켜기
+        if (loadingPanel != null) loadingPanel.SetActive(true);
+
+        // 2. 이미 켜져 있는 서브 씬이 있다면 언로드 후 완료될 때까지 대기
         if (!string.IsNullOrEmpty(currentSubScene))
         {
-            SceneManager.UnloadSceneAsync(currentSubScene);
+            AsyncOperation unloadOp = SceneManager.UnloadSceneAsync(currentSubScene);
+            if (unloadOp != null)
+            {
+                while (!unloadOp.isDone)
+                {
+                    yield return null;
+                }
+            }
         }
 
-        // 2. 리스트에서 맞는 씬 이름을 찾아서 로드
+        // 3. 리스트에서 맞는 씬 이름 찾기
         SceneData data = sceneList.Find(s => s.type == type);
 
         if (data.sceneName != null)
         {
             currentSubScene = data.sceneName;
-            // Additive 모드로 로드하여 메인 씬을 유지함
-            SceneManager.LoadSceneAsync(data.sceneName, LoadSceneMode.Additive);
+
+            // 4. Additive 모드로 비동기 로드 시작
+            AsyncOperation loadOp = SceneManager.LoadSceneAsync(data.sceneName, LoadSceneMode.Additive);
+            loadOp.allowSceneActivation = true; // 바로 활성화할 경우
+
+            // 5. 로딩 진행도 반영
+            while (!loadOp.isDone)
+            {
+                // progress는 0부터 0.9까지만 가므로 1.0 기준으로 보정하려면 아래와 같이 처리
+                float progress = Mathf.Clamp01(loadOp.progress / 0.9f);
+
+                if (progressBar != null)
+                {
+                    progressBar.value = progress;
+                }
+
+                yield return null;
+            }
         }
+
+        // 6. 로딩 완료 후 로딩창 끄기
+        if (loadingPanel != null) loadingPanel.SetActive(false);
     }
 
     public void CloseCurrentScene()

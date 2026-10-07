@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UiTalk
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: d40a228585951c74c9474bc49352130e, type: 3}
+    - {fileID: 2800000, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - d40a228585951c74c9474bc49352130e: 5559219914597194343
+    - d40a228585951c74c9474bc49352130e: -5330590749471535582
+    - d40a228585951c74c9474bc49352130e: -8286493204309498394
+    - 57df8d8c78dd7304c91d91c2e3f30a79: 7090499322339525597
+    - 57df8d8c78dd7304c91d91c2e3f30a79: -8986968396066797898
+    - 57df8d8c78dd7304c91d91c2e3f30a79: 658201743429666166
+    - 57df8d8c78dd7304c91d91c2e3f30a79: -6587670957902651579
+    - 57df8d8c78dd7304c91d91c2e3f30a79: -4428645718057366129
+    - 57df8d8c78dd7304c91d91c2e3f30a79: -1723612295646315268
+    - 57df8d8c78dd7304c91d91c2e3f30a79: 6691574488832221455
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 5559219914597194343, guid: d40a228585951c74c9474bc49352130e, type: 3}
+  - {fileID: -5330590749471535582, guid: d40a228585951c74c9474bc49352130e, type: 3}
+  - {fileID: -8286493204309498394, guid: d40a228585951c74c9474bc49352130e, type: 3}
+  - {fileID: 7090499322339525597, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+  - {fileID: -8986968396066797898, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+  - {fileID: 658201743429666166, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+  - {fileID: -6587670957902651579, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+  - {fileID: -4428645718057366129, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+  - {fileID: -1723612295646315268, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+  - {fileID: 6691574488832221455, guid: 57df8d8c78dd7304c91d91c2e3f30a79, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uB300\uD654\uCC3D UI_28"
+  - "\uB300\uD654\uCC3D UI_29"
+  - "\uB300\uD654\uCC3D UI_30"
+  - "\uD018\uC2A4\uD2B8 \uC120\uD0DD\uC9C0_2"
+  - "\uD018\uC2A4\uD2B8 \uC120\uD0DD\uC9C0_3"
+  - "\uD018\uC2A4\uD2B8 \uC120\uD0DD\uC9C0_0"
+  - "\uD018\uC2A4\uD2B8 \uC120\uD0DD\uC9C0_1"
+  - "\uD018\uC2A4\uD2B8 \uC120\uD0DD\uC9C0_6"
+  - "\uD018\uC2A4\uD2B8 \uC120\uD0DD\uC9C0_4"
+  - "\uD018\uC2A4\uD2B8 \uC120\uD0DD\uC9C0_5"
+  m_RenderDataMap: {}
+  m_Tag: UiTalk
+  m_IsVariant: 0

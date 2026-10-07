@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Players
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 16384
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 16384
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: fd41823cc43ca7b42a4e9a3823c919b5, type: 3}
+    - {fileID: 102900000, guid: 26a7cd5b8daf81b43a386b268d784af0, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - eebddc40fddc0d044b0ad1b6dbaf5da0: -914676865707594564
+    - f6fd5f6008e5bb348a787a31375296b5: -3479200677707438371
+    - 1ba2e041d9af7bd46a56b30ce9ca2929: -2357599841409370354
+    - b061d661f5aca0b44a948f47baf06a85: 6559190174542453600
+    - 2612178186286b144b7654787bec837e: -2520792546471248857
+    - 7d473b62a9b5a7945bba2ddabaff43b2: -5162539745160790947
+    - 3860399379e753f43a516b27634b1dc2: 1263358355174129923
+    - 29498604a8915b7469a0e0bc4af19992: -8601755287994826534
+    - 1678c8a7d34d50b4bb20a61ab27a0b7f: 7155829290084134414
+    - 2ece2099b7c5303408693158fbda5144: 7447628072597211463
+    - 6ddee10a603cb0144a26007405e681de: 989514249176100794
+    - 5c69990abb9ab764da7bea838efd583d: 7335337375542387480
+    - 1fa65b4bc040b824c955e54889e168c6: -5052681905588201971
+    - 5701faeb70980184cb526676a6282453: 5324753780985982321
+    - 7bae530cd2e76774ba82c52adbb96ccc: -951633547412615041
+    - 305879dd7f0297b4294d4ecf67c75ae8: 6757450459337283524
+    - 6423d90ee41f3ef459aa0f42afa5a77f: 71420125571779947
+    - f8a5bbcee5f4e2f40bc7410a252311c5: -35650495293078652
+    - 609f041f6e4cd2847ac0468925dfdb71: -3849830125932790540
+    - 1154558f9d9735446a077925f924b575: -3307110552754687186
+    - b2fe2def6db07db4084657814498e0b8: -9219514001136869747
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -914676865707594564, guid: eebddc40fddc0d044b0ad1b6dbaf5da0, type: 3}
+  - {fileID: -3479200677707438371, guid: f6fd5f6008e5bb348a787a31375296b5, type: 3}
+  - {fileID: -2357599841409370354, guid: 1ba2e041d9af7bd46a56b30ce9ca2929, type: 3}
+  - {fileID: 6559190174542453600, guid: b061d661f5aca0b44a948f47baf06a85, type: 3}
+  - {fileID: -2520792546471248857, guid: 2612178186286b144b7654787bec837e, type: 3}
+  - {fileID: -5162539745160790947, guid: 7d473b62a9b5a7945bba2ddabaff43b2, type: 3}
+  - {fileID: 1263358355174129923, guid: 3860399379e753f43a516b27634b1dc2, type: 3}
+  - {fileID: -8601755287994826534, guid: 29498604a8915b7469a0e0bc4af19992, type: 3}
+  - {fileID: 7155829290084134414, guid: 1678c8a7d34d50b4bb20a61ab27a0b7f, type: 3}
+  - {fileID: 7447628072597211463, guid: 2ece2099b7c5303408693158fbda5144, type: 3}
+  - {fileID: 989514249176100794, guid: 6ddee10a603cb0144a26007405e681de, type: 3}
+  - {fileID: 7335337375542387480, guid: 5c69990abb9ab764da7bea838efd583d, type: 3}
+  - {fileID: -5052681905588201971, guid: 1fa65b4bc040b824c955e54889e168c6, type: 3}
+  - {fileID: 5324753780985982321, guid: 5701faeb70980184cb526676a6282453, type: 3}
+  - {fileID: -951633547412615041, guid: 7bae530cd2e76774ba82c52adbb96ccc, type: 3}
+  - {fileID: 6757450459337283524, guid: 305879dd7f0297b4294d4ecf67c75ae8, type: 3}
+  - {fileID: 71420125571779947, guid: 6423d90ee41f3ef459aa0f42afa5a77f, type: 3}
+  - {fileID: -35650495293078652, guid: f8a5bbcee5f4e2f40bc7410a252311c5, type: 3}
+  - {fileID: -3849830125932790540, guid: 609f041f6e4cd2847ac0468925dfdb71, type: 3}
+  - {fileID: -3307110552754687186, guid: 1154558f9d9735446a077925f924b575, type: 3}
+  - {fileID: -9219514001136869747, guid: b2fe2def6db07db4084657814498e0b8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uC8FC\uC778\uACF5SD2_0"
+  - Char1_Smile1_0
+  - Char2_Sad2_0
+  - Char1_Smile2_0
+  - Char1_Panic1_0
+  - Char1_Normal1_0
+  - Char2_Surprise3_0
+  - Char2_Sad1_0
+  - Char1_Panic2_0
+  - Char1_Surprise1_0
+  - Char1_Surprise2_0
+  - "\uC8FC\uC778\uACF5SD1_0"
+  - Char1_SideLook1_0
+  - Char2_Normal1_0
+  - Char2_Sad3_0
+  - Char1_SideLook2_0
+  - Char1_Normal2_0
+  - Char2_Normal2_0
+  - Char2_Normal3_0
+  - Char2_Surprise1_0
+  - Char2_Surprise2_0
+  m_RenderDataMap: {}
+  m_Tag: Players
+  m_IsVariant: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 12031CandySpider
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 12031
+  itemName: "\uC0AC\uD0D5\uAC70\uBBF8"
+  icon: {fileID: -4892004799308055623, guid: 066f9e7f6371c0a4b89f15d26c11863e, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uAD6C\uB984\uAC70\uBBF8\uC9D1\uC744 \uC9D3\uB294 \uC791\uC740 \uAC70\uBBF8.\r\n\uBC18\uC9DD\uBC18\uC9DD
+    \uBE5B\uB098\uB294 \uBAB8\uC744 \uAC00\uC9C0\uACE0 \uC788\uC73C\uBA70,\r\n\uB2EC\uCF64\uD558\uACE0
+    \uBC14\uC0AD\uD558\uB2E4."
+  cookTime: 1
+  refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
+  buffEffect: {fileID: 11400000, guid: 5285c672a4a8c4d4d82ce390eb9ec9b9, type: 2}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

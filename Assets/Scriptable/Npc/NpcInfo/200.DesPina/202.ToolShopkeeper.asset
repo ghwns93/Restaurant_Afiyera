@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 202.ToolShopkeeper
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 202
-  npcName: "\uB3C4\uAD6C\uC810\uC7A5"
+  npcName: "\uB808\uBCA4\uD2B8"
   npcImage: {fileID: -1644196745144804770, guid: 37ff537037d221d42bc8588a61dd5b2f, type: 3}
   npcIconImage: {fileID: 5391698267338935046, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: -5947015584199938089, guid: e3dc6243ab967dc46953a21c16efa14b, type: 3}

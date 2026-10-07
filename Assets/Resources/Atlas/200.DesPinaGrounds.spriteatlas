@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 200.DesPinaGrounds
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 8d0b72b4eaa4bf249b74f113604aecd2, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - d7916a803bd3a034a95d5de1c2e95d69: -8170317725686563851
+    - b46acb8004ea5c94389f72b9bc3d1e6c: -2168927842636559639
+    - 024171338b15a4d4c8dc8c1dff24456d: -8682017555887012324
+    - e1340fa6e0d0cb141b07517168b64259: -2080626822815636931
+    - e1340fa6e0d0cb141b07517168b64259: -8818438549621893650
+    - e1340fa6e0d0cb141b07517168b64259: -3882564018935700876
+    - 32da4dc867106ad4ba3d98eec52288fd: 357795630698501736
+    - 64b490c9dec95d84a8f028347b7c2314: -8814627230121268729
+    - cf7128ae35493144e9602b35956a1430: -8907258855556829698
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -8170317725686563851, guid: d7916a803bd3a034a95d5de1c2e95d69, type: 3}
+  - {fileID: -2168927842636559639, guid: b46acb8004ea5c94389f72b9bc3d1e6c, type: 3}
+  - {fileID: -8682017555887012324, guid: 024171338b15a4d4c8dc8c1dff24456d, type: 3}
+  - {fileID: -2080626822815636931, guid: e1340fa6e0d0cb141b07517168b64259, type: 3}
+  - {fileID: -8818438549621893650, guid: e1340fa6e0d0cb141b07517168b64259, type: 3}
+  - {fileID: -3882564018935700876, guid: e1340fa6e0d0cb141b07517168b64259, type: 3}
+  - {fileID: 357795630698501736, guid: 32da4dc867106ad4ba3d98eec52288fd, type: 3}
+  - {fileID: -8814627230121268729, guid: 64b490c9dec95d84a8f028347b7c2314, type: 3}
+  - {fileID: -8907258855556829698, guid: cf7128ae35493144e9602b35956a1430, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uB545\uBC14\uB2E5_0"
+  - "\uD574\uBCC0\uAE38_0"
+  - "\uB545\uBC14\uB2E52_0"
+  - "\uBC14\uB2E42_2"
+  - "\uBC14\uB2E42_1"
+  - "\uBC14\uB2E42_0"
+  - "\uBC14\uB2E41_0"
+  - "\uD574\uBCC0\uAE382_0"
+  - "\uD574\uBCC0\uC704\uB545_0"
+  m_RenderDataMap: {}
+  m_Tag: 200.DesPinaGrounds
+  m_IsVariant: 0

@@ -19,7 +19,6 @@ MonoBehaviour:
   npcSdImage: {fileID: 0}
   isNightRestaurantNpc: 0
   portraits: []
-  specialEventDataList: []
   isInteractionNpc: 0
   npcInteractionBase: {fileID: 0}
   npcInteractionList: []

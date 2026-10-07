@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 22021BigWaveMushroom
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 22021
+  itemName: "\uD30C\uB3C4\uBC84\uC12F"
+  icon: {fileID: -3759324874398757047, guid: d83718e6cc9bb2142929fbc1f589877c, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uAC15\uD55C \uD30C\uB3C4\uC5D0 \uC2E4\uB824 \uB5A0\uB2E4\uB2C8\uB294
+    \uBB3C\uACB0\uBC84\uC12F.\r\n\uCC44\uCDE8\uD558\uAE30 \uC27D\uC9C0\uC54A\uC9C0\uB9CC,
+    \uBB3C\uACB0 \uBC84\uC12F\uC758 \uBA87\uBC30\uB294 \uB418\uB294 \uAE4A\uC740
+    \uC9E0\uB9DB\uC5D0 \uBC84\uC12F \uD558\uB098\uB85C 10\uB144\uB3D9\uC548 \uC721\uC218\uB97C
+    \uB053\uC77C \uC218 \uC788\uB2E4\uACE0 \uD55C\uB2E4."
+  cookTime: 0
+  refineIcon: {fileID: 0}
+  buffEffect: {fileID: 0}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

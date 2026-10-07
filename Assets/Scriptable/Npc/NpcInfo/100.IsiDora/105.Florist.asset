@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 105.Florist
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 105
-  npcName: "\uAF43\uC9D1\uC0AC\uC7A5"
+  npcName: "\uC138\uC774\uB808"
   npcImage: {fileID: -7275408965646908093, guid: 8722020f7cc5cb74ab1249347d8b9a8d, type: 3}
   npcIconImage: {fileID: -6751525359074088052, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: 7704304654227116703, guid: 4cc7d270979efad40b0fa8724a43cd38, type: 3}

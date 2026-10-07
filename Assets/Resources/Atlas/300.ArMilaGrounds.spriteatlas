@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 300.ArMilaGrounds
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: c5755136ee8a02d49a87ed4310880bd7, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - aad99b427018f9d459e43e6eed1e5515: -2475749987389609028
+    - c6dbe224b57f851458e0379aa042a082: 5194108183810465877
+    - c16c56dc0cf22ee48b816702f22d8c7a: 195911913591677114
+    - 0167891d87acaba489b4c393e800cced: -4431617299124491447
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -2475749987389609028, guid: aad99b427018f9d459e43e6eed1e5515, type: 3}
+  - {fileID: 5194108183810465877, guid: c6dbe224b57f851458e0379aa042a082, type: 3}
+  - {fileID: 195911913591677114, guid: c16c56dc0cf22ee48b816702f22d8c7a, type: 3}
+  - {fileID: -4431617299124491447, guid: 0167891d87acaba489b4c393e800cced, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uBC30\uACBD1_0"
+  - "\uBC30\uACBD2_0"
+  - "\uAE382_0"
+  - "\uAE381_0"
+  m_RenderDataMap: {}
+  m_Tag: 300.ArMilaGrounds
+  m_IsVariant: 0

@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UiInvite
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: a7e26790f2c97274fa40445a38d66ab6, type: 3}
+    - {fileID: 2800000, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - a7e26790f2c97274fa40445a38d66ab6: 8850273901219739383
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -614518164956565884
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 7693904715965562437
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -2323513452507804551
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 4361979855202439191
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -2536231819461270357
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 3181024323181445979
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 6123765974946994093
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 3478218392186967445
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 3389610833629762310
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 1619015228650198117
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 1387092191050808126
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -5644378929027365736
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -3129609305034682318
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -865833432610882400
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -8967727082914190356
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 920776569494420382
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 5833926746114265752
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -4640180361580105976
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 7420885946218464682
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 1949625550386393194
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -8315723474554743103
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -6078635670602963090
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -8357183807042635209
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 7827551467393182726
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 5564908256886782337
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 4772961191157913240
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 8207543968679052272
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -3354915641770400729
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 359951268033837412
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -5951468601220378395
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -8715078465347819814
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 5888526687205403636
+    - f47e95cd3bdd8314d90bd9e41c0688f9: 2434805506877164324
+    - f47e95cd3bdd8314d90bd9e41c0688f9: -719395376371167494
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 8850273901219739383, guid: a7e26790f2c97274fa40445a38d66ab6, type: 3}
+  - {fileID: -614518164956565884, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 7693904715965562437, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -2323513452507804551, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 4361979855202439191, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -2536231819461270357, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 3181024323181445979, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 6123765974946994093, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 3478218392186967445, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 3389610833629762310, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 1619015228650198117, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 1387092191050808126, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -5644378929027365736, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -3129609305034682318, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -865833432610882400, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -8967727082914190356, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 920776569494420382, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 5833926746114265752, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -4640180361580105976, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 7420885946218464682, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 1949625550386393194, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -8315723474554743103, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -6078635670602963090, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -8357183807042635209, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 7827551467393182726, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 5564908256886782337, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 4772961191157913240, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 8207543968679052272, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -3354915641770400729, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 359951268033837412, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -5951468601220378395, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -8715078465347819814, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 5888526687205403636, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: 2434805506877164324, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  - {fileID: -719395376371167494, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uC190\uB2D8\uB9AC\uC2A4\uD2B8_0"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_0"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_1"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_2"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_3"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_4"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_5"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_6"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_7"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_8"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_9"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_13"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_12"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_11"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_10"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_26"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_17"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_27"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_16"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_24"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_15"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_25"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_14"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_22"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_23"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_20"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_19"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_21"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_18"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_31"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_30"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_33"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_28"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_32"
+  - "\uCD08\uB300 \uC544\uC774\uCF582_29"
+  m_RenderDataMap: {}
+  m_Tag: UiInvite
+  m_IsVariant: 0

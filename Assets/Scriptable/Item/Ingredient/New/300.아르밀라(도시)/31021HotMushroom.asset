@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 31021HotMushroom
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 31021
+  itemName: "\uD56B\uD574\uBC84\uC12F"
+  icon: {fileID: -3759324874398757047, guid: d83718e6cc9bb2142929fbc1f589877c, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uC544\uC8FC \uC9E7\uC740 \uAE30\uAC04 \uC790\uB790\uB2E4 \uC5C6\uC5B4\uC9C0\uB294
+    \uBC84\uC12F.\r\n\uC0AC\uB78C\uC774 \uB9CE\uACE0 \uD56B\uD55C \uC7A5\uC18C\uC5D0
+    \uC8FC\uB85C \uB098\uD0C0\uB09C\uB2E4. \r\n\uC790\uB77C\uB0A0 \uB54C\uB9C8\uB2E4
+    \uB2E4\uB978 \uB9DB\uC73C\uB85C \uC790\uB77C\uB098\uC11C \uC80A\uC740\uC774\uB4E4
+    \uC0AC\uC774\uC5D0\uC11C \uC778\uAE30\uB2E4."
+  cookTime: 0
+  refineIcon: {fileID: 0}
+  buffEffect: {fileID: 0}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5

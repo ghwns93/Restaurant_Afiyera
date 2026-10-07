@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 111.Postman
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 111
-  npcName: "\uC6B0\uCCB4\uBD80"
+  npcName: "\uC138\uB974\uCCB4"
   npcImage: {fileID: -6905009323839189673, guid: 9c19940dc17629e488e98297629136c0, type: 3}
   npcIconImage: {fileID: 747872766816900187, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: -2467862913869333833, guid: 8a74d987ca69b97449790fa0880fa09e, type: 3}

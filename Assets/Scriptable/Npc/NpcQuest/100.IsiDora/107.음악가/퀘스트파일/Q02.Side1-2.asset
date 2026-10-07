@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323f1073e8b4a5446b92c7a7e045399e, type: 3}
+  m_Name: Q02.Side1-2
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialEventUnlockAction
+  questType: 1
+  questInteractionType: 0
+  dialogueKey: "\uC0AC\uC774\uB4DC1-2"
+  targetNpcId: 
+  unlockConditions:
+  - {fileID: 11400000, guid: 5c944f39bdda02f4884026bd473160ff, type: 2}
+  - {fileID: 11400000, guid: 14554882f407b9148860056e0732a4ac, type: 2}
+  unlockEventData: {fileID: 11400000, guid: 0ebbdc5e528e56142b83f68594f9fcc6, type: 2}
+  talkContent: 
+  choiceList: []

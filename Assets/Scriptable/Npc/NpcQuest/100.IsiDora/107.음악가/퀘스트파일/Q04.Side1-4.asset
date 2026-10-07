@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323f1073e8b4a5446b92c7a7e045399e, type: 3}
+  m_Name: Q04.Side1-4
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialEventUnlockAction
+  questType: 1
+  questInteractionType: 0
+  dialogueKey: "\uC0AC\uC774\uB4DC1-4"
+  targetNpcId: 
+  unlockConditions:
+  - {fileID: 11400000, guid: 2fbba8ed016545c42ad4c46177b5c408, type: 2}
+  - {fileID: 11400000, guid: d223bfcb3ce2ab54587302f863c97fb7, type: 2}
+  unlockEventData: {fileID: 11400000, guid: 894265bb75ae10c4b8888b3bc82363f6, type: 2}
+  talkContent: 
+  choiceList: []

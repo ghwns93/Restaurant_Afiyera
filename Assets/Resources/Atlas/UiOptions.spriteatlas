@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UiOptions
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 4
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 4
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: aa7ea4e0eeef73248b2387803fe1e7db, type: 3}
+    - {fileID: 2800000, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - aa7ea4e0eeef73248b2387803fe1e7db: 1636629312458618106
+    - 9830151cb8b4ef64b8b3c655ad377648: 9063286169277084238
+    - 9830151cb8b4ef64b8b3c655ad377648: -2672974015233421242
+    - 9830151cb8b4ef64b8b3c655ad377648: -1579677907923113806
+    - 9830151cb8b4ef64b8b3c655ad377648: 7655021058178612870
+    - 9830151cb8b4ef64b8b3c655ad377648: 7690859690920389751
+    - 9830151cb8b4ef64b8b3c655ad377648: 5301352892394963335
+    - 9830151cb8b4ef64b8b3c655ad377648: 5085147533075608491
+    - 9830151cb8b4ef64b8b3c655ad377648: -1874634269464272219
+    - 9830151cb8b4ef64b8b3c655ad377648: 4304261770735521530
+    - 9830151cb8b4ef64b8b3c655ad377648: 1342757542745511170
+    - 9830151cb8b4ef64b8b3c655ad377648: -8215742304689030027
+    - 9830151cb8b4ef64b8b3c655ad377648: 2344836293366905229
+    - 9830151cb8b4ef64b8b3c655ad377648: 448878156101122120
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1636629312458618106, guid: aa7ea4e0eeef73248b2387803fe1e7db, type: 3}
+  - {fileID: 9063286169277084238, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: -2672974015233421242, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: -1579677907923113806, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 7655021058178612870, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 7690859690920389751, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 5301352892394963335, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 5085147533075608491, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: -1874634269464272219, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 4304261770735521530, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 1342757542745511170, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: -8215742304689030027, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 2344836293366905229, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  - {fileID: 448878156101122120, guid: 9830151cb8b4ef64b8b3c655ad377648, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "\uC124\uC815\uCC3D\uBC30\uACBD_0"
+  - "\uC124\uC815\uCC3DUI_12"
+  - "\uC124\uC815\uCC3DUI_11"
+  - "\uC124\uC815\uCC3DUI_10"
+  - "\uC124\uC815\uCC3DUI_4"
+  - "\uC124\uC815\uCC3DUI_5"
+  - "\uC124\uC815\uCC3DUI_6"
+  - "\uC124\uC815\uCC3DUI_7"
+  - "\uC124\uC815\uCC3DUI_0"
+  - "\uC124\uC815\uCC3DUI_1"
+  - "\uC124\uC815\uCC3DUI_2"
+  - "\uC124\uC815\uCC3DUI_3"
+  - "\uC124\uC815\uCC3DUI_8"
+  - "\uC124\uC815\uCC3DUI_9"
+  m_RenderDataMap: {}
+  m_Tag: UiOptions
+  m_IsVariant: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898563c0c2681cf40987bbbd9b2f8b3d, type: 3}
+  m_Name: 11011GrassFish
+  m_EditorClassIdentifier: Assembly-CSharp::ItemIngredientData
+  id: 11011
+  itemName: "\uD480\uC789\uC5B4"
+  icon: {fileID: -3182339496134811183, guid: 1fdf01ce0593240469a7ac6c4ffbbfd0, type: 3}
+  itemType: 0
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uD480\uC744 \uBA39\uACE0 \uC790\uB77C\uB294 \uBB3C\uACE0\uAE30.\r\n\uC88B\uC544\uD558\uB294
+    \uC2DD\uBB3C\uC774 \uAC1C\uCCB4\uB9C8\uB2E4 \uB2EC\uB77C \uB2E4\uC591\uD55C \uB9DB\uC744
+    \uB748\uB2E4\uACE0 \uD55C\uB2E4."
+  cookTime: 1
+  refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
+  buffEffect: {fileID: 11400000, guid: 5285c672a4a8c4d4d82ce390eb9ec9b9, type: 2}
+  minPriceMultiplier: 0.5
+  maxPriceMultiplier: 1.5
