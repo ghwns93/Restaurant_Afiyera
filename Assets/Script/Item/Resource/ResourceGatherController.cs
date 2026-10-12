@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceGatherController : MonoBehaviour
@@ -54,7 +55,7 @@ public class ResourceGatherController : MonoBehaviour
     {
         if (isGathering)
         {
-            StopGathering(); // 도구를 바꾸면 채집 취소 및 프로그레스바 초기화
+            StopGathering();
         }
         EvaluateGatherCondition();
     }
@@ -93,6 +94,7 @@ public class ResourceGatherController : MonoBehaviour
         {
             if (toolData.TargetResourceType == currentTargetResource.ResourceType)
             {
+                // 도구가 요구하는 미끼 조건도 추가로 확인할 수 있습니다.
                 return true;
             }
         }
@@ -103,7 +105,6 @@ public class ResourceGatherController : MonoBehaviour
     {
         if (currentTargetResource == null) return;
 
-        // 채집 시작 (KeyDown)
         if (Input.GetKeyDown(gatherKey) && !isGathering)
         {
             if (CheckCanGather())
@@ -115,7 +116,6 @@ public class ResourceGatherController : MonoBehaviour
             }
         }
 
-        // 채집 중 키를 떼었을 때 취소 (KeyUp)
         if (isGathering && Input.GetKeyUp(gatherKey))
         {
             Debug.Log("채집 키를 떼어 취소되었습니다.");
@@ -123,7 +123,6 @@ public class ResourceGatherController : MonoBehaviour
         }
     }
 
-    // 채집 진행 및 프로그레스바 갱신 코루틴
     private IEnumerator GatherProcessRoutine(float duration, ItemToolData toolData)
     {
         isGathering = true;
@@ -132,9 +131,8 @@ public class ResourceGatherController : MonoBehaviour
         while (timer < duration)
         {
             timer += Time.deltaTime;
-            float progress = timer / duration; // 0.0 ~ 1.0 비율 계산
+            float progress = timer / duration;
 
-            // UI 프로그레스바에 현재 진행률 전달
             if (GatherUIController.Instance != null)
             {
                 GatherUIController.Instance.SetProgress(progress);
@@ -155,7 +153,6 @@ public class ResourceGatherController : MonoBehaviour
         }
         isGathering = false;
 
-        // 취소되면 프로그레스바를 다시 0으로 비우고 상태 재확인
         if (GatherUIController.Instance != null)
         {
             GatherUIController.Instance.SetProgress(0f);
@@ -170,32 +167,88 @@ public class ResourceGatherController : MonoBehaviour
 
         if (currentTargetResource == null) return;
 
-        ItemData rewardItem = null;
-        int rewardCount = 0;
+        // 1. 현재 장착/선택된 미끼 가져오기
+        ItemBaitData currentBait = PlayerInventoryController.Instance != null ? PlayerInventoryController.Instance.GetCurrentlyEquippedBait(toolData.ToolType) : null;
 
-        if (toolData != null && toolData.DropTable != null && toolData.DropTable.Count > 0)
+        if (currentBait == null)
         {
-            var dropped = toolData.GetRandomDropItem();
-            rewardItem = dropped.item;
-            rewardCount = dropped.count;
+            Debug.Log("미끼가 장착되어 있지 않습니다.");
+            if (GatherUIController.Instance != null) GatherUIController.Instance.SetProgress(0f);
+            EvaluateGatherCondition();
+            return;
         }
-        else if (currentTargetResource.RewardItemData != null)
+
+        // 2. 도구가 허용하는 최대 미끼 등급 검사
+        if (toolData != null && currentBait.BaitTier > toolData.MaxAllowedBaitTier)
         {
-            rewardItem = currentTargetResource.RewardItemData;
-            rewardCount = currentTargetResource.RewardItemCount;
+            Debug.Log("이 도구는 해당 미끼를 사용할 수 없습니다! (도구 등급 부족)");
+            if (GatherUIController.Instance != null) GatherUIController.Instance.SetProgress(0f);
+            EvaluateGatherCondition();
+            return;
         }
+
+        // 3. [핵심 변경] 자원 오브젝트에게 미끼를 전달하여 해당 자원의 드롭 테이블에서 아이템 추첨
+        var dropped = currentTargetResource.GetDropItemByBait(currentBait);
+        ItemData rewardItem = dropped.item;
+        int rewardCount = dropped.count;
 
         if (rewardItem != null && InventoryManager.Instance != null)
         {
             InventoryManager.Instance.AddItem(rewardItem, rewardCount);
-            Debug.Log($"채집 성공! [{rewardItem.ItemName} x{rewardCount}] 획득 완료.");
+            Debug.Log($"채집 성공! [{rewardItem.ItemName} x{rewardCount}] 획득 완료 (사용된 미끼: {currentBait.ItemName})");
         }
 
-        // 완료 후 프로그레스바 초기화 및 UI 재갱신
+        // 4. 미끼 소모 처리 (무제한이 아닐 경우 1개 차감)
+        if (!currentBait.IsInfinite && InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.ReduceItem(currentBait, 1);
+
+            // 만약 소모 후 해당 미끼의 남은 개수가 0개라면?
+            if (InventoryManager.Instance.GetItemCount(currentBait) <= 0)
+            {
+                Debug.Log($"[{currentBait.ItemName}] 미끼를 모두 소모했습니다. 대체 미끼를 찾습니다.");
+
+                // 현재 도구에서 사용 가능한 다른 미끼를 인벤토리에서 검색하여 자동 장착
+                ItemBaitData nextAvailableBait = FindAlternativeBait(toolData);
+                PlayerInventoryController.Instance.EquipBaitForTool(toolData.ToolType, nextAvailableBait); // 없으면 null이 들어가서 해제됨
+            }
+        }
+
         if (GatherUIController.Instance != null)
         {
             GatherUIController.Instance.SetProgress(0f);
         }
         EvaluateGatherCondition();
+    }
+
+    // 현재 도구에서 사용할 수 있고, 개수가 남아있는 다른 미끼를 찾는 함수
+    private ItemBaitData FindAlternativeBait(ItemToolData toolData)
+    {
+        if (InventoryManager.Instance == null || toolData == null) return null;
+
+        // 인벤토리에서 미끼 슬롯들을 가져옴 (프로젝트 구조에 맞게 메서드명 수정 필요)
+        List<ItemSlot> allBaitSlots = InventoryManager.Instance.GetSlots(ItemType.Bait);
+
+        foreach (var slot in allBaitSlots)
+        {
+            if (slot.ItemData is ItemBaitData baitData)
+            {
+                // 1. 도구 타입이 일치하고
+                // 2. 도구가 허용하는 최대 미끼 등급 이하이며
+                // 3. 인벤토리에 수량이 남아있는 경우 (무제한이거나 개수가 0 초과)
+                bool hasEnoughCount = baitData.IsInfinite || slot.Quantity > 0; // 혹은 slot.Quantity 등 프로젝트 필드명 사용
+
+                if (baitData.TargetToolType == toolData.ToolType &&
+                    baitData.BaitTier <= toolData.MaxAllowedBaitTier &&
+                    hasEnoughCount)
+                {
+                    // 현재 소모된 미끼와 다른 미끼를 우선적으로 찾거나, 발견한 첫 번째 미끼 반환
+                    return baitData;
+                }
+            }
+        }
+
+        // 사용 가능한 대체 미끼가 없으면 null 반환 (미끼 해제)
+        return null;
     }
 }

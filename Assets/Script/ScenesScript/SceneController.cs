@@ -46,6 +46,8 @@ public class SceneController : MonoBehaviour
     [Header("Loading UI")]
     [SerializeField] public GameObject loadingPanel;
     [SerializeField] public Slider progressBar;
+    [SerializeField] public Image loadingImage;
+    [SerializeField] public List<Sprite> loadingSprites;
 
     private string currentSubScene;
 
@@ -111,6 +113,10 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator LoadSubSceneRoutine(SceneType type)
     {
+        int randomIndex = Random.Range(0, loadingSprites.Count);
+
+        loadingImage.sprite = loadingSprites[randomIndex];
+
         // 1. 로딩창 켜기
         if (loadingPanel != null) loadingPanel.SetActive(true);
 

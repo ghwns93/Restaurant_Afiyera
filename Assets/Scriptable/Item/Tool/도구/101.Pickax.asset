@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee23ac2d5680f54d8964787a9093f6b, type: 3}
+  m_Name: 101.Pickax
+  m_EditorClassIdentifier: Assembly-CSharp::ItemToolData
+  id: 101
+  itemName: "\uACE1\uAD2D\uC774"
+  icon: {fileID: 2572107878246084426, guid: 0eff7b153506cf34e875e57ab16a83ce, type: 3}
+  itemType: 1
+  isStackable: 0
+  maxStackCount: 99
+  baseSellPrice: 100
+  baseBuyPrice: 100
+  description: "\uAE30\uBCF8\uC801\uC774 \uACE1\uAD2D\uC774\uB2E4"
+  toolType: 0
+  targetResourceType: 0
+  gatherDuration: 3
+  toolTier: 1

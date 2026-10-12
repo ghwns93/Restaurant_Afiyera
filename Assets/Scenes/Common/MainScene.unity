@@ -149,9 +149,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NpcSpecialEventManager
   allSpecialActions:
-  - {fileID: 11400000, guid: 965a4431b1f28724b97080d47c3e32de, type: 2}
-  - {fileID: 11400000, guid: 72166d83938e3154f8cea7b48ae6d10c, type: 2}
-  - {fileID: 11400000, guid: ca2147fc20fbd39479c76a778dcf750e, type: 2}
+  - {fileID: 11400000, guid: d425e9918cacddc4baef106cd6271b44, type: 2}
+  - {fileID: 11400000, guid: bc19afb6309a50c418314b4bd2e504a3, type: 2}
+  - {fileID: 11400000, guid: c8940a2c0471f4c45a9eec85a54c2187, type: 2}
+  - {fileID: 11400000, guid: c33e6ab2a4553524f8f37adffa46929e, type: 2}
+  - {fileID: 11400000, guid: 84ee5f923b71c5244ba04cc97c2f555c, type: 2}
+  - {fileID: 11400000, guid: 87704f5a61421fe428f5ca65bef5e638, type: 2}
+  - {fileID: 11400000, guid: 06b1c9fa9bf95d941b90dfe190777624, type: 2}
+  - {fileID: 11400000, guid: 9418a05f94907654daae27fa9a66ee6e, type: 2}
+  - {fileID: 11400000, guid: 5aee228a33d7c0d49bdbf0271cd3a021, type: 2}
+  - {fileID: 11400000, guid: 17e7bb12932d8a148bd6d464731cf9c2, type: 2}
+  - {fileID: 11400000, guid: 8da0398c891791c468764b82aa6e527a, type: 2}
+  - {fileID: 11400000, guid: f2dc2bfcc8338be42b41cbf516cc327f, type: 2}
+  - {fileID: 11400000, guid: 5a33a04bf75a30d48805e0931b43bad2, type: 2}
+  - {fileID: 11400000, guid: 3d9baf2e8b6b2ad4aa1a1fd110537145, type: 2}
+  - {fileID: 11400000, guid: 9d9e3582876d2aa4a90825660bedbe6a, type: 2}
+  - {fileID: 11400000, guid: 0b340a62bc3624048a67c3deaa914c70, type: 2}
+  - {fileID: 11400000, guid: 4c919b23ec3fc274a8b59eb8799a52e5, type: 2}
+  - {fileID: 11400000, guid: cc205f20ffdcdf4479926e299e489b06, type: 2}
 --- !u!4 &63394617
 Transform:
   m_ObjectHideFlags: 0
@@ -1002,6 +1017,11 @@ MonoBehaviour:
   optionOpened: 0
   loadingPanel: {fileID: 1705171448}
   progressBar: {fileID: 515683507}
+  loadingImage: {fileID: 1705171450}
+  loadingSprites:
+  - {fileID: -3877032515176633235, guid: 50e09c0bb3d53e845bff0ab37886c1ed, type: 3}
+  - {fileID: -3477801274088659622, guid: 17fbcb9a9e40e364cb7b27fc8a7e28eb, type: 3}
+  - {fileID: -4361784709148996675, guid: f8c093f3e7c6be645a086f78922f881f, type: 3}
 --- !u!1 &1190981683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,15 +1806,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.084905684, g: 0.033241376, b: 0.033241376, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4361784709148996675, guid: f8c093f3e7c6be645a086f78922f881f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1859,8 +1879,28 @@ MonoBehaviour:
   slots: []
   testMode: 1
   testItems:
-  - testItemData: {fileID: 11400000, guid: bca5bf4489b24734db8a9476eb260801, type: 2}
+  - testItemData: {fileID: 11400000, guid: db5310012ca013943b801258782a2594, type: 2}
     testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: 3f9dceab11b662145ad8f97668b59a1b, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: 3745c881db9b8f0458563dcf97cb6b5f, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: 9a6453bbb11dd5e4b910fa01e5942338, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: 08008baed0c8b6b4ab93d02c0e1011f3, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: 69ad01c71d128f44b8a2c7a70b3a9aa7, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: 6df433d1e18151a439dd7553f7367554, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: 48bd65659d8b75549bc9e1305d0a6ca5, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: c1d9316d300a4084e83fbbe57c218883, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: cc3dbbd014170674a8c089dcd8ed0549, type: 2}
+    testQuantity: 1
+  - testItemData: {fileID: 11400000, guid: d63feb957c5f0ce4abb2ca7cf28ec588, type: 2}
+    testQuantity: 5
   gold: 0
 --- !u!1 &1753860492
 GameObject:

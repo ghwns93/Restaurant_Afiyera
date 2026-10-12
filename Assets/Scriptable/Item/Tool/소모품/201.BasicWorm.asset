@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372f81e73a4ae6c45b529795c897c48e, type: 3}
+  m_Name: 201.BasicWorm
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBaitData
+  id: 201
+  itemName: "\uC9C0\uB801\uC774"
+  icon: {fileID: -7739285666016128672, guid: 84d332a564fa424478935277c4e94d42, type: 3}
+  itemType: 4
+  isStackable: 0
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uAE30\uCD08\uC801\uC778 \uC9C0\uB801\uC774 \uC774\uB2E4."
+  targetToolType: 1
+  baitTier: 1
+  isInfinite: 1
+  slotWeights:
+  - slotIndex: 0
+    weight: 100

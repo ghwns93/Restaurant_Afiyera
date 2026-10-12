@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInventoryController : MonoBehaviour
@@ -11,6 +12,8 @@ public class PlayerInventoryController : MonoBehaviour
     // 선택된 슬롯이 변경되었을 때벤트를 날려 UI를 갱신할 수 있습니다.
     public delegate void OnSelectedSlotChanged(int slotIndex);
     public event OnSelectedSlotChanged onSelectedSlotChangedCallback;
+
+    public Dictionary<ToolType, ItemBaitData> equippedBaits = new Dictionary<ToolType, ItemBaitData>();
 
     private void Awake()
     {
@@ -26,6 +29,12 @@ public class PlayerInventoryController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            // Ctrl 키가 눌린 상태에서는 숫자키 입력을 무시 (미끼 선택 UI와 충돌 방지)
+            return;
+        }
+
         HandleNumberKeyInput();
         HandleMouseScrollInput();
     }
@@ -139,5 +148,22 @@ public class PlayerInventoryController : MonoBehaviour
         }
 
         return null;
+    }
+
+    public ItemBaitData GetCurrentlyEquippedBait(ToolType toolType)
+    {
+        return equippedBaits.TryGetValue(toolType, out var baitData) ? baitData : null;
+    }
+
+    public void EquipBaitForTool(ToolType toolType, ItemBaitData baitData)
+    {
+        if (baitData == null)
+        {
+            equippedBaits.Remove(toolType);
+        }
+        else
+        {
+            equippedBaits[toolType] = baitData;
+        }
     }
 }

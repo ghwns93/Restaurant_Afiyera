@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee23ac2d5680f54d8964787a9093f6b, type: 3}
+  m_Name: 301.Magic
+  m_EditorClassIdentifier: Assembly-CSharp::ItemToolData
+  id: 301
+  itemName: "\uB9C8\uBC95\uBAA8\uC790"
+  icon: {fileID: 8061816906594963002, guid: 7c578d0989e489e4482c6ac0b9967caf, type: 3}
+  itemType: 1
+  isStackable: 0
+  maxStackCount: 99
+  baseSellPrice: 100
+  baseBuyPrice: 100
+  description: "\uAE30\uBCF8\uC801\uC778 \uB9C8\uBC95\uBAA8\uC790 \uC774\uB2E4."
+  toolType: 2
+  targetResourceType: 2
+  gatherDuration: 3
+  toolTier: 1

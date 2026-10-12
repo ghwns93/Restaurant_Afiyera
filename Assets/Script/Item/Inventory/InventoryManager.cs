@@ -152,6 +152,12 @@ public class InventoryManager : MonoBehaviour
         return slicedSlots;
     }
 
+    public List<ItemSlot> GetSlots(ItemType searchType)
+    {
+        var filteredSlots = slots.Where(s => !s.IsEmpty && s.ItemData.ItemType == searchType).ToList();
+        return filteredSlots;
+    }
+
     public int GetGold()
     {
         return gold;

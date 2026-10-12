@@ -29,5 +29,6 @@ public enum ItemType
     Ingredient, // 요리 재료
     Tool,       // 도구 (곡괭이, 칼 등)
     Special,    // 특수 아이템
-    Flavoring   // 양념 등
+    Flavoring,   // 양념 등
+    Bait,       // 미끼
 }

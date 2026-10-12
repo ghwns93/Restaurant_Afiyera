@@ -56,9 +56,14 @@ public class InventoryUI : MonoBehaviour
         slotUIList.Clear();
 
         // 인벤토리 매니저의 슬롯 개수(유동적으로 늘어난 크기)만큼 UI 슬롯 생성
-        List<ItemSlot> slots = InventoryManager.Instance.GetSlots(initialSlotCount);
+        List<ItemSlot> slots = InventoryManager.Instance.GetSlots(ItemType.Tool);
         for (int i = 0; i < slots.Count; i++)
         {
+            if(i >= initialSlotCount)
+            {
+                break; // 초기 슬롯 개수 이상은 생성하지 않음
+            }
+
             GameObject slotObj = Instantiate(slotPrefab, slotParent);
             InventorySlotUI slotUI = slotObj.GetComponent<InventorySlotUI>();
             slotUIList.Add(slotUI);
@@ -67,7 +72,7 @@ public class InventoryUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        List<ItemSlot> slots = InventoryManager.Instance.GetSlots(initialSlotCount);
+        List<ItemSlot> slots = InventoryManager.Instance.GetSlots(ItemType.Tool);
 
         // 만약 유동적으로 인벤토리 칸 수가 변경되었다면 UI를 재구축
         if (slotUIList.Count != slots.Count)

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee23ac2d5680f54d8964787a9093f6b, type: 3}
+  m_Name: 501.Net
+  m_EditorClassIdentifier: Assembly-CSharp::ItemToolData
+  id: 501
+  itemName: "\uC7A0\uC790\uB9AC\uCC44"
+  icon: {fileID: -2876009151403347214, guid: fafa888ea5b74df44a5ecba4aa8b7644, type: 3}
+  itemType: 1
+  isStackable: 0
+  maxStackCount: 99
+  baseSellPrice: 100
+  baseBuyPrice: 100
+  description: "\uAE30\uBCF8\uC801\uC778 \uC7A0\uC790\uB9AC\uCC44 \uC774\uB2E4."
+  toolType: 4
+  targetResourceType: 4
+  gatherDuration: 3
+  toolTier: 1
