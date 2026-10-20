@@ -20,12 +20,15 @@ MonoBehaviour:
   isNightRestaurantNpc: 1
   portraits:
   - {fileID: 7089774175459154275, guid: ea8de6f5e13c9374e808cf89138b47c0, type: 3}
-  - {fileID: 7117044838054661201, guid: fe269260587e5724fadb9d43bf957afa, type: 3}
-  - {fileID: 1256959007979194750, guid: ef385a0e56c4eca47964c5cd021ac678, type: 3}
   - {fileID: 7066885434081888270, guid: 26cb8576f6bf1d9428b797ac1822df73, type: 3}
+  - {fileID: 1256959007979194750, guid: ef385a0e56c4eca47964c5cd021ac678, type: 3}
   - {fileID: 5441344087830307880, guid: 25fbbf0104d4adc42bc8b2ea3bb582fa, type: 3}
-  isInteractionNpc: 0
-  npcInteractionBase: {fileID: 0}
-  npcInteractionList: []
+  - {fileID: 7117044838054661201, guid: fe269260587e5724fadb9d43bf957afa, type: 3}
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: 5aee228a33d7c0d49bdbf0271cd3a021, type: 2}
+  - {fileID: 11400000, guid: 17e7bb12932d8a148bd6d464731cf9c2, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 0
   shopItemList: []

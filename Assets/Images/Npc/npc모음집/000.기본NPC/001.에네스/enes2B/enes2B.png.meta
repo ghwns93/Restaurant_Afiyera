@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: adedeb56b9fac054c848d1a526ecf16c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6888716740431360264
+    second: enes2B_0
+  - first:
+      213: 5151147504816047278
+    second: enes2B_1
+  - first:
+      213: -3322211920462173339
+    second: enes2B_2
+  - first:
+      213: -2967185516742416095
+    second: enes2B_3
+  - first:
+      213: -4543721461623177980
+    second: enes2B_4
+  - first:
+      213: 4702989708562738408
+    second: enes2B_5
+  - first:
+      213: 4294106418113616185
+    second: enes2B_6
+  - first:
+      213: 7969243057725787933
+    second: enes2B_7
+  - first:
+      213: -8683157552225091381
+    second: enes2B_8
+  - first:
+      213: -2030245702506369088
+    second: enes2B_9
+  - first:
+      213: -2966451567577620250
+    second: enes2B_10
+  - first:
+      213: -6062035136079339492
+    second: enes2B_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enes2B_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 391
+        width: 388
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 801b2bf9063a99f50800000000000000
+      internalID: 6888716740431360264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_1
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 549
+        width: 264
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4433a1d5d8c7740800000000000000
+      internalID: 5151147504816047278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_2
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 386
+        width: 311
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ba8443cd125e1d0800000000000000
+      internalID: -3322211920462173339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_3
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 310
+        width: 184
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12962eb4e7072d6d0800000000000000
+      internalID: -2967185516742416095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_4
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 310
+        width: 184
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40db1a1876571f0c0800000000000000
+      internalID: -4543721461623177980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_5
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 392
+        width: 459
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec2331f830644140800000000000000
+      internalID: 4702989708562738408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_6
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 394
+        width: 232
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939136f390bb79b30800000000000000
+      internalID: 4294106418113616185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_7
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 1
+        width: 357
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f4e709650789e60800000000000000
+      internalID: 7969243057725787933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_8
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 394
+        width: 163
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc08fda263a3f7780800000000000000
+      internalID: -8683157552225091381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 665
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf285f4a4e13d3e0800000000000000
+      internalID: -2030245702506369088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_10
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1
+        width: 414
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0a227240c05d6d0800000000000000
+      internalID: -2966451567577620250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enes2B_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1
+        width: 490
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10ed0a69235fdba0800000000000000
+      internalID: -6062035136079339492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      enes2B_0: 6888716740431360264
+      enes2B_1: 5151147504816047278
+      enes2B_10: -2966451567577620250
+      enes2B_11: -6062035136079339492
+      enes2B_2: -3322211920462173339
+      enes2B_3: -2967185516742416095
+      enes2B_4: -4543721461623177980
+      enes2B_5: 4702989708562738408
+      enes2B_6: 4294106418113616185
+      enes2B_7: 7969243057725787933
+      enes2B_8: -8683157552225091381
+      enes2B_9: -2030245702506369088
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -31,7 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 1
   shopItemList:
-  - itemData: {fileID: 11400000, guid: c8d748ce200977a47ae9d50a840eceb6, type: 2}
+  - itemData: {fileID: 11400000, guid: becac2a0bf796d94082c01c251e6865b, type: 2}
     maxStockCount: 1
     stockLimited: 1
     basePrice: 100

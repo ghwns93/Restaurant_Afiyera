@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 107.Musician
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 107
-  npcName: "\uC74C\uC545\uAC00"
+  npcName: "\uC0B0\uD14C\uC2A4"
   npcImage: {fileID: -1749625442090529647, guid: e4eced7506a55604eaa7ff4029737ac3, type: 3}
   npcIconImage: {fileID: -8122915667789130968, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: -7647535450033077002, guid: cf97d0b77cee18c4b9c659117539f60b, type: 3}

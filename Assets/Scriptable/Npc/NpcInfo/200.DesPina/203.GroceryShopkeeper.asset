@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 203.GroceryShopkeeper
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 203
-  npcName: "\uC2DD\uD488\uC810\uC7A5"
+  npcName: "\uD22C\uB098"
   npcImage: {fileID: 753268738559914631, guid: 83e1b40074211b1468b4384ece778d4a, type: 3}
   npcIconImage: {fileID: -4873288986999372507, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: -6283962726075370205, guid: 94fbf9cdb4004be43b8afc321094b4ff, type: 3}
@@ -27,5 +27,5 @@ MonoBehaviour:
   isInteractionNpc: 0
   npcInteractionBase: {fileID: 0}
   npcInteractionList: []
-  npcType: 0
+  npcType: 1
   shopItemList: []

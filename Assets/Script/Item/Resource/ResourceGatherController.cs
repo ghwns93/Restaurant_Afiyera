@@ -172,10 +172,23 @@ public class ResourceGatherController : MonoBehaviour
 
         if (currentBait == null)
         {
-            Debug.Log("미끼가 장착되어 있지 않습니다.");
-            if (GatherUIController.Instance != null) GatherUIController.Instance.SetProgress(0f);
-            EvaluateGatherCondition();
-            return;
+            ItemBaitData defaultBait = FindAlternativeBait(toolData); // 앞서 만든 도구 전용 미끼 탐색 함수 활용
+
+            if (defaultBait != null)
+            {
+                // 자동으로 찾은 미끼를 장착 상태로 등록
+                PlayerInventoryController.Instance.EquipBaitForTool(toolData.ToolType, defaultBait);
+                currentBait = defaultBait;
+                Debug.Log($"장착된 미끼가 없어 인벤토리에서 [{defaultBait.ItemName}]을(를) 자동으로 장착했습니다.");
+            }
+            else
+            {
+                // 인벤토리에도 미끼가 전혀 없는 경우
+                Debug.Log("미끼가 장착되어 있지 않습니다.");
+                if (GatherUIController.Instance != null) GatherUIController.Instance.SetProgress(0f);
+                EvaluateGatherCondition();
+                return;
+            }
         }
 
         // 2. 도구가 허용하는 최대 미끼 등급 검사

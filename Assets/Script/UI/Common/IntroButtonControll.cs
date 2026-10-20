@@ -27,7 +27,9 @@ public class IntroButtonControll : MonoBehaviour
 
     public void StartGame()
     {
-        SceneController.Instance.LoadSubScene(SceneType.Village);
+        //SceneController.Instance.LoadSubScene(SceneType.Village);
+
+        TutorialManager.Instance.StartIntro();
     }
 
     public void ExitGame()

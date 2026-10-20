@@ -7,11 +7,18 @@ public class BasicNpcScript : MonoBehaviour
 {
     [SerializeField] private NpcBasicInfo npcBasicInfo;
 
+    private NpcBasicInfo myNpcBasicInfo;
+
     private List<NpcInteractionBase> copyedNpcInteractionList = new List<NpcInteractionBase>();
 
     public List<NpcInteractionBase> CopyedNpcInteractionList { get => copyedNpcInteractionList; set => copyedNpcInteractionList = value; }
-    public string MyNpcId => npcBasicInfo.npcId;
-    public NpcBasicInfo MyNpcBasicInfo => npcBasicInfo;
+    public string MyNpcId => myNpcBasicInfo.npcId;
+    public NpcBasicInfo MyNpcBasicInfo => myNpcBasicInfo;
+
+    private void Awake()
+    {
+        myNpcBasicInfo = Instantiate(npcBasicInfo);
+    }
 
     private void Start()
     {
@@ -20,7 +27,7 @@ public class BasicNpcScript : MonoBehaviour
 
     public virtual void StartRoutine()
     {
-        if(npcBasicInfo == null)
+        if(myNpcBasicInfo == null)
         {
             //Debug.LogError("NpcBasicInfo is not assigned in " + gameObject.name);
             return;
@@ -39,19 +46,19 @@ public class BasicNpcScript : MonoBehaviour
 
     private void SetNpcImage()
     {
-        if(npcBasicInfo.npcSdImage != null)
+        if(myNpcBasicInfo.npcSdImage != null)
         {
             var npcSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             if (npcSpriteRenderer != null)
             {
-                npcSpriteRenderer.sprite = npcBasicInfo.npcSdImage;
+                npcSpriteRenderer.sprite = myNpcBasicInfo.npcSdImage;
             }
         }
     }
 
     public void InputInteraction()
     {
-        foreach (var interaction in npcBasicInfo.npcInteractionList)
+        foreach (var interaction in myNpcBasicInfo.npcInteractionList)
         {
             if (interaction != null)
             {
@@ -66,7 +73,7 @@ public class BasicNpcScript : MonoBehaviour
 
     public void SetNpcInteractionButton()
     {
-        if (npcBasicInfo.npcInteractionBase is NpcInteractionTalk)
+        if (myNpcBasicInfo.npcInteractionBase is NpcInteractionTalk)
         {
             List<NpcInteractionBase> unlockedTalk = new List<NpcInteractionBase>();
 
@@ -84,10 +91,10 @@ public class BasicNpcScript : MonoBehaviour
 
     public void NpcInteraction()
     {
-        if (npcBasicInfo.isInteractionNpc)
+        if (myNpcBasicInfo.isInteractionNpc)
         {
             //NPC 상호작용 코드
-            npcBasicInfo.npcInteractionBase.Execute(gameObject);
+            myNpcBasicInfo.npcInteractionBase.Execute(gameObject);
 
             SetNpcInteractionButton();
         }

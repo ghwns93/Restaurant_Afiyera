@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,13 +8,15 @@ public class PlayerInventoryController : MonoBehaviour
     public static PlayerInventoryController Instance => instance;
 
     [SerializeField] private int selectedSlotIndex = 0; // 현재 선택된 슬롯 번호 (0 ~ 9)
-    private const int MaxQuickSlots = 10;                // 1~9 및 0번까지 총 10개의 슬롯
+    private int MaxQuickSlots = Enum.GetValues(typeof(ToolType)).Length;                // 1~9 및 0번까지 총 10개의 슬롯
 
     // 선택된 슬롯이 변경되었을 때벤트를 날려 UI를 갱신할 수 있습니다.
     public delegate void OnSelectedSlotChanged(int slotIndex);
     public event OnSelectedSlotChanged onSelectedSlotChangedCallback;
 
     public Dictionary<ToolType, ItemBaitData> equippedBaits = new Dictionary<ToolType, ItemBaitData>();
+
+    public int SelectedSlotIndex => selectedSlotIndex;
 
     private void Awake()
     {
@@ -27,6 +30,11 @@ public class PlayerInventoryController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        SelectSlot(selectedSlotIndex);
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.LeftControl))
@@ -35,73 +43,27 @@ public class PlayerInventoryController : MonoBehaviour
             return;
         }
 
-        HandleNumberKeyInput();
         HandleMouseScrollInput();
-    }
-
-    // 숫자 키 입력 처리 (1~9, 그리고 0)
-    private void HandleNumberKeyInput()
-    {
-        // 1~9 키 처리
-        for (int i = 0; i < 9; i++)
-        {
-            KeyCode alphaKey = KeyCode.Alpha1 + i;
-            KeyCode keypadKey = KeyCode.Keypad1 + i;
-
-            if (Input.GetKeyDown(alphaKey) || Input.GetKeyDown(keypadKey))
-            {
-                SelectSlot(i);
-                break;
-            }
-        }
-
-        // '0' 키 또는 숫자패드 '0' 입력 시 10번째 슬롯(인덱스 9) 선택
-        if (Input.GetKeyDown(KeyCode.Alpha0) || Input.GetKeyDown(KeypadZeroCheck()))
-        {
-            SelectSlot(9);
-        }
-    }
-
-    // 숫자패드 0 키 체크 헬퍼
-    private KeyCode KeypadZeroCheck()
-    {
-        return KeyCode.Keypad0;
     }
 
     // 마우스 휠 입력 처리 (10칸 순환)
     private void HandleMouseScrollInput()
     {
-        float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
-
-        if (scrollDelta != 0f)
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (scroll != 0f)
         {
-            int totalSlots = MaxQuickSlots;
-            if (InventoryManager.Instance != null)
+            if (scroll > 0f)
             {
-                // 인벤토리 전체 칸 수와 10칸 중 작은 값 혹은 전체 칸으로 설정 가능
-                totalSlots = Mathf.Min(MaxQuickSlots, InventoryManager.Instance.GetSlots().Count);
+                // 휠 위로 -> 이전 슬롯
+                selectedSlotIndex = (SelectedSlotIndex - 1 + MaxQuickSlots) % MaxQuickSlots;
+            }
+            else if (scroll < 0f)
+            {
+                // 휠 아래로 -> 다음 슬롯
+                selectedSlotIndex = (SelectedSlotIndex + 1) % MaxQuickSlots;
             }
 
-            if (scrollDelta < 0f)
-            {
-                // 휠을 아래로 내릴 때: index++
-                selectedSlotIndex++;
-                if (selectedSlotIndex >= totalSlots)
-                {
-                    selectedSlotIndex = 0; // 끝에 도달하면 처음(1번 슬롯)으로 순환
-                }
-            }
-            else if (scrollDelta > 0f)
-            {
-                // 휠을 위로 올릴 때: index--
-                selectedSlotIndex--;
-                if (selectedSlotIndex < 0)
-                {
-                    selectedSlotIndex = totalSlots - 1; // 처음에 도달하면 맨 끝(10번 슬롯)으로 순환
-                }
-            }
-
-            SelectSlot(selectedSlotIndex);
+            onSelectedSlotChangedCallback?.Invoke(SelectedSlotIndex);
         }
     }
 

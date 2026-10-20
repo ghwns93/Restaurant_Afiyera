@@ -22,8 +22,6 @@ MonoBehaviour:
   baseBuyPrice: 0
   description: "\uC9C4\uC561\uC744 \uC5F4\uC2EC\uD788 \uAD74\uB9B0 \uBC29\uC6B8\uBC29\uAC8C.\r\n\uC5B4\uC9F8\uC120\uC9C0
     \uC9C4\uC561\uC5D0 \uD0C4\uC0B0\uC774 \uC0DD\uACBC\uB2E4."
-  cookTime: 0
-  refineIcon: {fileID: 0}
-  buffEffect: {fileID: 0}
+  resourceType: 4
   minPriceMultiplier: 0.5
   maxPriceMultiplier: 1.5

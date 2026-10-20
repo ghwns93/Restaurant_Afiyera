@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 305.Alchemist
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 305
-  npcName: "\uC5F0\uAE08\uC220\uC0AC"
+  npcName: "\uBA5C\uB9AC\uC2A4"
   npcImage: {fileID: -8542999820991491958, guid: b195bc2968066114da2ed0772c4b741e, type: 3}
   npcIconImage: {fileID: 5833926746114265752, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
   npcSdImage: {fileID: -6294080718365167168, guid: ac8df73c3e2647947b07f4d8dc72ccda, type: 3}

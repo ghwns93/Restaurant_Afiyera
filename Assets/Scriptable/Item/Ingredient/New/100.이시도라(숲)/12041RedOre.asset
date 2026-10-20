@@ -24,8 +24,7 @@ MonoBehaviour:
     \r\n\uAC15\uB82C\uD55C \uB9E4\uC6B4 \uB9DB\uC744 \uB0B4\uB294 \uB3CC.\r\n\uB9CE\uC740
     \uC591\uC744 \uD55C\uBC88\uC5D0 \uBA39\uC73C\uBA74 \uBD88\uC774 \uB0A0 \uC218
     \uC788\uC73C\uB2C8 \uC8FC\uC758."
-  cookTime: 1
-  refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
-  buffEffect: {fileID: 11400000, guid: 5285c672a4a8c4d4d82ce390eb9ec9b9, type: 2}
+  resourceType: 0
+  isUnlocked: 1
   minPriceMultiplier: 0.5
   maxPriceMultiplier: 1.5

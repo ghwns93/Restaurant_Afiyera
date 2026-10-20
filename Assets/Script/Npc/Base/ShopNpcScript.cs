@@ -79,9 +79,9 @@ public class ShopNpcScript : BasicNpcScript
             }
         }
 
-        if (TimeBase.Instance != null)
+        if (TimeBase.Instance != null && MyNpcBasicInfo != null)
         {
-            if (TimeBase.Instance.IsNewDay)
+            if (TimeBase.Instance.IsNewDay && MyNpcBasicInfo.isInteractionNpc)
             {
                 NextDayRandomChangePriceEventHandler(false);
             }
@@ -90,13 +90,19 @@ public class ShopNpcScript : BasicNpcScript
 
     private void OnEnable()
     {
-        // 3. 특정 이벤트 발동 시 가격 변동 리스너 등록 (예시: 날짜 변경 이벤트나 경제 이벤트)
-        TimeEvents.OnDayEnded += NextDayRandomChangePriceEventHandler;
+        if (MyNpcBasicInfo != null)
+        {
+            // 3. 특정 이벤트 발동 시 가격 변동 리스너 등록 (예시: 날짜 변경 이벤트나 경제 이벤트)
+            if(MyNpcBasicInfo.isInteractionNpc) TimeEvents.OnDayEnded += NextDayRandomChangePriceEventHandler;
+        }
     }
 
     private void OnDisable()
     {
-        TimeEvents.OnDayEnded -= NextDayRandomChangePriceEventHandler;
+        if (MyNpcBasicInfo != null)
+        {
+            if (MyNpcBasicInfo.isInteractionNpc) TimeEvents.OnDayEnded -= NextDayRandomChangePriceEventHandler;
+        }
     }
 
     private void NextDayRandomChangePriceEventHandler(bool nothing)

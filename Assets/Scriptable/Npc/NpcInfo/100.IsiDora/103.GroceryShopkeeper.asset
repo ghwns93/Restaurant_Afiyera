@@ -25,8 +25,17 @@ MonoBehaviour:
   - {fileID: -2329141846653376758, guid: f939adaee40778840a8d7853d9d46ba2, type: 3}
   - {fileID: 3670161018007977871, guid: 3cebf7b74f97cd1498c35d8cc1b05937, type: 3}
   - {fileID: 5283246015986561516, guid: b9f7babafcaf70246b97efbed5a976f0, type: 3}
-  isInteractionNpc: 0
-  npcInteractionBase: {fileID: 0}
-  npcInteractionList: []
-  npcType: 0
-  shopItemList: []
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: 7c4be18aef2378f4689dd0d7d1a5e99b, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcType: 1
+  shopItemList:
+  - itemData: {fileID: 11400000, guid: 8d8ce2d8f937d7440a4afc7ea630557e, type: 2}
+    maxStockCount: 5
+    stockLimited: 0
+    basePrice: 20
+    currentPrice: 20
+    previousPrice: 20
+    stockCount: 5

@@ -86,11 +86,14 @@ public class InventoryManager : MonoBehaviour
         // 1. 중첩 가능한 아이템인 경우 기존에 가진 슬롯에 합치기 시도
         if (item.IsStackable)
         {
-            ItemSlot existingSlot = slots.Find(s => !s.IsEmpty && s.ItemData.Id == item.Id);
+            ItemSlot existingSlot = slots.Find(s => !s.IsEmpty && s.ItemData.Id == item.Id && s.ItemData.ItemName == item.ItemName);
             if (existingSlot != null)
             {
                 existingSlot.Quantity += count;
                 onInventoryChangedCallback?.Invoke();
+
+                Debug.Log("인벤토리 수량 증가!");
+
                 return true;
             }
         }
@@ -99,9 +102,12 @@ public class InventoryManager : MonoBehaviour
         ItemSlot emptySlot = slots.Find(s => s.IsEmpty);
         if (emptySlot != null)
         {
-            emptySlot.ItemData = item;
+            emptySlot.ItemData = Instantiate(item);
             emptySlot.Quantity = count;
             onInventoryChangedCallback?.Invoke();
+
+            Debug.Log("인벤토리 새로 추가!");
+
             return true;
         }
 
@@ -154,7 +160,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<ItemSlot> GetSlots(ItemType searchType)
     {
-        var filteredSlots = slots.Where(s => !s.IsEmpty && s.ItemData.ItemType == searchType).ToList();
+        var filteredSlots = slots.Where(s => !s.IsEmpty && s.ItemData.ItemType == searchType && s.Quantity > 0).ToList();
         return filteredSlots;
     }
 

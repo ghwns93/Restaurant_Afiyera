@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 301.Mage
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 301
-  npcName: "\uB9C8\uBC95\uC0AC"
+  npcName: "\uB204\uB974"
   npcImage: {fileID: -7553707147453839549, guid: 36afdfeab4b4afd4ba5c44f4200bf229, type: 3}
   npcIconImage: {fileID: -3354915641770400729, guid: f47e95cd3bdd8314d90bd9e41c0688f9, type: 3}
   npcSdImage: {fileID: 3378168811980130759, guid: fdf8a46c91df0694d97ea5ec52e94501, type: 3}

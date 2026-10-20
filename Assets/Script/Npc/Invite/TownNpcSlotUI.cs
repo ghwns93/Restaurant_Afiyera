@@ -89,7 +89,7 @@ public class TownNpcSlotUI : MonoBehaviour
         float newWidth = spriteWidth * spriteRate;
         float newHeight = spriteHeight * spriteRate;
 
-        Debug.Log($"Sprite Size: {spriteWidth} x {spriteHeight}, New Size: {newWidth} x {newHeight}");
+        //Debug.Log($"Sprite Size: {spriteWidth} x {spriteHeight}, New Size: {newWidth} x {newHeight}");
 
         npcIconImage.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
 

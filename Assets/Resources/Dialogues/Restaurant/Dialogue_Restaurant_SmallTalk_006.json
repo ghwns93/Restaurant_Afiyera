@@ -1,0 +1,443 @@
+{
+  "dialogueId": "SmallTalk006",
+  "startLineId": "SmallTalk006_01",
+  "lines": [
+    {
+      "id": "SmallTalk006_01",
+      "speakerId": "npc.001",
+      "text": "약속 시간에 찾아온 토리는 잔뜩 신이 난듯 보였다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_02",
+      "speakerId": "npc.206",
+      "text": "안녕하세요, 에네스씨! 오늘은 초대해주셔 감사합니다!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_03",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.206",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_03",
+      "speakerId": "npc.001",
+      "text": "어서오세요, 토리씨. 환영합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_04",
+      "speakerId": "npc.001",
+      "text": "토리는 안쪽으로 안내받아 자리에 앉으면서도, 말을 멈추지 않았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_05",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_05",
+      "speakerId": "npc.206",
+      "text": "이야, 제가 이 요리를 정말 먹어보고 싶었는데, 다루기가 힘들어서 그런지 도저히 하는 곳을 찾을 수가 없더라구요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_06",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_06",
+      "speakerId": "npc.206",
+      "text": "에네스씨께 부탁드리면서도 설마설마했는데 그렇게 딱 가능하다고 해주시다니! 제가 얼마나 신났는지 아세요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_07",
+      "speakerId": "npc.001",
+      "text": "그러셨군요. 기대에 부족하지는 않을까 걱정이네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_08",
+      "speakerId": "npc.206",
+      "text": "에이, 무슨 말씀이세요. 이런건 다 경험이죠. 저는 먹어보는 것만으로 만족합니다!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_09",
+      "speakerId": "npc.001",
+      "text": "토리는 자리에 앉아서도 흥분이 가라앉지 않는 듯, 이야기를 늘어놓았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_10",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_10",
+      "speakerId": "npc.206",
+      "text": "에네스씨, 제가 왜 이렇게 이 음식에 집착하는지 아세요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_11",
+      "speakerId": "npc.001",
+      "text": "글쎄요... 아무래도 음식 생김새가 화려해서 그러신걸까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_12",
+      "speakerId": "npc.206",
+      "text": "물론 그런 것도 없잖아 있죠. 하지만! 진짜 이유는 다른데 있답니다!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_13",
+      "speakerId": "npc.206",
+      "text": "저는 말이에요. 어릴 적에 해적이 되고 싶었어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_14",
+      "speakerId": "npc.001",
+      "text": "해적이요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_15",
+      "speakerId": "npc.206",
+      "text": "네! 해적. 멋지잖아요! 바다를 누비는, 바다의 무법자!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_16",
+      "speakerId": "npc.206",
+      "text": "보물을 찾아, 사나이의 꿈과 열정으로 모험을 나서는!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_17",
+      "speakerId": "npc.001",
+      "text": "음... 실제 해적이랑은 조금 거리가 있는 감상인 것 같은데...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_18",
+      "speakerId": "npc.206",
+      "text": "그쵸. 그래서 어느정도 철이 들고서는 막 난 해적이 되겠다. 라는 건 아니었죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_19",
+      "speakerId": "npc.206",
+      "text": "그래도 이 해적이라는게. 저한테는 어릴적의 꿈이자 영웅? 로망? 같은 거였다는 말이죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_20",
+      "speakerId": "npc.206",
+      "text": "근데? 이 이야기 속의 해적! 이라는 느낌을 딱 표현해낸 요리가 있다는데, 이야. 참 궁금하더라구요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_21",
+      "speakerId": "npc.206",
+      "text": "언제 한번 반드시! 꼭! 먹어보고싶다. 했는데 어떻게 기회가 닿지 않아서 늘 상상만 하고 있었죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_22",
+      "speakerId": "npc.206",
+      "text": "그런데 에네스씨가 제게 이런 기회를 주셨으니! 제가 어떻게 흥분하지 않을 수 있겠어요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_23",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 그럼 그렇게 기대하시는 요리를 얼른 준비해드려야겠네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_24",
+      "speakerId": "npc.206",
+      "text": "오! 감사합니다. 방해되지 않게 가만히 있을게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_25",
+      "speakerId": "npc.001",
+      "text": "토리는 방해하지 않겠다던 자신의 말을 지키려는 듯 말을 걸지는 않았지만,",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_26",
+      "speakerId": "npc.001",
+      "text": "궁금증은 도저히 참을 수 없는 듯 몸을 이리저리 들썩거리며 내가 요리를 준비하는 모습을 흥미롭게 바라봤다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_27",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_27",
+      "speakerId": "npc.001",
+      "text": "요리 준비 됬습니다. 토리씨가 기대하시던, 해적의 보물이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_28",
+      "speakerId": "npc.206",
+      "text": "와. 어떻게 재료를 좀 구해서 직접 해먹어볼까 했는데. 조리법이 장난아니네요. 저는 따라하지도 못하겠어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_29",
+      "speakerId": "npc.206",
+      "text": "이 한번을 엄청난 행운이라고 생각하고, 이 맛을 뇌리에 새기겠습니다!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_30",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_30",
+      "speakerId": "npc.001",
+      "text": "하하, 또 먹고 싶으시면 언제든 말씀해주세요. 따로 선약이 없으면 언제든 준비해드릴께요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_31",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_31",
+      "speakerId": "npc.206",
+      "text": "오, 말씀만이시라도 감사합니다! 그럼 어디 한번... 맛을 볼까요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_32",
+      "speakerId": "npc.001",
+      "text": "토리는 정말 기대가 되는 듯, 설레는 표정을 숨기지 못하고 음식을 입안에 넣었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_33",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_33",
+      "speakerId": "npc.001",
+      "text": "그러고는 이내, 아주, 아주 미묘한 표정을 지었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_34",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_34",
+      "speakerId": "npc.001",
+      "text": "나는 어느정도 예상했던 반응이니만큼, 그리 당황하지 않고 그에게 물었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_35",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_35",
+      "speakerId": "npc.001",
+      "text": "토리씨.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_36",
+      "speakerId": "npc.206",
+      "text": "...네! 에네스씨. 우와, 아주 맛있는걸요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_37",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_37",
+      "speakerId": "npc.001",
+      "text": "...쓰죠?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_38",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_38",
+      "speakerId": "npc.206",
+      "text": "...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_39",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_39",
+      "speakerId": "npc.206",
+      "text": "네...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_40",
+      "speakerId": "npc.001",
+      "text": "음... 이 요리가... 토리씨가 말씀하신 그런 이야기 속 해적의 보물. 이라는 화려한 외양을 표현한건 맞는데...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_41",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_41",
+      "speakerId": "npc.001",
+      "text": "맛은 반대로 그 현실에 조금... 집중한 편이 거든요. 이른바 현실의 쓴맛. 이라는 거죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_42",
+      "speakerId": "npc.206",
+      "text": "하... 맛이 없는건 아닌데... 바다의 풍미와 이 뭔가 화려한 느낌까지. 참 괜찮은데.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_43",
+      "speakerId": "npc.206",
+      "text": "이게... 쓰네요. 네가 생각하던 해적의 현실은 이것이다. 라는 느낌이랄까...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_44",
+      "speakerId": "npc.206",
+      "text": "뭔가 되게... 또 한번 차게 식는 기분이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_45",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_45",
+      "speakerId": "npc.206",
+      "text": "아, 그래도 감사합니다. 제 소원을 이뤄주셨어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_46",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_46",
+      "speakerId": "npc.206",
+      "text": "감사합니다... 정말로...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk006_47",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk006_47",
+      "speakerId": "npc.001",
+      "text": "식사를 마치고 돌아가는 토리의 뒷모습은, 어딘가 아주 처량해보였다.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

@@ -9,7 +9,7 @@ public enum SceneType
     Intro,
     Main,
     Option,
-    Farm,
+    Garden,
     Restaurant,
     Shop,
     Village,

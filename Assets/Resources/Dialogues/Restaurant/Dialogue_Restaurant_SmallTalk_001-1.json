@@ -1,0 +1,548 @@
+{
+    "dialogueId" : "SmallTalk001-1",
+    "startLineId" : "SmallTalk001-1_01",
+    "lines" : [
+    {
+      "id": "SmallTalk001-1_01",
+      "speakerId": "npc.101",
+      "text": "흠흠. 실례하겠네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_02",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.101",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_02",
+      "speakerId": "npc.001",
+      "text": "기별에 문뜩 돌아보자 어느샌가 촌장이 들어와 문가에 서 있었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_03",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_03",
+      "speakerId": "npc.001",
+      "text": "어서오세요, 촌장님. 많이 기다리셨나요? 죄송합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_04",
+      "speakerId": "npc.101",
+      "text": "아닐세. 금방 도착해서 바빠 보이길래 잠시 기다리고 있었네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_05",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_05",
+      "speakerId": "npc.101",
+      "text": "흠흠. 어떻게, 마을 생활은 조금 괜찮은가.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_06",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_06",
+      "speakerId": "npc.001",
+      "text": "덕분에 편하게 잘 지내고 있습니다. 앉으시죠, 금방 음식 준비해 드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_07",
+      "speakerId": "npc.101",
+      "text": "고맙네. 그나저나, 오래살고 볼일이군... 이 건물에 다시 불이 들어오는 것을 볼 줄이야.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_08",
+      "speakerId": "npc.001",
+      "text": "촌장님께서도 이전에 이 건물을 사용하던 분과 친분이 있으셨나요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_09",
+      "speakerId": "npc.101",
+      "text": "잘 알았지.좋은 분이셨어...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_10",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_10",
+      "speakerId": "npc.001",
+      "text": "...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_11",
+      "speakerId": "npc.101",
+      "text": "크흠. 오늘 요리는, 부탁한 그것인가?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_12",
+      "speakerId": "npc.001",
+      "text": "아,네. 말씀하신 보석 해씨로 준비했습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_13",
+      "speakerId": "npc.101",
+      "text": "그렇구만. 기대하고 있겠네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_14",
+      "speakerId": "npc.001",
+      "text": "촌장은 그 말을 끝으로 식당 이곳저곳을 둘러보며 조용히 기다리기 시작했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_15",
+      "speakerId": "npc.001",
+      "text": "음식 나왔습니다, 촌장님.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_16",
+      "speakerId": "npc.101",
+      "text": "고맙네. 잘 먹겠네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_17",
+      "speakerId": "npc.001",
+      "text": "촌장은 우물거리며 음식을 맛보기 시작했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_18",
+      "speakerId": "npc.101",
+      "text": "음! 맛이 좋구만. 소문에 자네의 요리실력이 발군이라더니, 정말이었구만 그래.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_19",
+      "speakerId": "npc.001",
+      "text": "입맛에 맞으시다니 다행입니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_20",
+      "speakerId": "npc.101",
+      "text": "음, 자네가 마을에 적응할 걱정은 안해도 되겠어. 이런 음식이라면 다들 줄서서 찾아올게 아닌가.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_20",
+      "speakerId": "npc.001",
+      "text": "하하, 그렇다면 저야 감사한 일이죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_21",
+      "speakerId": "npc.001",
+      "text": "촌장은 정말 맛있다는 듯 음식을 음미하다, 이내 말을 이었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_22",
+      "speakerId": "npc.101",
+      "text": "그런데 자네는 이렇게 타지로 와서 일하고 그러면, 가족들이 걱정이 참 많겠구만.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_23",
+      "speakerId": "npc.001",
+      "text": "어...하하... 저를 그렇게 걱정해줄 사람이 없네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_24",
+      "speakerId": "npc.101",
+      "text": "음. 뭔가 사연이 있나보구만. 실례했네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_25",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.101",
+          "slot" : 1,
+          "portraitIndex" : 3
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_25",
+      "speakerId": "npc.001",
+      "text": "아닙니다, 괜찮습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_26",
+      "speakerId": "npc.001",
+      "text": "잠시간 식당에 어색한 침묵이 내려앉았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_27",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.101",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_27",
+      "speakerId": "npc.001",
+      "text": "이내 촌장은 침묵을 깨려는 듯이 문득 말을 꺼내었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_28",
+      "speakerId": "npc.101",
+      "text": "크흠. 뭐 그래도 기다리는 사람이나 연인은 있을 것 아닌가.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_29",
+      "speakerId": "npc.001",
+      "text": "하하, 아쉽게도 제가 그쪽으로도 연이 없어서...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_30",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_30",
+      "speakerId": "npc.101",
+      "text": "허, 자네 만나는 사람이 없나? 맘에 둔 사람도?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_31",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.101",
+          "slot" : 1,
+          "portraitIndex" : 1
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_31",
+      "speakerId": "npc.001",
+      "text": "...예",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_32",
+      "speakerId": "npc.101",
+      "text": "저런, 젊을적에 사랑을 하고 인연을 만나고 해야지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_33",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_33",
+      "speakerId": "npc.001",
+      "text": "어...그런가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_34",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_34",
+      "speakerId": "npc.001",
+      "text": "촌장은 대꾸할 새도 주지 않고 이야기를 이어갔다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_35",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.101",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_35",
+      "speakerId": "npc.101",
+      "text": "···해서 나도 젊었을 적에는 말일세, 온동네 여인들을 다 몰고 다녔단 말일세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_36",
+      "speakerId": "npc.001",
+      "text": "젊을 적에 인기가 많으셨나 보군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_37",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_37",
+      "speakerId": "npc.101",
+      "text": "그럼, 아주 인기가 많았지. 그럼에도 한 여인만을 바라보는 지고지순한 불같은 사랑을 했다 이말일세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_38",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_38",
+      "speakerId": "npc.001",
+      "text": "대단하시네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_39",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_39",
+      "speakerId": "npc.101",
+      "text": "그럼, 이 사내란 모름지기 사랑할때 불같이 뜨거운 마음으로 해야하는 것이라네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_40",
+      "speakerId": "npc.101",
+      "text": "내가 자네에게 이 사랑이라는 것을 좀 이야기 해주자면 말일세, 사랑이란 말이네,···",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_41",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_41",
+      "speakerId": "npc.001",
+      "text": "촌장은 그 뒤로도 한참동안 사랑에 대한 이야기를 늘어놓았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_42",
+      "speakerId": "npc.101",
+      "text": "···그렇다는 이야기일세. 이 사랑이라는게 얼마나 섬세한것이냐 하면, 어이쿠야.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_43",
+      "speakerId": "npc.001",
+      "text": "촌장은 열심히 이야기를 이어가다 시계를 보고는 말을 멈췄다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_44",
+      "speakerId": "npc.101",
+      "text": "벌써 시간이 이렇게 됬군. 미안하네, 이 늙은이가 오랜만에 이야기를 들어주는 젊은이를 만나 말이 길었군.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_45",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_45",
+      "speakerId": "npc.001",
+      "text": "아닙니다, 저도 도움이 되는 이야기를 많이 들어 유익했습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_46",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_46",
+      "speakerId": "npc.101",
+      "text": "그리 말해주니 다행히구만, 여튼 간에 남은 이야기들은 다음에 이어가도록 하세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_47",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_47",
+      "speakerId": "npc.001",
+      "text": "...예, 물론입니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_48",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_48",
+      "speakerId": "npc.101",
+      "text": "다음에는 내 자네가 좀 더 흥미롭게 들을 만한 이야기로 해줌세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_49",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_49",
+      "speakerId": "npc.101",
+      "text": "내가 그녀와 만난 이 사랑이야기를 한번 해주겠네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_50",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_50",
+      "speakerId": "npc.101",
+      "text": "꽤나 파란만장한 연애였으니 들어줄만 할걸세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_51",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_51",
+      "speakerId": "npc.001",
+      "text": "그럼 기대하고 있겠습니다. 조심히 들어가세요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_52",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_52",
+      "speakerId": "npc.101",
+      "text": "고맙네, 자네도 조심히 들어가게.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_53",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_53",
+      "speakerId": "npc.001",
+      "text": "나는 촌장을 배웅하고, 남은 식당 정리를 하며 생각했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk001-1_54",
+      "events": [
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.101"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk001-1_54",
+      "speakerId": "npc.001",
+      "text": "생각보다 촌장은 참 말이 많은 사람이라고.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+]
+}

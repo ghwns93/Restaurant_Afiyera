@@ -15,7 +15,7 @@ public class NpcBasicInfo : ScriptableObject
     [Tooltip("SD 이미지")]
     public Sprite npcSdImage;
 
-    public string npcId => string.Format("{0}", npcCode);
+    public string npcId => string.Format("npc.{0:D3}", npcCode);
 
     [Header("Night Restaurant Info")]
     public bool isNightRestaurantNpc = false;                                               // 야간 식당 NPC 여부

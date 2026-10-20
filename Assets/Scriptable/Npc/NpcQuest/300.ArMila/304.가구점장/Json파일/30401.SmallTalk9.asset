@@ -22,4 +22,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 61ba2623a3d09214c95483674a51e253, type: 2}
   - {fileID: 11400000, guid: d15db7d397911294f8bb98c25d33e5a0, type: 2}
   foodSprite: {fileID: 2765931682814102245, guid: 67926d8dcd1e49f45919fa21d39b5417, type: 3}
-  dialogueJsonFile: {fileID: 0}
+  dialogueJsonFile: {fileID: 4900000, guid: 2cea34ee00687284c8b08f1913bd1279, type: 3}
+  endTalkFunc: {fileID: 11400000, guid: d863c8e43af0a3843804dd048d121876, type: 2}

@@ -1,0 +1,288 @@
+{
+  "dialogueId": "SmallTalk007",
+  "startLineId": "SmallTalk007_01",
+  "lines": [
+    {
+      "id": "SmallTalk007_01",
+      "speakerId": "npc.207",
+      "text": "에네스씨! 저 리나인데요! 문 좀 열어주실 수 있나요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_02",
+      "speakerId": "npc.001",
+      "text": "문 밖에서 들려오는 리나의 목소리에 서둘러 마중을 나서보니, 눈 앞에 보인 것은 아주 화려한 장식이 된 풍선 다발이었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_03",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_03",
+      "speakerId": "npc.001",
+      "text": "이게... 다 뭔가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_04",
+      "speakerId": "npc.207",
+      "text": "안녕하세요 에네스씨! 개업 축하 풍선이에요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_05",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.207",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_05",
+      "speakerId": "npc.001",
+      "text": "개업...축하요? 어... 개업을... 축하할 시기는 지났는데요...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_06",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_06",
+      "speakerId": "npc.207",
+      "text": "아, 제가 그때 당시에 축하를 못해드려서 늦었지만 지금이라도 축하해드리려고 준비 해왔어요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_07",
+      "speakerId": "npc.001",
+      "text": "하지만 리나씨... 제가 개업할 때는 저희는 서로 몰랐는걸요...?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_08",
+      "speakerId": "npc.207",
+      "text": "니까 지금하는거죠! 지금은 서로 알잖아요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_09",
+      "speakerId": "npc.001",
+      "text": "어...음. 일단 안으로 들어오시죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_10",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_10",
+      "speakerId": "npc.207",
+      "text": "네! 감사해요! 아, 풍선은 어디다가 두면 될까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_11",
+      "speakerId": "npc.001",
+      "text": "그러게요... 안쪽에 자리를 내볼게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_12",
+      "speakerId": "npc.001",
+      "text": "리나는 식당 안으로 들어와, 문 옆쪽에 방해가 되지 않도록 풍선을 잘 끌어모아 두고서는 자리에 앉았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_13",
+      "speakerId": "npc.001",
+      "text": "음... 음료 한 잔만 부탁하셔서 제가 따로 준비한게 없는데... 이거면 괜찮을까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_14",
+      "speakerId": "npc.001",
+      "text": "난 리나에게 줄 음료를 준비하곤 고개를 들었다가 당황해서 말했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_15",
+      "speakerId": "npc.001",
+      "text": "리나씨... 그게 다 뭔가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_16",
+      "speakerId": "npc.207",
+      "text": "아, 이건 제가 좋아하는 간식이구요. 이건 제가 구워온 컵케익이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_17",
+      "speakerId": "npc.207",
+      "text": "이거는 나중에 드시라고 챙겨온 생선조림! 제가 자신있는 요리니까 꼭 드셔보세요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_18",
+      "speakerId": "npc.001",
+      "text": "어... 음식을 드시러 오신게 아니셨나요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_19",
+      "speakerId": "npc.207",
+      "text": "네? 맞아요! 에네스씨가 제게 음식을 준비해준다고 하셨으니, 저도 에네스씨께 드리려고 준비했죠!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_20",
+      "speakerId": "npc.001",
+      "text": "음... 그렇군요. 뭐라도 좀 더 준비할 걸 그랬네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_21",
+      "speakerId": "npc.207",
+      "text": "에이, 초대해주신 것만으로 감사하죠. 아, 음료 감사해요! 에네스씨 것도 있나요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_22",
+      "speakerId": "npc.001",
+      "text": "제거요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_23",
+      "speakerId": "npc.207",
+      "text": "네! 같이 먹어요! 곁들일 음식들도 여기 많이 있으니까요!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_24",
+      "speakerId": "npc.001",
+      "text": "어... 잠시만요...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_25",
+      "speakerId": "npc.001",
+      "text": "나는 떨떨름한 기분으로 음료를 한잔 더 준비했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_26",
+      "speakerId": "npc.001",
+      "text": "네, 준비했어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_27",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_27",
+      "speakerId": "npc.207",
+      "text": "그렇군요. 그럼... 에네스씨와 아피에라를 위해서. 짠!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_28",
+      "speakerId": "npc.001",
+      "text": "짠...?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk007_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk007_29",
+      "speakerId": "npc.001",
+      "text": "뭔가 이상한 것 같다는 기분을 지울 수 없었지만, 어쨌든 리나는 신나게 놀고 돌아갔다.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: 207.Citizen2
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 207
-  npcName: "\uC2DC\uBBFC2"
+  npcName: "\uB9AC\uB098"
   npcImage: {fileID: 5554704596501713522, guid: fc6085346a980824497d31d0a80a7ef8, type: 3}
   npcIconImage: {fileID: -691919593, guid: fc6085346a980824497d31d0a80a7ef8, type: 3}
   npcSdImage: {fileID: 5056877412534556408, guid: 6505d5ade36d93f48af50a8441283549, type: 3}
-  isNightRestaurantNpc: 0
-  portraits: []
-  isInteractionNpc: 0
-  npcInteractionBase: {fileID: 0}
-  npcInteractionList: []
+  isNightRestaurantNpc: 1
+  portraits:
+  - {fileID: 5554704596501713522, guid: fc6085346a980824497d31d0a80a7ef8, type: 3}
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: 3d9baf2e8b6b2ad4aa1a1fd110537145, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 0
   shopItemList: []

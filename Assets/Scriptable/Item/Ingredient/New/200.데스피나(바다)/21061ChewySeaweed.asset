@@ -26,8 +26,6 @@ MonoBehaviour:
     \uACF3\uC5D0\uC11C \uC798 \uB9D0\uB9AC\uBA74 \uCAC0\uB4DD\uD558\uBA70 \uC9E0
     \uB9DB\uC740 \uC5C6\uC5B4\uC838 \uAC10\uCE60\uB9DB\uB9CC \uB0A8\uC740 \uC88B\uC740
     \uAC04\uC2DD\uAC70\uB9AC\uAC00 \uB41C\uB2E4."
-  cookTime: 0
-  refineIcon: {fileID: 0}
-  buffEffect: {fileID: 0}
+  resourceType: 5
   minPriceMultiplier: 0.5
   maxPriceMultiplier: 1.5

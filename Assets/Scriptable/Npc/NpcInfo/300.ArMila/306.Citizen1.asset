@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 306.Citizen1
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 306
-  npcName: "\uC2DC\uBBFC1"
+  npcName: "\uB8E8"
   npcImage: {fileID: 0}
   npcIconImage: {fileID: 0}
   npcSdImage: {fileID: 0}

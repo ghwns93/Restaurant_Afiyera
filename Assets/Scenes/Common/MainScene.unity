@@ -167,6 +167,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0b340a62bc3624048a67c3deaa914c70, type: 2}
   - {fileID: 11400000, guid: 4c919b23ec3fc274a8b59eb8799a52e5, type: 2}
   - {fileID: 11400000, guid: cc205f20ffdcdf4479926e299e489b06, type: 2}
+  - {fileID: 11400000, guid: 0e463866663823444aa5702955c578b3, type: 2}
+  - {fileID: 11400000, guid: 2f30b75ca30552842b2d8fc79d230202, type: 2}
+  - {fileID: 11400000, guid: 2c7de05cfe048384c93296a412913265, type: 2}
 --- !u!4 &63394617
 Transform:
   m_ObjectHideFlags: 0
@@ -731,6 +734,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 60a51d2e1dc255b4ea6bc1f53e15758d, type: 2}
   - {fileID: 11400000, guid: 0969ef9db0e2d0649b6fcdc3ee89011e, type: 2}
   - {fileID: 11400000, guid: d2de9a7900665424a864e1a052c3f275, type: 2}
+  - {fileID: 11400000, guid: 83f411135ec7ddb428b808191093148c, type: 2}
+  - {fileID: 11400000, guid: fcf6c75054587364ca7ca86638287e4a, type: 2}
+  - {fileID: 11400000, guid: 09328bc2985d44a41ac59e448b654647, type: 2}
+  - {fileID: 11400000, guid: 38cc35ab7361a4c43b7adbdae2834710, type: 2}
 --- !u!4 &550212293
 Transform:
   m_ObjectHideFlags: 0
@@ -741,6 +748,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.43393, y: 0.42716, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &731230791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731230793}
+  - component: {fileID: 731230792}
+  m_Layer: 0
+  m_Name: GardenRewardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &731230792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731230791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e02f98555b28143996209b27acfda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GardenRewardManager
+--- !u!4 &731230793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731230791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 969, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1014,6 +1065,8 @@ MonoBehaviour:
     sceneName: InviteCustomerScene
   - type: 19
     sceneName: InventoryScene
+  - type: 3
+    sceneName: GardenScene
   optionOpened: 0
   loadingPanel: {fileID: 1705171448}
   progressBar: {fileID: 515683507}
@@ -1467,6 +1520,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1516349502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516349503}
+  - component: {fileID: 1516349504}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1516349503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516349502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 961.40765, y: 504.6476, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1516349504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516349502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0455e1868d127a24bbffd190b7ac24ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialManager
+  introData: {fileID: 11400000, guid: 0434f4bb0f9fb434c908313daa8da379, type: 2}
 --- !u!1 &1554992376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1999,7 @@ MonoBehaviour:
     testQuantity: 1
   - testItemData: {fileID: 11400000, guid: d63feb957c5f0ce4abb2ca7cf28ec588, type: 2}
     testQuantity: 5
-  gold: 0
+  gold: 1000
 --- !u!1 &1753860492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,6 +2412,56 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &2114077771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114077773}
+  - component: {fileID: 2114077772}
+  m_Layer: 0
+  m_Name: GardenObjectDicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2114077772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114077771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294a7407d2894634e9e0badef9640d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GardenObjectDicManager
+  dataList:
+  - {fileID: 11400000, guid: cfc8609e08a9f484187e0f391782ca05, type: 2}
+  - {fileID: 11400000, guid: 81cb5210d82815c46a6d92e779405273, type: 2}
+  - {fileID: 11400000, guid: eee0f5ed9b12e9040938179d61afe29b, type: 2}
+  - {fileID: 11400000, guid: cea8802ebfd7b5d479454da79e6cb0a2, type: 2}
+  - {fileID: 11400000, guid: 6a9d8f545f8b41b4da74be2f21eda4db, type: 2}
+--- !u!4 &2114077773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114077771}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 191.05185, y: 53.51054, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2337,5 +2485,8 @@ SceneRoots:
   - {fileID: 1209563708}
   - {fileID: 1456225495}
   - {fileID: 1122363521}
+  - {fileID: 2114077773}
   - {fileID: 63394617}
   - {fileID: 550212293}
+  - {fileID: 1516349503}
+  - {fileID: 731230793}

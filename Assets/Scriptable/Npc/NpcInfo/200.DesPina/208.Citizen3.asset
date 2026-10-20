@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: 208.Citizen3
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 208
-  npcName: "\uC2DC\uBBFC3"
+  npcName: "\uC900"
   npcImage: {fileID: 0}
   npcIconImage: {fileID: 0}
   npcSdImage: {fileID: 0}
   isNightRestaurantNpc: 0
   portraits: []
-  specialEventDataList: []
   isInteractionNpc: 0
   npcInteractionBase: {fileID: 0}
   npcInteractionList: []

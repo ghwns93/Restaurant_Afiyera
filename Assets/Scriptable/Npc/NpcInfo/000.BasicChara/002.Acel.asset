@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a6ab2459590df49a05bc3734be8e80, type: 3}
+  m_Name: 002.Acel
+  m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
+  npcCode: 2
+  npcName: "\uC544\uC140"
+  npcImage: {fileID: -5162539745160790947, guid: 7d473b62a9b5a7945bba2ddabaff43b2, type: 3}
+  npcIconImage: {fileID: 0}
+  npcSdImage: {fileID: 0}
+  isNightRestaurantNpc: 1
+  portraits:
+  - {fileID: -5162539745160790947, guid: 7d473b62a9b5a7945bba2ddabaff43b2, type: 3}
+  - {fileID: -2520792546471248857, guid: 2612178186286b144b7654787bec837e, type: 3}
+  - {fileID: -5052681905588201971, guid: 1fa65b4bc040b824c955e54889e168c6, type: 3}
+  - {fileID: -3479200677707438371, guid: f6fd5f6008e5bb348a787a31375296b5, type: 3}
+  - {fileID: 7447628072597211463, guid: 2ece2099b7c5303408693158fbda5144, type: 3}
+  - {fileID: -7032145863774326723, guid: adf2ddd6d0a11ee45820d1c5be71edcf, type: 3}
+  - {fileID: -5014320634196523328, guid: 71d383dd709207c4cacbbf53051ce566, type: 3}
+  - {fileID: -2378112576795824520, guid: e8f603b44e2dc034681db0ac7455247c, type: 3}
+  - {fileID: 71420125571779947, guid: 6423d90ee41f3ef459aa0f42afa5a77f, type: 3}
+  - {fileID: 7155829290084134414, guid: 1678c8a7d34d50b4bb20a61ab27a0b7f, type: 3}
+  - {fileID: 6559190174542453600, guid: b061d661f5aca0b44a948f47baf06a85, type: 3}
+  - {fileID: 989514249176100794, guid: 6ddee10a603cb0144a26007405e681de, type: 3}
+  isInteractionNpc: 0
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
+  - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcType: 0
+  shopItemList: []

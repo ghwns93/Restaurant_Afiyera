@@ -36,7 +36,7 @@ public class CookingWorkerManager : MonoBehaviour
     {
         CookingRefineResource refine = Instantiate(_refineObject, pos).GetComponent<CookingRefineResource>();
         refine._data = data;
-        refine._sprite.sprite = data.refineIcon;
+        //refine._sprite.sprite = data.refineIcon;
         refine.transform.SetSiblingIndex(1);
     }
 }

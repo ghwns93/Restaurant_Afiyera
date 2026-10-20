@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 304.FurnitureShopkeeper
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 304
-  npcName: "\uAC00\uAD6C\uC810\uC7A5"
+  npcName: "\uBE44\uC5D4"
   npcImage: {fileID: 2684173050213421113, guid: aaa0d2555e86cb64b8713f9999586992, type: 3}
   npcIconImage: {fileID: -7638026864246209176, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: -935394423681889051, guid: 46e0291ca670c424d8add6ec47bde057, type: 3}
@@ -24,8 +24,10 @@ MonoBehaviour:
   - {fileID: 6849856239992176167, guid: 2cfb41cdb5b1ca04a8e0730959383407, type: 3}
   - {fileID: 1439952456310240638, guid: b56341bda491f844fbaab6297bf48c39, type: 3}
   - {fileID: 7978848993661622781, guid: e40a2b0930045c045845dbc6619aac34, type: 3}
-  isInteractionNpc: 0
-  npcInteractionBase: {fileID: 0}
-  npcInteractionList: []
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: 4c919b23ec3fc274a8b59eb8799a52e5, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 0
   shopItemList: []

@@ -1,0 +1,494 @@
+{
+  "dialogueId": "SmallTalk003-1",
+  "startLineId": "SmallTalk003-1_01",
+  "lines": [
+    {
+      "id": "SmallTalk003-1_01",
+      "speakerId": "npc.004",
+      "text": "똑똑.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_02",
+      "speakerId": "npc.001",
+      "text": "나는 문을 두르리는 똑똑 소리에, 손님을 맞이하러 나섰다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_03",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_03",
+      "speakerId": "npc.109",
+      "text": "안녕하세요, 에네스씨. 오늘은 초대해주셔서 감사해요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.109",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_04",
+      "speakerId": "npc.001",
+      "text": "오셨군요, 하티제씨. 어서 오세요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_05",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_05",
+      "speakerId": "npc.001",
+      "text": "하티제는 주의를 살피는 듯 두리번거리며 안쪽으로 들어와, 안내해준 자리에 앉았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_06",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_06",
+      "speakerId": "npc.109",
+      "text": "신기하네요. 그 방치된 건물이 이렇게 잘 가꾸어졌다니.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_07",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.109",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_07",
+      "speakerId": "npc.001",
+      "text": "잉키들이 고생을 많이했죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_08",
+      "speakerId": "npc.109",
+      "text": "잉키들이요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_09",
+      "speakerId": "npc.001",
+      "text": "저를 도와주는 작은 친구들이 있습니다. 다음에 소개시켜드릴께요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_10",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_10",
+      "speakerId": "npc.109",
+      "text": "그렇군요. 기대하고 있을게요. 아, 이건 작지만 선물이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_11",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.109",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_11",
+      "speakerId": "npc.001",
+      "text": "하티제가 건낸 물건은 몇개의 양초와 챔버 촛대였다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_12",
+      "speakerId": "npc.109",
+      "text": "이곳은 시골이라 밤이되면 많이 어두우니까요. 장식품이지만 실용성도 있는 걸로 준비해봤는데, 괜찮은가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_13",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 유용할 것 같네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_14",
+      "speakerId": "npc.001",
+      "text": "나는 촛대를 톡톡 건드려보고는 요리 중에 더럽혀지지 않을 만한 곳에 치워두곤 이야기했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_15",
+      "speakerId": "npc.001",
+      "text": "오늘 요리는 이슬콩떡, 맞죠? 손이 많이가서 적게 밖에 준비하지 못해서 양에 차실지 걱정이네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_16",
+      "speakerId": "npc.109",
+      "text": "괜찮아요. 양보다는 개인적인 추억때문에 부탁드린거라.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_17",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.109",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_17",
+      "speakerId": "npc.109",
+      "text": "손이 많이 가는 음식이라니 죄송하네요. 많이 번거로우셨겠어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_18",
+      "speakerId": "npc.001",
+      "text": "하하, 괜찮습니다. 그게 제 일인걸요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_19",
+      "speakerId": "npc.001",
+      "text": "내가 뒤돌아 음식을 준비하기 시작하자, 하티제는 멍하니 그 모습을 바라보다 말했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_20",
+      "speakerId": "npc.109",
+      "text": "사실... 이슬콩떡은 저희 할머니가 자주 해주시던 음식이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_21",
+      "speakerId": "npc.109",
+      "text": "항상 제가 찾아가면 간식으로 내주시곤 하셨죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_22",
+      "speakerId": "npc.109",
+      "text": "문뜩... 에네스씨가 먹고 싶은 요리를 말해달라고 하셨을때... 할머니 생각이 나더라구요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_23",
+      "speakerId": "npc.001",
+      "text": "그랬군요. 제가 그 맛을 흉내낼수 있을지 모르겠네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_24",
+      "speakerId": "npc.001",
+      "text": "손녀분을 향한 사랑과 정성이 가득 담겨있었을텐데 말이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_25",
+      "speakerId": "npc.109",
+      "text": "괜찮아요. 사실 저도 정확하게 맛이 기억나지는 않아서...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_26",
+      "speakerId": "npc.109",
+      "text": "할머니의 이슬콩떡을 마지막으로 맛본지도 이젠 많이 시간이 지났거든요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_27",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_27",
+      "speakerId": "npc.001",
+      "text": "...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_28",
+      "speakerId": "npc.001",
+      "text": "나는 추억에 잠긴듯 말이 없어진 하티제를 방해하지 않도록 조심스럽게 음식을 준비했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_29",
+      "speakerId": "npc.001",
+      "text": "음식 나왔습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_30",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_30",
+      "speakerId": "npc.109",
+      "text": "감사해요. 잘먹을게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_31",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_31",
+      "speakerId": "npc.001",
+      "text": "하티제는 이슬콩떡을 쿡 찔러보고는, 이내 살짝 베어 물었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_32",
+      "speakerId": "npc.109",
+      "text": "음, 맛있네요. 저희 할머니가 해주시던 것보다 더 맛있는 것 같아요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_33",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.109",
+          "slot" : 1,
+          "portraitIndex" : 4
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_33",
+      "speakerId": "npc.001",
+      "text": "...할머니께서 해주시던 맛과는 거리가 있나보네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_34",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_34",
+      "speakerId": "npc.109",
+      "text": "앗...죄송해요...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_35",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.109",
+          "slot" : 1,
+          "portraitIndex" : 1
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_35",
+      "speakerId": "npc.001",
+      "text": "아닙니다. 저도 아직 멀었나보네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_36",
+      "speakerId": "npc.001",
+      "text": "혹시 어떤 부분이 다른가요? 다음번에는 제대로 준비해드릴게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_37",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_37",
+      "speakerId": "npc.109",
+      "text": "감사해요, 그렇게까지 신경써주신다니...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_38",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.109",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_38",
+      "speakerId": "npc.109",
+      "text": "음... 분명 맛은 에네스씨의 것이 훨씬 밸런스도 좋고 맛있는데...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_39",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_39",
+      "speakerId": "npc.109",
+      "text": "뭐랄까, 조금... 그때보다 맛이 약한것 같아요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_40",
+      "speakerId": "npc.109",
+      "text": "할머니의 이슬콩떡은 분명, 향이라고 할까 맛이라고 할까... 뭔가가 더 짙었던 것 같아요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_41",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_41",
+      "speakerId": "npc.109",
+      "text": "어쩌면 제가 추억때문에 맛을 더 좋게 기억하는 걸지도 모르겠네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_42",
+      "speakerId": "npc.001",
+      "text": "흠... 제가 조금더 알아보고 조리법을 바꿔볼게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_43",
+      "speakerId": "npc.001",
+      "text": "기대하셨는데 아쉽겠네요. 죄송합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_44",
+      "speakerId": "npc.109",
+      "text": "아니에요! 제가 더 죄송하죠. 기껏 번거롭게 준비해주셨는데 또 귀찮게해서...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_45",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_45",
+      "speakerId": "npc.109",
+      "text": "죄송해요. 다음번에 제가 정말 따로 답례를 준비할게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_46",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_46",
+      "speakerId": "npc.001",
+      "text": "아뇨아뇨, 그러실 필요는 없습니다. 제가 더 잘 준비했어야했는걸요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_47",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_47",
+      "speakerId": "npc.109",
+      "text": "아뇨, 그래도···",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk003-1_48",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk003-1_48",
+      "speakerId": "npc.001",
+      "text": "그렇게 하티제와는 연신 서로 고개를 숙이며 사과를 하다, 일단은 다음번 약속을 기약하며 해어졌다.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

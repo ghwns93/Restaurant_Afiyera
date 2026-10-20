@@ -1,0 +1,812 @@
+{
+  "dialogueId": "Town",
+  "startLineId": "Town_01",
+  "lines": [
+    {
+      "id": "Town_01",
+      "speakerId": "npc.001",
+      "text": "힌겔의 안내를 따라 다다른 곳은 한 건물의 앞이었다.",
+      "typingSpeed": 0.04,
+      "next": "Town_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_02",
+      "speakerId": "npc.001",
+      "text": "마을 광장 어귀에 있는 것이, 누군가의 집은 아니지만 건물의 크기로 보아서 중요한 건물이라는 것을 알 수 있었다.",
+      "typingSpeed": 0.04,
+      "next": "Town_03",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_03",
+      "speakerId": "npc.108",
+      "text": "다 도착했어요! 잠시만 기다려 주세요.",
+      "typingSpeed": 0.04,
+      "next": "Town_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        },
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 9
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_04",
+      "speakerId": "npc.001",
+      "text": "힌겔은 건물 안쪽으로 들어가며 누군가를 큰소리로 찾았다.",
+      "typingSpeed": 0.04,
+      "next": "Town_05",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 1
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_05",
+      "speakerId": "npc.108",
+      "text": "촌장님!! 촌장님 안 계세요?",
+      "typingSpeed": 0.04,
+      "next": "Town_06",
+      "events": [
+        {
+          "type": "HIDE_NPC",
+          "npcId" : "npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_06",
+      "speakerId": "npc.001",
+      "text": "그러고서 잠시가 지나자, 힌겔은 안쪽에서 한 사람과 함께 걸어 나왔다.",
+      "typingSpeed": 0.04,
+      "next": "Town_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_07",
+      "speakerId": "npc.108",
+      "text": "에네스씨, 이분은 저희 이시도라의 촌장님이세요! 마을에 이런저런일들을 해결해주시는 분이세요!",
+      "typingSpeed": 0.04,
+      "next": "Town_08",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 2,
+          "portraitIndex" : 1
+        },
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.101",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_08",
+      "speakerId": "npc.101",
+      "text": "아이고, 반갑습니다. 이번에 관리국에서 오신다는 이야기는 들었습니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_09",
+      "events": [
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_09",
+      "speakerId": "npc.101",
+      "text": "이 마을의 촌장 일을 하고 있는 볼칸이라고 합니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_10",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_10",
+      "speakerId": "npc.001",
+      "text": "안녕하세요, 당분간 신세지게된 에네스라고 합니다. 앞으로 잘 부탁드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_11",
+      "speakerId": "npc.101",
+      "text": "허허. 마을에 적응하시는데 필요하신게 있으시다면 언제든 말씀해주시지요.",
+      "typingSpeed": 0.04,
+      "next": "Town_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_12",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 앞으로 함께 지내야 하는데 말씀 편하게 하셔도 괜찮습니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_13",
+      "speakerId": "npc.101",
+      "text": "이것 참. 예의바르신 분이시군요. 그럼 편하게 이야기하도록 하겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_14",
+      "speakerId": "npc.108",
+      "text": "촌장님, 지금 그게 중요한게 아니에요! 에네스씨가 저희 마을을 도와주신데요!",
+      "typingSpeed": 0.04,
+      "next": "Town_15",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 2,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_15",
+      "speakerId": "npc.101",
+      "text": "마을을 도와? 그게 무슨 소리인가?",
+      "typingSpeed": 0.04,
+      "next": "Town_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_16",
+      "speakerId": "npc.108",
+      "text": "아, 설명이 모자랐네요. 이번에 에네스씨가 ···",
+      "typingSpeed": 0.04,
+      "next": "Town_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_17",
+      "speakerId": "npc.001",
+      "text": "힌겔이 이러쿵저러쿵 설명을 열심히 하자, 전부 귀기울여 듣고 있던 촌장이 이야기했다.",
+      "typingSpeed": 0.04,
+      "next": "Town_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_18",
+      "speakerId": "npc.101",
+      "text": "그것 참 감사한 일이구만. 그렇다면 마을에서도 발뻗고 쉬고 있을 수만은 없지.",
+      "typingSpeed": 0.04,
+      "next": "Town_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_19",
+      "speakerId": "npc.101",
+      "text": "잠시만 기다려주게.",
+      "typingSpeed": 0.04,
+      "next": "Town_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_20",
+      "speakerId": "npc.001",
+      "text": "촌장은 다시 건물 안으로 걸어 들어가더니, 양손에 한아름 뭔가를 들고 나타났다.",
+      "typingSpeed": 0.04,
+      "next": "Town_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_21",
+      "speakerId": "npc.101",
+      "text": "자, 이것들을 가져가게. 조금 오래되기는 했지만, 사용하는데 문제는 없을걸세.",
+      "typingSpeed": 0.04,
+      "next": "Town_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_22",
+      "speakerId": "npc.001",
+      "text": "이게 다 뭔가요?",
+      "typingSpeed": 0.04,
+      "next": "Town_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_23",
+      "speakerId": "npc.101",
+      "text": "마을에서 이래저래 사용하던 도구들이네. 이것들만 있으면 어지간한 것들은 모으는데 문제가 없을걸세.",
+      "typingSpeed": 0.04,
+      "next": "Town_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_24",
+      "speakerId": "npc.101",
+      "text": "내 간간이 손질하고 했으니, 바로 써도 될걸세.",
+      "typingSpeed": 0.04,
+      "next": "Town_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_25",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 조심히 사용하겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_26",
+      "speakerId": "npc.101",
+      "text": "마을을 위해서 내 이정도도 못내어주겠나. 그래서, 식당은 언제부터 영업하는가?",
+      "typingSpeed": 0.04,
+      "next": "Town_27",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_27",
+      "speakerId": "npc.001",
+      "text": "음... 일단 식재료를 구하기는 해야하니...",
+      "typingSpeed": 0.04,
+      "next": "Town_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_28",
+      "speakerId": "npc.101",
+      "text": "그렇지. 음식을 하려면 재료는 있어야지. 저기 마을 상점가쪽에 그래도 마을에서 나는 특산물 정도는 팔고 있으니 한번 찾아가 보게.",
+      "typingSpeed": 0.04,
+      "next": "Town_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_29",
+      "speakerId": "npc.101",
+      "text": "힌겔과 함께 가서 잘 설명하면 선뜻 내어줄걸세.",
+      "typingSpeed": 0.04,
+      "next": "Town_30",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_30",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 참고하겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_31",
+      "events": [
+        {
+          "type" :"HIDE_NPC",
+          "npcId" :"npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_31",
+      "speakerId": "npc.108",
+      "text": "에네스씨 에네스씨. 식당을 열면 손님을 어떻게 모으실 건가요?",
+      "typingSpeed": 0.04,
+      "next": "Town_32",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 7
+        },
+        {
+          "type":"HIDE_NPC",
+          "npcId" : "npc.101"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_32",
+      "speakerId": "npc.001",
+      "text": "손님이라... 아무래도 재료를 직접 모아야 하다 보니 그리 많은 분들을 모시기는 힘들것 같은데요.",
+      "typingSpeed": 0.04,
+      "next": "Town_33",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_33",
+      "speakerId": "npc.108",
+      "text": "그렇네요... 그러면! 이렇게 하는 건 어떨까요?",
+      "typingSpeed": 0.04,
+      "next": "Town_34",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_34",
+      "speakerId": "npc.108",
+      "text": "예약제로 영업을 하는거에요! 오히려 딱 오늘은 한명만! 이렇게 받아버리면 특이해서라도 사람들에게 입소문이 많이 나지 않을까요?",
+      "typingSpeed": 0.04,
+      "next": "Town_35",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 9
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_35",
+      "speakerId": "npc.001",
+      "text": "하루에 한명이요? 그러면... 사람들이 많이 찾아 줄까요?",
+      "typingSpeed": 0.04,
+      "next": "Town_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_36",
+      "speakerId": "npc.108",
+      "text": "음... 그러면 처음에는 사람들을 직접 초대하고 하면...",
+      "typingSpeed": 0.04,
+      "next": "Town_37",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 3
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_37",
+      "speakerId": "npc.001",
+      "text": "힌겔은 그닥 자신이 없는듯, 말꼬리를 흐리며 말했다.",
+      "typingSpeed": 0.04,
+      "next": "Town_38",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_38",
+      "speakerId": "npc.001",
+      "text": "그러면, 이렇게 하죠.",
+      "typingSpeed": 0.04,
+      "next": "Town_39",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_39",
+      "speakerId": "npc.001",
+      "text": "예약제로 식당을 해서, 하루에 한 분만 모시는 대신에. 따로 예약 비용이나 음식 비용을 받지는 않는거에요.",
+      "typingSpeed": 0.04,
+      "next": "Town_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_40",
+      "speakerId": "npc.108",
+      "text": "네?! 그러면 식당을 어떻게 영업을 하시려고...",
+      "typingSpeed": 0.04,
+      "next": "Town_41",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_41",
+      "speakerId": "npc.001",
+      "text": "저는 어짜피 관리국 소속이다보니 따로 장사같은 것을 통해서 막 큰돈을 버는게 문제가 될 수 있기도 하고...",
+      "typingSpeed": 0.04,
+      "next": "Town_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_42",
+      "speakerId": "npc.001",
+      "text": "재료 같은건 자급자족 하는 만큼, 그렇게 크게 비용이 들지는 않을테니까요.",
+      "typingSpeed": 0.04,
+      "next": "Town_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_43",
+      "speakerId": "npc.001",
+      "text": "건물 유지비 같은건... 하루에 음식 하나 판매할 정도는... 제가 어떻게든 해볼 수 있지 않을까요?",
+      "typingSpeed": 0.04,
+      "next": "Town_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_44",
+      "speakerId": "npc.001",
+      "text": "내 이야기를 듣고 힌게이 망설이는 듯 하자, 이야기를 가만히 듣고 있던 촌장이 나서 말했다.",
+      "typingSpeed": 0.04,
+      "next": "Town_45",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 0
+        },
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.101",
+          "slot" : 2,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_45",
+      "speakerId": "npc.101",
+      "text": "건물 유지비는 마을에서 처리하겠네. 그 부분은 신경쓰지 말게.",
+      "typingSpeed": 0.04,
+      "next": "Town_46",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_46",
+      "speakerId": "npc.001",
+      "text": "예? 그렇게까지 해주시 않으셨도 괜찮습니다. 너무 신세지는 것 아닌지...",
+      "typingSpeed": 0.04,
+      "next": "Town_47",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_47",
+      "speakerId": "npc.101",
+      "text": "괜찮네. 애초에 마을에서 관리하던 건물이니 만큼, 가타부타한 비용은 원래 마을에서 처리하고 있었네.",
+      "typingSpeed": 0.04,
+      "next": "Town_48",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_48",
+      "speakerId": "npc.101",
+      "text": "무엇보다 마을에 조금 뜻 깊은 건물이라 없애지도 못하고 있었어서 괜시레 돈만 나가고 있었는데, 어떻게든 사용된다면 더 좋은 것 아니겠나.",
+      "typingSpeed": 0.04,
+      "next": "Town_49",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_49",
+      "speakerId": "npc.101",
+      "text": "마을을 위해 수익도 마다하고 힘써준다는데, 그 정도 배려도 해주지 못해서야 우리 면이 안서지 않겠나.",
+      "typingSpeed": 0.04,
+      "next": "Town_50",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_50",
+      "speakerId": "npc.108",
+      "text": "와! 촌장님 너무 멋있어요! 감사해요!",
+      "typingSpeed": 0.04,
+      "next": "Town_51",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 4
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_51",
+      "speakerId": "npc.001",
+      "text": "힌겔이 방방 뛰며 촌장에서 감사를 표하는 것을 보며, 나는 말했다.",
+      "typingSpeed": 0.04,
+      "next": "Town_52",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_52",
+      "speakerId": "npc.001",
+      "text": "그렇게까지 말씀해주시는데 배려를 거절하는 것도 예의가 아닌듯하니... 감사히 받겠습니다. 감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_53",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_53",
+      "speakerId": "npc.101",
+      "text": "음. 오히려 내가 더 감사하네. 마을을 위해서 사실상 아무런 대가 없이 힘써주는 것 아닌가.",
+      "typingSpeed": 0.04,
+      "next": "Town_54",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_54",
+      "speakerId": "npc.101",
+      "text": "일 때문이라고 해도, 그리 열정적으로 임해주니 이정도는 편의를 봐줘야지.",
+      "typingSpeed": 0.04,
+      "next": "Town_55",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_55",
+      "speakerId": "npc.101",
+      "text": "아무튼, 얼른 가서 준비하게. 식당을 하려면 준비할 게 많을 것 아닌가.",
+      "typingSpeed": 0.04,
+      "next": "Town_56",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_56",
+      "speakerId": "npc.001",
+      "text": "네, 그럼 이만 가보겠습니다. 많은 도움을 주셔서 감사합니다. 다음에 저희 식당이 준비되면 꼭 말씀드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_57",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_57",
+      "speakerId": "npc.101",
+      "text": "그래. 다음에 봅세. 고생하게.",
+      "typingSpeed": 0.04,
+      "next": "Town_58",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_58",
+      "speakerId": "npc.001",
+      "text": "나와 힌겔은 촌장이 준 물건들을 한아름 안고 식당으로 향하는 발걸음을 옮겼다.",
+      "typingSpeed": 0.04,
+      "next": "Town_59",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_59",
+      "speakerId": "npc.108",
+      "text": "그럼 에네스씨, 다른 문제들은 얼추 해결되기는 했는데... 식당에 찾아오실 손님들은 어떻게 모을 생각이신가요?",
+      "typingSpeed": 0.04,
+      "next": "Town_60",
+      "events": [
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.101"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_60",
+      "speakerId": "npc.001",
+      "text": "글쎄요, 일단은 직접 돌아다니면서 한분 한분 초대하는 수 밖에 없지 않을까요?",
+      "typingSpeed": 0.04,
+      "next": "Town_61",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_61",
+      "speakerId": "npc.001",
+      "text": "일단은 마을분들께도 식사를 대접하면서 조금 경험을 쌓고, 다른 지역 분들도 모시다 보면 점점 이름이 알려지겠죠.",
+      "typingSpeed": 0.04,
+      "next": "Town_62",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_62",
+      "speakerId": "npc.001",
+      "text": "재료를 구하러 다른 마을까지 다녀오는 일도 있을테니, 그럴때 홍보를 겸하면 어떨까요?",
+      "typingSpeed": 0.04,
+      "next": "Town_63",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_63",
+      "speakerId": "npc.108",
+      "text": "오! 좋은거 같아요! 그러면 그렇게 한분한분 모시면서, 드시고 싶은 음식을 여쭤보고 준비하는 거네요!",
+      "typingSpeed": 0.04,
+      "next": "Town_64",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 9
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_64",
+      "speakerId": "npc.001",
+      "text": "그렇죠.",
+      "typingSpeed": 0.04,
+      "next": "Town_65",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_65",
+      "speakerId": "npc.108",
+      "text": "앞으로 많이 바빠지겠네요! 저도 힘내야겠어요!",
+      "typingSpeed": 0.04,
+      "next": "Town_66",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 4
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_66",
+      "speakerId": "npc.001",
+      "text": "힌겔씨가요?",
+      "typingSpeed": 0.04,
+      "next": "Town_67",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_67",
+      "speakerId": "npc.108",
+      "text": "네! 당연히 제가 열심히 도와드려야죠! 이렇게 까지 같이 이야기했는데, 에네스씨만 일하게 둘 수는 없죠!",
+      "typingSpeed": 0.04,
+      "next": "Town_68",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_68",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "Town_69",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_69",
+      "speakerId": "npc.108",
+      "text": "에이, 별말씀을요. 그럼 앞으로 힘내봐요!",
+      "typingSpeed": 0.04,
+      "next": "Town_70",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_70",
+      "speakerId": "npc.001",
+      "text": "힌겔은 그렇게 식당까지 물건들을 옮겨주고도, 식당 내부를 어떻게 꾸밀지, 어떤 가구를 들여 놓을지 한참을 이야기하다 떠났다.",
+      "typingSpeed": 0.04,
+      "next": "Town_71",
+      "events": [
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.001"
+        },
+        {
+          "type" : "HIDE_NPC",
+          "npcId" :"npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "Town_71",
+      "speakerId": "npc.001",
+      "text": "나는 앞으로 식당일을 하며 이 마을에 대해 어떻게 조사할지 잠자리를 준비하며 생각했다.",
+      "typingSpeed": 0.04,
+      "next": "Town_72",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_72",
+      "speakerId": "npc.001",
+      "text": "아직까지 상부에서 나를 왜 이곳으로 보냈는지. 이 프로젝트는 어떤 목적으로 진행하는 것인지 의문이 많이 남아있기는 하지만,",
+      "typingSpeed": 0.04,
+      "next": "Town_73",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "Town_73",
+      "speakerId": "npc.001",
+      "text": "오늘처럼만 된다면, 잘 진행할 수 있을 거라고.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

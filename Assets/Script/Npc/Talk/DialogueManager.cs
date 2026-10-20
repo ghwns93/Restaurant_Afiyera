@@ -19,7 +19,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text bodyText;          // 대사 본문 (TextMeshPro)
     [SerializeField] private GameObject nextIndicator;   // "▼" 같은 다음 표시 아이콘
     [SerializeField] private NpcSlotView[] npcSlots;     // 화면에 배치된 NPC 슬롯들
-    [SerializeField] private TempCookAndNightCookScene nightCookScene;
 
     [Header("선택지 UI")]
     [SerializeField] private Transform choiceContainer;          // 버튼들이 배치될 부모 (Vertical Layout Group 권장)
@@ -251,7 +250,12 @@ public class DialogueManager : MonoBehaviour
 
         // 2) 화자 이름 표시 + 말하는 NPC 강조
         var npc = NpcDicManager.Instance.GetData(line.speakerId);
-        nameText.text = npc != null ? npc.npcName : line.speakerId;
+
+        string npcName = npc != null ? npc.npcName : line.speakerId;
+
+        if (npcName == "empty") npcName = "";
+
+        nameText.text = npcName;
 
         foreach (var slot in npcSlots)
             slot.SetSpeaking(slot.IsOccupied && slot.CurrentNpcId == line.speakerId);
@@ -445,9 +449,7 @@ public class DialogueManager : MonoBehaviour
         // 필요하면 여기서 onDialogueEnd 이벤트 발행 (퀘스트 시작, 플레이어 조작 복구 등)
         NpcSpecialEventManager.Instance.MarkEventAsSeen(NpcSpecialEventManager.Instance.GetSelectedId()?.name);
 
-        NpcSpecialEventManager.Instance.ResetEvent();
-
-        nightCookScene.NightCookEnd();
+        NpcSpecialEventManager.Instance.EndTalkEnvent();
     }
 
     // ===== 스킵: 가장 가까운 선택지(없으면 마지막 라인)까지 즉시 점프 =====

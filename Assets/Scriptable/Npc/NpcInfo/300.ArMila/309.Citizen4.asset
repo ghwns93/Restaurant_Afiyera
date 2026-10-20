@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: 309.Citizen4
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 309
-  npcName: "\uC2DC\uBBFC4"
+  npcName: "\uD310"
   npcImage: {fileID: 0}
   npcIconImage: {fileID: 0}
   npcSdImage: {fileID: 0}
   isNightRestaurantNpc: 0
   portraits: []
-  specialEventDataList: []
   isInteractionNpc: 0
   npcInteractionBase: {fileID: 0}
   npcInteractionList: []

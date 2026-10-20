@@ -17,6 +17,7 @@ public enum ResourceType
     Mistic,            // 신비한 자원
     Plant,             // 식물
     Insect,            // 곤충
+    Shop,              // 상점구매
 }
 
 [CreateAssetMenu(fileName = "New Tool Item", menuName = "Inventory/Tool")]

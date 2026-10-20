@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 101.VillageChief
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 101
-  npcName: "\uCD0C\uC7A5"
+  npcName: "\uBCFC\uCE78"
   npcImage: {fileID: 21300000, guid: e9486c11de9965b4abe101487d360bd5, type: 3}
   npcIconImage: {fileID: 6272591594166438393, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: -4817471885051654188, guid: 9db39f4bc793ad545b7eee063f1422b2, type: 3}
@@ -26,8 +26,8 @@ MonoBehaviour:
   isInteractionNpc: 1
   npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
   npcInteractionList:
-  - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
-  - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
+  - {fileID: 11400000, guid: d425e9918cacddc4baef106cd6271b44, type: 2}
+  - {fileID: 11400000, guid: bc19afb6309a50c418314b4bd2e504a3, type: 2}
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 0
   shopItemList: []

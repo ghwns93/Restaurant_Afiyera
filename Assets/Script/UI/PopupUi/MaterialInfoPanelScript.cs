@@ -17,14 +17,14 @@ public class MaterialInfoPanelScript : MonoBehaviour
 
         if (matSubDescriptionText != null)
         {
-            if (showItem.buffEffect != null)
-            {
-                matSubDescriptionText.text = $"버프 효과: {showItem.buffEffect.description}";
-            }
-            else
-            {
-                matSubDescriptionText.text = "";
-            }
+            //if (showItem.buffEffect != null)
+            //{
+            //    matSubDescriptionText.text = $"버프 효과: {showItem.buffEffect.description}";
+            //}
+            //else
+            //{
+            //    matSubDescriptionText.text = "";
+            //}
         }
     }
 }

@@ -24,8 +24,10 @@ MonoBehaviour:
   - {fileID: -7826262640116959742, guid: 6f27f2cc695d3b449b45c245656984e5, type: 3}
   - {fileID: -4460074896955692341, guid: da08b5999a439974982b83c09ea88c54, type: 3}
   - {fileID: 5696012009431381005, guid: aee08e8705b649d4fbc877baf57a4d21, type: 3}
-  isInteractionNpc: 0
-  npcInteractionBase: {fileID: 0}
-  npcInteractionList: []
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: 8da0398c891791c468764b82aa6e527a, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 0
   shopItemList: []

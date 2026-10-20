@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 303.GroceryShopkeeper
   m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
   npcCode: 303
-  npcName: "\uC2DD\uD488\uC810\uC7A5"
+  npcName: "\uC140\uB9B0"
   npcImage: {fileID: -7089423755946850462, guid: 336c65f136afe064ba427730be1876ce, type: 3}
   npcIconImage: {fileID: -6283625187600960490, guid: 1e31c87c4b8d30a4eb58b69f30d084b2, type: 3}
   npcSdImage: {fileID: 8537710062132249458, guid: e1b3bc00268406e4b8b1e9d4e328c1c2, type: 3}
@@ -24,8 +24,31 @@ MonoBehaviour:
   - {fileID: -3561652758447548297, guid: 449b14d93f1d77a4f929d41596a0c8df, type: 3}
   - {fileID: 8457704473796436064, guid: e771148e26e86a94a833c5dcb92cc959, type: 3}
   - {fileID: 408361978292006339, guid: 0834d9b8702ca8c45b729d2b8a7c101a, type: 3}
-  isInteractionNpc: 0
-  npcInteractionBase: {fileID: 0}
-  npcInteractionList: []
-  npcType: 0
-  shopItemList: []
+  isInteractionNpc: 1
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: 7c4be18aef2378f4689dd0d7d1a5e99b, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcType: 1
+  shopItemList:
+  - itemData: {fileID: 11400000, guid: 11c71992d944782489c7f9f4f2563b6a, type: 2}
+    maxStockCount: 5
+    stockLimited: 0
+    basePrice: 20
+    currentPrice: 20
+    previousPrice: 20
+    stockCount: 5
+  - itemData: {fileID: 11400000, guid: 61ba2623a3d09214c95483674a51e253, type: 2}
+    maxStockCount: 5
+    stockLimited: 0
+    basePrice: 50
+    currentPrice: 50
+    previousPrice: 50
+    stockCount: 5
+  - itemData: {fileID: 11400000, guid: d15db7d397911294f8bb98c25d33e5a0, type: 2}
+    maxStockCount: 5
+    stockLimited: 0
+    basePrice: 100
+    currentPrice: 100
+    previousPrice: 100
+    stockCount: 5

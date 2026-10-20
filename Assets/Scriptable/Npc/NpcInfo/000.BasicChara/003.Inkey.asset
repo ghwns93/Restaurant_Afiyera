@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a6ab2459590df49a05bc3734be8e80, type: 3}
+  m_Name: 003.Inkey
+  m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
+  npcCode: 3
+  npcName: "\uC789\uD0A4"
+  npcImage: {fileID: 6785259513071122764, guid: 22d1015bcf616bc44b4452807ca5cdd5, type: 3}
+  npcIconImage: {fileID: 0}
+  npcSdImage: {fileID: 0}
+  isNightRestaurantNpc: 1
+  portraits:
+  - {fileID: 6785259513071122764, guid: 22d1015bcf616bc44b4452807ca5cdd5, type: 3}
+  - {fileID: -2703778047279121900, guid: 9b3aedef8f5075c4281515089f7a934f, type: 3}
+  isInteractionNpc: 0
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
+  - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcType: 0
+  shopItemList: []

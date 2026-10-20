@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Village/InventoryScene.unity
     guid: 5e4ec4d84d60d9448bd67a2449196843
+  - enabled: 1
+    path: Assets/Scenes/Village/GardenScene.unity
+    guid: f26cef40b3c564a4eaa5db6ee2c4462e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

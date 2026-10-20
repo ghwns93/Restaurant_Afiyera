@@ -57,31 +57,31 @@ public class CookingCookHolder : MonoBehaviour
         int elapsed0 = time - _cookStartTime[0];
         int elapsed1 = (_cookStartTime[1] >= 0 && _resourceData.Count > 1) ? time - _cookStartTime[1] : -1;
 
-        if (elapsed0 > _resourceData[0].cookTime)
-        {
-            Debug.Log("Mat 1 Burned");
-            DishBurned();
-            return;
-        }
+        //if (elapsed0 > _resourceData[0].cookTime)
+        //{
+        //    Debug.Log("Mat 1 Burned");
+        //    DishBurned();
+        //    return;
+        //}
 
-        if (elapsed1 > 0 && elapsed1 > _resourceData[1].cookTime)
-        {
-            Debug.Log("Mat 2 Burned");
-            DishBurned();
-            return;
-        }
+        //if (elapsed1 > 0 && elapsed1 > _resourceData[1].cookTime)
+        //{
+        //    Debug.Log("Mat 2 Burned");
+        //    DishBurned();
+        //    return;
+        //}
 
-        if (elapsed0 == _resourceData[0].cookTime)
-        {
-            _matCookDone[0] = true;
-            Debug.Log("mat 1 Complete");
-        }
+        //if (elapsed0 == _resourceData[0].cookTime)
+        //{
+        //    _matCookDone[0] = true;
+        //    Debug.Log("mat 1 Complete");
+        //}
 
-        if (elapsed1 > 0 && elapsed1 == _resourceData[1].cookTime)
-        {
-            _matCookDone[1] = true;
-            Debug.Log("mat 2 Complete");
-        }
+        //if (elapsed1 > 0 && elapsed1 == _resourceData[1].cookTime)
+        //{
+        //    _matCookDone[1] = true;
+        //    Debug.Log("mat 2 Complete");
+        //}
 
         if (_resourceData.Count > 1 && _matCookDone[0] && _matCookDone[1])
         {

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a6ab2459590df49a05bc3734be8e80, type: 3}
+  m_Name: 001.Enes
+  m_EditorClassIdentifier: Assembly-CSharp::NpcBasicInfo
+  npcCode: 1
+  npcName: "\uC5D0\uB124\uC2A4"
+  npcImage: {fileID: 5324753780985982321, guid: 5701faeb70980184cb526676a6282453, type: 3}
+  npcIconImage: {fileID: 0}
+  npcSdImage: {fileID: 7335337375542387480, guid: 5c69990abb9ab764da7bea838efd583d, type: 3}
+  isNightRestaurantNpc: 1
+  portraits:
+  - {fileID: 5324753780985982321, guid: 5701faeb70980184cb526676a6282453, type: 3}
+  - {fileID: -8601755287994826534, guid: 29498604a8915b7469a0e0bc4af19992, type: 3}
+  - {fileID: -3307110552754687186, guid: 1154558f9d9735446a077925f924b575, type: 3}
+  - {fileID: -35650495293078652, guid: f8a5bbcee5f4e2f40bc7410a252311c5, type: 3}
+  - {fileID: -3849830125932790540, guid: 609f041f6e4cd2847ac0468925dfdb71, type: 3}
+  - {fileID: -2357599841409370354, guid: 1ba2e041d9af7bd46a56b30ce9ca2929, type: 3}
+  - {fileID: -951633547412615041, guid: 7bae530cd2e76774ba82c52adbb96ccc, type: 3}
+  - {fileID: -9219514001136869747, guid: b2fe2def6db07db4084657814498e0b8, type: 3}
+  - {fileID: 1263358355174129923, guid: 3860399379e753f43a516b27634b1dc2, type: 3}
+  isInteractionNpc: 0
+  npcInteractionBase: {fileID: 11400000, guid: 3a38cae47aa2b9f46b87506ba3ec9194, type: 2}
+  npcInteractionList:
+  - {fileID: 11400000, guid: eb9ea3e2fa2a28649873d1680d0df692, type: 2}
+  - {fileID: 11400000, guid: ad0d0312a54b628408ee90fe43b8ac2a, type: 2}
+  - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
+  npcType: 0
+  shopItemList: []

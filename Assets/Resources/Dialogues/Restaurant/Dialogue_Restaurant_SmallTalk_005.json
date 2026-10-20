@@ -1,0 +1,409 @@
+{
+  "dialogueId": "SmallTalk005",
+  "startLineId": "SmallTalk005_01",
+  "lines": [
+    {
+      "id": "SmallTalk005_01",
+      "speakerId": "npc.001",
+      "text": "식당에서 레벤트를 위한 음식을 준비하던 나는, 들려오는 노크 소리에 손을 멈추고 손님을 맞이하러 나섰다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_02",
+      "speakerId": "npc.001",
+      "text": "어서오세요, 레벤트씨.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_03",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_03",
+      "speakerId": "npc.202",
+      "text": "안녕하세요, 에네스씨. 오늘은 실례하겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 3
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_04",
+      "speakerId": "npc.001",
+      "text": "레벤트는 조신하게 고개를 숙이며, 나의 안내를 따라 식당 안으로 들어섰다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_05",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_05",
+      "speakerId": "npc.001",
+      "text": "음식은 금방 준비해드릴게요. 밑준비는 전부 끝내놓았거든요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_06",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_06",
+      "speakerId": "npc.202",
+      "text": "아, 감사해요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_07",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_07",
+      "speakerId": "npc.001",
+      "text": "나는 서둘러 음식 준비를 마치고, 레벤트에게 내어주며 말했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_08",
+      "speakerId": "npc.001",
+      "text": "음식 준비됬습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_09",
+      "speakerId": "npc.202",
+      "text": "감사해요. 아, 드리는 걸 깜빡했네요. 작게나마 답례품을 준비해봤어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_10",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_10",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 지금 확인해봐도 괜찮을까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_11",
+      "speakerId": "npc.202",
+      "text": "네, 괜찮아요. 그렇게 거창한 건 아니라 쑥스럽네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_12",
+      "speakerId": "npc.001",
+      "text": "레벤트가 건내준 답례품은 자그마한 조개로 된 목걸이였다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_13",
+      "speakerId": "npc.001",
+      "text": "목걸이네요. 직접 만드신 건가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_14",
+      "speakerId": "npc.202",
+      "text": "네, 저희 마을에서 전통적으로 만드는 목걸이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_15",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_15",
+      "speakerId": "npc.202",
+      "text": "전해져 내려오는 전설이 얽힌 의미있는 물건이랍니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_16",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 소중히 보관해야겠네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_17",
+      "speakerId": "npc.001",
+      "text": "레벤트는 음식을 한입 입에 넣었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_18",
+      "speakerId": "npc.202",
+      "text": "음, 맛있네요. 익힘이나 간이 딱 맞아요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_19",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 3
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_19",
+      "speakerId": "npc.001",
+      "text": "입에 맞으시다니 다행이네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_20",
+      "speakerId": "npc.001",
+      "text": "나는 받은 목걸이를 이리저리 살펴보다 물었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_21",
+      "speakerId": "npc.001",
+      "text": "그런데, 전설이 얽힌 목걸이라니 궁금해지네요. 혹시 어떤 이야기인지 물어봐도 괜찮을까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_22",
+      "speakerId": "npc.202",
+      "text": "아, 그럼요. 물론이죠. 그렇게 거창한 이야기는 아니에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_23",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_23",
+      "speakerId": "npc.202",
+      "text": "그 목걸이는 저희 마을에 대대로 전해져 내려오는, 바다의 천사님을 모시는 부적이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_24",
+      "speakerId": "npc.202",
+      "text": "누군가 바다에서 길을 잃어 집으로 돌아갈 수 없을때, 바다에 이 조개 부적을 빠뜨리면.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_25",
+      "speakerId": "npc.202",
+      "text": "바다의 천사님이 나타나서 집으로 가는 길을 가르쳐준다고해요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_26",
+      "speakerId": "npc.202",
+      "text": "그래서 저희 마을에서 바다로 나가는 모든 사람들은 이 목걸이를 차고 간답니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_27",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_27",
+      "speakerId": "npc.202",
+      "text": "물론, 사용하지 않고 돌아오는걸 가장 바라기는 하지만요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_28",
+      "speakerId": "npc.001",
+      "text": "집으로 돌아가게 해주는 부적이라... 신기하네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_29",
+      "speakerId": "npc.202",
+      "text": "에네스씨는 바다로 나가거나 하실 일이 잘 없으실테니 크게 필요는 없으시겠지만...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_30",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_30",
+      "speakerId": "npc.202",
+      "text": "그래도 어찌보면 저희 마을의 상징? 같은 물건이라 드리고 싶었어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_31",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_31",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 소중히 간직할게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_32",
+      "speakerId": "npc.202",
+      "text": "좋아해주시니 다행이네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_33",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 3
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_33",
+      "speakerId": "npc.001",
+      "text": "그나저나, 바다의 천사님이라니... 어떤 존재인가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_34",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_34",
+      "speakerId": "npc.202",
+      "text": "글쎄요? 저는 직접 본적은 없어서... 마을 어른들 중에서는 알음알음 보셨다는 분도 계시기는 해요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_35",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.202",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_35",
+      "speakerId": "npc.202",
+      "text": "아, 청년회장님께 여쭤보시면 좋을거에요. 가장 최근에 바다의 천사님을 보신 분이거든요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_36",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 나중에 한번 부탁드려야겠네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk005_37",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk005_37",
+      "speakerId": "npc.202",
+      "text": "아마 이야기하는 것을 좋아하시는 분이니까, 흔쾌히 말해주실거에요.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

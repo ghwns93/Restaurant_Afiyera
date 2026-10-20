@@ -6,140 +6,171 @@ using UnityEngine.UI;
 public class BaitSelectorUI : MonoBehaviour
 {
     [Header("UI 구성 요소")]
-    [SerializeField] private GameObject baitSelectorRoot;       // 미끼 UI 전체를 감싸는 부모 오브젝트
-    [SerializeField] private Transform playerTransform;         // 플레이어 위치 (기준점)
-    [SerializeField] private GameObject baitSlotUIPrefab;       // 미끼 아이콘을 표시할 작은 동그라미 UI 프리팹
-    [SerializeField] private Transform baitSlotsParent;         // 미끼 슬롯들이 생성될 부모 컨테이너
-    [SerializeField] private RectTransform selectionIndicator;  // 선택된 미끼를 표시하는 빨간 원 테두리 UI
+    [SerializeField] private GameObject baitSlotUIPrefab;         // 미끼 아이콘 프리팹
+    [SerializeField] private Transform baitSlotsParent;           // 미끼들이 배치될 부모 컨테이너
+    [SerializeField] private RectTransform centerPointTransform;  // [빨간 점] 회전의 중심 (도구 UI 정중앙)
+    [SerializeField] private RectTransform baitPointTransform;    // [녹색 점 / BaitPoint] 선택된 미끼 고정 포인터
 
-    [Header("배치 설정")]
-    [SerializeField] private float radius = 100f;               // 플레이어 중심부터 아이콘까지의 거리 (UI 캔버스 기준 픽셀)
-    [SerializeField] private float openDuration = 0.2f;         // 펼쳐지는 애니메이션 시간
+    [Header("회전 궤도 설정")]
+    [SerializeField] private float slotAngleSpacing = 45f;        // 슬롯 간 각도 간격
 
     private List<BaitSlotUI> spawnedBaitSlots = new List<BaitSlotUI>();
     private List<ItemBaitData> availableBaits = new List<ItemBaitData>();
     private int selectedBaitIndex = 0;
-    private bool isOpen = false;
 
-    // 미끼 슬롯 내부 데이터 저장을 위한 구조체/클래스
+    // [핵심 수정] static을 붙여서 오브젝트가 꺼지거나 재조립되어도 마지막 선택 미끼 기억이 안 날아가게 유지
+    private static Dictionary<ToolType, ItemBaitData> lastSelectedBaitsPerTool = new Dictionary<ToolType, ItemBaitData>();
+
+    private float currentAngleOffset = 0f;
+    private Coroutine rotateCoroutine;
+
     private class BaitSlotUI
     {
         public GameObject rootObject;
         public RectTransform rectTransform;
         public Image iconImage;
         public ItemBaitData baitData;
-        public Vector2 targetAnchoredPosition; // 최종 목표 위치
+    }
+
+    private void OnEnable()
+    {
+        if (PlayerInventoryController.Instance != null)
+        {
+            PlayerInventoryController.Instance.onSelectedSlotChangedCallback += OnEquippedToolChanged;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (PlayerInventoryController.Instance != null)
+        {
+            PlayerInventoryController.Instance.onSelectedSlotChangedCallback -= OnEquippedToolChanged;
+        }
     }
 
     private void Start()
     {
-        if (baitSelectorRoot != null)
-        {
-            baitSelectorRoot.SetActive(false);
-        }
+        SetupBaitSelector();
     }
 
     private void Update()
     {
-        HandleInput();
+        HandleMouseWheelInput();
     }
 
-    private void HandleInput()
+    private void OnEquippedToolChanged(int slotIndex)
     {
-        // 1. 도구가 장착된 상태에서 Ctrl 키를 누르고 있을 때
-        bool isToolEquipped = CheckToolEquipped();
-
-        if (isToolEquipped && Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            OpenBaitSelector();
-        }
-        else if (isToolEquipped && Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            CloseBaitSelector();
-        }
-
-        // 2. 미끼 UI가 열려있는 동안 마우스 휠로 선택 변경
-        if (isOpen && spawnedBaitSlots.Count > 0)
-        {
-            float scroll = Input.GetAxis("Mouse ScrollWheel");
-            if (scroll != 0f)
-            {
-                if (scroll > 0f)
-                {
-                    selectedBaitIndex = (selectedBaitIndex - 1 + spawnedBaitSlots.Count) % spawnedBaitSlots.Count;
-                }
-                else
-                {
-                    selectedBaitIndex = (selectedBaitIndex + 1) % spawnedBaitSlots.Count;
-                }
-                UpdateSelectionIndicator();
-            }
-        }
+        SetupBaitSelector();
     }
 
-    private bool CheckToolEquipped()
+    public void SetupBaitSelector()
     {
-        if (PlayerInventoryController.Instance == null) return false;
-        ItemData equipped = PlayerInventoryController.Instance.GetCurrentlyEquippedItem();
-        return equipped is ItemToolData;
-    }
+        ItemToolData toolData = GetCurrentEquippedTool();
+        if (toolData == null)
+        {
+            ClearBaitUI();
+            return;
+        }
 
-    private void OpenBaitSelector()
-    {
-        // 현재 장착된 도구 정보 가져오기
-        ItemToolData toolData = PlayerInventoryController.Instance.GetCurrentlyEquippedItem() as ItemToolData;
-        if (toolData == null) return;
-
-        // 1 & 3번 수정사항 반영: 현재 장착된 도구 타입과 일치하고, 도구 허용 등급 이하인 미끼만 필터링
         RefreshAvailableBaits(toolData);
 
         if (availableBaits.Count == 0)
         {
-            Debug.Log("이 도구와 매칭되는 사용 가능한 미끼가 없습니다.");
+            ClearBaitUI();
             return;
         }
 
-        // 슬롯 UI 생성 및 배치 각도 계산
-        CreateBaitSlotsUI();
+        selectedBaitIndex = 0;
+        ItemBaitData targetBait = null;
 
-        // 2번 수정사항 반영: 현재 장착된 미끼가 있다면 그 인덱스를 찾아 포커싱, 없으면 0번
-        ItemBaitData currentEquippedBait = PlayerInventoryController.Instance.GetCurrentlyEquippedBait(toolData.ToolType);
-        selectedBaitIndex = 0; // 기본값 0번
-
-        if (currentEquippedBait != null)
+        // 1. 기억된 미끼가 있는지 확인
+        if (lastSelectedBaitsPerTool.ContainsKey(toolData.ToolType) && lastSelectedBaitsPerTool[toolData.ToolType] != null)
         {
-            int foundIndex = availableBaits.IndexOf(currentEquippedBait);
+            targetBait = lastSelectedBaitsPerTool[toolData.ToolType];
+        }
+
+        // 2. 기억된 게 없거나 인벤토리에 없다면 기본 장착 미끼 확인
+        if (targetBait == null || !availableBaits.Contains(targetBait))
+        {
+            targetBait = PlayerInventoryController.Instance.GetCurrentlyEquippedBait(toolData.ToolType);
+        }
+
+        if (targetBait != null)
+        {
+            int foundIndex = availableBaits.IndexOf(targetBait);
             if (foundIndex != -1)
             {
                 selectedBaitIndex = foundIndex;
             }
         }
 
-        // [핵심 수정] 도구가 바뀌어 사용 가능한 미끼 개수가 줄어들었을 때 OutOfRange가 나지 않도록 안전장치 보정
         if (selectedBaitIndex >= availableBaits.Count)
         {
             selectedBaitIndex = availableBaits.Count - 1;
         }
 
-        isOpen = true;
-        baitSelectorRoot.SetActive(true);
-        UpdateSelectionIndicator();
-
-        // 펼쳐지는 연출 애니메이션 시작
-        StopAllCoroutines();
-        StartCoroutine(AnimateOpenSelector());
-    }
-
-    private void CloseBaitSelector()
-    {
-        isOpen = false;
-        if (baitSelectorRoot != null)
+        if (centerPointTransform != null && baitPointTransform != null)
         {
-            baitSelectorRoot.SetActive(false);
+            Vector2 dir = baitPointTransform.anchoredPosition - centerPointTransform.anchoredPosition;
+            float baseAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            currentAngleOffset = baseAngle - (selectedBaitIndex * slotAngleSpacing);
         }
 
-        // 선택된 최종 미끼를 플레이어 컨트롤러나 인벤토리에 전달
+        CreateBaitSlotsUI();
+        UpdateAllSlotsPosition();
         ApplySelectedBait();
+    }
+
+    private void HandleMouseWheelInput()
+    {
+        if (spawnedBaitSlots.Count == 0 || centerPointTransform == null || baitPointTransform == null) return;
+
+        // 혹시 Ctrl을 꼭 누른 상태에서만 휠을 돌리게 하고 싶다면 아래 주석을 해제하세요.
+        if (!Input.GetKey(KeyCode.LeftControl) && !Input.GetKey(KeyCode.RightControl)) return;
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (scroll != 0f)
+        {
+            if (scroll > 0f)
+            {
+                selectedBaitIndex = (selectedBaitIndex - 1 + spawnedBaitSlots.Count) % spawnedBaitSlots.Count;
+            }
+            else
+            {
+                selectedBaitIndex = (selectedBaitIndex + 1) % spawnedBaitSlots.Count;
+            }
+
+            ItemToolData toolData = GetCurrentEquippedTool();
+            if (toolData != null)
+            {
+                lastSelectedBaitsPerTool[toolData.ToolType] = spawnedBaitSlots[selectedBaitIndex].baitData;
+            }
+
+            Vector2 dir = baitPointTransform.anchoredPosition - centerPointTransform.anchoredPosition;
+            float baseAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            float targetOffset = baseAngle - (selectedBaitIndex * slotAngleSpacing);
+
+            StopRotateCoroutine();
+            rotateCoroutine = StartCoroutine(AnimateRotateTo(targetOffset));
+
+            ApplySelectedBait();
+        }
+    }
+
+    private ItemToolData GetCurrentEquippedTool()
+    {
+        if (PlayerInventoryController.Instance == null) return null;
+        ItemData equipped = PlayerInventoryController.Instance.GetCurrentlyEquippedItem();
+        return equipped as ItemToolData;
+    }
+
+    private void ClearBaitUI()
+    {
+        foreach (var slot in spawnedBaitSlots)
+        {
+            if (slot.rootObject != null) Destroy(slot.rootObject);
+        }
+        spawnedBaitSlots.Clear();
     }
 
     private void RefreshAvailableBaits(ItemToolData toolData)
@@ -153,7 +184,6 @@ public class BaitSelectorUI : MonoBehaviour
             {
                 if (item.ItemData is ItemBaitData baitData)
                 {
-                    // [수정사항 1 & 3] 미끼의 TargetToolType이 현재 도구의 ToolType과 일치하고, 최대 허용 등급 이하인 경우만 추가
                     if (baitData.TargetToolType == toolData.ToolType && baitData.BaitTier <= toolData.MaxAllowedBaitTier)
                     {
                         if (!availableBaits.Contains(baitData))
@@ -168,7 +198,6 @@ public class BaitSelectorUI : MonoBehaviour
 
     private void CreateBaitSlotsUI()
     {
-        // 기존 생성된 슬롯 정리
         foreach (var slot in spawnedBaitSlots)
         {
             if (slot.rootObject != null) Destroy(slot.rootObject);
@@ -177,9 +206,6 @@ public class BaitSelectorUI : MonoBehaviour
 
         int count = availableBaits.Count;
         if (count == 0) return;
-
-        float startAngle = -45f;
-        float angleStep = count > 1 ? 90f / (count - 1) : 0f;
 
         for (int i = 0; i < count; i++)
         {
@@ -192,74 +218,65 @@ public class BaitSelectorUI : MonoBehaviour
                 iconImg.sprite = availableBaits[i].Icon;
             }
 
-            float currentAngle = startAngle + (angleStep * i);
-            float rad = currentAngle * Mathf.Deg2Rad;
-            Vector2 targetPos = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)) * radius;
-
             BaitSlotUI slotUI = new BaitSlotUI
             {
                 rootObject = slotObj,
                 rectTransform = rect,
                 iconImage = iconImg,
-                baitData = availableBaits[i],
-                targetAnchoredPosition = targetPos
+                baitData = availableBaits[i]
             };
 
-            // 처음 시작할 때는 플레이어 위치(중앙, 0,0)에서 시작하도록 설정 (펼쳐지는 연출용)
-            rect.anchoredPosition = Vector2.zero;
             spawnedBaitSlots.Add(slotUI);
         }
-
-        UpdateSelectionIndicator();
     }
 
-    private IEnumerator AnimateOpenSelector()
+    private void UpdateAllSlotsPosition()
     {
-        float timer = 0f;
+        int count = spawnedBaitSlots.Count;
+        if (count == 0 || centerPointTransform == null || baitPointTransform == null) return;
 
-        while (timer < openDuration)
+        Vector2 centerPos = centerPointTransform.anchoredPosition;
+        float radius = Vector2.Distance(centerPos, baitPointTransform.anchoredPosition);
+
+        for (int i = 0; i < count; i++)
         {
-            timer += Time.deltaTime;
-            float progress = Mathf.Clamp01(timer / openDuration);
-            float curvedProgress = Mathf.Sin(progress * Mathf.PI * 0.5f);
+            float angle = (i * slotAngleSpacing) + currentAngleOffset;
+            float rad = angle * Mathf.Deg2Rad;
 
-            for (int i = 0; i < spawnedBaitSlots.Count; i++)
-            {
-                Vector2 currentPos = Vector2.Lerp(Vector2.zero, spawnedBaitSlots[i].targetAnchoredPosition, curvedProgress);
-                spawnedBaitSlots[i].rectTransform.anchoredPosition = currentPos;
-            }
+            Vector2 offset = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)) * radius;
+            spawnedBaitSlots[i].rectTransform.anchoredPosition = centerPos + offset;
+        }
+    }
 
-            // 애니메이션 도중에도 테두리 위치 동기화
-            UpdateSelectionIndicator();
+    private IEnumerator AnimateRotateTo(float targetOffset)
+    {
+        float startOffset = currentAngleOffset;
+        float elapsed = 0f;
+        float duration = 0.15f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            float smoothT = Mathf.Sin(t * Mathf.PI * 0.5f);
+
+            currentAngleOffset = Mathf.Lerp(startOffset, targetOffset, smoothT);
+            UpdateAllSlotsPosition();
 
             yield return null;
         }
 
-        // 최종 위치 보정
-        for (int i = 0; i < spawnedBaitSlots.Count; i++)
-        {
-            spawnedBaitSlots[i].rectTransform.anchoredPosition = spawnedBaitSlots[i].targetAnchoredPosition;
-        }
-        UpdateSelectionIndicator();
+        currentAngleOffset = targetOffset;
+        UpdateAllSlotsPosition();
     }
 
-    private void UpdateSelectionIndicator()
+    private void StopRotateCoroutine()
     {
-        if (spawnedBaitSlots.Count == 0 || selectionIndicator == null) return;
-
-        // [방어 코드 추가] selectedBaitIndex가 리스트 범위를 벗어났다면 마지막 유효한 인덱스로 보정
-        if (selectedBaitIndex >= spawnedBaitSlots.Count)
+        if (rotateCoroutine != null)
         {
-            selectedBaitIndex = spawnedBaitSlots.Count - 1;
+            StopCoroutine(rotateCoroutine);
+            rotateCoroutine = null;
         }
-        // 음수가 되는 경우 방지
-        if (selectedBaitIndex < 0)
-        {
-            selectedBaitIndex = 0;
-        }
-
-        // 선택된 미끼 슬롯의 위치로 빨간 테두리(Indicator) 이동
-        selectionIndicator.position = spawnedBaitSlots[selectedBaitIndex].rectTransform.position;
     }
 
     private void ApplySelectedBait()
@@ -270,11 +287,10 @@ public class BaitSelectorUI : MonoBehaviour
         if (PlayerInventoryController.Instance != null)
         {
             ItemData equipped = PlayerInventoryController.Instance.GetCurrentlyEquippedItem();
-
             if (equipped is ItemToolData toolData)
             {
                 PlayerInventoryController.Instance.EquipBaitForTool(toolData.ToolType, selectedBait);
-                Debug.Log($"미끼 선택 완료: {selectedBait.ItemName}");
+                lastSelectedBaitsPerTool[toolData.ToolType] = selectedBait;
             }
         }
     }

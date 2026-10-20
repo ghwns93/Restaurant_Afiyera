@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03af5376853a2d94f8ccf7229b0c7d5f, type: 3}
+  m_Name: HandStatue
+  m_EditorClassIdentifier: Assembly-CSharp::StatueData
+  id: 301
+  itemName: "\uCC44\uC9D1\uC11D\uC0C1(\uAE30\uBCF8)"
+  icon: {fileID: 1156771476863572680, guid: 0bd2b8be9049e7b4d8ba0d02c2f904c5, type: 3}
+  itemType: 5
+  isStackable: 1
+  maxStackCount: 99
+  baseSellPrice: 0
+  baseBuyPrice: 0
+  description: "\uAE30\uBCF8\uC801\uC778 \uC11D\uC0C1\uC774\uB2E4."
+  objectPrefab: {fileID: 5686474358133775028, guid: b69745faf8ea0a54db03a7d1050de5ca, type: 3}
+  objectType: 0
+  resourceType: 3

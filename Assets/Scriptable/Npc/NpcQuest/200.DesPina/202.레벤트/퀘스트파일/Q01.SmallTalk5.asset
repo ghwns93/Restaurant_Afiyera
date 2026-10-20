@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpecialEventUnlockAction
   questType: 1
   questInteractionType: 0
-  dialogueKey: "\uC2A4\uBAB0\uD1A0\uD06C5"
+  dialogueKey: "\uC2A4\uBAB0\uD1A0\uD06C5 \uD574\uAE08"
   targetNpcId: 
   unlockConditions:
   - {fileID: 11400000, guid: 001adffd004accd43a11ece81e3a4fc0, type: 2}
   unlockEventData: {fileID: 11400000, guid: 8202693209167ed41a1b0c781ca021a8, type: 2}
-  talkContent: 
+  talkContent: "\uD574\uAE08\uC644\uB8CC"
   choiceList: []

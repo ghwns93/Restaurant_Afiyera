@@ -1,0 +1,1072 @@
+{
+    "dialogueId": "intro",
+    "startLineId": "intro_01",
+  "lines": [
+    {
+      "id": "intro_01",
+      "speakerId": "npc.004",
+      "text": "'기억하지 말아줘.'",
+      "typingSpeed": 0.04,
+      "next": "intro_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_02",
+      "speakerId": "npc.001",
+      "text": "점심시간, 낮잠을 자기에 좋은 포근한 날씨에 잠깐 졸았던 나는 지레 식은땀을 흘리며 잠에서 깨어났다.",
+      "typingSpeed": 0.06,
+      "next": "intro_03",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_03",
+      "speakerId": "npc.001",
+      "text": "매일 일어나면 꿈에 대한 기억은 잊어버리지만, 늘 식은땀을 흘리며 잠에서 깨어난다.",
+      "typingSpeed": 0.04,
+      "next": "intro_04",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_04",
+      "speakerId": "npc.001",
+      "text": "정수기에서 물 한잔을 마시고 숨을 돌리고 있을 때, 전화가 울렸다.",
+      "typingSpeed": 0.04,
+      "next": "intro_05",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_05",
+      "speakerId": "npc.004",
+      "text": "도시 관리 부서의 에네스 차장님 맞으시죠?",
+      "typingSpeed": 0.04,
+      "next": "intro_06",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_06",
+      "speakerId": "npc.001",
+      "text": "예, 맞습니다. 혹시 무슨 용건으로 연락을 주신건가요?",
+      "typingSpeed": 0.04,
+      "next": "intro_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_07",
+      "speakerId": "npc.004",
+      "text": "다름아니라, 이번에 에네스씨가 새로 발령받아 부서를 이동하게 되셔서요.",
+      "typingSpeed": 0.04,
+      "next": "intro_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_08",
+      "speakerId": "npc.004",
+      "text": "발령지가 '이시도라'라는 곳이어서, 내일부터 그곳으로 이동하셔서 일하시게 되셨어요.",
+      "typingSpeed": 0.04,
+      "next": "intro_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_09",
+      "speakerId": "npc.001",
+      "text": "'이시도라'요...?",
+      "typingSpeed": 0.04,
+      "next": "intro_10",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 2
+        }],
+      "choices": []
+    },
+    {
+      "id": "intro_10",
+      "speakerId": "npc.001",
+      "text": "처음 들어보는 낯선 '이시도라'라는 지명에 당황스러웠다.",
+      "typingSpeed": 0.04,
+      "next": "intro_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_11",
+      "speakerId": "npc.001",
+      "text": "대부분의 지명이라면 알고있다고 생각하지만, 들어본적 없는 곳이다.",
+      "typingSpeed": 0.04,
+      "next": "intro_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_12",
+      "speakerId": "npc.001",
+      "text": "갑작스레 왜 그런 곳으로 발령받게 되었을까?",
+      "typingSpeed": 0.04,
+      "next": "intro_13",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }],
+      "choices": []
+    },
+    {
+      "id": "intro_13",
+      "speakerId": "npc.001",
+      "text": "나는 관리국에서 셀수 없을만큼 오랜 기간동안 언제나 조용히 일 해왔다.",
+      "typingSpeed": 0.04,
+      "next": "intro_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_14",
+      "speakerId": "npc.001",
+      "text": "누구에게도 민폐를 끼치지도 않고, 스스로 장담컨데 흐르는 물 위의 낙엽마냥 가만히.",
+      "typingSpeed": 0.04,
+      "next": "intro_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_15",
+      "speakerId": "npc.001",
+      "text": "그렇게 생각하던 나는 모두가 기분 좋을 것만 같은 맑은 날,",
+      "typingSpeed": 0.04,
+      "next": "intro_16",
+      "events": [
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.001"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_16",
+      "speakerId": "npc.001",
+      "text": "영문도 모르는 채로 한적한 시골 마을 이시도라로 전출 당했다.",
+      "typingSpeed": 0.04,
+      "next": "intro_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_17",
+      "speakerId": "npc.004",
+      "text": "'이시도라'... 예전에 몇번 들어봤었지.",
+      "typingSpeed": 0.04,
+      "next": "intro_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_18",
+      "speakerId": "npc.004",
+      "text": "물도 맑고, 공기도 좋고. 사람들도 친절하고. 좋은 마을이야.",
+      "typingSpeed": 0.04,
+      "next": "intro_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_19",
+      "speakerId": "npc.001",
+      "text": "이번에 관리국에서 그쪽으로 발령받게 되어서 말이죠. 태워다주셔서 감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "intro_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_20",
+      "speakerId": "npc.004",
+      "text": "관리국에서 일했어? 멋진 청년이네. 다들 목숨걸고 관리국에 들어가려고 하는데 말이야.",
+      "typingSpeed": 0.04,
+      "next": "intro_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_21",
+      "speakerId": "npc.004",
+      "text": "어쩌다 이시도라까지 가게 된건지는 몰라도, 관리국의 일이라면 막상 가면은 또 좋은 일일지도 모르잖아?",
+      "typingSpeed": 0.06,
+      "next": "intro_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_22",
+      "speakerId": "npc.001",
+      "text": "막막한 기분이 들기는 했지만,택시 기사님의 말에 처음 가보는 곳에서의 처음하는 일이라 되레 겁먹고 있었던 것 아닌가. 하고 스스로 되뇌이니 조금은 마음이 편해졌다.",
+      "typingSpeed": 0.06,
+      "next": "intro_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_23",
+      "speakerId": "npc.001",
+      "text": "나는 수도에서부터 이시도라까지 태워준 기사님에게 감사를 표하며, 차에서 내려 발걸음을 옮겼다.",
+      "typingSpeed": 0.04,
+      "next": "intro_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_24",
+      "speakerId": "npc.001",
+      "text": "'이시도라'... 기사님의 말씀처럼 공기가 되게 맑은 것 같네.",
+      "typingSpeed": 0.04,
+      "next": "intro_25",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }],
+      "choices": []
+    },
+    {
+      "id": "intro_25",
+      "speakerId": "npc.001",
+      "text": "처음 와보는 곳이지만, 아늑하고 정감이 가는게, 꼭 고향 마을 같군.",
+      "typingSpeed": 0.04,
+      "next": "intro_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_26",
+      "speakerId": "npc.001",
+      "text": "나는 마을 이곳저곳을 돌아다니며 둘러 보았다.",
+      "typingSpeed": 0.04,
+      "next": "intro_27",
+      "events": [
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.001"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_27",
+      "speakerId": "npc.001",
+      "text": "이시도라는 낡은 집과 낡은 간판들. 붉은 지붕들이 인상깊은 마을이었다.",
+      "typingSpeed": 0.04,
+      "next": "intro_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_28",
+      "speakerId": "npc.001",
+      "text": "그렇게 걷고 걸어 내가 살며 일할 건물에 도착한 나는, 그 앞에 걸터앉아 하늘을 바라보았다.",
+      "typingSpeed": 0.05,
+      "next": "intro_29",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }],
+      "choices": []
+    },
+    {
+      "id": "intro_29",
+      "speakerId": "npc.001",
+      "text": "먼지가 가득 낀 것만 같은 목조 건물. 조금 벽면에 기대었더니 먼지가 옷 곳곳에 묻었다.",
+      "typingSpeed": 0.04,
+      "next": "intro_30",
+      "events": [
+        {
+          "type" :"HIDE_NPC",
+          "npcId" : "npc.001"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_30",
+      "speakerId": "npc.001",
+      "text": "이곳에서 나는 앞으로 어떻게 일해야 하는 걸까.",
+      "typingSpeed": 0.04,
+      "next": "intro_31",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_31",
+      "speakerId": "npc.001",
+      "text": "그런 고민을 하고 있던 찰나 멀리서 숨을 헉헉대며 달려오는 한 용족 소녀가 보였다.",
+      "typingSpeed": 0.04,
+      "next": "intro_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_32",
+      "speakerId": "npc.001",
+      "text": "소녀는 나의 앞에 다다르자, 내가 인사를 건내기도 전에 말을 꺼냈다.",
+      "typingSpeed": 0.04,
+      "next": "intro_33",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }],
+      "choices": []
+    },
+    {
+      "id": "intro_33",
+      "speakerId": "npc.108",
+      "text": "아! 안녕하세요! 혹시 오늘 조간신문에 나온 그분이신가요! 이시도라 신문에서 봤어요! 관리국에서 이시도라로 오셨다고!",
+      "typingSpeed": 0.08,
+      "next": "intro_34",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 4
+        }],
+      "choices": []
+    },
+    {
+      "id": "intro_34",
+      "speakerId": "npc.001",
+      "text": "신문은 모르겠지만, 관리국에서 온건 맞아요. 이곳의 주민 분이신가요?",
+      "typingSpeed": 0.04,
+      "next": "intro_35",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_35",
+      "speakerId": "npc.108",
+      "text": "네!! 저는 힌겔이라고 하구요! 여기서 태어나고 자라서 누구보다도 이시도라를 잘 알아요!",
+      "typingSpeed": 0.06,
+      "next": "intro_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_36",
+      "speakerId": "npc.108",
+      "text": "저!! 엄청!! 진짜로!! 관리국에 매일매일 이시도라에 와달라고 편지를 썼었는데 드디어 이시도라로 관리국 분이 와주시다니!!",
+      "typingSpeed": 0.08,
+      "next": "intro_37",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_37",
+      "speakerId": "npc.001",
+      "text": "초롱초롱한 그녀의 눈이 나를 뚫어져라 쳐다보았다.",
+      "typingSpeed": 0.04,
+      "next": "intro_38",
+      "events": [
+        {
+          "type" :"HIDE_NPC",
+          "npcId" : "npc.001"
+        },
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_38",
+      "speakerId": "npc.001",
+      "text": "아직 일에 대하여 아무것도 아는 것이 없던 터라, 그런 그녀에게 무슨 말을 해주어야 할지 막막했다.",
+      "typingSpeed": 0.04,
+      "next": "intro_39",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        },
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_39",
+      "speakerId": "npc.001",
+      "text": "나는 신이난 그녀의 얼굴을 바라보다, 입을 떼었다.",
+      "typingSpeed": 0.04,
+      "next": "intro_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_40",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 저는 관리국에서 나온 에네스라고 합니다. 잘 부탁드려요.",
+      "typingSpeed": 0.04,
+      "next": "intro_41",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_41",
+      "speakerId": "npc.001",
+      "text": "음... 제가 이번에 이시도라에 발령받아서 처음 와보다 보니 마을에 대해서 아는 것이 많이 없는데, 자세한 마을 소개를 부탁드려도 될까요?",
+      "typingSpeed": 0.06,
+      "next": "intro_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_42",
+      "speakerId": "npc.108",
+      "text": "제가요? 좋아요!!",
+      "typingSpeed": 0.04,
+      "next": "intro_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_43",
+      "speakerId": "npc.001",
+      "text": "그녀는 웃으며 나를 쳐다보았다.",
+      "typingSpeed": 0.04,
+      "next": "intro_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_44",
+      "speakerId": "npc.001",
+      "text": "마을을 안내하며 설명하는 그녀는, 매우 신이 나 보였다.",
+      "typingSpeed": 0.04,
+      "next": "intro_45",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_45",
+      "speakerId": "npc.001",
+      "text": "그녀의 말에 따르면, 이시도라는 원래 도시로 향하는 사람들이 들르는 곳이었지만",
+      "typingSpeed": 0.04,
+      "next": "intro_46",
+      "events": [
+        {
+          "type" :"HIDE_NPC",
+          "npcId" : "npc.001"
+        },
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_46",
+      "speakerId": "npc.001",
+      "text": "근처에 고속도로가 생기며 이 곳에 들르는 사람들의 발걸음이 끊겼고, 근 몇년동안 찾아오는 외지인을 손에 꼽을 수 있을 정도로 외진 마을이 되었다 말했다.",
+      "typingSpeed": 0.08,
+      "next": "intro_47",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_47",
+      "speakerId": "npc.108",
+      "text": "관리국도 이제 안 것 같아요! 이시도라의 매력을!",
+      "typingSpeed": 0.04,
+      "next": "intro_48",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        },
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_48",
+      "speakerId": "npc.001",
+      "text": "그녀가 크게 고양된 목소리로 나에게 마을에 대하여 설명해주고 있을 때, 주머니 속의 전화기에서 벨이 울렸다.",
+      "typingSpeed": 0.05,
+      "next": "intro_49",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_49",
+      "speakerId": "npc.001",
+      "text": "여보세요. 에네스 차장입니다.",
+      "typingSpeed": 0.04,
+      "next": "intro_50",
+      "events": [
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_50",
+      "speakerId": "npc.004",
+      "text": "에네스씨, 대체 무슨 짓을 한거야?",
+      "typingSpeed": 0.04,
+      "next": "intro_51",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.002",
+          "slot" : 1,
+          "portraitIndex" : 5
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_51",
+      "speakerId": "npc.001",
+      "text": "저도 모르는 일입니다. 아셀...",
+      "typingSpeed": 0.04,
+      "next": "intro_52",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.002",
+          "slot" : 1,
+          "portraitIndex" : 6
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_52",
+      "speakerId": "npc.002",
+      "text": "엄청 걱정했다니깐... 직장 동료지만 그 에네스가 사고를 쳤나 싶었단 말이야!",
+      "typingSpeed": 0.04,
+      "next": "intro_53",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_53",
+      "speakerId": "npc.001",
+      "text": "걱정해주셔서 감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "intro_54",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.002",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }],
+      "choices": []
+    },
+    {
+      "id": "intro_54",
+      "speakerId": "npc.002",
+      "text": "사실 걱정됬던 것도 있지만, 일 때문에 전화한거야.",
+      "typingSpeed": 0.04,
+      "next": "intro_55",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_55",
+      "speakerId": "npc.001",
+      "text": "이시도라에서의 업무를 아셀이 전달해주는 건가요?",
+      "typingSpeed": 0.04,
+      "next": "intro_56",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_56",
+      "speakerId": "npc.002",
+      "text": "귀찮아... 에네스가 다른 곳으로 발령갔다는 소식을 듣자마자 상부에서 나한테 업무를 전달하라더라.",
+      "typingSpeed": 0.04,
+      "next": "intro_57",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.002",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_57",
+      "speakerId": "npc.002",
+      "text": "나 말고 케렘한테 시켜도 되잖아... 안 그래도 바쁜 사람한테.",
+      "typingSpeed": 0.04,
+      "next": "intro_58",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.002",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_58",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 그래서 저는 여기서 무슨 일을 하면 될까요?",
+      "typingSpeed": 0.04,
+      "next": "intro_59",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_59",
+      "speakerId": "npc.002",
+      "text": "이번에 에네스가 진행할 프로젝트는 '이시도라 프로젝트'야. 이름 그대로 이시도라를 관리하고, 그곳의 역사에 대해서 조사하는 프로젝트지.",
+      "typingSpeed": 0.06,
+      "next": "intro_60",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.002",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_60",
+      "speakerId": "npc.002",
+      "text": "추가로 거기 주민들한테는 알리지 않고 조용히 조사해달라더라. 뭐, 조사하는동안 들키지 않도록 식당같은 가게나 차리면 되겠네.",
+      "typingSpeed": 0.04,
+      "next": "intro_61",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_61",
+      "speakerId": "npc.001",
+      "text": "이곳의 역사가 딱히 특별할게 있나요? 그냥 수도로 가는 길목에 위치한 시골 마을이라고 들었는데... 그리고 들키지 않고 조사하라니...",
+      "typingSpeed": 0.06,
+      "next": "intro_62",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_62",
+      "speakerId": "npc.002",
+      "text": "아아아!! 난 몰라! 아무튼 상부에서 뭔가 특이사항이 있으면 전달하래! 그럼 끊어!",
+      "typingSpeed": 0.04,
+      "next": "intro_63",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.002",
+          "slot" : 1,
+          "portraitIndex" : 6
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_63",
+      "speakerId": "npc.001",
+      "text": "아셀의 그 말을 끝으로 전화가 끊겼다.",
+      "typingSpeed": 0.04,
+      "next": "intro_64",
+      "events": [
+        {
+          "type" :"HIDE_NPC",
+          "npcId" : "npc.002"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_64",
+      "speakerId": "npc.001",
+      "text": "힌겔은 전화하는 동안 옆에서 여전히 싱글벙글 웃으며 전화가 끝나기를 기다리고 있었다.",
+      "typingSpeed": 0.04,
+      "next": "intro_65",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_65",
+      "speakerId": "npc.001",
+      "text": "전화가 길었죠? 죄송합니다. 동료에게서 연락이 왔었어서...",
+      "typingSpeed": 0.04,
+      "next": "intro_66",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_66",
+      "speakerId": "npc.108",
+      "text": "아니에요!! 괜찮아요! 그러고 보니 마을에 대한 이야기만 계속 했네요!",
+      "typingSpeed": 0.04,
+      "next": "intro_67",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_67",
+      "speakerId": "npc.108",
+      "text": "혹시 다른 궁금하신 거나 필요하신 일이 있으시다면 언제든 도와드릴께요!",
+      "typingSpeed": 0.04,
+      "next": "intro_68",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_68",
+      "speakerId": "npc.001",
+      "text": "그 말을 듣고 무언가를 떠올린 나는 그녀에게 말했다.",
+      "typingSpeed": 0.04,
+      "next": "intro_69",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_69",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 안 그래도 앞으로 여기에 식당을 차리려고 했었어요.",
+      "typingSpeed": 0.04,
+      "next": "intro_70",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_70",
+      "speakerId": "npc.108",
+      "text": "식당이요?",
+      "typingSpeed": 0.04,
+      "next": "intro_71",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_71",
+      "speakerId": "npc.001",
+      "text": "네. 여기에 식당을 차려서 입소문이 난다면 이시도라에 찾아오는 사람들도 늘어날 거고...",
+      "typingSpeed": 0.04,
+      "next": "intro_72",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_72",
+      "speakerId": "npc.108",
+      "text": "마을을 발전시킬 수 있다는 거죠?",
+      "typingSpeed": 0.04,
+      "next": "intro_73",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_73",
+      "speakerId": "npc.001",
+      "text": "그런거죠.",
+      "typingSpeed": 0.04,
+      "next": "intro_74",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_74",
+      "speakerId": "npc.108",
+      "text": "에네스씨는 요리를 잘하시나요?",
+      "typingSpeed": 0.04,
+      "next": "intro_75",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_75",
+      "speakerId": "npc.001",
+      "text": "제가 맛을 볼수는 없지만... 음식을 잘 한다는 말은 많이 들었어요.",
+      "typingSpeed": 0.04,
+      "next": "intro_76",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_76",
+      "speakerId": "npc.108",
+      "text": "맛을 볼 수 없다뇨?",
+      "typingSpeed": 0.04,
+      "next": "intro_77",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_77",
+      "speakerId": "npc.001",
+      "text": "나는 가면을 벗어 얼굴을 보였다.",
+      "typingSpeed": 0.04,
+      "next": "intro_78",
+      "events": [
+        {
+          "type" :"HIDE_NPC",
+          "npcId" :"npc.001"
+        },
+        {
+          "type" : "HIDE_NPC",
+          "npcId" : "npc.108"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_78",
+      "speakerId": "npc.001",
+      "text": "입이 없어서 음식을 먹거나 맛을 볼 수는 없지만... 이런 제가 요리를 한다면 신기해서라도 오지 않을까요?",
+      "typingSpeed": 0.04,
+      "next": "intro_79",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_79",
+      "speakerId": "npc.108",
+      "text": "입이...없..네요.",
+      "typingSpeed": 0.04,
+      "next": "intro_80",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        },
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 8
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_80",
+      "speakerId": "npc.001",
+      "text": "그녀는 신기하다는 듯이 나를 쳐다보았다. 몇번씩이나 눈을 감았다 뜨는 것이 진짜인지, 속임수는 아닌지 생각하는 듯 보였다.",
+      "typingSpeed": 0.04,
+      "next": "intro_81",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_81",
+      "speakerId": "npc.001",
+      "text": "정 걱정되시면 다른 일을 생각해봐도...",
+      "typingSpeed": 0.04,
+      "next": "intro_82",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_82",
+      "speakerId": "npc.108",
+      "text": "아니에요!! 한번 음식 맛이라도 볼게요! 정 맛이 없으면 제가 도와드리면 되죠!",
+      "typingSpeed": 0.04,
+      "next": "intro_83",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 4
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_83",
+      "speakerId": "npc.108",
+      "text": "마을 입구 근처에 오래되서 안쓰는 식당 건물이 있는데... 거기에 식당을 여는 건 어떨까요?",
+      "typingSpeed": 0.04,
+      "next": "intro_84",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_84",
+      "speakerId": "npc.001",
+      "text": "그럼 일단 그쪽으로 가볼까요?",
+      "typingSpeed": 0.04,
+      "next": "intro_85",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_85",
+      "speakerId": "npc.001",
+      "text": "나는 그녀의 안내를 따라 그녀가 말한 건물로 향하였다.",
+      "typingSpeed": 0.04,
+      "next": "intro_86",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_86",
+      "speakerId": "npc.001",
+      "text": "그녀는 궁금한 것이 많은지, 가는 길에 나에게 이것저것을 물어왔다.",
+      "typingSpeed": 0.04,
+      "next": "intro_87",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.108",
+          "slot" : 1,
+          "portraitIndex" : 7
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "intro_87",
+      "speakerId": "npc.108",
+      "text": "수도에는 정말 엄청 다양한 종족들이 있나봐요!! 저는 이시도라 밖으로 나가본 적이 없어서 신기해요!",
+      "typingSpeed": 0.05,
+      "next": "intro_88",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_88",
+      "speakerId": "npc.001",
+      "text": "수도 쪽은 아무래도 종족이 다양한 편이죠. 저도 가끔 수도 바깥쪽에서 오시는 종족 분들을 보면 신기해요.",
+      "typingSpeed": 0.04,
+      "next": "intro_89",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_89",
+      "speakerId": "npc.108",
+      "text": "이시도라가 아무래도 과거에는 많은 사람들이 찾아주시던 마을이라 계시는 분들도 나름대로 다양한 편인데, 에네스씨 같은 분은 처음 뵈어서요!",
+      "typingSpeed": 0.05,
+      "next": "intro_90",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_90",
+      "speakerId": "npc.001",
+      "text": "예전에 제 맨 얼굴을 무서워하시던 분들도 계셔서 가면을 쓰고 생활하고 있어요.",
+      "typingSpeed": 0.04,
+      "next": "intro_91",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_91",
+      "speakerId": "npc.108",
+      "text": "무섭다...는 느낌은 아닌데 처음보는 종족이시다 보니 저도 신기하긴 했어요!",
+      "typingSpeed": 0.04,
+      "next": "intro_92",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "intro_92",
+      "speakerId": "npc.001",
+      "text": "그렇게 수다를 떨며 가다보니 어느세 그녀가 말한 오래된 식당에 도착했다.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

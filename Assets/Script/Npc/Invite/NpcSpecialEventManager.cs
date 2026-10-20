@@ -64,6 +64,11 @@ public class NpcSpecialEventManager : MonoBehaviour
         return SelectedEvent;
     }
 
+    public void EndTalkEnvent()
+    {
+        SelectedEvent.EndTalkFunc.EndTalk();
+    }
+
     public void ResetEvent()
     {
         SelectedEvent = null;

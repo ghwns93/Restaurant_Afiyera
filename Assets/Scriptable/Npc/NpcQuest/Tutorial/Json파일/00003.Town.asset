@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67adf6d06ed67944791b9ccb4905a7c1, type: 3}
+  m_Name: 00003.Town
+  m_EditorClassIdentifier: Assembly-CSharp::NpcSpecialEventData
+  eventId: 00003
+  eventName: "\uB9C8\uC744\uC778\uD2B8\uB85C"
+  town: 0
+  npcInfo: {fileID: 0}
+  storyOrder: 0
+  requiredIngredients: []
+  foodSprite: {fileID: 0}
+  dialogueJsonFile: {fileID: 4900000, guid: c3f3e35372f41dc45a23ca523c9294b2, type: 3}
+  endTalkFunc: {fileID: 11400000, guid: 1f4bb7ba983e9944f9fa410ff741ee78, type: 2}

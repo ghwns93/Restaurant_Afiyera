@@ -1,0 +1,24 @@
+{
+    "dialogueId" : "SmallTalk010",
+    "startLineId" : "SmallTalk010_01",
+    "lines" : [
+    {
+      "id": "SmallTalk010_01",
+      "speakerId": "monologue",
+      "text": "",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk010_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk010_01",
+      "speakerId": "monologue",
+      "text": "",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk010_02",
+      "events": [],
+      "choices": []
+    }
+]
+}

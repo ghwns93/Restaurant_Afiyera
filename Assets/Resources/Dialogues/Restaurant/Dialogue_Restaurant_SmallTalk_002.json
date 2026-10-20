@@ -1,0 +1,476 @@
+{
+  "dialogueId": "SmallTalk002",
+  "startLineId": "SmallTalk002_01",
+  "lines": [
+    {
+      "id": "SmallTalk002_01",
+      "speakerId": "npc.001",
+      "text": "똑똑, 노크 소리가 들려와 문을 열어보니 꽃집사장 세이레가 찾아와 문앞에 서있었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_02",
+      "speakerId": "npc.001",
+      "text": "어서오세요, 세이레씨.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_03",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.100",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_03",
+      "speakerId": "npc.105",
+      "text": "안녕하세요, 에네스씨. 실례할께요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.105",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_04",
+      "speakerId": "npc.001",
+      "text": "세이레는 손에 하얀 꽃이 가득 든 바구니를 든채로 식당으로 들어왔다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_05",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_05",
+      "speakerId": "npc.105",
+      "text": "아, 이건 감사 선물이에요. 빈손으로 오기는 조금 그래서 준비해봤어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_06",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_06",
+      "speakerId": "npc.001",
+      "text": "빈손으로 오셔도 괜찮은데 말이죠. 소중하게 보관하겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_07",
+      "speakerId": "npc.105",
+      "text": "의미가 깊은 꽃이라, 새로 식당 문을 여신 에네스씨께 꼭 선물로 드리고 싶었어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_08",
+      "speakerId": "npc.001",
+      "text": "의미요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_09",
+      "speakerId": "npc.001",
+      "text": "아, 제가 손님을 너무 오래 서 계시게 했네요. 이쪽에 앉으세요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_10",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_10",
+      "speakerId": "npc.001",
+      "text": "세이레가 준 꽃은 하얀 잎이 겹겹이 쌓여 흔들리는 작은 꽃이었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_11",
+      "speakerId": "npc.001",
+      "text": "세이레가 준 바구니를 창가쪽에 조심히 둔 나는 주방으로 가 음식을 준비하기 시작했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_12",
+      "speakerId": "npc.001",
+      "text": "금방 음식 준비해드릴게요. 조금만 앉아서 기다려주세요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_13",
+      "speakerId": "npc.105",
+      "text": "서두르지 않으셔도 괜찮아요. 식당 분위기가 좋아서, 가만히 앉아있어도 풀벌레 소리랑 요리하시는 소리가 듣기 좋네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_14",
+      "speakerId": "npc.001",
+      "text": "준비된 음식을 가져오자, 정말로 식당의 조용한 분위기가 맘에 든 듯 세이레는 가만히 앉아 창밖을 바라보고 있었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_15",
+      "speakerId": "npc.001",
+      "text": "음식 나왔습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_16",
+      "speakerId": "npc.105",
+      "text": "아, 감사해요. 잘먹을게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_17",
+      "speakerId": "npc.001",
+      "text": "세이레는 음식을 한입 먹고는, 깜짝 놀라며 한손으로 입가를 가린채 말했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_18",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.105",
+          "slot" : 1,
+          "portraitIndex" : 1
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_18",
+      "speakerId": "npc.105",
+      "text": "와, 정말 맛있네요. 깜짝 놀랐어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_19",
+      "speakerId": "npc.001",
+      "text": "하하, 감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_20",
+      "speakerId": "npc.105",
+      "text": "어떻게 이런 맛을 냈는지 묻고 싶을 정도에요. 제가 한 것과는 차원이 다르네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_21",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.105",
+          "slot" : 1,
+          "portraitIndex" : 3
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_21",
+      "speakerId": "npc.001",
+      "text": "나중에 레시피를 따로 적어 드릴께요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_22",
+      "speakerId": "npc.105",
+      "text": "아니에요. 이런 음식은 먹는 장소도 중요하니까요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_23",
+      "speakerId": "npc.105",
+      "text": "이 요리는 가끔 이렇게 아피에라에서 맛 볼때 가장 빛날 것 같아요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_24",
+      "speakerId": "npc.001",
+      "text": "그렇게까지 말씀해주시면 어쩔수없네요. 드시고 싶으실때 말씀해주시면 제가 최대한 준비해드릴께요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_25",
+      "speakerId": "npc.105",
+      "text": "후후. 감사해요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_26",
+      "speakerId": "npc.001",
+      "text": "나는 세이레가 어느정도 접시를 비웠을 때, 입가심할 물 한잔을 건내며 물었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_27",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.105",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_27",
+      "speakerId": "npc.001",
+      "text": "제가 꽃은 잘 몰라서, 주신 꽃은 어떻게 관리하면 될까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_28",
+      "speakerId": "npc.105",
+      "text": "아, 물병에 꽂아서 해가 잘드는 곳에 주시면 일주일 정도 잘 피어 있을거에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_29",
+      "speakerId": "npc.105",
+      "text": "꽃이 마음에 드시면, 제가 다음에 화분을 가져다 드릴께요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_30",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_30",
+      "speakerId": "npc.001",
+      "text": "아, 아닙니다. 그러면 너무 죄송하죠. 다음번엔 제가 찾아뵐게요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_31",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_31",
+      "speakerId": "npc.001",
+      "text": "그저 의미가 깊은 꽃이라고 하셔서 따로 특별하게 보관해야할까 해서 여쭤봤어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_32",
+      "speakerId": "npc.105",
+      "text": "아, 그러셨군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_33",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.105",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_33",
+      "speakerId": "npc.105",
+      "text": "저 꽃은 산윤슬꽃이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_34",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.105",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_34",
+      "speakerId": "npc.105",
+      "text": "모든 저주를 물리치고, 행복을 불러온다는 꽃이죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_35",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_35",
+      "speakerId": "npc.001",
+      "text": "아... 들어본적 있는 것 같아요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_36",
+      "speakerId": "npc.105",
+      "text": "아무로 모르는 마법의 숲속에서, 마법의 잔물결 위에 피어오른다는 전설의 꽃.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_37",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_37",
+      "speakerId": "npc.105",
+      "text": "옛날 이야기 속에서 용사님이 잠든 공주님을 깨우기 위해 구해왔던 꽃이에요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_38",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_38",
+      "speakerId": "npc.001",
+      "text": "아, 그 꽃이었군요. 그럼 이 꽃은...",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_39",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_39",
+      "speakerId": "npc.105",
+      "text": "네, 맞아요. 하얀 성녀님이 마을에 들리셨을때, 씨앗을 주고 가셨어요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_40",
+      "speakerId": "npc.105",
+      "text": "제가 그 씨앗을 길러, 꽃으로 틔워 나눠드리고 있구요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_41",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_41",
+      "speakerId": "npc.105",
+      "text": "그래서, 돈을 받지 않고 마을에 오신 분들께 선물로 드리는 꽃이랍니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_42",
+      "speakerId": "npc.001",
+      "text": "정말 특별한 꽃이었군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_43",
+      "speakerId": "npc.105",
+      "text": "맞아요. 실제로 주위 공기를 정화하고 조금이지만 주위를 정화해주기도 해서, 식당이니만큼 꼭 하나 드리고 싶었거든요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_44",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 나중에 화분으로도 준비해놔야 겠네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_45",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_45",
+      "speakerId": "npc.105",
+      "text": "후후. 화분은 저희가게에 많이 있답니다?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk002_46",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.105",
+          "slot" : 1,
+          "portraitIndex" : 3
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk002_46",
+      "speakerId": "npc.001",
+      "text": "하하, 그땐 잘 부탁드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

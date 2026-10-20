@@ -2,24 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    [Header("선택 표시 UI")]
-    [SerializeField] private RectTransform selectorRectTransform; // 이동할 화살표(선택 UI)의 RectTransform
-    [SerializeField] private List<RectTransform> slotRectTransforms; // 각 인벤토리 슬롯들의 RectTransform 목록 (1번부터 0번까지 순서대로)
-    [SerializeField] private float moveSpeed = 15f; // 값이 클수록 빠르게 이동합니다.
-
-    [Header("아이템 슬롯 UI")]
-    [SerializeField] private Transform slotParent;   // 그리드 레이아웃 그룹이 있는 부모 객체
+    [Header("원형 인벤토리 세팅")]
+    [SerializeField] private RectTransform slotParent;   // Vertical Layout Group이 부착된 부모
     [SerializeField] private GameObject slotPrefab;  // 슬롯 UI 프리팹
-    [SerializeField] private int initialSlotCount = 10; // 초기 슬롯 개수
+    [SerializeField] private float moveSpeed = 15f;    // 이동 속도
+
+    [Header("슬롯 제한")]
+    [SerializeField] private int maxSlotCount = 10;    // 최대 슬롯 개수
 
     private List<InventorySlotUI> slotUIList = new List<InventorySlotUI>();
     private Coroutine moveCoroutine;
+    private VerticalLayoutGroup layoutGroup;
 
     private void Start()
     {
+        if (slotParent != null)
+        {
+            layoutGroup = slotParent.GetComponent<VerticalLayoutGroup>();
+        }
+
         if (InventoryManager.Instance != null)
         {
             InventoryManager.Instance.onInventoryChangedCallback += UpdateUI;
@@ -30,6 +35,7 @@ public class InventoryUI : MonoBehaviour
         if (PlayerInventoryController.Instance != null)
         {
             PlayerInventoryController.Instance.onSelectedSlotChangedCallback += OnSelectedSlotChanged;
+            OnSelectedSlotChanged(PlayerInventoryController.Instance.SelectedSlotIndex);
         }
     }
 
@@ -48,21 +54,16 @@ public class InventoryUI : MonoBehaviour
 
     private void InitSlots()
     {
-        // 기존 생성된 슬롯 UI 청소
         foreach (Transform child in slotParent)
         {
             Destroy(child.gameObject);
         }
         slotUIList.Clear();
 
-        // 인벤토리 매니저의 슬롯 개수(유동적으로 늘어난 크기)만큼 UI 슬롯 생성
         List<ItemSlot> slots = InventoryManager.Instance.GetSlots(ItemType.Tool);
         for (int i = 0; i < slots.Count; i++)
         {
-            if(i >= initialSlotCount)
-            {
-                break; // 초기 슬롯 개수 이상은 생성하지 않음
-            }
+            if (i >= maxSlotCount) break;
 
             GameObject slotObj = Instantiate(slotPrefab, slotParent);
             InventorySlotUI slotUI = slotObj.GetComponent<InventorySlotUI>();
@@ -74,15 +75,14 @@ public class InventoryUI : MonoBehaviour
     {
         List<ItemSlot> slots = InventoryManager.Instance.GetSlots(ItemType.Tool);
 
-        // 만약 유동적으로 인벤토리 칸 수가 변경되었다면 UI를 재구축
-        if (slotUIList.Count != slots.Count)
+        if (slotUIList.Count != slots.Count && slotUIList.Count < maxSlotCount)
         {
             InitSlots();
         }
 
         for (int i = 0; i < slotUIList.Count; i++)
         {
-            if (!slots[i].IsEmpty)
+            if (i < slots.Count && !slots[i].IsEmpty)
             {
                 slotUIList[i].SetItem(slots[i].ItemData, slots[i].Quantity);
             }
@@ -95,39 +95,55 @@ public class InventoryUI : MonoBehaviour
 
     private void OnSelectedSlotChanged(int slotIndex)
     {
-        if (slotIndex < 0) slotIndex = 0; // 음수 인덱스 방지
+        int totalCount = slotUIList.Count;
+        if (totalCount == 0) return;
 
-        if (slotIndex >= slotRectTransforms.Count) slotIndex = slotRectTransforms.Count - 1;
+        slotIndex = Mathf.Clamp(slotIndex, 0, totalCount - 1);
 
-        // 목표 위치(슬롯의 로컬 좌표 기준 또는 부모 기준 위치) 계산
-        // 만약 슬롯과 셀렉터가 같은 부모를 공유하고 있다면 anchoredPosition을 사용합니다.
-        Vector2 targetPosition = slotRectTransforms[slotIndex].anchoredPosition;
+        // 1. 자식의 높이(Height)와 VerticalLayoutGroup의 Spacing 가져오기
+        float childHeight = 0f;
+        if (totalCount > 0 && slotUIList[0] != null)
+        {
+            RectTransform childRect = slotUIList[0].GetComponent<RectTransform>();
+            childHeight = childRect.rect.height;
+        }
 
-        // 기존에 실행 중이던 이동 코루틴이 있다면 중지하여 겹침 방지
+        float spacing = (layoutGroup != null) ? layoutGroup.spacing : 0f;
+
+        // 2. 한 칸당 이동할 거리 (자식 y 크기 + spacing 수치)
+        float step = childHeight + spacing;
+
+        // 3. 중앙 인덱스 계산 (예: 5개일 때 5 / 2 = 2)
+        int centerIndex = totalCount / 2;
+
+        // 4. 중앙(2번)일 때 PosY = 0,
+        // 2 -> 1 -> 0 일 때 -(step) 만큼 차감
+        // 2 -> 3 -> 4 일 때 +(step) 만큼 증가
+        float targetY = (slotIndex - centerIndex) * step;
+
+        Vector2 targetPosition = new Vector2(0f, targetY);
+
         if (moveCoroutine != null)
         {
             StopCoroutine(moveCoroutine);
         }
 
-        // 새로운 이동 코루틴 시작
         moveCoroutine = StartCoroutine(SmoothMoveCoroutine(targetPosition));
     }
 
     private IEnumerator SmoothMoveCoroutine(Vector2 targetPos)
     {
-        // Vector2.Lerp 또는 무한 루프 내 Approach 방식을 사용하여 스르륵 이동
-        while (Vector2.Distance(selectorRectTransform.anchoredPosition, targetPos) > 0.1f)
+        while (Vector2.Distance(slotParent.anchoredPosition, targetPos) > 0.1f)
         {
-            selectorRectTransform.anchoredPosition = Vector2.Lerp(
-                selectorRectTransform.anchoredPosition,
+            slotParent.anchoredPosition = Vector2.Lerp(
+                slotParent.anchoredPosition,
                 targetPos,
                 Time.deltaTime * moveSpeed
             );
-            yield return null; // 다음 프레임까지 대기
+            yield return null;
         }
 
-        // 미세한 오차 보정을 위해 최종 위치에 정확히 안착
-        selectorRectTransform.anchoredPosition = targetPos;
+        slotParent.anchoredPosition = targetPos;
         moveCoroutine = null;
     }
 }

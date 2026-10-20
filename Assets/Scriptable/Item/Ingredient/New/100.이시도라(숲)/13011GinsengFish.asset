@@ -23,8 +23,7 @@ MonoBehaviour:
   description: "\uC624\uB79C \uC138\uC6D4\uC744 \uD488\uC740 \uBFCC\uB9AC\uB9CC\uC744
     \uACE0\uC9D1\uD558\uB294 \uD480\uC789\uC5B4.\r\n\uBB18\uD55C \uB9DB\uC774 \uB098\uBA70
     \uAC74\uAC15\uC5D0 \uC544\uC8FC \uC88B\uB2E4\uACE0 \uD55C\uB2E4."
-  cookTime: 1
-  refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
-  buffEffect: {fileID: 11400000, guid: 5285c672a4a8c4d4d82ce390eb9ec9b9, type: 2}
+  resourceType: 1
+  isUnlocked: 1
   minPriceMultiplier: 0.5
   maxPriceMultiplier: 1.5

@@ -1,30 +1,53 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
+using Spine.Unity; // Spine 관련 컴포넌트를 사용하기 위해 필요
 
-public class MovedObjectSorting : MonoBehaviour
+public class SortingOrderController : MonoBehaviour
 {
+    [SerializeField] private MeshRenderer frontSkeletonRenderer;
+    [SerializeField] private MeshRenderer backSkeletonRenderer;
+
     private SpriteRenderer spriteRenderer;
 
     private int originalSortingOrder;
+    private bool isSpine = false; // 현재 스파인 캐릭터인지 판별하는 플래그
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        originalSortingOrder = spriteRenderer.sortingOrder;
+        if (frontSkeletonRenderer != null)
+        {
+            isSpine = true;
+            originalSortingOrder = frontSkeletonRenderer.sortingOrder;
+        }
+        else
+        {
+            isSpine = false;
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
     }
 
     private void LateUpdate()
     {
-        // 1. NPC의 '발바닥 위치'를 기준으로 정확한 타일 좌표를 얻습니다.
-        // (NPC 스프라이트의 Pivot이 반드시 'Bottom Center'로 설정되어 있어야 합니다)
+        // 렌더러가 아예 없다면 실행 중지
+        if (isSpine && frontSkeletonRenderer == null) return;
+        if (isSpine && backSkeletonRenderer == null) return;
+        if (!isSpine && spriteRenderer == null) return;
+
+        // 1. 발바닥 위치 기준 Y좌표 계산
         Vector3 footPos = transform.position;
 
-        // 2. 울타리와 동일한 베이스 레이어를 계산합니다 (1000 단위 적용).
+        // 2. 베이스 레이어 계산 (1000 단위 등 게임 환경에 맞게 조절)
         int baseOrder = Mathf.RoundToInt(-(footPos.y) * 100 - 150);
 
-        // 3. 울타리 뒷벽(0)과 앞벽(2) 사이에 NPC가 위치하도록 고정값 1을 더해줍니다.
-        // 타일 경계를 넘어가는 순간 유니티 타일맵 좌표가 알아서 변경되므로 툭툭 끊기지 않습니다.
-        spriteRenderer.sortingOrder = baseOrder + originalSortingOrder;
+        // 3. 컴포넌트 종류에 따라 각각 다른 방식으로 sortingOrder 적용
+        if (isSpine)
+        {
+            // --- Spine (SkeletonRenderer)인 경우 처리 방식 ---
+            frontSkeletonRenderer.sortingOrder = baseOrder + originalSortingOrder;
+            backSkeletonRenderer.sortingOrder = baseOrder + originalSortingOrder;
+        }
+        else
+        {
+            spriteRenderer.sortingOrder = baseOrder + originalSortingOrder;
+        }
     }
 }

@@ -1,0 +1,479 @@
+{
+  "dialogueId": "SmallTalk009",
+  "startLineId": "SmallTalk009_01",
+  "lines": [
+    {
+      "id": "SmallTalk009_01",
+      "speakerId": "npc.304",
+      "text": "실례합니다. 아르밀라 가구점의 비엔입니다. 오늘 예정된 식사 약속 용건으로 찾아뵙습니다만.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_02",
+      "speakerId": "npc.001",
+      "text": "식당의 입구에서 노크 소리와 함께 들린 정중한 인사에 나는 비엔을 맞이하러 나섰다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_03",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_03",
+      "speakerId": "npc.001",
+      "text": "어서오세요. 비엔 점장님. 오늘 방문해주셔서 감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_04",
+      "speakerId": "npc.304",
+      "text": "환대 감사합니다. 에네스님. 오늘은 잘 부탁드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_05",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.304",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_05",
+      "speakerId": "npc.304",
+      "text": "아, 이건 초대에 감사하는 의미로 자그마하게나마 준비해보았습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_06",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_06",
+      "speakerId": "npc.304",
+      "text": "요근래 도시에서 인기를 끌고있는 와인입니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_07",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 안쪽으로 들어오시죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_08",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_08",
+      "speakerId": "npc.001",
+      "text": "비엔은 식당 안쪽으로 들어와, 점잖게 자리에 앉아 말했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_09",
+      "speakerId": "npc.304",
+      "text": "오늘 이렇게 자리할 수 있게되어, 기대가 정말 큽니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_10",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_10",
+      "speakerId": "npc.304",
+      "text": "부탁드린 음식은 모름지기 요리사가 즐기는 음악에 대하여 알 수 있으니 말이지요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_11",
+      "speakerId": "npc.001",
+      "text": "비엔 점장님께서는 음악을 좋아하시는군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_12",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_12",
+      "speakerId": "npc.304",
+      "text": "예, 흥미가 있는 편입니다. 크게 호불호가 있는 장르도 없다보니, 다른 이와 음악에 관한 깊이 있는 대화 또한 즐기는 편이지요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_13",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 저는 그리 조예가 깊지는 않아서, 오늘 많이 배우도록 하겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_14",
+      "speakerId": "npc.304",
+      "text": "하하, 아닙니다. 저도 전문가는 아닌지라. 그저 좋아하고 흥미가 있는 사람일 뿐입니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_15",
+      "speakerId": "npc.304",
+      "text": "무엇보다, 각자의 취향이 있기 나름이지, 예술에 정답은 없는 것 아니겠습니까.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_16",
+      "speakerId": "npc.001",
+      "text": "좋은 말씀이십니다. 금방 요리를 준비해드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_17",
+      "speakerId": "npc.001",
+      "text": "난 미리 골라놓았던 CD 버섯들로 정성스레 음식을 준비했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_18",
+      "speakerId": "npc.001",
+      "text": "완성됬습니다. 요리 준비해드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_19",
+      "speakerId": "npc.304",
+      "text": "감사합니다. 먹음직스러워 보이네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_20",
+      "speakerId": "npc.001",
+      "text": "비엔은 음식은 한입씩 먹으며 자세하게 이야기를 늘어놓았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_21",
+      "speakerId": "npc.304",
+      "text": "오, 이건 최근에 유행하는 곡이군요. 젊은 친구들이 좋아하는 신나는 리듬이 좋은 곡이죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_22",
+      "speakerId": "npc.001",
+      "text": "저를 도와주는 친구가 이번에 추천해줘서 들어봤는데, 노래가 좋아 즐겨 듣고 있습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_23",
+      "speakerId": "npc.304",
+      "text": "음, 재즈도 있군요. 이 곡도 참 좋은 곡이죠. 명곡은 시대를 타지않는 법이니까요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_24",
+      "speakerId": "npc.001",
+      "text": "예전부터 즐겨 듣는 곡입니다. 잘 알려지지 않은 곡인데, 역시 조예가 깊으시네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_25",
+      "speakerId": "npc.304",
+      "text": "과찬이십니다. 마지막은... 락이군요. 교과서적인 곡이죠. 많은 가수들에게 영감을 준 한 시대를 풍미한 최고의 밴드라고 생각합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_26",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_26",
+      "speakerId": "npc.001",
+      "text": "제가 가장 좋아하는 가수입니다. 다른 곡을 찾아도 언제나 돌아오게 되더군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_27",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_27",
+      "speakerId": "npc.304",
+      "text": "최고는 많지만 최초는 유일한 법이니까요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_28",
+      "speakerId": "npc.304",
+      "text": "훌륭한 음식이었습니다. 아주 완벽하게 조리되었네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_29",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_29",
+      "speakerId": "npc.001",
+      "text": "감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_30",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_30",
+      "speakerId": "npc.304",
+      "text": "실례가 되지 않는다면 한가지 여쭤보고 싶은 것이 있는데, 괜찮을까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_31",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_31",
+      "speakerId": "npc.001",
+      "text": "물론입니다. 어떤 것일까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_32",
+      "speakerId": "npc.304",
+      "text": "감사합니다. 혹시 에네스님께서는, 클래식은 즐기지 않으시나요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_33",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_33",
+      "speakerId": "npc.001",
+      "text": "음... 그렇네요. 클래식을 들어보기는 했지만, 별도로 마땅히 좋아한다라 할 정도는 아닌것 같습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_34",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_34",
+      "speakerId": "npc.304",
+      "text": "그렇군요. 제가 클래식을 매우 좋아하는 지라, 아쉬워 여쭤보았습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_35",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_35",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 혹시 비엔 점장님이 클래식 중 추천하는 곡이나 가수가 있으실까요? 이참에 한 번 식견을 넓혀보겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_36",
+      "speakerId": "npc.304",
+      "text": "음... 좋은 곡들이 많아 하나만 골라 추천드리기가 곤란하군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_37",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_37",
+      "speakerId": "npc.304",
+      "text": "그래도 역시 클래식을 처음 듣는다면, 그 경계를 허문 위대한 연주자, 아티의 노래를 추천합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_38",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_38",
+      "speakerId": "npc.001",
+      "text": "아티요. 기억해놓겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_39",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_39",
+      "speakerId": "npc.304",
+      "text": "부디 취향에 맞으셨다면 좋겠습니다. 혹시 이전에 들어보신 적이 없으신가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_40",
+      "speakerId": "npc.001",
+      "text": "음... 정확히 기억이 나지 않네요. 노래를 들어보면 어디선가 들어보았는가 기억이 날지도 모르겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_41",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_41",
+      "speakerId": "npc.304",
+      "text": "그렇군요. 지금 당장은 활동하지 않으시지만, 얼마 전까지 일선에서 활동하시던 살아있는 전설이시니만큼 아마 노래를 들어보셨을지도 모르겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_42",
+      "speakerId": "npc.001",
+      "text": "나는 비엔에게 추천할 만한 유명한 아티의 곡 몇 개를 추천 받고서 문뜩 궁금해져 물어보았다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_43",
+      "speakerId": "npc.001",
+      "text": "혹시 비엔 점장님께서는 이 아티라는 연주자 분의 연주를 실제로 들어보신 적이 있으신가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_44",
+      "speakerId": "npc.304",
+      "text": "네. 운이 좋게도 어찌 연이 닿아 한 번 연주회에 방문한 적이 있었습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_45",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_45",
+      "speakerId": "npc.304",
+      "text": "사실... 그날이 제가 클래식이라는 장르에 빠지게된 날이었습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_46",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_46",
+      "speakerId": "npc.304",
+      "text": "그 분이 연주하시는 그 모습이 마치... 그 곳의 모든 소리를 빨아들이는 듯 했습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_47",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_47",
+      "speakerId": "npc.304",
+      "text": "세상의 모든 소리가 사라진 정적 속에, 저와 그 음악소리만이 남은 느낌이라고 할까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_48",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_48",
+      "speakerId": "npc.304",
+      "text": "참... 인상적인 경험이었습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_49",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_49",
+      "speakerId": "npc.001",
+      "text": "그렇게까지 말씀하시니, 저도 한번 경험해보고 싶어지네요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_50",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_50",
+      "speakerId": "npc.304",
+      "text": "아직 그 분이 살아계시니 만큼, 언젠가는 기회가 있으리라 믿습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk009_51",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk009_51",
+      "speakerId": "npc.001",
+      "text": "그뒤로도 비엔과는 한참 음악에 대한 이야기를 나눴다.",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [],
+      "choices": []
+    }
+  ]
+}

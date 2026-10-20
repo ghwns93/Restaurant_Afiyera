@@ -1,0 +1,758 @@
+{
+  "dialogueId": "SmallTalk004",
+  "startLineId": "SmallTalk004_01",
+  "lines": [
+    {
+      "id": "SmallTalk004_01",
+      "speakerId": "npc.001",
+      "text": "쿵쿵, 힘차게 문을 두드리는 소리에 식재료를 정리하던 나는 문뜩 고개를 들었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_02",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_02",
+      "speakerId": "npc.201",
+      "text": "에네스! 있는가! 나 카쿰이네!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_03",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_03",
+      "speakerId": "npc.001",
+      "text": "네, 잠시만요. 금방 가겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_04",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.001",
+          "slot" : 0,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_04",
+      "speakerId": "npc.001",
+      "text": "서둘러 문을 열자, 커다란 물고기를 든 카쿰이 서있었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_05",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_05",
+      "speakerId": "npc.201",
+      "text": "실례하겠네! 이야, 가게가 참 멋지구만 그래!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_06",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_06",
+      "speakerId": "npc.001",
+      "text": "감사합니다. 어서 들어오세요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_07",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_07",
+      "speakerId": "npc.201",
+      "text": "아, 이건 선물일세! 요 앞에 강에서 방금 막 낚아왔으니 아주 신선할거야!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_08",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 4
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_08",
+      "speakerId": "npc.001",
+      "text": "나는 카쿰에게 감사인사를 건내며, 그를 가게 안으로 안내했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_09",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_09",
+      "speakerId": "npc.201",
+      "text": "이야, 이시도라는 오랜만에 와보지만, 언제와도 참 좋은 마을이란 말일세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_10",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_10",
+      "speakerId": "npc.001",
+      "text": "조용하고 평화로운 곳이죠.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_11",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_11",
+      "speakerId": "npc.201",
+      "text": "그렇지. 그리고 이렇게 풍요로운 숲향기가 나는 곳은 잘 없다네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_12",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_12",
+      "speakerId": "npc.201",
+      "text": "이곳 사람들 모두가 숲을 아끼고 존중하기에 이런 환경이 보존되는 것이겠지. 멋진 일이네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_13",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_13",
+      "speakerId": "npc.001",
+      "text": "카쿰은 사뭇 기분이 좋은듯, 꽤나 들떠보였다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_14",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_14",
+      "speakerId": "npc.001",
+      "text": "카쿰씨는 참 숲을 좋아하시는 모양이군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_15",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_15",
+      "speakerId": "npc.201",
+      "text": "물론이지. 아, 내가 말 안했던가? 내 고향도 이런 숲속 마을이었다네. 아, 외모로 대충 짐작했으려나?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_16",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_16",
+      "speakerId": "npc.001",
+      "text": "그렇군요. 처음 알았습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_17",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_17",
+      "speakerId": "npc.001",
+      "text": "나는 카쿰과 이런저런 잡담을 나누며 음식을 준비했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_18",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_18",
+      "speakerId": "npc.001",
+      "text": "음식 준비해드리겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_19",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_19",
+      "speakerId": "npc.201",
+      "text": "오! 고맙네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_20",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_20",
+      "speakerId": "npc.001",
+      "text": "카쿰은 내어준 파이를 보고는 입맛을 다시며 말했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_21",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_21",
+      "speakerId": "npc.201",
+      "text": "이야, 아주 제대로구만. 아무래도 바닷가에선 이렇게 싱싱한 재료를 사용할 수 없단 말이지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_22",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_22",
+      "speakerId": "npc.001",
+      "text": "그런가요? 그래도 그렇게까지 구하기 힘들 정도는 아니지 않을까요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_23",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_23",
+      "speakerId": "npc.201",
+      "text": "내가 조금 예민해서 말이야. 이 갓채집한 향긋한 숲내음이 아니면 만족이 안 된단말이지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_24",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_24",
+      "speakerId": "npc.001",
+      "text": "카쿰은 연신 입맛을 다시며, 서둘러 파이를 입에 넣었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_25",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_25",
+      "speakerId": "npc.201",
+      "text": "음! 완벽하구만! 에네스 자네 요리실력이 아주 좋구만 그래!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_26",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 1
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_26",
+      "speakerId": "npc.001",
+      "text": "감사합니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_27",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_27",
+      "speakerId": "npc.001",
+      "text": "카쿰은 파이를 우물거리며 말했다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_28",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_28",
+      "speakerId": "npc.201",
+      "text": "내 아무리 이젠 바다 사나이가 되었지만, 이 맛을 포기를 못한단말이지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_29",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_29",
+      "speakerId": "npc.201",
+      "text": "고향 생각도 나고 해서 어찌보면 추억의 맛이라고 할 수 있겠군.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_30",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_30",
+      "speakerId": "npc.001",
+      "text": "고향이 조금 거리가 있으신가보군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_31",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_31",
+      "speakerId": "npc.201",
+      "text": "그런 편이지. 데스피나에서도 배를 타고 한참을 가야하는 곳이라네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_32",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_32",
+      "speakerId": "npc.001",
+      "text": "꽤나 멀리에서 오셨었군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_33",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_33",
+      "speakerId": "npc.201",
+      "text": "그렇지. 나도 꽤 인생이 파란만장한 편이지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_34",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_34",
+      "speakerId": "npc.201",
+      "text": "이게 또 재밌는 이야기가 있는데, 들어볼텐가?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_35",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 2
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_35",
+      "speakerId": "npc.201",
+      "text": "마을 사람들은 하도 듣다보니 질린다고 안 들어준단 말이지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_36",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_36",
+      "speakerId": "npc.001",
+      "text": "카쿰은 이젠 운만 떼어도 술자리를 박차고 도망간다며 낄낄 웃었다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_37",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_37",
+      "speakerId": "npc.001",
+      "text": "저에게는 한 번도 하신적 없는 이야기니, 귀기울여 듣겠습니다.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_38",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_38",
+      "speakerId": "npc.201",
+      "text": "오! 자세가 좋구만. 어디보자... 어디서부터 시작해야하나.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_39",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_39",
+      "speakerId": "npc.201",
+      "text": "나는 말일세. 원래는 상인이었네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_40",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_40",
+      "speakerId": "npc.201",
+      "text": "보따리 하나를 들고 여기저기 돌아다니며 물건을 팔았지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_41",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_41",
+      "speakerId": "npc.201",
+      "text": "어째 재주가 좋아 돈은 좀 벌었었네. 그래서 좀 장사 규모를 키워보려고 생각했네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_42",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_42",
+      "speakerId": "npc.201",
+      "text": "그래, 이 다리 두짝으로 하는 장사에는 한계가 있다. 크기를 키우자!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_43",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_43",
+      "speakerId": "npc.201",
+      "text": "말이며 마차며 하는 건 째째하니 번거롭기만 하고 그리 맘에 들지 않던군. 그래서 결심했지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_44",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_44",
+      "speakerId": "npc.201",
+      "text": "땅으로 옮기는 시대는 갔다. 이제는 바다다!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_45",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_45",
+      "speakerId": "npc.201",
+      "text": "그래서 배를 띄웠네. 멋모르고 항구로 가서, 배를 사고, 짐을 왕창 싣고 바다로 나섰지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_46",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_46",
+      "speakerId": "npc.201",
+      "text": "어리고 멍청했지. 이 바다라는 것이 얼마나 변덕쟁인지 몰랐어.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_47",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_47",
+      "speakerId": "npc.201",
+      "text": "멋모르는 이 족제비한테 바다는 가혹했고, 난 길을 잃었네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_48",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_48",
+      "speakerId": "npc.201",
+      "text": "이러다 영영 바다 위를 떠도는 건 아닐까. 어쩌면 이러다 난 죽는걸까. 별 생각을 다했지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_49",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_49",
+      "speakerId": "npc.201",
+      "text": "어떻게 챙겨온 짐에 있던 식재료로 굶어 죽는건 면했지만, 글쎄, 썩 긍정적인 결말이 보이지는 않는 상황이었네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_50",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_50",
+      "speakerId": "npc.201",
+      "text": "그렇게 결국 마지막 식량도 다떨어진 날. 잠이 안오더군.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_51",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_51",
+      "speakerId": "npc.201",
+      "text": "내가 지금 잠들면, 과연 내일은 일어날 수 있을까. 그런 생각 때문에 말일세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_52",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_52",
+      "speakerId": "npc.201",
+      "text": "그렇게 멍하니 갑판에 앉아 있을때, 바로 그때였네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_53",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_53",
+      "speakerId": "npc.201",
+      "text": "바다가 갑자기 빛나는 거 아니겠는가!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_54",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_54",
+      "speakerId": "npc.201",
+      "text": "멍하니 있던 나는, 문뜩 그 사실을 알아차리고, 후다닥 바다 속을 바라봤네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_55",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_55",
+      "speakerId": "npc.201",
+      "text": "그 안에는 말일세. 신비로운 무언가가 있었네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_56",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_56",
+      "speakerId": "npc.201",
+      "text": "내가 늘 어떻게 설명해보려 하지만, 이 뭐라 설명을 못한단 말이지, 그 모습을 말이야.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_57",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_57",
+      "speakerId": "npc.201",
+      "text": "아주 거대했고, 아주 아름다웠네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_58",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_58",
+      "speakerId": "npc.201",
+      "text": "고래도 아니었고, 마치 해파리처럼 반투명했네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_59",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_59",
+      "speakerId": "npc.201",
+      "text": "그러면서도 밝게 빛을 발하고 있었고, 다채로운 색체를 가졌었지.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_60",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_60",
+      "speakerId": "npc.201",
+      "text": "그렇게 나는 그 모습을 홀린 듯이 바라보고 있었네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_61",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_61",
+      "speakerId": "npc.201",
+      "text": "그것은 마치 나를 살피는 듯, 배와 함께 움직이며 주위를 맴돌고 있었네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_62",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_62",
+      "speakerId": "npc.201",
+      "text": "그러다 갑자기, 속도를 내어 한쪽으로 향하는 것 아닌가.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_63",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_63",
+      "speakerId": "npc.201",
+      "text": "난 그것을 놓치기 싫어, 최대한 배를 몰아 속도를 내어 따라갔지만, 너무 빨라 따라잡을 수가 없더군.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_64",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_64",
+      "speakerId": "npc.201",
+      "text": "그래도 홀린 듯 계속해서 그것이 사라진 방향으로 계속 배를 몰았네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_65",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_65",
+      "speakerId": "npc.201",
+      "text": "그렇게 몇날몇일을 미친 것처럼 배를 몰다 도착한 곳이 바로!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_66",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_66",
+      "speakerId": "npc.201",
+      "text": "데스피나였다. 라는 이야기일세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_67",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_67",
+      "speakerId": "npc.201",
+      "text": "그 당시 사람들에게 이 이야기를 해주자, 다들 말해주더군.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_68",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_68",
+      "speakerId": "npc.201",
+      "text": "바다의 천사가 나를 구해줬다. 라고 말일세.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_69",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_69",
+      "speakerId": "npc.201",
+      "text": "나는 그 길로 그 바다의 천사를 다시 만나기 위해, 데스피나에서 물질을 하며 살고있고 말이네.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_70",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_70",
+      "speakerId": "npc.201",
+      "text": "끝일세. 어떤가?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_71",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_71",
+      "speakerId": "npc.001",
+      "text": "정말... 꿈 같은 이야기네요. 마치 동화같군요.",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_72",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_72",
+      "speakerId": "npc.201",
+      "text": "하하. 터무니 없지? 그런데 어떡할건가. 그 산증인이 여기 있는데!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_73",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 4
+        }
+      ],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_73",
+      "speakerId": "npc.201",
+      "text": "난 반드시 다시 그것을 만나고야 말걸세. 그게 이 카쿰의 원대한 소원일세!",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_74",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_74",
+      "speakerId": "npc.001",
+      "text": "만나서... 어떡하시려는 건가요?",
+      "typingSpeed": 0.04,
+      "next": "SmallTalk004_75",
+      "events": [],
+      "choices": []
+    },
+    {
+      "id": "SmallTalk004_75",
+      "speakerId": "npc.201",
+      "text": "음? 글쎄? 고맙다고하지 않을까?",
+      "typingSpeed": 0.04,
+      "next": "",
+      "events": [
+        {
+          "type": "SHOW_NPC",
+          "npcId" : "npc.201",
+          "slot" : 1,
+          "portraitIndex" : 0
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

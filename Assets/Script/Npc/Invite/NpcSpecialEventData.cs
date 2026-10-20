@@ -19,11 +19,17 @@ public class NpcSpecialEventData : ScriptableObject
     [Header("Dialogue Data (JSON)")]
     [SerializeField] private TextAsset dialogueJsonFile;
 
+    [Header("이벤트 끝나고 일어날 동작")]
+    [SerializeField] private EndTalkBase endTalkFunc;
+
     public string EventId => eventId;
     public string EventName => eventName;
-    public int StoryOrder => storyOrder;
     public TownType Town => town;
     public NpcBasicInfo NpcInfo => npcInfo;
+    public int StoryOrder => storyOrder;
     public List<ItemIngredientData> RequiredIngredients => requiredIngredients;
+    public Sprite FoodSprite => foodSprite;
     public string DialogueJsonText => dialogueJsonFile != null ? dialogueJsonFile.text : string.Empty;
+    public TextAsset DialogueJsonFile => dialogueJsonFile;
+    public EndTalkBase EndTalkFunc => endTalkFunc;
 }
