@@ -8,5 +8,6 @@ public class EndTalkMoveNewScene : EndTalkBase
     public override void EndTalk()
     {
         SceneController.Instance.LoadSubScene(nextScene);
+        NpcSpecialEventManager.Instance.ResetEvent();
     }
 }

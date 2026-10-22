@@ -37,6 +37,8 @@ public class PlayerInventoryController : MonoBehaviour
 
     private void Update()
     {
+        if (!SystemController.Instance.IsSystemPaused) return;
+
         if (Input.GetKey(KeyCode.LeftControl))
         {
             // Ctrl 키가 눌린 상태에서는 숫자키 입력을 무시 (미끼 선택 UI와 충돌 방지)

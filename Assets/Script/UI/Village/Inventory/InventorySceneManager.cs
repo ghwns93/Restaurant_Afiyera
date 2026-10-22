@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySceneManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class InventorySceneManager : MonoBehaviour
     [SerializeField] private GameObject uiRoot;
     [SerializeField] private InventorySceneScript inventoryRoot;
     [SerializeField] private Canvas parentCanvas;           // 부모 캔버스 (Screen Space - Camera 또는 Overlay)
+    [SerializeField] private ScrollRect selectionScrollRect; // 연보라 창에 붙어있는 ScrollRect 연결
 
     [Header("Description Settings")]
     [SerializeField] private GameObject descriptPanel;       // 노란 박스 패널
@@ -85,10 +87,21 @@ public class InventorySceneManager : MonoBehaviour
         panelRectTransform.position = mousePosition + mouseOffset;
     }
 
+    private void ResetScrollPosition()
+    {
+        if (selectionScrollRect != null)
+        {
+            // Canvas 레이아웃이 즉시 반영되도록 갱신 후 위치 이동
+            Canvas.ForceUpdateCanvases();
+            selectionScrollRect.horizontalNormalizedPosition = 0f;
+        }
+    }
+
     public void OpenUI()
     {
         SystemController.Instance.SetSystemPause(false);
         inventoryRoot.InitSlots();
+        ResetScrollPosition();
         uiRoot.SetActive(true);
     }
 

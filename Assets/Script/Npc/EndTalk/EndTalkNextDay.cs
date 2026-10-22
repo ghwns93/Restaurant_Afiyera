@@ -6,5 +6,6 @@ public class EndTalkNextDay : EndTalkBase
     public override void EndTalk()
     {
         NpcSpecialEventManager.Instance.ResetEvent(); 
-        TimeBase.Instance.GoToSleep(false);    }
+        TimeBase.Instance.GoToSleep(false);    
+    }
 }

@@ -1973,7 +1973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6415259d4254e64d80a9a42a5dee4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  maxSlotCount: 20
+  maxSlotCount: 50
   slots: []
   testMode: 1
   testItems:
@@ -2486,7 +2486,7 @@ SceneRoots:
   - {fileID: 1456225495}
   - {fileID: 1122363521}
   - {fileID: 2114077773}
+  - {fileID: 731230793}
   - {fileID: 63394617}
   - {fileID: 550212293}
   - {fileID: 1516349503}
-  - {fileID: 731230793}

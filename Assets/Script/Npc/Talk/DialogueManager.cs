@@ -447,9 +447,16 @@ public class DialogueManager : MonoBehaviour
             if (slot.IsOccupied) slot.Hide();
 
         // 필요하면 여기서 onDialogueEnd 이벤트 발행 (퀘스트 시작, 플레이어 조작 복구 등)
-        NpcSpecialEventManager.Instance.MarkEventAsSeen(NpcSpecialEventManager.Instance.GetSelectedId()?.name);
 
-        NpcSpecialEventManager.Instance.EndTalkEnvent();
+        if (NpcSpecialEventManager.Instance.GetSelectedId() != null)
+        {
+            NpcSpecialEventManager.Instance.MarkEventAsSeen(NpcSpecialEventManager.Instance.GetSelectedId().name);
+            NpcSpecialEventManager.Instance.EndTalkEnvent();
+        }
+        else
+        {
+            TimeBase.Instance.GoToSleep(false);
+        }
     }
 
     // ===== 스킵: 가장 가까운 선택지(없으면 마지막 라인)까지 즉시 점프 =====

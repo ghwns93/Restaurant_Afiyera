@@ -16,6 +16,16 @@ public class GardenRewardManager : MonoBehaviour
     // 슬롯 인덱스별 데이터 저장 딕셔너리
     public Dictionary<int, SlotSaveData> slotDataMap = new Dictionary<int, SlotSaveData>();
 
+    private void OnEnable()
+    {
+        TimeEvents.OnDayEnded += OnNewDayPassed;
+    }
+
+    private void OnDisable()
+    {
+        TimeEvents.OnDayEnded -= OnNewDayPassed;
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -57,7 +67,7 @@ public class GardenRewardManager : MonoBehaviour
     /// <summary>
     /// 다른 씬(메인, 필드 등)에서 하루가 지났을 때 호출하는 보상 지급 함수
     /// </summary>
-    public void OnNewDayPassed()
+    public void OnNewDayPassed(bool none)
     {
         foreach (var pair in slotDataMap)
         {
@@ -75,6 +85,6 @@ public class GardenRewardManager : MonoBehaviour
     private void AddItemToInventory(ItemIngredientData ingredient, int amount)
     {
         // 사용 중이신 인벤토리 시스템과 연동
-        // InventoryManager.Instance.AddItem(ingredient, amount);
+        InventoryManager.Instance.AddItem(ingredient, amount);
     }
 }
