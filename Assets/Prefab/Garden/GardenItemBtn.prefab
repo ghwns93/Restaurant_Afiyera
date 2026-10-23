@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4307675535478961178}
   - component: {fileID: 259954494123411543}
   - component: {fileID: 2624748363145214721}
+  - component: {fileID: 4289525889141607903}
   m_Layer: 5
   m_Name: GardenItemBtn
   m_TagString: Untagged
@@ -95,6 +96,18 @@ MonoBehaviour:
   materialSelectBtn: {fileID: 5293598756067220845}
   objectIconImage: {fileID: 2384988065139271392}
   materialIconImage: {fileID: 5366820688187136575}
+--- !u!114 &4289525889141607903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718496933462307072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1fdb6e875134cb17f5be1fecc61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSoundHandler
 --- !u!1 &3151713605233851994
 GameObject:
   m_ObjectHideFlags: 0

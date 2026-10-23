@@ -41,6 +41,8 @@ public class ShopDropReceiver : MonoBehaviour, IDropHandler
                 InventoryManager.Instance.ReduceItem(soldItem, soldCount);
                 InventoryManager.Instance.AddGold(totalEarnings);
 
+                SFXPlayer.Play(SoundName.SFX_ShopPurchase);
+
                 if (ShopManager.Instance != null)
                 {
                     ShopManager.Instance.UpdatePlayerUI();

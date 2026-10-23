@@ -133,6 +133,8 @@ public class InventoryUI : MonoBehaviour
 
     private IEnumerator SmoothMoveCoroutine(Vector2 targetPos)
     {
+        SFXPlayer.Play(SoundName.SFX_ToolSelect);
+
         while (Vector2.Distance(slotParent.anchoredPosition, targetPos) > 0.1f)
         {
             slotParent.anchoredPosition = Vector2.Lerp(

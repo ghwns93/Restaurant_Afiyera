@@ -730,6 +730,7 @@ GameObject:
   - component: {fileID: 1321255195256457819}
   - component: {fileID: 2296745662286147786}
   - component: {fileID: 4574764456292729414}
+  - component: {fileID: -7182245457854615392}
   m_Layer: 5
   m_Name: ShopItemListPrefab
   m_TagString: Untagged
@@ -820,6 +821,18 @@ MonoBehaviour:
   soldOutPanel: {fileID: 2785059188425306391}
   priceUpSprite: {fileID: 4973305791137834786, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
   priceDownSprite: {fileID: -8988973681752283195, guid: ef72c3e4f9cd11c44819d1206a8790e5, type: 3}
+--- !u!114 &-7182245457854615392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427767243894270642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1fdb6e875134cb17f5be1fecc61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSoundHandler
 --- !u!1 &8429505078872954496
 GameObject:
   m_ObjectHideFlags: 0

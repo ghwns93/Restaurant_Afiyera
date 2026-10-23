@@ -2263,9 +2263,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8ac137946b6acb46b6e5b2b12dd1e47, type: 2}
   - {fileID: 11400000, guid: d1fcdff17d738664c98064c1a9fdaa8d, type: 2}
   - {fileID: 11400000, guid: a69cb0e5d37a4c74ab07c2823072e78f, type: 2}
+  - {fileID: 11400000, guid: d3249ed991b1f084f8c35e143ab0d491, type: 2}
   - {fileID: 11400000, guid: 8066e18420c0cfb47a05641b7ef047c0, type: 2}
   - {fileID: 11400000, guid: f0aa03887d18a254eb3c6d16c6fadab5, type: 2}
-  - {fileID: 11400000, guid: d3249ed991b1f084f8c35e143ab0d491, type: 2}
+  - {fileID: 11400000, guid: 3eb4598dcec262d449df2a88aa329903, type: 2}
+  - {fileID: 11400000, guid: 38cff72f2ac3eef498bbc33e1271a96d, type: 2}
+  - {fileID: 11400000, guid: c8c829ba059fb954fae7aeb57fba6895, type: 2}
+  - {fileID: 11400000, guid: 7c39bf3679ec4e14d981491ae2c016a1, type: 2}
+  - {fileID: 11400000, guid: 6d7ea1eddfe9664438e05b72e7de2b03, type: 2}
+  - {fileID: 11400000, guid: 1393910de1e39774d9ab8b69d622d6ba, type: 2}
+  - {fileID: 11400000, guid: bf60a18549d74c343820660c187381d7, type: 2}
+  - {fileID: 11400000, guid: 50b7140c960344944981c926920c2346, type: 2}
+  - {fileID: 11400000, guid: 792c49dd778bd46469683e2064e95f21, type: 2}
+  - {fileID: 11400000, guid: f516c816a8ca09c4db8eb1aa71779df3, type: 2}
+  - {fileID: 11400000, guid: c1a472eef68b2304190804f132c3e1f8, type: 2}
+  - {fileID: 11400000, guid: a97314be10245a34c852affdd57d935e, type: 2}
+  - {fileID: 11400000, guid: 2fdf3eaf273a22744ad2a23aa7410352, type: 2}
+  - {fileID: 11400000, guid: b9558eef2720ea845ba87bfa06cd7afa, type: 2}
+  - {fileID: 11400000, guid: 1c223d4526604ae41b76bbbb009a1963, type: 2}
+  - {fileID: 11400000, guid: 8911ba9b5eadfac499df4c62c3aa6712, type: 2}
+  - {fileID: 11400000, guid: cbbcf6edde7f34e47a71915f53d07f1e, type: 2}
+  - {fileID: 11400000, guid: 81933b1367f659f4b85da132dc7f3277, type: 2}
+  - {fileID: 11400000, guid: d7d452b29d32db14e9478c4a1c909cc8, type: 2}
   villageBgmList:
   - towntype: 0
     soundName: 2

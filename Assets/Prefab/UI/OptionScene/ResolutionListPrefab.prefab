@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6770682037706303235}
   - component: {fileID: 3936414442038894829}
   - component: {fileID: 6138477867007460994}
+  - component: {fileID: -3868200097417705525}
   m_Layer: 5
   m_Name: ResolutionListPrefab
   m_TagString: Untagged
@@ -228,3 +229,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResolutionNodes
   resolutionText: {fileID: 3936414442038894829}
   arrowImages: {fileID: 7287537027690314065}
+--- !u!114 &-3868200097417705525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515427022895832651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1fdb6e875134cb17f5be1fecc61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSoundHandler

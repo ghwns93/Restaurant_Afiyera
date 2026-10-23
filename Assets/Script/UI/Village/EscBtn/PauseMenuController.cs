@@ -65,6 +65,8 @@ public class PauseMenuController : MonoBehaviour
 
     private IEnumerator AnimateButtonsIn()
     {
+        SFXPlayer.Play(SoundName.SFX_EscOpen);
+
         // 1. 먼저 모든 버튼 오브젝트를 활성화
         for (int i = 0; i < menuButtons.Length; i++)
         {
@@ -81,6 +83,8 @@ public class PauseMenuController : MonoBehaviour
 
     private IEnumerator AnimateButtonsOut()
     {
+        SFXPlayer.Play(SoundName.SFX_EscClose);
+
         // 닫을 때는 역순 또는 동시에 아래로 내리기
         for (int i = menuButtons.Length - 1; i >= 0; i--)
         {

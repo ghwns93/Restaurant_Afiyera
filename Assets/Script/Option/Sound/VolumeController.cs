@@ -1,7 +1,5 @@
-using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
-using static UnityEngine.Rendering.DebugUI;
 
 public class VolumeController : MonoBehaviour
 {

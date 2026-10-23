@@ -10,6 +10,8 @@ public class ResourceGatherController : MonoBehaviour
     private Coroutine gatherCoroutine = null;
     private bool isGathering = false;
 
+    private SoundName nowPlayingSound;
+
     private void Start()
     {
         if (PlayerInventoryController.Instance != null)
@@ -128,6 +130,27 @@ public class ResourceGatherController : MonoBehaviour
         isGathering = true;
         float timer = 0f;
 
+        switch(toolData.TargetResourceType)
+        {
+            case ResourceType.Insect:
+                nowPlayingSound = SoundName.SFX_Gather_Insect;
+                break;
+            case ResourceType.Water:
+                nowPlayingSound = SoundName.SFX_Gather_Fishing;
+                break;
+            case ResourceType.Rock:
+                nowPlayingSound = SoundName.SFX_Gather_Mining;
+                break;
+            case ResourceType.Plant:
+                nowPlayingSound = SoundName.SFX_Gather_Hand;
+                break;
+            case ResourceType.Mistic:
+                nowPlayingSound = SoundName.SFX_Gather_Magic;
+                break;
+        }
+
+        SFXPlayer.PlayLong(nowPlayingSound);
+
         while (timer < duration)
         {
             timer += Time.deltaTime;
@@ -146,11 +169,14 @@ public class ResourceGatherController : MonoBehaviour
 
     private void StopGathering()
     {
+        SFXPlayer.Stop(nowPlayingSound);
+
         if (gatherCoroutine != null)
         {
             StopCoroutine(gatherCoroutine);
             gatherCoroutine = null;
         }
+
         isGathering = false;
 
         if (GatherUIController.Instance != null)

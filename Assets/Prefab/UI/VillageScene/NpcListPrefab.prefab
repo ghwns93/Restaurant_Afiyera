@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 1543823258501471374}
   - component: {fileID: 6868211904215713772}
   - component: {fileID: 1973752778538549631}
+  - component: {fileID: 2458421576570304107}
   m_Layer: 5
   m_Name: InviteButton
   m_TagString: Untagged
@@ -496,6 +497,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2458421576570304107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514662988945708356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1fdb6e875134cb17f5be1fecc61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSoundHandler
 --- !u!1 &3656603096500704501
 GameObject:
   m_ObjectHideFlags: 0

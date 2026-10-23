@@ -29,6 +29,8 @@ public class FreeMovement : MonoBehaviour
     private string wCurrentAnimation = "";
     private string sCurrentAnimation = "";
 
+    private bool isWalking = false;
+
     private void OnEnable()
     {
         SystemController.OnSystemStateChanged += HandleSystemState;
@@ -85,6 +87,23 @@ public class FreeMovement : MonoBehaviour
         {
             ratio = moveSpeedRatio;
         }
+
+        //if (moveInput.sqrMagnitude > 0.01f)
+        //{
+        //    if (!isWalking)
+        //    {
+        //        isWalking = true;
+        //        SFXPlayer.PlayLong(SoundName.SFX_Walk_Ground);
+        //    }
+        //}
+        //else
+        //{
+        //    if (isWalking)
+        //    {
+        //        isWalking = false;
+        //        SFXPlayer.Stop(SoundName.SFX_Walk_Ground);
+        //    }
+        //}
 
         // 물리 기반 이동 처리
         rb.linearVelocity = moveInput * moveSpeed * ratio;

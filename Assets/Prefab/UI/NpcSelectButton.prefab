@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7885277604972218981}
   - component: {fileID: 1040396541590905601}
   - component: {fileID: 8318662352614545980}
+  - component: {fileID: 4584913840266367600}
   m_Layer: 5
   m_Name: NpcSelectButton
   m_TagString: Untagged
@@ -91,6 +92,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcSelectButton
   nameText: {fileID: 4153545216472470339}
   highlightImage: {fileID: 1040396541590905601}
+--- !u!114 &4584913840266367600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541272022844878603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1fdb6e875134cb17f5be1fecc61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSoundHandler
 --- !u!1 &1796622466201439246
 GameObject:
   m_ObjectHideFlags: 0

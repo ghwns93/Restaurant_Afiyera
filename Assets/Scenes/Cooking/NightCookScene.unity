@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 141964787}
   - component: {fileID: 141964786}
   - component: {fileID: 141964785}
+  - component: {fileID: 141964788}
   m_Layer: 5
   m_Name: AutoModeBtn
   m_TagString: Untagged
@@ -356,6 +357,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141964783}
   m_CullTransparentMesh: 1
+--- !u!114 &141964788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141964783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1fdb6e875134cb17f5be1fecc61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSoundHandler
 --- !u!1 &218603476
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +654,6 @@ MonoBehaviour:
   - {fileID: 1776265149}
   - {fileID: 1506316065}
   - {fileID: 1732529720}
-  nightCookScene: {fileID: 713203760}
   choiceContainer: {fileID: 1435751798}
   choiceButtonPrefab: {fileID: 6331116254187693329, guid: d261749dabf1c9545bd8b5db97630260, type: 3}
   defaultTypingSpeed: 0.04
@@ -756,6 +768,7 @@ GameObject:
   - component: {fileID: 645673518}
   - component: {fileID: 645673517}
   - component: {fileID: 645673516}
+  - component: {fileID: 645673519}
   m_Layer: 5
   m_Name: SkipBtn
   m_TagString: Untagged
@@ -876,6 +889,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645673514}
   m_CullTransparentMesh: 1
+--- !u!114 &645673519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645673514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1fdb6e875134cb17f5be1fecc61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSoundHandler
 --- !u!1 &672159845
 GameObject:
   m_ObjectHideFlags: 0

@@ -151,6 +151,8 @@ public class ShopManager : MonoBehaviour
 
                 shopItem.StockCount--; // 재고 감소
 
+                SFXPlayer.Play(SoundName.SFX_ShopPurchase);
+
                 // 3. UI 갱신
                 UpdatePlayerUI();
                 RefreshShopUI();
