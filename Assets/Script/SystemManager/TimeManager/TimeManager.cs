@@ -22,6 +22,18 @@ public class TimeManager : TimeBase
         TimeEvents.OnDayEnded -= NextDay;
     }
 
+    private void Start()
+    {
+        SetDefaultTime();
+    }
+
+    private void SetDefaultTime()
+    {
+        nowMinutes = startTime * secondsPerMinute; // 하루가 끝나면 시간 초기화
+
+        RecordNowTime((nowMinutes / secondsPerMinute), (nowMinutes % secondsPerMinute));
+    }
+
     private void HandleTimeConsumed(int minutes)
     {
         nowMinutes = Mathf.Min((sleepTime * secondsPerMinute), nowMinutes + minutes);
@@ -29,21 +41,23 @@ public class TimeManager : TimeBase
 
         RecordNowTime((nowMinutes / secondsPerMinute), (nowMinutes % secondsPerMinute));
 
-        if (nowMinutes >= (workTime * secondsPerMinute) && isWorking == false)
-        {
-            GoToWork();
-        }
-        else if (nowMinutes >= (nightOpenTime * secondsPerMinute) 
-              && todayNightRestaurantHasOpen == true 
-              && todayNightRestaurantIsWorked == false)
-        {
-            GoToNightWork();
-        }
-        else if ((sleepTime * secondsPerMinute) <= nowMinutes)
-        {
-            //강제 취침 이벤트 발생
-            GoToSleep();
-        }
+        //if (nowMinutes >= (workTime * secondsPerMinute) && isWorking == false)
+        //{
+        //    GoToWork();
+        //}
+        //else if (nowMinutes >= (nightOpenTime * secondsPerMinute) 
+        //      && todayNightRestaurantHasOpen == true 
+        //      && todayNightRestaurantIsWorked == false)
+        //{
+        //    GoToNightWork();
+        //}
+        //else if ((sleepTime * secondsPerMinute) <= nowMinutes)
+        //{
+        //    //강제 취침 이벤트 발생
+        //    GoToSleep();
+        //}
+
+        TimeEvents.OnTimeChanged?.Invoke();
     }
 
     public override void GoToWork()
@@ -66,9 +80,9 @@ public class TimeManager : TimeBase
 
     public override void GoToSleep(bool IsForcibly = true)
     {
-        Debug.Log("자러 갈 시간");
+        //Debug.Log("자러 갈 시간");
 
-        nowMinutes = 0; // 하루가 끝나면 시간 초기화
+        SetDefaultTime();
 
         TimeEvents.OnDayEnded?.Invoke(IsForcibly); // 하루 종료 이벤트 발생
     }
@@ -80,6 +94,4 @@ public class TimeManager : TimeBase
 
         RecordNowTime(hour, 0);
     }
-
-    
 }

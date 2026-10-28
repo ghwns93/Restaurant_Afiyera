@@ -92,8 +92,6 @@ public class InventoryManager : MonoBehaviour
                 existingSlot.Quantity += count;
                 onInventoryChangedCallback?.Invoke();
 
-                Debug.Log("인벤토리 수량 증가!");
-
                 return true;
             }
         }
@@ -106,12 +104,9 @@ public class InventoryManager : MonoBehaviour
             emptySlot.Quantity = count;
             onInventoryChangedCallback?.Invoke();
 
-            Debug.Log("인벤토리 새로 추가!");
-
             return true;
         }
 
-        Debug.Log("인벤토리가 가득 찼습니다!");
         return false;
     }
 

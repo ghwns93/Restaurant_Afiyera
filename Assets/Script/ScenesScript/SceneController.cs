@@ -38,6 +38,8 @@ public class SceneController : MonoBehaviour
         public string sceneName;
     }
 
+    public float minLoadTime = 2f;
+
     public SceneType startScene;
     public List<SceneData> sceneList;
 
@@ -113,8 +115,10 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator LoadSubSceneRoutine(SceneType type)
     {
-        int randomIndex = Random.Range(0, loadingSprites.Count);
+        // 로딩 시작 시간 기록
+        float startTime = Time.time;
 
+        int randomIndex = Random.Range(0, loadingSprites.Count);
         loadingImage.sprite = loadingSprites[randomIndex];
 
         // 1. 로딩창 켜기
@@ -147,7 +151,7 @@ public class SceneController : MonoBehaviour
             // 5. 로딩 진행도 반영
             while (!loadOp.isDone)
             {
-                // progress는 0부터 0.9까지만 가므로 1.0 기준으로 보정하려면 아래와 같이 처리
+                // progress는 0부터 0.9까지만 가므로 1.0 기준으로 보정
                 float progress = Mathf.Clamp01(loadOp.progress / 0.9f);
 
                 if (progressBar != null)
@@ -157,6 +161,17 @@ public class SceneController : MonoBehaviour
 
                 yield return null;
             }
+        }
+
+        // 씬 로딩은 끝났지만, 최소 2초가 지났는지 확인
+        float elapsedTime = Time.time - startTime;
+
+        if (elapsedTime < minLoadTime)
+        {
+            // 2초가 안 지났다면 남은 시간만큼 대기 (게이지도 1.0보다 모자라게 상태 유지)
+            if (progressBar != null) progressBar.value = 0.93f;
+
+            yield return new WaitForSeconds(minLoadTime - elapsedTime);
         }
 
         // 6. 로딩 완료 후 로딩창 끄기

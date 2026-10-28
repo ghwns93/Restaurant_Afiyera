@@ -18,7 +18,7 @@ public class ShopPlayerInventorySetting : MonoBehaviour
         inventorySlots.Clear();
 
         // 인벤토리 매니저의 슬롯 개수(유동적으로 늘어난 크기)만큼 UI 슬롯 생성
-        List<ItemSlot> slots = InventoryManager.Instance.GetSlots();
+        List<ItemSlot> slots = InventoryManager.Instance.GetSlots(ItemType.Ingredient);
 
         for (int i = 0; i < slots.Count; i++)
         {

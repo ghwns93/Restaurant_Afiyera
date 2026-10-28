@@ -18,6 +18,7 @@ public abstract class TimeBase : MonoBehaviour
     protected const float realSecondsPerDay = 86400; // 실제 하루의 초 수 (24시간 * 60분 * 60초)
     protected const int secondsPerHour = 3600; // 한 시간의 초 수
     protected const int secondsPerMinute = 60; // 일 분의 초 수
+    protected const int minutePerHour = 60; // 한 시간의 분 수
 
     protected bool isWorking = false;
 
@@ -121,6 +122,17 @@ public abstract class TimeBase : MonoBehaviour
     {
         nowHour = hour;
         nowMinute = minute;
+    }
+
+    public bool CheckBetweenTime(int startHour, int startMinute, int endHour, int endMinute)
+    {
+        int startSum = (startHour * minutePerHour) + startMinute;
+        int endSum = (endHour * minutePerHour) + endMinute;
+
+        int nowSum = (nowHour * minutePerHour) + nowMinute;
+
+        if (startSum <= nowSum && nowSum <= endSum) return true;
+        else return false;
     }
 
     public abstract void SetNowTime(int hour);

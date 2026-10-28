@@ -18,14 +18,13 @@ MonoBehaviour:
   itemType: 0
   isStackable: 1
   maxStackCount: 99
-  baseSellPrice: 0
-  baseBuyPrice: 0
+  baseSellPrice: 60
+  baseBuyPrice: 60
   description: "\uACF1\uAC8C \uAC08\uC544\uC11C \uC2DD\uC7AC\uB8CC\uB85C \uC0AC\uC6A9\uD558\uBA74
     \r\n\uD654\uD55C \uB9E4\uC6B4\uB9DB\uC744 \uB0B4\uB294 \uB3CC.\r\n\uB9CE\uC740
     \uC591\uC744 \uD55C\uBC88\uC5D0 \uBA39\uC73C\uBA74\r\n\uBAA9\uAD6C\uBA4D\uC774
     \uC5BC\uC5B4\uBD99\uC744 \uC218 \uC788\uC73C\uB2C8 \uC8FC\uC758."
-  cookTime: 1
-  refineIcon: {fileID: 5446372724782223166, guid: 9bf101f9e561d144fb5d944927354b31, type: 3}
-  buffEffect: {fileID: 11400000, guid: 5285c672a4a8c4d4d82ce390eb9ec9b9, type: 2}
+  resourceType: 0
+  isUnlocked: 0
   minPriceMultiplier: 0.5
   maxPriceMultiplier: 1.5

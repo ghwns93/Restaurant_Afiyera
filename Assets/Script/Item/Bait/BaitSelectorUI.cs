@@ -55,7 +55,7 @@ public class BaitSelectorUI : MonoBehaviour
 
     private void Update()
     {
-        if (!SystemController.Instance.IsSystemPaused) return;
+        if (SystemController.Instance == null || !SystemController.Instance.IsSystemPaused) return;
 
         HandleMouseWheelInput();
     }

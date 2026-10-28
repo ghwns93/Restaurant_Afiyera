@@ -185,6 +185,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &256561487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256561489}
+  - component: {fileID: 256561490}
+  m_Layer: 0
+  m_Name: DialogueBackInfoDicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &256561489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256561487}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.43393, y: 0.42716, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256561490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256561487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb0f76df8fe4744b83a624d84dcfac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackDicManager
+  dataList:
+  - {fileID: 11400000, guid: 9b66f7516de8bfc45987abc7f9482000, type: 2}
+  - {fileID: 11400000, guid: f68c8178ec6a17b409a2e8079ba5fb16, type: 2}
+  - {fileID: 11400000, guid: 9a043767debc2c0409731724fe711f6a, type: 2}
+  - {fileID: 11400000, guid: 1faa19a9c10099c4984fa0ab37e3c1b4, type: 2}
 --- !u!1 &278446596
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,10 +703,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1753860493}
   m_HandleRect: {fileID: 483013282}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 20
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: -80
+  m_Value: 0.975
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1043,6 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20d6032f753e24fa491874a3c18335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  minLoadTime: 0.5
   startScene: 0
   sceneList:
   - type: 0
@@ -1084,7 +1134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190981685}
-  - component: {fileID: 1190981684}
+  - component: {fileID: 1190981686}
   m_Layer: 0
   m_Name: DayManager
   m_TagString: Untagged
@@ -1092,28 +1142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1190981684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190981683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dde5ac38e3e33df46834811179bef0fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DayManager
-  privateNowDay: 1
-  workTime: 10
-  nightOpenTime: 22
-  startTime: 7
-  sleepTime: 24
-  IsNewDay: 0
-  nowTimeState: 0
-  nowHour: 0
-  nowMinute: 0
-  oneDayDurationInSeconds: 288
 --- !u!4 &1190981685
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,6 +1157,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190981686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190981683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b7ac5ceb1c3784cbc646b4033cfbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
+  privateNowDay: 1
+  workTime: 10
+  nightOpenTime: 22
+  startTime: 7
+  sleepTime: 24
+  IsNewDay: 0
+  nowTimeState: 0
+  nowHour: 0
+  nowMinute: 0
 --- !u!1 &1209563706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1694,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9999
   m_TargetDisplay: 0
 --- !u!224 &1554992380
 RectTransform:
@@ -2508,4 +2557,5 @@ SceneRoots:
   - {fileID: 731230793}
   - {fileID: 63394617}
   - {fileID: 550212293}
+  - {fileID: 256561489}
   - {fileID: 1516349503}

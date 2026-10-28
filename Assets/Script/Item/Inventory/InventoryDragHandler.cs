@@ -34,7 +34,10 @@ public class InventoryDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandl
         // 인벤토리에 실제 아이템 데이터가 있는지 확인
         if (InventoryManager.Instance != null)
         {
-            var slotData = InventoryManager.Instance.slots[slotIndex];
+            var slotDatas = InventoryManager.Instance.GetSlots(ItemType.Ingredient);
+
+            var slotData = slotDatas[slotIndex];
+
             if (slotData == null || slotData.ItemData == null) return;
         }
 

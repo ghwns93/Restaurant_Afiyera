@@ -52,4 +52,5 @@ public static class DialogueEventType
     public const string ShowNpc = "SHOW_NPC";
     public const string HideNpc = "HIDE_NPC";
     public const string ActionPlay = "ACTION_PLAY";  // ▼ 추가
+    public const string ShowBackInfo = "SHOW_BACK";  // ▼ 추가
 }

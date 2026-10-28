@@ -21,7 +21,9 @@ public class ShopDropReceiver : MonoBehaviour, IDropHandler
 
         if (InventoryManager.Instance != null)
         {
-            var slotData = InventoryManager.Instance.slots[slotIndex];
+            var slotDatas = InventoryManager.Instance.GetSlots(ItemType.Ingredient);
+
+            var slotData = slotDatas[slotIndex];
 
             if (slotData != null && slotData.ItemData != null && slotData.Quantity > 0)
             {

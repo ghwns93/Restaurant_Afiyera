@@ -36,7 +36,7 @@ SpriteAtlas:
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     - serializedVersion: 4
       m_BuildTarget: Standalone
-      m_MaxTextureSize: 4096
+      m_MaxTextureSize: 8192
       m_ResizeAlgorithm: 0
       m_TextureFormat: 25
       m_TextureCompression: 1
@@ -58,24 +58,39 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 081927bd04d99504aa469bda806bf9f3, type: 3}
-    - {fileID: 2800000, guid: 518fe07065ee1f3439753a9878ab1e99, type: 3}
-    - {fileID: 2800000, guid: 38eb6123c513e0847a4e56e233a0c60b, type: 3}
+    - {fileID: 102900000, guid: a4d76b48c0a314645966141d408e0b79, type: 3}
+    - {fileID: 102900000, guid: 86a02711136e86347a10491834b51d79, type: 3}
+    - {fileID: 102900000, guid: 29ad081acdb51d141b13f7f7dd39ce0b, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
-    - 518fe07065ee1f3439753a9878ab1e99: -5697067001844015098
-    - 38eb6123c513e0847a4e56e233a0c60b: -7278812258214571259
-    - 081927bd04d99504aa469bda806bf9f3: 8663009441460879470
+    - 0659fa22fd6ed604caa6a0de46bff8f3: -7278812258214571259
+    - 609466778bc5c404bb79e361814f5a88: -5697067001844015098
+    - be88cbc7516d33a4eb0c814b14395988: -4831210048182687994
+    - 1e9763f8c44ae364181b3df2074bedfe: -8360728027353604549
+    - 929e1a29253963a4fa611d9f9b4eea98: -4782459378411269484
+    - ff5c799c7c7c8d343a5b01fc9451f497: 4877091818486257534
+    - d40c666ebb3086b4bbd51eb05dd21216: 6584751581320971760
+    - 3ec93c3fa9115f94aac5a29644622f8a: 8663009441460879470
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: -5697067001844015098, guid: 518fe07065ee1f3439753a9878ab1e99, type: 3}
-  - {fileID: -7278812258214571259, guid: 38eb6123c513e0847a4e56e233a0c60b, type: 3}
-  - {fileID: 8663009441460879470, guid: 081927bd04d99504aa469bda806bf9f3, type: 3}
+  - {fileID: -7278812258214571259, guid: 0659fa22fd6ed604caa6a0de46bff8f3, type: 3}
+  - {fileID: -5697067001844015098, guid: 609466778bc5c404bb79e361814f5a88, type: 3}
+  - {fileID: -4831210048182687994, guid: be88cbc7516d33a4eb0c814b14395988, type: 3}
+  - {fileID: -8360728027353604549, guid: 1e9763f8c44ae364181b3df2074bedfe, type: 3}
+  - {fileID: -4782459378411269484, guid: 929e1a29253963a4fa611d9f9b4eea98, type: 3}
+  - {fileID: 4877091818486257534, guid: ff5c799c7c7c8d343a5b01fc9451f497, type: 3}
+  - {fileID: 6584751581320971760, guid: d40c666ebb3086b4bbd51eb05dd21216, type: 3}
+  - {fileID: 8663009441460879470, guid: 3ec93c3fa9115f94aac5a29644622f8a, type: 3}
   m_PackedSpriteNamesToIndex:
-  - "\uC8FC\uBC29\uCABD\uBC30\uACBD2_0"
   - "\uC8FC\uBC29\uCABD\uBC30\uACBD3(\uBC24)_0"
+  - "\uC8FC\uBC29\uCABD\uBC30\uACBD2_0"
+  - "\uC8FC\uBC29\uCABD\uBC30\uACBD2(\uB0AE)_0"
+  - "\uC8FC\uBC29\uCABD\uBC30\uACBD3(\uB0AE)_0"
+  - "\uC219\uC18C\uC55E \uBC30\uACBD_0"
+  - "\uC2DD\uB2F9\uC55E\uBC30\uACBD_0"
+  - "\uB9C8\uC744\uBC30\uACBD_0"
   - "\uAC00\uAC8C \uBC30\uACBD_0"
   m_RenderDataMap: {}
   m_Tag: NightRestaurantAtlas

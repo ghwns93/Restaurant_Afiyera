@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -124,22 +125,26 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        if (soundDictionary.TryGetValue(name, out SoundData data)) 
+        if (soundDictionary.TryGetValue(name, out SoundData data))
         {
             if (data.soundName == SoundName.None) return;
 
-            // 독립된 임시 오디오 소스 오브젝트 생성 (개별 제어를 위함)
+            // 임시 오디오 소스 오브젝트 생성
             GameObject sfxObj = new GameObject($"LongSFX_{name}");
             AudioSource source = sfxObj.AddComponent<AudioSource>();
 
             source.outputAudioMixerGroup = data.group;
             source.clip = data.clip; 
-            source.volume = data.volume; 
-            source.pitch = data.pitch;
-            source.loop = data.loop; // SoundData의 loop 설정 따름
+            source.volume = data.volume;
+            source.pitch = data.pitch; 
+            source.loop = data.loop;
             source.Play();
 
             activeLongSfxSources.Add(name, source);
+
+            // [핵심 추가] 루프가 아니거나(일반 사운드인데 PlayLong으로 틀었을 때), 
+            // 혹은 끝까지 재생되었을 때를 감지하여 딕셔너리에서 자동 제거하는 코루틴 시작
+            StartCoroutine(CheckAudioFinishedRoutine(name, source, sfxObj));
         }
     }
 
@@ -156,6 +161,41 @@ public class SoundManager : MonoBehaviour
                 Destroy(source.gameObject); // 오브젝트 정리
             }
             activeLongSfxSources.Remove(name);
+        }
+    }
+
+    /// <summary>
+    /// 오디오 재생이 끝날 때까지 기다렸다가 딕셔너리에서 안전하게 지워주는 코루틴
+    /// </summary>
+    private IEnumerator CheckAudioFinishedRoutine(SoundName name, AudioSource source, GameObject sfxObj)
+    {
+        // loop가 켜져 있으면 사용자가 직접 StopLongSfx를 호출하기 전까지는 계속 대기
+        // loop가 꺼져있는 클립이라면 끝날 때까지 대기
+        if (!source.loop)
+        {
+            // 오디오 클립의 실제 재생 시간만큼 대기 (피치 변동 고려)
+            float duration = source.clip.length / Mathf.Abs(source.pitch);
+            yield return new WaitForSeconds(duration);
+        }
+        else
+        {
+            // 루프 사운드인 경우, 소스가 도중에 파괴되거나 멈출 때까지 대기
+            while (source != null && source.isPlaying)
+            {
+                yield return null;
+            }
+        }
+
+        // 재생이 끝났거나 소스가 꺼졌다면 딕셔너리 정리
+        if (activeLongSfxSources.ContainsKey(name) && activeLongSfxSources[name] == source)
+        {
+            activeLongSfxSources.Remove(name);
+        }
+
+        // 오브젝트 정리
+        if (sfxObj != null)
+        {
+            Destroy(sfxObj);
         }
     }
 

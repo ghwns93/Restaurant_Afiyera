@@ -18,8 +18,8 @@ MonoBehaviour:
   itemType: 0
   isStackable: 1
   maxStackCount: 99
-  baseSellPrice: 0
-  baseBuyPrice: 0
+  baseSellPrice: 60
+  baseBuyPrice: 60
   description: "\uD589\uBCF5\uD558\uACE0 \uC2F6\uB2E4\uB294 \uC18C\uC6D0\uB4E4\uC774
     \uBAA8\uC5EC \uC774\uB8E8\uC5B4\uC9C4 \uB9C8\uB825 \uACB0\uC815.\r\n\uC785 \uC548\uC5D0
     \uB2F4\uB294 \uAC83 \uB9CC\uC73C\uB85C\uB3C4 \uB9C8\uC74C\uC774 \uB4E4\uB728\uB294

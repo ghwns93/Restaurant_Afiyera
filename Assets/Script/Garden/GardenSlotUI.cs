@@ -13,12 +13,18 @@ public class GardenSlotUI : MonoBehaviour
     public Image objectIconImage;   // 1번 선택 아이콘 이미지
     public Image materialIconImage; // 2번 선택 아이콘 이미지
 
+    private Sprite defaultObjectIconImage;
+    private Sprite defaultMaterialIconImage;
+
     public void InitSlot(int index)
     {
         slotIndex = index;
 
         objectSelectBtn.onClick.AddListener(OnClickObjectButton);
         materialSelectBtn.onClick.AddListener(OnClickMaterialButton);
+
+        defaultObjectIconImage = objectIconImage.sprite;
+        defaultMaterialIconImage = materialIconImage.sprite;
 
         // 초기 생성 시 빈 상태로 세팅 (버튼은 살아있고 아이콘만 투명하게 처리)
         UpdateUI(null, null);
@@ -40,24 +46,24 @@ public class GardenSlotUI : MonoBehaviour
         if (gardenObj != null && gardenObj.Icon != null)
         {
             objectIconImage.sprite = gardenObj.Icon;
-            SetImageAlpha(objectIconImage, 1.0f); // 선명하게 보이도록 알파값 1
+            //SetImageAlpha(objectIconImage, 1.0f); // 선명하게 보이도록 알파값 1
         }
         else
         {
-            objectIconImage.sprite = null;
-            SetImageAlpha(objectIconImage, 0.0f); // 이미지가 없으면 투명하게 처리 (버튼 클릭은 정상 작동)
+            objectIconImage.sprite = defaultObjectIconImage;
+            //SetImageAlpha(objectIconImage, 0.0f); // 이미지가 없으면 투명하게 처리 (버튼 클릭은 정상 작동)
         }
 
         // 2번 재료 아이콘 처리
         if (material != null && material.Icon != null)
         {
             materialIconImage.sprite = material.Icon;
-            SetImageAlpha(materialIconImage, 1.0f);
+            //SetImageAlpha(materialIconImage, 1.0f);
         }
         else
         {
-            materialIconImage.sprite = null;
-            SetImageAlpha(materialIconImage, 0.0f);
+            materialIconImage.sprite = defaultMaterialIconImage;
+            //SetImageAlpha(materialIconImage, 0.0f);
         }
     }
 

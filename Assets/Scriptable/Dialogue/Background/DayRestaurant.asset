@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7239182f0352943acafd57d89817d5, type: 3}
+  m_Name: DayRestaurant
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBackInfo
+  backInfoType: 0
+  skyObject: {fileID: 1576405932397179334, guid: 719dfe59a23bc1e49b2e5c089bd8f781, type: 3}
+  wallObject: {fileID: 2464317709567248145, guid: 68e311b2007d973478ab66d5fca960e2, type: 3}
+  frontObject: {fileID: 7460244387792021681, guid: 555afbe4fc5050a47ab53e08432a427e, type: 3}

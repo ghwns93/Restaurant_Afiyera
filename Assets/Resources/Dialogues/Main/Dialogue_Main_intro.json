@@ -1,6 +1,6 @@
 {
-    "dialogueId": "intro",
-    "startLineId": "intro_01",
+  "dialogueId": "intro",
+  "startLineId": "intro_01",
   "lines": [
     {
       "id": "intro_01",
@@ -8,7 +8,12 @@
       "text": "'기억하지 말아줘.'",
       "typingSpeed": 0.04,
       "next": "intro_02",
-      "events": [],
+      "events": [
+        {
+          "type": "SHOW_BACK",
+          "actionId": "NightRestaurant"
+        }
+      ],
       "choices": []
     },
     {
@@ -47,9 +52,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
         }
       ],
       "choices": []
@@ -90,10 +95,11 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 2
-        }],
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 2
+        }
+      ],
       "choices": []
     },
     {
@@ -123,10 +129,11 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
-        }],
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
+        }
+      ],
       "choices": []
     },
     {
@@ -155,8 +162,8 @@
       "next": "intro_16",
       "events": [
         {
-          "type" : "HIDE_NPC",
-          "npcId" : "npc.001"
+          "type": "HIDE_NPC",
+          "npcId": "npc.001"
         }
       ],
       "choices": []
@@ -242,10 +249,11 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
-        }],
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
+        }
+      ],
       "choices": []
     },
     {
@@ -265,8 +273,8 @@
       "next": "intro_27",
       "events": [
         {
-          "type" : "HIDE_NPC",
-          "npcId" : "npc.001"
+          "type": "HIDE_NPC",
+          "npcId": "npc.001"
         }
       ],
       "choices": []
@@ -289,10 +297,11 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
-        }],
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
+        }
+      ],
       "choices": []
     },
     {
@@ -303,8 +312,8 @@
       "next": "intro_30",
       "events": [
         {
-          "type" :"HIDE_NPC",
-          "npcId" : "npc.001"
+          "type": "HIDE_NPC",
+          "npcId": "npc.001"
         }
       ],
       "choices": []
@@ -318,9 +327,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
         }
       ],
       "choices": []
@@ -343,10 +352,11 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 0
-        }],
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 0
+        }
+      ],
       "choices": []
     },
     {
@@ -358,10 +368,11 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 4
-        }],
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 4
+        }
+      ],
       "choices": []
     },
     {
@@ -391,9 +402,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 7
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 7
         }
       ],
       "choices": []
@@ -406,12 +417,12 @@
       "next": "intro_38",
       "events": [
         {
-          "type" :"HIDE_NPC",
-          "npcId" : "npc.001"
+          "type": "HIDE_NPC",
+          "npcId": "npc.001"
         },
         {
-          "type" : "HIDE_NPC",
-          "npcId" : "npc.108"
+          "type": "HIDE_NPC",
+          "npcId": "npc.108"
         }
       ],
       "choices": []
@@ -425,15 +436,15 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
         },
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 7
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 7
         }
       ],
       "choices": []
@@ -500,12 +511,12 @@
       "next": "intro_46",
       "events": [
         {
-          "type" :"HIDE_NPC",
-          "npcId" : "npc.001"
+          "type": "HIDE_NPC",
+          "npcId": "npc.001"
         },
         {
-          "type" : "HIDE_NPC",
-          "npcId" : "npc.108"
+          "type": "HIDE_NPC",
+          "npcId": "npc.108"
         }
       ],
       "choices": []
@@ -528,15 +539,15 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
         },
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 7
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 7
         }
       ],
       "choices": []
@@ -558,8 +569,8 @@
       "next": "intro_50",
       "events": [
         {
-          "type" : "HIDE_NPC",
-          "npcId" : "npc.108"
+          "type": "HIDE_NPC",
+          "npcId": "npc.108"
         }
       ],
       "choices": []
@@ -573,9 +584,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.002",
-          "slot" : 1,
-          "portraitIndex" : 5
+          "npcId": "npc.002",
+          "slot": 1,
+          "portraitIndex": 5
         }
       ],
       "choices": []
@@ -589,9 +600,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.002",
-          "slot" : 1,
-          "portraitIndex" : 6
+          "npcId": "npc.002",
+          "slot": 1,
+          "portraitIndex": 6
         }
       ],
       "choices": []
@@ -614,10 +625,11 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.002",
-          "slot" : 1,
-          "portraitIndex" : 7
-        }],
+          "npcId": "npc.002",
+          "slot": 1,
+          "portraitIndex": 7
+        }
+      ],
       "choices": []
     },
     {
@@ -647,9 +659,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.002",
-          "slot" : 1,
-          "portraitIndex" : 2
+          "npcId": "npc.002",
+          "slot": 1,
+          "portraitIndex": 2
         }
       ],
       "choices": []
@@ -663,9 +675,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.002",
-          "slot" : 1,
-          "portraitIndex" : 7
+          "npcId": "npc.002",
+          "slot": 1,
+          "portraitIndex": 7
         }
       ],
       "choices": []
@@ -688,9 +700,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.002",
-          "slot" : 1,
-          "portraitIndex" : 0
+          "npcId": "npc.002",
+          "slot": 1,
+          "portraitIndex": 0
         }
       ],
       "choices": []
@@ -722,9 +734,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.002",
-          "slot" : 1,
-          "portraitIndex" : 6
+          "npcId": "npc.002",
+          "slot": 1,
+          "portraitIndex": 6
         }
       ],
       "choices": []
@@ -737,8 +749,8 @@
       "next": "intro_64",
       "events": [
         {
-          "type" :"HIDE_NPC",
-          "npcId" : "npc.002"
+          "type": "HIDE_NPC",
+          "npcId": "npc.002"
         }
       ],
       "choices": []
@@ -752,9 +764,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 7
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 7
         }
       ],
       "choices": []
@@ -813,9 +825,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 2
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 2
         }
       ],
       "choices": []
@@ -838,9 +850,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 7
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 7
         }
       ],
       "choices": []
@@ -863,9 +875,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 2
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 2
         }
       ],
       "choices": []
@@ -896,12 +908,12 @@
       "next": "intro_78",
       "events": [
         {
-          "type" :"HIDE_NPC",
-          "npcId" :"npc.001"
+          "type": "HIDE_NPC",
+          "npcId": "npc.001"
         },
         {
-          "type" : "HIDE_NPC",
-          "npcId" : "npc.108"
+          "type": "HIDE_NPC",
+          "npcId": "npc.108"
         }
       ],
       "choices": []
@@ -924,15 +936,15 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.001",
-          "slot" : 0,
-          "portraitIndex" : 0
+          "npcId": "npc.001",
+          "slot": 0,
+          "portraitIndex": 0
         },
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 8
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 8
         }
       ],
       "choices": []
@@ -964,9 +976,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 4
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 4
         }
       ],
       "choices": []
@@ -1007,9 +1019,9 @@
       "events": [
         {
           "type": "SHOW_NPC",
-          "npcId" : "npc.108",
-          "slot" : 1,
-          "portraitIndex" : 7
+          "npcId": "npc.108",
+          "slot": 1,
+          "portraitIndex": 7
         }
       ],
       "choices": []

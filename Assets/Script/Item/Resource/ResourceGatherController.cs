@@ -5,6 +5,7 @@ using UnityEngine;
 public class ResourceGatherController : MonoBehaviour
 {
     [SerializeField] private KeyCode gatherKey = KeyCode.F; // 채집 매핑 키
+    [SerializeField] private int spendMinute = 30;
 
     private ResourceObject currentTargetResource = null;
     private Coroutine gatherCoroutine = null;
@@ -233,6 +234,8 @@ public class ResourceGatherController : MonoBehaviour
 
         if (rewardItem != null && InventoryManager.Instance != null)
         {
+            TimeEvents.OnTimeConsumed?.Invoke(spendMinute);
+
             InventoryManager.Instance.AddItem(rewardItem, rewardCount);
             Debug.Log($"채집 성공! [{rewardItem.ItemName} x{rewardCount}] 획득 완료 (사용된 미끼: {currentBait.ItemName})");
         }

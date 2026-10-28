@@ -37,6 +37,18 @@ public class DialogueManager : MonoBehaviour
     [Header("모드 변경 알림 (UI 버튼 하이라이트용)")]
     public UnityEvent<bool> onAutoModeChanged;
 
+    [Header("배경 변경용")]
+    [SerializeField] private BackInfoType defaultBackInfo;
+
+    [SerializeField] private Transform skyParent;
+    [SerializeField] private Transform wallParent;
+    [SerializeField] private Transform frontParent;
+
+    // 현재 생성된 배경 오브젝트들을 관리하기 위한 변수 (필요시 교체/삭제용)
+    private GameObject currentSkyObj;
+    private GameObject currentWallObj;
+    private GameObject currentFrontObj;
+
     private DialogueData currentDialogue;
     private Dictionary<string, DialogueLine> lineMap; // id → 라인 빠른 조회
     private DialogueLine currentLine;
@@ -71,6 +83,8 @@ public class DialogueManager : MonoBehaviour
         if (nextIndicator != null) nextIndicator.SetActive(false);
         if (choiceContainer != null) choiceContainer.gameObject.SetActive(false);
 
+        ClearExistingBackgrounds();
+        ApplyBackground(defaultBackInfo.ToString());
         //StartDialogueFromResources("dialogue_intro");
         StartDialogue();
     }
@@ -288,6 +302,15 @@ public class DialogueManager : MonoBehaviour
                             slot.Hide();
                     break;
                 }
+            case DialogueEventType.ShowBackInfo:
+                {
+                    // JSON에서 읽어온 type 문자열 (예: "Town")
+                    string typeStr = ev.actionId; // 혹은 해당 이벤트 내 문자열 필드명 사용
+
+                    ApplyBackground(typeStr);
+                    OnAdvanceInput();
+                    break;
+                }
             default:
                 Debug.LogWarning($"[DialogueManager] 알 수 없는 이벤트 타입: {ev.type}");
                 break;
@@ -299,6 +322,7 @@ public class DialogueManager : MonoBehaviour
     private void ProcessLineEvents(DialogueLine line)
     {
         pendingActionId = null;
+
         if (line.events != null)
         {
             foreach (var ev in line.events)
@@ -518,5 +542,102 @@ public class DialogueManager : MonoBehaviour
         foreach (var ev in line.events)
             if (ev.type == DialogueEventType.ActionPlay) return true;
         return false;
+    }
+
+    private void ApplyBackground(string backTypeStr)
+    {
+        // 1. BackDicManager를 통해 데이터 가져오기 (문자열 -> enum 자동 매칭)
+        DialogueBackInfo backInfo = BackDicManager.Instance.GetData(backTypeStr);
+        if (backInfo == null)
+        {
+            Debug.LogError($"[DialogueManager] 배경 정보를 찾을 수 없습니다: {backTypeStr}");
+            return;
+        }
+
+        // 2. 기존에 생성되어 있던 배경이 있다면 제거
+        if (currentSkyObj != null) Destroy(currentSkyObj);
+        if (currentWallObj != null) Destroy(currentWallObj);
+        if (currentFrontObj != null) Destroy(currentFrontObj);
+
+        // 참조 변수도 우선 초기화
+        currentSkyObj = null;
+        currentWallObj = null;
+        currentFrontObj = null;
+
+        // 3. Sky 객체가 존재할 때만 생성 (null이면 생성하지 않고 넘어감, currentSkyObj는 null 유지)
+        if (backInfo.SkyObject != null && skyParent != null)
+        {
+            currentSkyObj = InstantiateWithRectTransform(backInfo.SkyObject, skyParent);
+        }
+
+        // 4. Wall 객체가 존재할 때만 생성
+        if (backInfo.WallObject != null && wallParent != null)
+        {
+            currentWallObj = InstantiateWithRectTransform(backInfo.WallObject, wallParent);
+        }
+
+        // 5. Front 객체가 존재할 때만 생성
+        if (backInfo.FrontObject != null && frontParent != null)
+        {
+            currentFrontObj = InstantiateWithRectTransform(backInfo.FrontObject, frontParent);
+        }
+    }
+
+    // 프리팹이 가진 원래의 RectTransform 속성(포지션, 앵커, 사이즈, 스케일 등)을 보존하며 생성하는 헬퍼 함수
+    private GameObject InstantiateWithRectTransform(GameObject prefab, Transform parent)
+    {
+        RectTransform prefabRect = prefab.GetComponent<RectTransform>();
+        GameObject instance = Instantiate(prefab, parent);
+        RectTransform instanceRect = instance.GetComponent<RectTransform>();
+
+        if (prefabRect != null && instanceRect != null)
+        {
+            // 프리팹에 설정된 앵커, 피벗, 사이즈, 로컬포지션, 스케일 그대로 복사
+            instanceRect.anchorMin = prefabRect.anchorMin;
+            instanceRect.anchorMax = prefabRect.anchorMax;
+            instanceRect.anchoredPosition = prefabRect.anchoredPosition;
+            instanceRect.anchoredPosition3D = prefabRect.anchoredPosition3D;
+            instanceRect.sizeDelta = prefabRect.sizeDelta;
+            instanceRect.pivot = prefabRect.pivot;
+            instanceRect.localScale = prefabRect.localScale;
+            instanceRect.localRotation = prefabRect.localRotation;
+        }
+
+        return instance;
+    }
+
+    private void ClearExistingBackgrounds()
+    {
+        // 참조 변수 초기화
+        currentSkyObj = null;
+        currentWallObj = null;
+        currentFrontObj = null;
+
+        // Sky 자식 정리
+        if (skyParent != null)
+        {
+            foreach (Transform child in skyParent)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        // Wall 자식 정리
+        if (wallParent != null)
+        {
+            foreach (Transform child in wallParent)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        // Front 자식 정리
+        if (frontParent != null)
+        {
+            foreach (Transform child in frontParent)
+            {
+                Destroy(child.gameObject);
+            }
+        }
     }
 }
