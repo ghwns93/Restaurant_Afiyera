@@ -10,6 +10,7 @@ public class DisplaySettings : MonoBehaviour
     [SerializeField] private GameObject resolutionNodePrefab;       // ResolutionNodes가 부착된 프리팹
     [SerializeField] private ResolutionOption[] resolutionOptions; 
     [SerializeField] private int maxResolutionCount = 5;            // 최대 해상도 옵션 개수 (고화질부터 저화질까지 골고루 5개 선택)
+    [SerializeField] private GameObject dontSelectedPanel;
 
     private List<ResolutionNodes> spawnedNodes = new List<ResolutionNodes>();
     private int currentResoulutionSelectedIndex = -1;
@@ -37,10 +38,15 @@ public class DisplaySettings : MonoBehaviour
 
     private void Start()
     {
-        // 초기 설정값 적용
-        fullscreenToggle.isOn = Screen.fullScreen;
+        DefaultSetting();
+    }
 
-        vSynscToggle.isOn = QualitySettings.vSyncCount > 0;
+    private void DefaultSetting()
+    {
+        fullscreenToggle.isOn = DisplayValueController.Instance.GetFullScreen();
+        dontSelectedPanel.SetActive(Screen.fullScreen);
+
+        vSynscToggle.isOn = DisplayValueController.Instance.GetVsync();
 
         qualityDropdown.value = QualitySettings.GetQualityLevel();
 
@@ -169,6 +175,22 @@ public class DisplaySettings : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        dontSelectedPanel.SetActive(isFullscreen);
+
+        if (isFullscreen)
+        {
+            Resolution maxResolution = Screen.resolutions[Screen.resolutions.Length - 1];
+
+            // 현재 해상도 유지
+            Screen.SetResolution(maxResolution.width, maxResolution.height, true);
+        }
+        else
+        {
+            var currentResolution = DisplayValueController.Instance.GetRes();
+
+            // 창모드로 전환 시 기본 해상도(예: 1280x720)로 설정
+            Screen.SetResolution((int)currentResolution.x, (int)currentResolution.y, false);
+        }
 
         DisplayValueController.Instance.SaveFullScreen(isFullscreen);
     }
@@ -243,6 +265,11 @@ public class DisplaySettings : MonoBehaviour
 
     public void OnNodeHover(int index)
     {
+        if(Screen.fullScreen == true)
+        {
+            return;
+        }
+
         // 4. 특정 프리팹에 마우스가 올라갈 경우 해당 해상도만 화살표 표시, 나머지는 가리기
         for (int i = 0; i < spawnedNodes.Count; i++)
         {
@@ -252,6 +279,11 @@ public class DisplaySettings : MonoBehaviour
 
     public void OnNodeExit()
     {
+        if (Screen.fullScreen == true)
+        {
+            return;
+        }
+
         // 5. 모든 프리팹에서 마우스가 벗어날 경우 최종적으로 선택되어 있던 프리팹에만 화살표 표시
         for (int i = 0; i < spawnedNodes.Count; i++)
         {
@@ -261,6 +293,11 @@ public class DisplaySettings : MonoBehaviour
 
     public void UpdateSelectedIndex(int index)
     {
+        if (Screen.fullScreen == true)
+        {
+            return;
+        }
+
         currentResoulutionSelectedIndex = index;
         // 6. 클릭 시 선택된 노드 고정 및 나머지 해제 갱신
         for (int i = 0; i < spawnedNodes.Count; i++)

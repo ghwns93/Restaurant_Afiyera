@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -214,10 +215,17 @@ public class BaitSelectorUI : MonoBehaviour
             GameObject slotObj = Instantiate(baitSlotUIPrefab, baitSlotsParent);
             RectTransform rect = slotObj.GetComponent<RectTransform>();
             Image iconImg = slotObj.GetComponent<Image>();
+            TextMeshProUGUI quantyText = slotObj.GetComponentInChildren<TextMeshProUGUI>();
 
             if (iconImg != null && availableBaits[i].Icon != null)
             {
                 iconImg.sprite = availableBaits[i].Icon;
+            }
+
+            if (quantyText != null)
+            {
+                int quantity = InventoryManager.Instance.GetItemCount(availableBaits[i]);
+                quantyText.text = quantity.ToString();
             }
 
             BaitSlotUI slotUI = new BaitSlotUI

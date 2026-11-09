@@ -134,7 +134,7 @@ public class ResourceGatherController : MonoBehaviour
         switch(toolData.TargetResourceType)
         {
             case ResourceType.Insect:
-                nowPlayingSound = SoundName.SFX_Gather_Insect;
+                nowPlayingSound = SoundName.SFX_Gather_Insect_Full;
                 break;
             case ResourceType.Water:
                 nowPlayingSound = SoundName.SFX_Gather_Fishing;

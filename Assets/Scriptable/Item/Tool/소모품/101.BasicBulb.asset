@@ -16,13 +16,14 @@ MonoBehaviour:
   itemName: "\uC804\uAD6C"
   icon: {fileID: 7408496281217197143, guid: 3093ea4bb2b92a7409a950de7c928a46, type: 3}
   itemType: 4
-  isStackable: 0
+  isStackable: 1
   maxStackCount: 99
   baseSellPrice: 0
-  baseBuyPrice: 0
+  baseBuyPrice: 10
   description: "\uC798 \uC548\uBCF4\uC774\uB294 \uC804\uAD6C\uB2E4."
+  targetToolType: 0
   baitTier: 1
-  isInfinite: 1
+  isInfinite: 0
   slotWeights:
   - slotIndex: 0
     weight: 100

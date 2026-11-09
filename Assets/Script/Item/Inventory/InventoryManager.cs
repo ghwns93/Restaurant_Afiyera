@@ -133,7 +133,7 @@ public class InventoryManager : MonoBehaviour
         int totalCount = 0;
         foreach (var slot in slots)
         {
-            if (!slot.IsEmpty && slot.ItemData.Id == item.Id)
+            if (!slot.IsEmpty && slot.ItemData.ItemType == item.ItemType && slot.ItemData.Id == item.Id)
             {
                 totalCount += slot.Quantity;
             }

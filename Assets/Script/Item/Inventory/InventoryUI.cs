@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -75,16 +76,23 @@ public class InventoryUI : MonoBehaviour
     {
         List<ItemSlot> slots = InventoryManager.Instance.GetSlots(ItemType.Tool);
 
-        if (slotUIList.Count != slots.Count && slotUIList.Count < maxSlotCount)
+        List<ItemSlot> highestTierList = slots
+            .GroupBy(slot => (slot.ItemData as ItemToolData).ToolType) // 1. ItemData를 거쳐서 ItemType 접근
+            .Select(group => group.OrderByDescending(slot => (slot.ItemData as ItemToolData)?.ToolTeir ?? 0).First()) // 2. ItemToolData로 캐스팅하여 ToolTeir 비교
+            .ToList();
+
+        Debug.Log("highestTierList.Count: " + highestTierList.Count);
+
+        if (slotUIList.Count != highestTierList.Count && slotUIList.Count < maxSlotCount)
         {
             InitSlots();
         }
 
         for (int i = 0; i < slotUIList.Count; i++)
         {
-            if (i < slots.Count && !slots[i].IsEmpty)
+            if (i < highestTierList.Count && !highestTierList[i].IsEmpty)
             {
-                slotUIList[i].SetItem(slots[i].ItemData, slots[i].Quantity);
+                slotUIList[i].SetItem(highestTierList[i].ItemData, highestTierList[i].Quantity);
             }
             else
             {
@@ -133,7 +141,8 @@ public class InventoryUI : MonoBehaviour
 
     private IEnumerator SmoothMoveCoroutine(Vector2 targetPos)
     {
-        SFXPlayer.Play(SoundName.SFX_ToolSelect);
+        SFXPlayer.Stop(SoundName.SFX_ToolSelect);
+        SFXPlayer.PlayLong(SoundName.SFX_ToolSelect);
 
         while (Vector2.Distance(slotParent.anchoredPosition, targetPos) > 0.1f)
         {

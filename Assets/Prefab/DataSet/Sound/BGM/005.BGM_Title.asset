@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 005.BGM_Title
   m_EditorClassIdentifier: 
   soundName: 1
-  clip: {fileID: 8300000, guid: 927e01c7a7088c44694401be0decc989, type: 3}
+  clip: {fileID: 8300000, guid: a1e3c67a7399f52488eea2fffc6f5e65, type: 3}
   group: {fileID: -6878773805126846739, guid: 9dae4ddf0d98e9b4985266e8a86adb07, type: 2}
   volume: 1
   pitch: 1
   loop: 0
+  maxHearingDistance: 5
+  fadeDistance: 25

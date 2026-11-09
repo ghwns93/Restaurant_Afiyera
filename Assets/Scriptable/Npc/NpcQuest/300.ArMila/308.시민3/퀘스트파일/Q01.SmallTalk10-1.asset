@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpecialEventUnlockAction
   questType: 1
   questInteractionType: 0
-  dialogueKey: "\uC2A4\uBAB0\uD1A0\uD06C10-1"
+  dialogueKey: "\uC2A4\uBAB0\uD1A0\uD06C"
   targetNpcId: 
   unlockConditions:
   - {fileID: 11400000, guid: 0ecf6d712ea58a2408f9090607e281a5, type: 2}

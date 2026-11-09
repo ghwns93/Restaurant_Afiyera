@@ -110,19 +110,18 @@ public class SceneController : MonoBehaviour
         //    SceneManager.LoadSceneAsync(data.sceneName, LoadSceneMode.Additive);
         //}
 
+        if (loadingPanel != null) loadingPanel.SetActive(true);
+
         StartCoroutine(LoadSubSceneRoutine(type));
     }
 
     private IEnumerator LoadSubSceneRoutine(SceneType type)
     {
-        // 로딩 시작 시간 기록
+        // 1.로딩 시작 시간 기록
         float startTime = Time.time;
 
         int randomIndex = Random.Range(0, loadingSprites.Count);
         loadingImage.sprite = loadingSprites[randomIndex];
-
-        // 1. 로딩창 켜기
-        if (loadingPanel != null) loadingPanel.SetActive(true);
 
         // 2. 이미 켜져 있는 서브 씬이 있다면 언로드 후 완료될 때까지 대기
         if (!string.IsNullOrEmpty(currentSubScene))

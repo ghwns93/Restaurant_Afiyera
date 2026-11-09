@@ -2037,17 +2037,15 @@ MonoBehaviour:
   - testItemData: {fileID: 11400000, guid: 08008baed0c8b6b4ab93d02c0e1011f3, type: 2}
     testQuantity: 1
   - testItemData: {fileID: 11400000, guid: 69ad01c71d128f44b8a2c7a70b3a9aa7, type: 2}
-    testQuantity: 1
+    testQuantity: 10
   - testItemData: {fileID: 11400000, guid: 6df433d1e18151a439dd7553f7367554, type: 2}
-    testQuantity: 1
+    testQuantity: 10
   - testItemData: {fileID: 11400000, guid: 48bd65659d8b75549bc9e1305d0a6ca5, type: 2}
-    testQuantity: 1
+    testQuantity: 10
   - testItemData: {fileID: 11400000, guid: c1d9316d300a4084e83fbbe57c218883, type: 2}
-    testQuantity: 1
+    testQuantity: 10
   - testItemData: {fileID: 11400000, guid: cc3dbbd014170674a8c089dcd8ed0549, type: 2}
-    testQuantity: 1
-  - testItemData: {fileID: 11400000, guid: d63feb957c5f0ce4abb2ca7cf28ec588, type: 2}
-    testQuantity: 5
+    testQuantity: 10
   gold: 1000
 --- !u!1 &1753860492
 GameObject:
@@ -2332,6 +2330,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1c223d4526604ae41b76bbbb009a1963, type: 2}
   - {fileID: 11400000, guid: 8911ba9b5eadfac499df4c62c3aa6712, type: 2}
   - {fileID: 11400000, guid: cbbcf6edde7f34e47a71915f53d07f1e, type: 2}
+  - {fileID: 11400000, guid: 73483924167cdb34a87cbd66698c996c, type: 2}
+  - {fileID: 11400000, guid: 523cd8e02d8b6b44c97e064280678b7e, type: 2}
   - {fileID: 11400000, guid: 81933b1367f659f4b85da132dc7f3277, type: 2}
   - {fileID: 11400000, guid: d7d452b29d32db14e9478c4a1c909cc8, type: 2}
   villageBgmList:

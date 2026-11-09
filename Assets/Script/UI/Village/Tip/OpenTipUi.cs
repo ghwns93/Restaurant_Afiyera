@@ -12,11 +12,15 @@ public class OpenTipUi : MonoBehaviour
 
     public void OpenTipPanel()
     {
+        SystemController.Instance.SetSystemPause(false);
+
         tipPanel.SetActive(true);
     }
 
     public void CloseTipPanel()
     {
+        SystemController.Instance.SetSystemPause(true);
+
         tipPanel.SetActive(false);
     }
 }

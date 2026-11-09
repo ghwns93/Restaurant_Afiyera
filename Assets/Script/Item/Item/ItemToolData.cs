@@ -26,9 +26,11 @@ public class ItemToolData : ItemData
     [SerializeField] private ToolType toolType;                     // 도구 종류
     [SerializeField] private ResourceType targetResourceType;       // 채집 가능한 자원 종류
     [SerializeField] private float gatherDuration = 3f;             // 채집 시간
+    [SerializeField] private int toolTeir = 1; // 도구 등급
     [SerializeField] private BaitTier maxAllowedBaitTier = BaitTier.Basic; // 사용 가능한 최대 미끼 등급
 
     public ToolType ToolType => toolType;
+    public int ToolTeir => toolTeir;
     public ResourceType TargetResourceType => targetResourceType;
     public float GatherDuration => gatherDuration;
     public BaitTier MaxAllowedBaitTier => maxAllowedBaitTier;

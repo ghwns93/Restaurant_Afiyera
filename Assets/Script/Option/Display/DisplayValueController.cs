@@ -73,4 +73,29 @@ public class DisplayValueController : MonoBehaviour
     {
         PlayerPrefs.SetInt(PREF_FPS_LIMIT, fps);
     }
+
+    public bool GetFullScreen()
+    {
+        return PlayerPrefs.GetInt(PREF_FULLSCREEN, 1) == 1;
+    }
+
+    public Vector2 GetRes()
+    {
+        Resolution currentRes = Screen.resolutions[Screen.resolutions.Length - 1];
+
+        int x = PlayerPrefs.GetInt(PREF_RES_X, currentRes.width);
+        int y = PlayerPrefs.GetInt(PREF_RES_Y, currentRes.height);
+
+        return new Vector2(x, y);
+    }
+
+    public bool GetVsync()
+    {
+        return PlayerPrefs.GetInt(PREF_VSYNC, 0) == 1;
+    }
+
+    public int GetFPS()
+    {
+        return PlayerPrefs.GetInt(PREF_FPS_LIMIT, 60);
+    }
 }

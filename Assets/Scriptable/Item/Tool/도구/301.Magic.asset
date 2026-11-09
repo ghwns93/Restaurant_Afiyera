@@ -24,4 +24,5 @@ MonoBehaviour:
   toolType: 2
   targetResourceType: 2
   gatherDuration: 3
-  toolTier: 1
+  toolTeir: 1
+  maxAllowedBaitTier: 3

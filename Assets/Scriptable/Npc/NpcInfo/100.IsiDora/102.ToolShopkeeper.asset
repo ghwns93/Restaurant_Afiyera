@@ -31,10 +31,66 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d5dca9a39ab1a144b8608184d4a860aa, type: 2}
   npcType: 1
   shopItemList:
-  - itemData: {fileID: 11400000, guid: becac2a0bf796d94082c01c251e6865b, type: 2}
-    maxStockCount: 1
+  - itemData: {fileID: 11400000, guid: 69ad01c71d128f44b8a2c7a70b3a9aa7, type: 2}
+    maxStockCount: 10
     stockLimited: 1
-    basePrice: 100
-    currentPrice: 100
-    previousPrice: 100
-    stockCount: 1
+    basePrice: 10
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: 6df433d1e18151a439dd7553f7367554, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 10
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: 48bd65659d8b75549bc9e1305d0a6ca5, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 10
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: c1d9316d300a4084e83fbbe57c218883, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 10
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: cc3dbbd014170674a8c089dcd8ed0549, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 10
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: 13ea1eebf447bc34c9a45b6767fa34fd, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 30
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: 5c870425833ae3a418720adba04d0797, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 30
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: ab7baf1fbbd033d48a1b68eaec03e13c, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 30
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
+  - itemData: {fileID: 11400000, guid: d63feb957c5f0ce4abb2ca7cf28ec588, type: 2}
+    maxStockCount: 10
+    stockLimited: 1
+    basePrice: 30
+    currentPrice: 0
+    previousPrice: 0
+    stockCount: 10
