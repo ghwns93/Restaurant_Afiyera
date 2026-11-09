@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OpenTipUi : MonoBehaviour
+public class OpenTipUi : ButtonSystemController
 {
     [SerializeField]
     private GameObject tipPanel;

@@ -13,7 +13,7 @@ public class GardenManager : MonoBehaviour
     public List<ItemSlot> availableGardenObjects;
 
     // 실제 월드(빨간 위치)에 생성된 오브젝트들을 담아두는 딕셔너리
-    private Dictionary<int, GameObject> spawnedInstances = new Dictionary<int, GameObject>();
+    private Dictionary<int, GardenSlotData> spawnedInstances = new Dictionary<int, GardenSlotData>();
 
     private void Awake()
     {
@@ -79,17 +79,15 @@ public class GardenManager : MonoBehaviour
         Transform targetPoint = placePoints[slotIndex];
 
         // 기존에 생성된 오브젝트가 있다면 파괴
-        if (spawnedInstances.ContainsKey(slotIndex) && spawnedInstances[slotIndex] != null)
-        {
-            Destroy(spawnedInstances[slotIndex]);
-            spawnedInstances.Remove(slotIndex);
-        }
+        RemoveStatue(slotIndex);
 
         // 새로운 오브젝트 생성
         if (objData != null && objData.objectPrefab != null)
         {
             GameObject newInstance = Instantiate(objData.objectPrefab, targetPoint.position, targetPoint.rotation, targetPoint);
-            spawnedInstances[slotIndex] = newInstance;
+            spawnedInstances[slotIndex] = new(objData, newInstance);
+
+            InventoryManager.Instance.UsedItemQuantity(spawnedInstances[slotIndex].selectedObject, 1);
         }
     }
 
@@ -97,5 +95,27 @@ public class GardenManager : MonoBehaviour
     {
         SystemController.Instance.SetSystemPause(true);
         SceneController.Instance.LoadSubScene(SceneType.Village);
+    }
+
+    private void RemoveStatue(int slotIndex)
+    {
+        if (spawnedInstances.ContainsKey(slotIndex) && spawnedInstances[slotIndex].spawnedObject != null)
+        {
+            Destroy(spawnedInstances[slotIndex].spawnedObject);
+            spawnedInstances.Remove(slotIndex);
+
+            InventoryManager.Instance.UsedItemQuantity(spawnedInstances[slotIndex].selectedObject, -1);
+        }
+    }
+}
+
+public struct GardenSlotData
+{
+    public GardenObjectData selectedObject;
+    public GameObject spawnedObject;
+    public GardenSlotData(GardenObjectData obj, GameObject mat)
+    {
+        selectedObject = obj;
+        spawnedObject = mat;
     }
 }

@@ -7,6 +7,7 @@ public class InventorySlotPrefabScript : MonoBehaviour, IPointerEnterHandler, IP
 {
     [Header("아이템 정보")]
     [SerializeField] Image itemImage;
+    [SerializeField] TextMeshProUGUI itemCountText;
 
     private ItemSlot slot;
 
@@ -16,6 +17,9 @@ public class InventorySlotPrefabScript : MonoBehaviour, IPointerEnterHandler, IP
 
         itemImage.gameObject.SetActive(true);
         itemImage.sprite = slot.ItemData.Icon;
+
+        itemCountText.gameObject.SetActive(true);
+        itemCountText.text = slot.Quantity.ToString();
     }
 
     public void ClearSlot()
@@ -23,6 +27,7 @@ public class InventorySlotPrefabScript : MonoBehaviour, IPointerEnterHandler, IP
         slot = null;
 
         itemImage.gameObject.SetActive(false);
+        itemCountText.gameObject.SetActive(false);
     }
 
     // Update() 문을 아예 제거하여 매 프레임 위치를 갱신하며 발생하는 점멸 원인을 원천 차단합니다.

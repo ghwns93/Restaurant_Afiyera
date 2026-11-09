@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySceneScript : MonoBehaviour
 {
@@ -26,13 +27,14 @@ public class InventorySceneScript : MonoBehaviour
             GameObject slotObj = Instantiate(slotPrefab, slotParent);
             InventorySlotPrefabScript slotUI = slotObj.GetComponent<InventorySlotPrefabScript>();
 
-            if (slots[i].ItemData != null)
+            slotUI.ClearSlot();
+
+            if (i < slots.Count)
             {
-                slotUI.SetItem(slots[i]);
-            }
-            else
-            {
-                slotUI.ClearSlot();
+                if (slots[i].ItemData != null)
+                {
+                    slotUI.SetItem(slots[i]);
+                }
             }
 
             inventorySlots.Add(slotUI);

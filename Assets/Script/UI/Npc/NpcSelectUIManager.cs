@@ -40,6 +40,7 @@ public class NpcSelectUIManager : MonoBehaviour
         var btn = go.GetComponent<NpcSelectButton>();
         btn.Setup(npc);
         activeButtons.Add(btn);
+        selectedIndex = 0;
         RefreshVisuals();
     }
 

@@ -8,13 +8,14 @@ public class InventorySceneManager : MonoBehaviour
     [SerializeField] private GameObject uiRoot;
     [SerializeField] private InventorySceneScript inventoryRoot;
     [SerializeField] private Canvas parentCanvas;           // 부모 캔버스 (Screen Space - Camera 또는 Overlay)
-    [SerializeField] private ScrollRect selectionScrollRect; // 연보라 창에 붙어있는 ScrollRect 연결
 
     [Header("Description Settings")]
     [SerializeField] private GameObject descriptPanel;       // 노란 박스 패널
     [SerializeField] private TextMeshProUGUI descriptText;   // 내부 텍스트
     [SerializeField] private Vector2 mouseOffset = new Vector2(15f, -15f); // 마우스 간격
     private RectTransform panelRectTransform;
+
+    private bool isInventoryCanMove = false;
 
     private static InventorySceneManager instance;
     public static InventorySceneManager Instance => instance;
@@ -87,21 +88,10 @@ public class InventorySceneManager : MonoBehaviour
         panelRectTransform.position = mousePosition + mouseOffset;
     }
 
-    private void ResetScrollPosition()
-    {
-        if (selectionScrollRect != null)
-        {
-            // Canvas 레이아웃이 즉시 반영되도록 갱신 후 위치 이동
-            Canvas.ForceUpdateCanvases();
-            selectionScrollRect.horizontalNormalizedPosition = 0f;
-        }
-    }
-
     public void OpenUI()
     {
         SystemController.Instance.SetSystemPause(false);
         inventoryRoot.InitSlots();
-        ResetScrollPosition();
         uiRoot.SetActive(true);
     }
 

@@ -81,8 +81,6 @@ public class InventoryUI : MonoBehaviour
             .Select(group => group.OrderByDescending(slot => (slot.ItemData as ItemToolData)?.ToolTeir ?? 0).First()) // 2. ItemToolData로 캐스팅하여 ToolTeir 비교
             .ToList();
 
-        Debug.Log("highestTierList.Count: " + highestTierList.Count);
-
         if (slotUIList.Count != highestTierList.Count && slotUIList.Count < maxSlotCount)
         {
             InitSlots();

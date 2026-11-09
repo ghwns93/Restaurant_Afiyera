@@ -112,26 +112,17 @@ public class TownNpcSlotUI : MonoBehaviour
         }
         else
         {
-            if (CheckAllIngredientsCollected())
+            if (NpcSpecialEventManager.Instance.CheckAllIngredientsCollected(eventData))
             {
                 NpcSpecialEventManager.Instance.SetSelectedEventId(eventData);
                 OnStateChanged?.Invoke();
                 OnActiveButton();
             }
-        }
-    }
-
-    private bool CheckAllIngredientsCollected()
-    {
-        if (eventData == null) return false;
-        foreach (var ingredient in eventData.RequiredIngredients)
-        {
-            if (InventoryManager.Instance.GetItemCount(ingredient) == 0)
+            else
             {
-                return false; // 하나라도 부족하면 false 반환
+                InActiveButton();
             }
         }
-        return true; // 모든 재료가 충분하면 true 반환
     }
 
     private void InActiveButton()

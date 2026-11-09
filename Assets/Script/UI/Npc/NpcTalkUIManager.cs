@@ -75,6 +75,9 @@ public class NpcTalkUIManager : MonoBehaviour
 
             activeButtons.Add(btn);
         }
+
+        selectedIndex = 0;
+        RefreshVisuals();
     }
 
     public void SetTalkText(string text)

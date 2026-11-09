@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OpenInventoryScene : MonoBehaviour
+public class OpenInventoryScene : ButtonSystemController
 {
     public void OpenInventory()
     {

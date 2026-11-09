@@ -35,18 +35,14 @@ public class BaitSelectorUI : MonoBehaviour
 
     private void OnEnable()
     {
-        if (PlayerInventoryController.Instance != null)
-        {
-            PlayerInventoryController.Instance.onSelectedSlotChangedCallback += OnEquippedToolChanged;
-        }
+        if (PlayerInventoryController.Instance != null) PlayerInventoryController.Instance.onSelectedSlotChangedCallback += OnEquippedToolChanged;
+        if (InventoryManager.Instance != null) InventoryManager.Instance.onInventoryChangedCallback += SetupBaitSelector;
     }
 
     private void OnDisable()
     {
-        if (PlayerInventoryController.Instance != null)
-        {
-            PlayerInventoryController.Instance.onSelectedSlotChangedCallback -= OnEquippedToolChanged;
-        }
+        if (PlayerInventoryController.Instance != null) PlayerInventoryController.Instance.onSelectedSlotChangedCallback -= OnEquippedToolChanged;
+        if (InventoryManager.Instance != null) InventoryManager.Instance.onInventoryChangedCallback -= SetupBaitSelector;
     }
 
     private void Start()

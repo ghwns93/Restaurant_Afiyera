@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OpenInviteUi : MonoBehaviour
+public class OpenInviteUi : ButtonSystemController
 {
     [SerializeField] private TownType townType;
 

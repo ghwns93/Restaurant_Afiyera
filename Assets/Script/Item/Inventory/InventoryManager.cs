@@ -1,3 +1,4 @@
+using Spine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -86,7 +87,7 @@ public class InventoryManager : MonoBehaviour
         // 1. 중첩 가능한 아이템인 경우 기존에 가진 슬롯에 합치기 시도
         if (item.IsStackable)
         {
-            ItemSlot existingSlot = slots.Find(s => !s.IsEmpty && s.ItemData.Id == item.Id && s.ItemData.ItemName == item.ItemName);
+            ItemSlot existingSlot = slots.Find(s => !s.IsEmpty && s.ItemData.Id == item.Id && s.ItemData.ItemType == item.ItemType);
             if (existingSlot != null)
             {
                 existingSlot.Quantity += count;
@@ -114,7 +115,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (item == null || count <= 0) return;
 
-        ItemSlot existingSlot = slots.Find(s => !s.IsEmpty && s.ItemData.Id == item.Id);
+        ItemSlot existingSlot = slots.Find(s => !s.IsEmpty && s.ItemData.ItemType == item.ItemType && s.ItemData.Id == item.Id);
         if (existingSlot != null)
         {
             existingSlot.Quantity -= count;
@@ -135,27 +136,46 @@ public class InventoryManager : MonoBehaviour
         {
             if (!slot.IsEmpty && slot.ItemData.ItemType == item.ItemType && slot.ItemData.Id == item.Id)
             {
-                totalCount += slot.Quantity;
+                totalCount += (slot.Quantity - slot.UsedQuantity);
             }
         }
         return totalCount;
     }
 
+    public void UsedItemQuantity(ItemData item, int quntity)
+    {
+        if (item == null) return;
+        ItemSlot existingSlot = slots.Find(s => !s.IsEmpty && s.ItemData.ItemType == item.ItemType && s.ItemData.Id == item.Id);
+        if (existingSlot != null)
+        {
+            if (existingSlot.UsedQuantity < existingSlot.Quantity)
+            {
+                existingSlot.UsedQuantity += quntity;
+            }
+            else
+                return;
+
+            onInventoryChangedCallback?.Invoke();
+        }
+    }
+
     public List<ItemSlot> GetSlots()
     {
-        return slots;
+        var filteredSlots = slots.Where(s => !s.IsEmpty && s.Quantity - s.UsedQuantity > 0).ToList();
+
+        return filteredSlots;
     }
 
     public List<ItemSlot> GetSlots(int count)
     {
-        var slicedSlots = slots.Take(count).ToList();
+        var slicedSlots = slots.Where(s => !s.IsEmpty && s.Quantity - s.UsedQuantity > 0).Take(count).ToList();
 
         return slicedSlots;
     }
 
     public List<ItemSlot> GetSlots(ItemType searchType)
     {
-        var filteredSlots = slots.Where(s => !s.IsEmpty && s.ItemData.ItemType == searchType && s.Quantity > 0).ToList();
+        var filteredSlots = slots.Where(s => !s.IsEmpty && s.Quantity - s.UsedQuantity > 0 && s.ItemData.ItemType == searchType && s.Quantity > 0).ToList();
         return filteredSlots;
     }
 

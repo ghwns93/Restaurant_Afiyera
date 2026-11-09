@@ -51,6 +51,8 @@ public class PolygonParticleSpawner : MonoBehaviour
         {
             GameObject star = Instantiate(starParticlePrefab, randomPoint, Quaternion.identity);
 
+            star.transform.SetParent(transform, true); // 부모를 현재 오브젝트로 설정 (월드 좌표 유지)
+
             // 위로 떠오르며 페이드 아웃되는 컴포넌트 부착 또는 실행
             StarEffectItem starItem = star.GetComponent<StarEffectItem>();
             if (starItem == null)

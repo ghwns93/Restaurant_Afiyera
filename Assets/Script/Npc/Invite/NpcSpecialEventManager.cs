@@ -1,3 +1,4 @@
+using Spine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -25,6 +26,20 @@ public class NpcSpecialEventManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public bool CheckAllIngredientsCollected(NpcSpecialEventData selectedEvent)
+    {
+        if (selectedEvent == null) return false;
+
+        foreach (var ingredient in selectedEvent.RequiredIngredients)
+        {
+            if (InventoryManager.Instance.GetItemCount(ingredient) == 0)
+            {
+                return false; // 하나라도 부족하면 false 반환
+            }
+        }
+        return true; // 모든 재료가 충분하면 true 반환
     }
 
     /// <summary>
@@ -61,6 +76,8 @@ public class NpcSpecialEventManager : MonoBehaviour
 
     public NpcSpecialEventData GetSelectedId()
     {
+        if(CheckAllIngredientsCollected(SelectedEvent) == false) return null;
+
         return SelectedEvent;
     }
 

@@ -366,7 +366,6 @@ MonoBehaviour:
   uiRoot: {fileID: 1032706816}
   inventoryRoot: {fileID: 151622602}
   parentCanvas: {fileID: 1032706820}
-  selectionScrollRect: {fileID: 0}
   descriptPanel: {fileID: 397329022}
   descriptText: {fileID: 460654925}
   mouseOffset: {x: 225, y: -85}
@@ -1621,10 +1620,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1566292749}
     m_Modifications:
-    - target: {fileID: 1536867513110189365, guid: bc5fce6d0f362eb4da971c085299f5a4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5981138473482381746, guid: c01141adc5198124e9b822933bdef49d, type: 3}
     - target: {fileID: 4294898637215380322, guid: bc5fce6d0f362eb4da971c085299f5a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2178,7 +2173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
   m_Content: {fileID: 1566292749}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -2574,9 +2569,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -392.50043}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1566292751
 MonoBehaviour:
   m_ObjectHideFlags: 0
