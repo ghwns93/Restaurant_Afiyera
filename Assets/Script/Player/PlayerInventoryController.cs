@@ -46,6 +46,7 @@ public class PlayerInventoryController : MonoBehaviour
         }
 
         HandleMouseScrollInput();
+        HandleKeyInput();
     }
 
     // 마우스 휠 입력 처리 (10칸 순환)
@@ -66,6 +67,21 @@ public class PlayerInventoryController : MonoBehaviour
             }
 
             onSelectedSlotChangedCallback?.Invoke(SelectedSlotIndex);
+        }
+    }
+
+    private void HandleKeyInput()
+    {
+        if (KeyCode.Alpha1 <= KeyCode.Alpha5)
+        {
+            for (int i = 0; i < MaxQuickSlots; i++)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+                {
+                    SelectSlot(i);
+                    break;
+                }
+            }
         }
     }
 

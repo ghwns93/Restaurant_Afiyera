@@ -15,7 +15,7 @@ MonoBehaviour:
   npcCode: 4
   npcName: 
   npcImage: {fileID: 7669812580904013858, guid: 4d1bd91827542694eb2c133c57019cd3, type: 3}
-  npcIconImage: {fileID: 0}
+  npcIconImage: {fileID: 7669812580904013858, guid: 4d1bd91827542694eb2c133c57019cd3, type: 3}
   npcSdImage: {fileID: 0}
   isNightRestaurantNpc: 1
   portraits:

@@ -54,3 +54,11 @@ public static class DialogueEventType
     public const string ActionPlay = "ACTION_PLAY";  // ▼ 추가
     public const string ShowBackInfo = "SHOW_BACK";  // ▼ 추가
 }
+
+[System.Serializable]
+public class DialogueLogEntry
+{
+    public string speakerName; // 화자 이름 (빈 문자열이면 내레이션 등)
+    public string dialogueText; // 대사 본문
+    public bool isChoiceRecord; // true면 플레이어가 고른 선택지 기록
+}

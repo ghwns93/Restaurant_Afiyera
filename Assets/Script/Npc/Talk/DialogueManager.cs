@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 // 대화씬 전체를 제어하는 매니저.
 // - JSON 로드 → id 기반 그래프 탐색으로 라인 재생 (선택지 분기 지원)
@@ -33,6 +36,18 @@ public class DialogueManager : MonoBehaviour
     [Header("오토 모드")]
     [SerializeField] private float autoBaseDelay = 1.0f;       // 오토 진행 기본 대기 시간
     [SerializeField] private float autoDelayPerChar = 0.03f;   // 글자 수에 비례해 추가되는 대기 시간 (긴 문장 = 더 오래 표시)
+    [SerializeField] private Image autoModeIndicator; // 오토 모드 켜짐/꺼짐 표시용 (선택)
+    [SerializeField] private Sprite autoOnSprite;
+    [SerializeField] private Sprite autoOffSprite;
+
+    [Header("대화 기록(로그) UI")]
+    [SerializeField] private GameObject logPanel;         // 대화 기록 전체 팝업 패널
+    [SerializeField] private Transform logContentParent;  // 스크롤 뷰의 Content 트랜스포트
+    [SerializeField] private GameObject logItemNormalPrefab;    // 로그 한 줄을 표시할 UI 프리팹 (Text 기반)
+    [SerializeField] private GameObject logItemChoicePrefab;    // 로그 한 줄을 표시할 UI 프리팹 (Text 기반)
+
+    // 누적된 대화 기록 리스트
+    private List<DialogueLogEntry> dialogueHistory = new List<DialogueLogEntry>();
 
     [Header("모드 변경 알림 (UI 버튼 하이라이트용)")]
     public UnityEvent<bool> onAutoModeChanged;
@@ -91,16 +106,34 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!dialogueActive) return;
+        if (!dialogueActive)
+        {
+            //Debug.Log("[DialogueManager] 대화가 활성화되지 않은 상태에서 Update 호출됨.");
+            return;
+        }
 
         // 선택지 표시 중엔 스킵/오토/진행 입력 전부 정지. 버튼으로만 진행
-        if (choicesVisible || waitingForAction) return;
+        if (choicesVisible || waitingForAction)
+        {
+            //Debug.Log("[DialogueManager] 선택지 표시 중이거나 액션 대기 중이므로 입력 무시.");
+            return;
+        }
 
         // 마우스 클릭 / 스페이스 / 엔터로 진행
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
+            // ★ 수정된 부분: 마우스 클릭일 때만 UI 오브젝트 위인지 체크
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (IsPointerOverInteractiveUI())
+                {
+                    //Debug.Log("[DialogueManager] UI 버튼 위 클릭 감지. 대화 진행을 무시합니다.");
+                    return; // 버튼이나 상호작용 UI 위를 클릭했다면 대화 진행 안 함
+                }
+            }
+
             // 수동 조작 시 오토 모드 해제 (유지하고 싶으면 이 줄 제거)
-            if (autoMode) SetAutoMode(false);
+            //if (autoMode) SetAutoMode(false);
             OnAdvanceInput();
         }
     }
@@ -111,7 +144,11 @@ public class DialogueManager : MonoBehaviour
 
     public void SetAutoMode(bool on)
     {
-        if (autoMode == on) return;
+        if (autoMode == on)
+        {
+            Debug.Log($"[DialogueManager] 오토 모드 이미 {(on ? "켜짐" : "꺼짐")} 상태입니다.");
+            return;
+        }
         autoMode = on;
         onAutoModeChanged?.Invoke(on);
 
@@ -119,10 +156,14 @@ public class DialogueManager : MonoBehaviour
         {
             // 이미 타이핑이 끝나 대기 중인 상태에서 켰다면 즉시 오토 카운트 시작
             if (dialogueActive && !isTyping && !choicesVisible)
+            {
                 StartAutoAdvance();
+            }
+            autoModeIndicator.sprite = autoOnSprite;
         }
         else
         {
+            autoModeIndicator.sprite = autoOffSprite;
             CancelAutoAdvance();
         }
     }
@@ -173,6 +214,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue()
     {
         string json = NpcSpecialEventManager.Instance.GetSelectedId()?.DialogueJsonText;
+
+        dialogueHistory.Clear();
 
         StartDialogue(json);
     }
@@ -273,6 +316,18 @@ public class DialogueManager : MonoBehaviour
 
         foreach (var slot in npcSlots)
             slot.SetSpeaking(slot.IsOccupied && slot.CurrentNpcId == line.speakerId);
+
+        // ★ [추가] 대화 기록(로그)에 현재 대사 추가 (중복 추가 방지 혹은 타이밍 조절 가능)
+        // 보통 대사가 출력될 때 기록에 남깁니다.
+        if (!string.IsNullOrEmpty(line.text))
+        {
+            dialogueHistory.Add(new DialogueLogEntry
+            {
+                speakerName = line.speakerId,
+                dialogueText = line.text,
+                isChoiceRecord = false
+            });
+        }
 
         // 3) 타자 효과 시작
         if (typingRoutine != null) StopCoroutine(typingRoutine);
@@ -437,6 +492,14 @@ public class DialogueManager : MonoBehaviour
     private void OnChoiceSelected(DialogueChoice choice)
     {
         HideChoices();
+
+        // ★ [추가] 플레이어가 선택한 선택지도 기록에 남김
+        dialogueHistory.Add(new DialogueLogEntry
+        {
+            speakerName = "선택", // 또는 플레이어 이름
+            dialogueText = $"▶ {choice.text}", // 선택한 내용임을 직관적으로 표시
+            isChoiceRecord = true
+        });
 
         // 선택지에 붙은 이벤트 실행 (예: 거절 시 NPC 퇴장)
         if (choice.events != null)
@@ -639,5 +702,85 @@ public class DialogueManager : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
+    }
+
+    // UI 버튼의 onClick에 연결
+    public void OpenDialogueLog()
+    {
+        if (logPanel == null || logItemNormalPrefab == null || logItemChoicePrefab == null || logContentParent == null)
+        {
+            Debug.LogWarning("[DialogueManager] 로그 UI 관련 참조가 연결되지 않았습니다.");
+            return;
+        }
+
+        // 1. 기존에 생성되어 있던 로그 목록 클리어
+        foreach (Transform child in logContentParent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // 2. 누적된 히스토리를 순회하며 UI 생성
+        foreach (var history in dialogueHistory)
+        {
+            GameObject logObj = Instantiate(history.isChoiceRecord ? logItemChoicePrefab : logItemNormalPrefab, logContentParent);
+
+            DialogueRecodePrefabScript logScript = logObj.GetComponent<DialogueRecodePrefabScript>();
+            if (logScript != null)
+            {
+                logScript.SetDialogueLogEntry(history);
+            }
+            else
+            {
+                Debug.LogWarning("[DialogueManager] 로그 프리팹에 DialogueRecodePrefabScript가 없습니다.");
+            }
+        }
+
+        // 3. 로그 패널 활성화
+        logPanel.SetActive(true);
+
+        dialogueActive = false;
+
+        SetAutoMode(false);
+    }
+
+    // 로그 닫기 버튼에 연결
+    public void CloseDialogueLog()
+    {
+        if (logPanel != null)
+        {
+            logPanel.SetActive(false);
+            dialogueActive = true;
+        }
+    }
+
+    // 마우스가 버튼, 스크롤바 등 상호작용 가능한 UI 위에 있는지 확인하는 함수
+    private bool IsPointerOverInteractiveUI()
+    {
+        if (EventSystem.current == null) return false;
+
+        // 1. 기본적으로 UI 위에 마우스가 있는지 확인
+        if (!EventSystem.current.IsPointerOverGameObject()) return false;
+
+        // 2. 현재 마우스가 올라가 있는 UI 오브젝트 가져오기
+        var currentEventSystem = EventSystem.current;
+        var pointerEventData = new UnityEngine.EventSystems.PointerEventData(currentEventSystem)
+        {
+            position = Input.mousePosition
+        };
+
+        var results = new System.Collections.Generic.List<UnityEngine.EventSystems.RaycastResult>();
+        currentEventSystem.RaycastAll(pointerEventData, results);
+
+        foreach (var result in results)
+        {
+            // 만약 마우스 아래에 버튼(Button), 슬라이더, 토글 등 상호작용 컴포넌트가 있다면 true 반환
+            if (result.gameObject.GetComponent<UnityEngine.UI.Selectable>() != null)
+            {
+                return true;
+            }
+        }
+
+        // 단순히 마우스 아래에 이미지나 패널(배경)만 있다면 대화 진행을 막지 않음 (false)
+        return false;
     }
 }

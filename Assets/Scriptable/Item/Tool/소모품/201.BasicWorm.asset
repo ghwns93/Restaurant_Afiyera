@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemBaitData
   id: 201
   itemName: "\uC9C0\uB801\uC774"
-  icon: {fileID: -7739285666016128672, guid: 84d332a564fa424478935277c4e94d42, type: 3}
+  icon: {fileID: -4278082096567890737, guid: 8429e54002bf3ee4ca65035ee031165d, type: 3}
   itemType: 4
   isStackable: 1
   maxStackCount: 99

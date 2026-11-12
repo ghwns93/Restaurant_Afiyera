@@ -60,6 +60,8 @@ SpriteAtlas:
     packables:
     - {fileID: 2800000, guid: afa3a666dc681124d9e4018779eb6ccc, type: 3}
     - {fileID: 2800000, guid: b9853556a60f9c74e88b2a28b5748ee6, type: 3}
+    - {fileID: 2800000, guid: 61f211ddf5519d94a9cbe5d2c8616ff4, type: 3}
+    - {fileID: 2800000, guid: 1764991def1f6d743a1d40ae6ca66657, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -73,6 +75,10 @@ SpriteAtlas:
     - afa3a666dc681124d9e4018779eb6ccc: -2582547052236842550
     - afa3a666dc681124d9e4018779eb6ccc: -3686696799064413886
     - afa3a666dc681124d9e4018779eb6ccc: 3667238662991790495
+    - 1764991def1f6d743a1d40ae6ca66657: 807491707
+    - 61f211ddf5519d94a9cbe5d2c8616ff4: -4407174037039151450
+    - 61f211ddf5519d94a9cbe5d2c8616ff4: -3107444956298698803
+    - 61f211ddf5519d94a9cbe5d2c8616ff4: -5580256674033586290
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 8799537484695402472, guid: b9853556a60f9c74e88b2a28b5748ee6, type: 3}
@@ -84,6 +90,10 @@ SpriteAtlas:
   - {fileID: -2582547052236842550, guid: afa3a666dc681124d9e4018779eb6ccc, type: 3}
   - {fileID: -3686696799064413886, guid: afa3a666dc681124d9e4018779eb6ccc, type: 3}
   - {fileID: 3667238662991790495, guid: afa3a666dc681124d9e4018779eb6ccc, type: 3}
+  - {fileID: 807491707, guid: 1764991def1f6d743a1d40ae6ca66657, type: 3}
+  - {fileID: -4407174037039151450, guid: 61f211ddf5519d94a9cbe5d2c8616ff4, type: 3}
+  - {fileID: -3107444956298698803, guid: 61f211ddf5519d94a9cbe5d2c8616ff4, type: 3}
+  - {fileID: -5580256674033586290, guid: 61f211ddf5519d94a9cbe5d2c8616ff4, type: 3}
   m_PackedSpriteNamesToIndex:
   - "\uD3C9\uC0C1\uC2DCUI_2"
   - "\uD3C9\uC0C1\uC2DCUI_3"
@@ -94,6 +104,10 @@ SpriteAtlas:
   - "\uC778\uBCA4\uD1A0\uB9ACUI_0"
   - "\uC778\uBCA4\uD1A0\uB9ACUI_1"
   - "\uC778\uBCA4\uD1A0\uB9ACUI_2"
+  - CircleUI_0
+  - "\uC0C8\uB85C\uC6B4 \uB3C4\uAD6C \uC120\uD0DD2_1"
+  - "\uC0C8\uB85C\uC6B4 \uB3C4\uAD6C \uC120\uD0DD2_0"
+  - "\uC0C8\uB85C\uC6B4 \uB3C4\uAD6C \uC120\uD0DD2_2"
   m_RenderDataMap: {}
   m_Tag: UiInventory
   m_IsVariant: 0
